@@ -226,7 +226,7 @@ html {
   .post-title {
     @include relative-font-size(2.625);
     letter-spacing: -1px;
-    line-height: 1;
+    line-height: 1.5;
 
     @include media-query($on-laptop) {
       @include relative-font-size(2.25);
@@ -509,7 +509,7 @@ html {
 
   a {
     @include relative-font-size(1.125);
-    line-height: 15px;
+    line-height: 1.4;
     color: #666;
     max-width: 50%;
   }
