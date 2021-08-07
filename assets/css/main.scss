@@ -21,6 +21,22 @@ $brand-name: "{{ site.brand_color }}";
 $theme-color: map-get($theme-colors, "snowwhite");
 $brand-color: map-get($brand-colors, "orangered");
 $base-line-height: 1.7;
+$base-font-size: 16px;
+$base-font-family: -apple-system, blinkMacSystemFont, "Helvetica Neue", "Segoe UI",
+"Arial", "Roboto", "Hiragino Kaku Gothic ProN", YuGothicM, YuGothic, Meiryo,
+sans-serif;
+
+@font-face {
+  font-family: YuGothicM;
+  font-weight: normal;
+  src: local("YuGothic-Medium"), local("Yu Gothic Medium"),
+    local("YuGothic-Regular"); /* Windows8.1ではMediumがないのでRegularを指定 */
+}
+@font-face {
+  font-family: YuGothicM;
+  font-weight: bold;
+  src: local("YoGothic-Bold"), local("Yu Gothic");
+}
 
 @if map-has-key($theme-colors, $theme-name) {
   $theme-color: map-get($theme-colors, $theme-name);
