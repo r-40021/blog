@@ -26,7 +26,7 @@
   }
 
   .names {
-    font-size: 1em;
+    font-size: 1.4em;
     font-weight: bolder;
     width: 76%;
     margin-left: 12%;
@@ -34,6 +34,7 @@
     display: flex;
     justify-content: space-between;
     user-select: none;
+    padding: .4em 0;
   }
 
   .dark {
@@ -73,7 +74,8 @@
     margin-right: 20px;
 
     .names {
-      font-size: .85em;
+      font-size: 1.2em;
+      padding: .1em 0;
     }
   }
 }
