@@ -72,10 +72,10 @@ lang: "ja"  # default lang is en
 
 header_pages:
   - index.html
+  - about.html
   - archives.html
   - categories.html
   - tags.html
-  - about.md
 
 # Page default value
 # defaults:
