@@ -24,7 +24,7 @@
 {% assign hours = total_mins | divided_by: 60 %}
 {% assign mins = total_mins | modulo: 60 %}
 
-{% assign return = "About" %}
+{% assign return = "約" %}
 
 {% if hours > 0 %}
   {% assign unit = "hour" %}
@@ -33,7 +33,7 @@
   {% endif %}
   {% assign return = return
     | append: " "
-    | append: hours
+    | append: 時間
     | append: " "
     | append: unit %}
 {% endif %}
@@ -44,6 +44,6 @@
 {% endif %}
 {% assign return = return
   | append: " "
-  | append: mins
+  | append: 分
   | append: " "
   | append: unit %}
