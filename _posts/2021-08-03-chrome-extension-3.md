@@ -5,7 +5,7 @@ subheading: 1回15分でサクッと開発。いよいよ形にしていきま�
 categories: Chrome拡張機能
 tags: Chrome拡張機能 HTML JavaScript
 banner:
-  image: 2021-08-03-mac.jpg
+  image: ./assets/images/banners/2021-08-03-mac.jpg
   opacity: 0.618
   background: "#000"
   height: "100vh"

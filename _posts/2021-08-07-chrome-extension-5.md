@@ -7,7 +7,7 @@ series: chrome_copy
 series_title: 権限を減らす
 tags: Chrome拡張機能 JSON JavaScript
 banner:
-  image: 2021-08-07-debug.jpg
+  image: ./assets/images/banners/2021-08-07-debug.jpg
   opacity: 0.618
   background: "#000"
   height: "100vh"

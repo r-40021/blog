@@ -7,7 +7,7 @@ series: chrome_copy
 series_title: 環境構築
 tags: Chrome拡張機能 環境構築 JavaScript JSON HTML
 banner:
-  image: 2021-07-30-develop.jpg
+  image: ./assets/images/banners/2021-07-30-develop.jpg
   opacity: 0.618
   background: "#000"
   height: "100vh"

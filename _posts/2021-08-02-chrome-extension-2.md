@@ -7,7 +7,7 @@ series: chrome_copy
 series_title: ポップアップ作成
 tags: Chrome拡張機能 HTML JavaScript CSS 
 banner:
-  image: 2021-08-02-html.jpg
+  image: ./assets/images/banners/2021-08-02-html.jpg
   opacity: 0.618
   background: "#000"
   height: "100vh"
