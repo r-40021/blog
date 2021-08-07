@@ -6,18 +6,11 @@ categories: Chrome拡張機能
 series: chrome_copy
 series_title: 権限を減らす
 tags: Chrome拡張機能 JSON JavaScript
-banner:
-  image: ./assets/images/banners/2021-08-07-debug.jpg
-  opacity: 0.618
-  background: "#000"
-  height: "100vh"
-  min_height: "38vh"
-  heading_style: "font-size: 4.25em; font-weight: bold; text-decoration: underline"
-  subheading_style: "color: gold"
+image: assets/images/banners/2021-08-07-debug.jpg
 copylight: Photo by <a href="https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Sigmund</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---
 
-# お詫びと訂正
+## お詫びと訂正
 [本連載第4回 「コピー機能の実装」](https://r-40021.github.io/blog/2021/08/04/chrome-extension-4.html)のコードの一部に誤りがありました。お詫びして訂正いたします。
 
 誤
@@ -36,7 +29,7 @@ document.getElementById("LINE").addEventListener("click", ()=>{
 }, false);
 ```
 
-# 権限を少なくする
+## 権限を少なくする
 では、本題に入ります。
 
 前回まで書いてきたコードですが、まだ課題があります。
@@ -63,7 +56,7 @@ document.getElementById("LINE").addEventListener("click", ()=>{
 
 「この拡張機能に特別な権限は必要ありません」と表示されていれば OK です。
 
-# 不具合を修正する
+## 不具合を修正する
 
 しかし、これだけで今日の記事が終わってしまってはあっけないので、もう一つやります。
 
@@ -75,7 +68,7 @@ document.getElementById("LINE").addEventListener("click", ()=>{
 
 そこで、URL にこれらが存在するか調べる機能を実装していきます。
 
-## HTML の修正
+### HTML の修正
 「Facebook のシェアボタン」〜「LINE で送るボタン」までを、`<div id="sns">`で囲んでください。
 
 そして、`popup.js` の `chrome.tabs.query` の中の末尾に以下のコードを追加してください。
@@ -104,7 +97,7 @@ if(!/http\:\/\/|https\:\/\//.test(tabUrl)) {
 
 今日は以上です！
 
-# まとめ
+## まとめ
 - `tabs` の代わりに `activeTab` を指定することで、権限が無駄に多くなることが防げる。
 - `test` を用いると、文字列を検索することができる。
 

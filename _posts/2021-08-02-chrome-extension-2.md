@@ -6,28 +6,21 @@ categories: Chrome拡張機能
 series: chrome_copy
 series_title: ポップアップ作成
 tags: Chrome拡張機能 HTML JavaScript CSS 
-banner:
-  image: ./assets/images/banners/2021-08-02-html.jpg
-  opacity: 0.618
-  background: "#000"
-  height: "100vh"
-  min_height: "38vh"
-  heading_style: "font-size: 4.25em; font-weight: bold; text-decoration: underline"
-  subheading_style: "color: gold"
+image: assets/images/banners/2021-08-02-html.jpg
 copylight: Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Jackson So</a> on <a href="https://unsplash.com/s/photos/html%2Fcss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---
 拡張機能を作るシリーズ第2弾！今回は拡張機能のポップアップを作成していきます！
 
 これでかなり拡張機能っぽくなります。
 
-# ポップアップとは
+## ポップアップとは
 拡張機能のアイコンをクリックした時に出てくるもののことです。ここから拡張機能の設定や操作を行うことができます。拡張機能を使ったことがあれば、一度は目にしたことがあるでしょう。
 
 実は、このポップアップは、**HTMLとCSSでできています**！
 
 ということで、サクッと作っちゃいましょう！
 
-# 今回作っていくもの
+## 今回作っていくもの
 前回、「作るものはお楽しみ」と言っておきましたが、今回作っていく拡張機能が、ついに決まりました。
 
 それは、「開いているページのタイトルとURLをコピーする拡張機能」です。
@@ -38,7 +31,7 @@ copylight: Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsp
 
 では、早速作っていきましょう！
 
-# 設定ファイルを作る
+## 設定ファイルを作る
 ブラウザに、「これはこのような拡張機能ですよ」と教えてあげるための、設定ファイルを作っていきます。
 
 拡張機能開発用のフォルダを作って、`manifest.json` を作成してください。その後、下のコードを記述してください。
@@ -73,7 +66,7 @@ copylight: Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsp
 | `icons` | 拡張機能のアイコン。`16x16`、`48x48`、`128x128`の3種類の大きさを用意しなくてはならない。アイコンの画像は後ほど配布します。 |
 | `action` | ポップアップに関する設定。<br><br>`default_title`で、拡張機能のアイコンにカーソルをホバーした時に表示されるテキストを指定。<br><br>`default_icon`で、ブラウザのURLバーの右側に表示される、拡張機能のアイコンを指定。ここでは、先程の`icons`で指定した`48x48`の画像を流用。<br><br>`default_popup`で、ポップアップとして表示させるHTMLファイルを指定。 |
 
-# アイコン
+## アイコン
 アイコンは下のリンクからダウンロードできます。
 
 `.zip`形式ですので、解凍して拡張機能の開発用フォルダの一番上の階層に、3つの画像を配置してください。
@@ -88,7 +81,7 @@ copylight: Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsp
 
 ![フォルダ](https://user-images.githubusercontent.com/75155258/127797042-5be976a0-d12a-4653-a309-3afe987167fb.png)
 
-# HTML ファイルの作成
+## HTML ファイルの作成
 それでは、HTML ファイルを記述してポップアップを作っていきます。
 
 開発用フォルダの一番上の階層に、`popup.html` を作成し、以下のコードを記述してください。
@@ -131,7 +124,7 @@ setTimeout(() => {
 
 ![ファルダの中身](https://user-images.githubusercontent.com/75155258/127799634-641102be-ddef-43c8-9b93-80e54d0c24a7.png)
 
-# テストする
+## テストする
 ここまで、
 - 設定ファイル(`manifest.json`)
 - HTMLファイル(`popup.html`)
@@ -163,7 +156,7 @@ setTimeout(() => {
 
 ![拡張機能をピン留め](https://user-images.githubusercontent.com/75155258/127799053-701f68c1-05f0-4ebf-86d6-2a9f8843346d.png)
 
-# まとめ
+## まとめ
 - ポップアップ付き拡張機能の作成には、`manifest.json`、HTMLファイル、JavaScript ファイル、CSS ファイルが必要である。
 - `manifest.json`は拡張機能の情報を、ブラウザに伝えるためのファイルである。
 - HTML、CSS、JavaScript でポップアップを作成する。ここは、普通のWebアプリと変わらない。

@@ -4,14 +4,7 @@ title: "Chrome 拡張機能を作って公開しよう③　〜形にする〜"
 subheading: 1回15分でサクッと開発。いよいよ形にしていきます！
 categories: Chrome拡張機能
 tags: Chrome拡張機能 HTML JavaScript
-banner:
-  image: ./assets/images/banners/2021-08-03-mac.jpg
-  opacity: 0.618
-  background: "#000"
-  height: "100vh"
-  min_height: "38vh"
-  heading_style: "font-size: 4.25em; font-weight: bold; text-decoration: underline"
-  subheading_style: "color: gold"
+image: assets/images/banners/2021-08-03-mac.jpg
 series: chrome_copy
 series_title: 仕様に沿って開発
 copylight: Photo by <a href="https://unsplash.com/@jantined?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Jantine Doornbos</a> on <a href="https://unsplash.com/s/photos/develop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
@@ -23,7 +16,7 @@ copylight: Photo by <a href="https://unsplash.com/@jantined?utm_source=unsplash&
 
 今回はボリュームが大きいので、15分で終わらないかもしれません。その時はごめんなさい。
 
-# 仕様
+## 仕様
 まずは今回の拡張機能の仕様を紹介します。
 - 2つの独立したテキストボックスに、URL・ページタイトルをそれぞれ代入する
 - URL・ページタイトルは、それぞれコピーできる
@@ -33,7 +26,7 @@ copylight: Photo by <a href="https://unsplash.com/@jantined?utm_source=unsplash&
 
 とりあえずこのような仕様でいきます。
 
-# ポップアップの作成
+## ポップアップの作成
 前回作ったものは、「Hello, world」と出力するだけのものでしたが、今回は更に拡張機能っぽくしていきます。
 
 なお、今から記述していく HTML と CSS は簡単なものなのでコピペで済ませて構いません。後半の JavaScript が難しいので...
@@ -164,7 +157,7 @@ body {
 
 いい感じになっています！
 
-# JavaScript で動きをつける
+## JavaScript で動きをつける
 
 さあ、続いて JavaScript の記述です！まずは、`popup.js`の中身を消して、「タイトル」を表示させる要素と「URL」を表示させる要素を取得して定数に代入します。
 
@@ -292,7 +285,7 @@ chrome.tabs.query({ 'active': true, 'lastFocusedWindow': true }, tabs => {
 
 では、今日はこの辺にして、次回はメインの「コピー機能」と SNS への「シェア機能」を実装していきます。お楽しみに！
 
-# 問題点と予告
+## 問題点と予告
 実は、このコードにはまだ問題があります。この画像は、Chrome の拡張機能の管理画面のスクリーンショットです。
 
 ![権限多すぎ](https://user-images.githubusercontent.com/75155258/127963556-97d4558d-cb67-40f7-8ac4-cf119b9a35bc.png)
@@ -301,7 +294,7 @@ chrome.tabs.query({ 'active': true, 'lastFocusedWindow': true }, tabs => {
 
 「じゃあなんで `tabs` を用いたんだよ。最初から権限が少なくて済むようにしろよ。」と言われそうですが、`chrome.tabs.query` にも触れたかったので、今回はこちらを用いて開発しました。
 
-# まとめ
+## まとめ
 - `chrome.tabs.query` でタブの検索が行える。
 
 今日はお疲れさまでした！次回をお楽しみに。
