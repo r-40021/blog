@@ -25,6 +25,18 @@ sidebar:
 
     {%- include views/article.html -%}
 
+    {% if page.series %}
+      <br><br><br>
+      <p>【連載一覧】</p>
+      <ol>
+      {% for post in site.posts reversed %}
+        {% if post.series == page.series %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.series_title }}</a>{% if post.url == page.url %} (←今ココ){% endif %}</li>
+        {% endif %}
+      
+      {% endfor %}
+      </ol>
+       {% endif %}
     {%- assign result = hidden | where_exp: "item", "item == 'navigator'" -%}
     {%- if result.size == 0 -%}
     <div class="post-nav">
