@@ -2,7 +2,7 @@ title: やまだ Blog
 author: Yamada
 
 
-copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
+copyright: "(cleft) {currentYear} {author}"
 
 description: やまだのブログ。ぼちぼち更新していきます。
 baseurl: "/blog_theme"
