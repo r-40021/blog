@@ -7,11 +7,11 @@ copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
 description: やまだのブログ。ぼちぼち更新していきます。
 baseurl: "/blog_theme"
 url: "https://r-40021.github.io"
-favicon: "" # the favicon for your site
+favicon: "/favicon/favicon-32x32.png" # the favicon for your site
 
 
 yat:
-  date_format: "%Y/%M/%d"
+  date_format: "%Y/%m/%d"
 
 # If you want more debug log, you can set true
 # debug: false
