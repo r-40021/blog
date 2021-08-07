@@ -507,6 +507,16 @@ html {
   margin: 72px 0 59px;
   padding: 31px 0 0;
 
+  div{
+    word-wrap: break-word;
+  }
+  .previous{
+    margin-right: .3em
+  }
+  .next{
+    margin-left: .3em
+  }
+
   a {
     @include relative-font-size(1.125);
     line-height: 1.4;
