@@ -27,23 +27,17 @@
 {% assign return = "約" %}
 
 {% if hours > 0 %}
-  {% assign unit = "hour" %}
-  {% if hours > 1 %}
-    {% assign unit = unit | append: "s" %}
-  {% endif %}
+  {% assign unit = "時間" %}
   {% assign return = return
     | append: " "
-    | append: 時間
+    | append: hours
     | append: " "
     | append: unit %}
 {% endif %}
 
-{% assign unit = "min" %}
-{% if mins > 1 %}
-  {% assign unit = unit | append: "s" %}
-{% endif %}
+{% assign unit = "分" %}
 {% assign return = return
   | append: " "
-  | append: 分
+  | append: mins
   | append: " "
   | append: unit %}
