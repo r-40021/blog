@@ -6,14 +6,7 @@ categories: Chrome拡張機能
 series: chrome_copy
 series_title: コピー機能実装
 tags: Chrome拡張機能 JavaScript
-banner:
-  image: ./assets/images/banners/2021-08-04-twitter.jpg
-  opacity: 0.618
-  background: "#000"
-  height: "100vh"
-  min_height: "38vh"
-  heading_style: "font-size: 4.25em; font-weight: bold; text-decoration: underline"
-  subheading_style: "color: gold"
+image: assets/images/banners/2021-08-04-twitter.jpg
 copylight: Photo by <a href="https://unsplash.com/@alexbemore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Alexander Shatov</a> on <a href="https://unsplash.com/s/photos/twitter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---
 
@@ -25,7 +18,7 @@ copylight: Photo by <a href="https://unsplash.com/@alexbemore?utm_source=unsplas
 
 では、本題に入っていきましょう。(切り替えが早い)
 
-# コピーボタンの配置
+## コピーボタンの配置
 `popup.html` を次のように書き換えてください。
 `<!--ここから-->` という部分から、`<!--ここまで-->` という部分までが追加する分です。追加する部分は2箇所あります。
 
@@ -123,7 +116,7 @@ svg.withText{
 
 ![CSS適用後](https://user-images.githubusercontent.com/75155258/128103219-9d6ebeaa-f9c2-42da-83da-5e7b2d233983.png)
 
-# コピー機能の実装
+## コピー機能の実装
 
 それでは、本題の「コピー機能の実装」に移ります。
 
@@ -163,7 +156,7 @@ chrome.tabs.query({ 'active': true, 'lastFocusedWindow': true }, tabs => {
 
 ちなみに、「タイトルとURLを両方コピー」した場合は、タイトルとURLの間に改行が入ります。これが、上記のコードの `\n` に当たる部分です。JavaScriptでは、`\n` を使うと文字列を改行させることができます。
 
-# コピーしたことを伝える
+## コピーしたことを伝える
 しかし、これではボタンを押しても何も起こらないので、本当にコピーされたのか疑問に思いますよね。
 
 そこで、コピーボタンを押したら、クリップボードのアイコンが「チェックアイコン」に変わるようにしましょう。
@@ -233,7 +226,7 @@ showCheck("copyBoth");
 
 もし、クリックしたのと違うボタンのアイコンが変化している場合は、上記のコードを追加する場所を間違えています。
 
-# SNS へのシェアボタンを追加する
+## SNS へのシェアボタンを追加する
 SNS で直接投稿・送信ができるボタンを設置します。
 
 このようなボタンについては、公式が「このURLにアクセスすればシェアできるよ」と公開してくれているので、それに則って作成していきます。
@@ -408,7 +401,7 @@ function windowOpen(url) {
 
 上記のコードの中に、`encodeURIComponent()` というものが頻繁に使われていますが、これは日本語や記号などを、コンピューターが扱いやすいように変換するためのものです。URL の中に日本語などが紛れていると、予期せぬトラブルの原因になります。そこで、この処理が必要になるわけです。
 
-# コード全体
+## コード全体
 最後に、コードの全体を提示します。「うまく動かない」等の場合は参考にしてみてください。
 
 `popup.html`
@@ -746,13 +739,13 @@ function windowOpen(url) {
 
 さて、今日はここまでです。お疲れさまでした！
 
-# TODO
+## TODO
 - 前回予告した、「権限を少なくする作業」(次回)
 - Chrome Web ストアで公開(次々回)
 
 ※今後の予定は変更になる可能性があります
 
-# まとめ
+## まとめ
 - `navigator.clipboard.writeText(コピーしたい文字列)` で文字列をクリップボードにコピーできる。
 - 指定のURLにアクセスすれば、各種SNSでシェアすることができる。
 
@@ -762,5 +755,5 @@ function windowOpen(url) {
 
 それでは、次回(8/7)をお楽しみに！
 
-# 2021/8/7 追記
+## 2021/8/7 追記
 「LINE で送る」ボタンに関するコードに誤りがあったため訂正しました。
