@@ -5,7 +5,7 @@ author: Yamada
 copyright: "(cleft) {currentYear} {author}"
 
 description: やまだのブログ。ぼちぼち更新していきます。
-baseurl: "/blog222222"
+baseurl: "/blog"
 url: "https://r-40021.github.io"
 favicon: /favicon/apple-touch-icon.png" # the favicon for your site
 
