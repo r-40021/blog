@@ -1,53 +1,15 @@
-# Welcome to Jekyll!
-#
-# About Theme
-#
-# Yet another theme for elegant writers with modern flat style and beautiful
-# night/dark mode.
-#
-# Website: https://github.com/jeffreytse/jekyll-theme-yat
-#
-# You can do anything you want, including projects for your clients, as long
-# as you mention an attribution back (credit links in footer or project).
-# See the LICENCE file.
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you
-# use 'bundle exec jekyll serve'. If you change this file, please restart
-# the server process.
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: やまだ Blog
-author: @r-40021
+author: Yamada
 
-# Copyright setting
-# You can use any html code, currently below placeholders are available:
-# * current year: {currentYear}
-# * author: {author} (Value is the same as site.author)
-# * copyright: (c) - ©
-# * copyleft: (cleft)
-# * sound recording copyright: (p) - ℗ 
-#
-# For example:
-#   "Copyright (c) 2017-{currentYear} <a href="https://example.com">{author}</a>"
-#   "Copyright © 2017-2021 Foobar"
-#
+
 copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
 
 description: やまだのブログ。ぼちぼち更新していきます。
-baseurl: "/blog_theme" # the subpath of your site, e.g. /blog
-url: "https://r-40021.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/blog_theme"
+url: "https://r-40021.github.io"
 favicon: "" # the favicon for your site
 
-# Yat date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+
 yat:
   date_format: "%Y/%M/%d"
 
@@ -57,8 +19,6 @@ yat:
 # If you don't want transparent header, you can set false
 # header_transparent: true
 
-# Google analytics
-# google_analytics: [Tracking ID]
 
 # If you want to generate website sitemap, you can set true
 sitemap: true
