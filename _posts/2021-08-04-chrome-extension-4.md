@@ -7,7 +7,7 @@ series: chrome_copy
 series_title: コピー機能実装
 tags: Chrome拡張機能 JavaScript
 banner:
-  image: 2021-08-04-twitter.jpg
+  image: ./assets/images/banners/2021-08-04-twitter.jpg
   opacity: 0.618
   background: "#000"
   height: "100vh"
