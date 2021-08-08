@@ -14,7 +14,7 @@ yat:
   date_format: "%Y/%m/%d"
   
 twitter:
-  card: summary_large_image
+  card: "summary_large_image"
 
 # If you want more debug log, you can set true
 # debug: false
