@@ -6,6 +6,11 @@
    <!-- OGP -->
   <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ page.image | escape | default: "assets/images/banners/ogp.png" }}" />
   <meta name="twitter:card" content="summary_large_image" />
+   {% if page.layout == "post" %}
+    <meta property="og:type" content="article" />{% else %}
+    <meta property="og:type" content="website" />{% endif %}
+    <meta property="og:title" content="{% if page.title and page.url != " /" %}{{ page.title }} - {% endif %}{{
+        site.title }}" />
   <link rel="shortcut icon" href="{{ site.favicon }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
