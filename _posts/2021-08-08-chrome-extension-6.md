@@ -12,7 +12,7 @@ tags: Chrome拡張機能 JSON JavaScript コンテキストメニュー
 
 拡張機能も完成に近づいてきました！今回は、更に利便性を向上させるため、コンテキストメニュー(右クリックで開けるメニュー)からも拡張機能を起動できるようにします。
 
-## `background.js` の作成
+## background.js の作成
 
 開発用フォルダの一番上の階層に、`background.js` を作成してください。
 
@@ -20,7 +20,7 @@ tags: Chrome拡張機能 JSON JavaScript コンテキストメニュー
 
 また、これを使用するにあたって、`manifest.json` の変更が必要になります。
 
-## `manifest.json` の書き換え
+## manifest.json の書き換え
 
 `manifest.json` の `permissions` を以下のように書き換えてください。
 
