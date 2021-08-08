@@ -9,8 +9,7 @@
    {% if page.layout == "post" %}
     <meta property="og:type" content="article" />{% else %}
     <meta property="og:type" content="website" />{% endif %}
-    <meta property="og:title" content="{% if page.title and page.url != " /" %}{{ page.title }} - {% endif %}{{
-        site.title }}" />
+    <meta property="og:title" content="{% if page.title and page.url != " /" %}{{ page.title }} {% else %}{{ site.title }} {% endif %}" />
   <link rel="shortcut icon" href="{{ site.favicon }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
