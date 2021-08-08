@@ -105,7 +105,7 @@ const parent = chrome.contextMenus.create({
 | :---: | :--- |
 | `id` | 後で参照する時に用いる ID |
 | `title ` | コンテキストメニューに表示する文字列 |
-| `contexts` | どこを右クリックした際のコンテキストメニューに追加するか。<br><br><a href="https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-ContextType" target="_blank" rel="noopener noreferrer">詳細情報</a> |
+| `contexts` | どこを右クリックした際のコンテキストメニューに追加するか。<br><a href="https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-ContextType" target="_blank" rel="noopener noreferrer">詳細情報</a> |
 
 
 ## 子コンテキストメニューを作成する
