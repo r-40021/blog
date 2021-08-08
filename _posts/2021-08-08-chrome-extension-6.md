@@ -5,7 +5,7 @@ subheading: 1回15分でサクッと開発。今回は、拡張機能をコン�
 categories: Chrome拡張機能
 series: chrome_copy
 series_title: コンテキストメニューの作成
-tags: Chrome拡張機能 JSON JavaScript
+tags: Chrome拡張機能 JSON JavaScript コンテキストメニュー
 ---
 
 1回15分で拡張機能を作るシリーズ、第6弾！
