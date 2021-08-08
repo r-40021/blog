@@ -5,6 +5,7 @@
   {%- seo -%}
    <!-- OGP -->
   <meta property="og:title" content="{% if page.layout == "home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ page.image | escape | default: "assets/images/banners/ogp.png" }}" />
    {% if page.layout == "post" %}
     <meta property="og:type" content="article" />{% else %}
