@@ -2,9 +2,8 @@ title: やまだ Blog
 author: Yamada
 
 
-copyright: "(cright) {currentYear} {author}"
+copyright: "\xA9 {currentYear} {author}"
 
-cright: "\xA9"
 
 description: やまだのブログ。ぼちぼち更新していきます。
 baseurl: "/blog"
