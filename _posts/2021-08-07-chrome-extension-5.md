@@ -71,7 +71,9 @@ document.getElementById("LINE").addEventListener("click", ()=>{
 ### HTML の修正
 「Facebook のシェアボタン」〜「LINE で送るボタン」までを、`<div id="sns">`で囲んでください。
 
-そして、`popup.js` の `chrome.tabs.query` の中の末尾に以下のコードを追加してください。
+### JavaScript の修正
+
+`popup.js` の `chrome.tabs.query` の中の末尾に以下のコードを追加してください。
 
 ```JavaScript
 if(!/http\:\/\/|https\:\/\//.test(tabUrl)) {
