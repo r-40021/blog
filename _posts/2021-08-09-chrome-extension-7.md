@@ -7,8 +7,7 @@ series: chrome_copy
 series_title: Webストアに公開
 tags: Chrome拡張機能 Webストア　最終回
 image: assets/images/banners/2021-08-09-chrome.jpg
-copylight: "Photo by <a href="https://unsplash.com/@firmbee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Firmbee.com</a> on <a href="https://unsplash.com/s/photos/google-chrome?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
-  "
+copylight: Photo by <a href="https://unsplash.com/@firmbee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Firmbee.com</a> on <a href="https://unsplash.com/s/photos/google-chrome?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---
 
 拡張機能を作るシリーズ、最終回！いよいよ、拡張機能を Web ストアに公開していきます！
