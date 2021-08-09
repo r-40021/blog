@@ -33,6 +33,17 @@ body {
   flex-direction: column;
 }
 
+::selection {
+    background: #ffe8b4;
+    color: #333;
+}
+
+//Firefox
+::-moz-selection {
+    background: #ffe8b4;
+    color: #333;
+}
+
 
 
 /**
