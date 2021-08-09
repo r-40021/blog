@@ -4,6 +4,8 @@ author: Yamada
 
 copyright: "(cright) {currentYear} {author}"
 
+cright: &copy;
+
 description: やまだのブログ。ぼちぼち更新していきます。
 baseurl: "/blog"
 url: "https://r-40021.github.io"
