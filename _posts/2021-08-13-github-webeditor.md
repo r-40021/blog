@@ -3,12 +3,11 @@ layout: post
 title: "GitHub に Web Editor が実装されたので使ってみた"
 subheading: VS Code がまんまブラウザで使える
 categories: GitHub
-tags: GitHub VsCode
+tags: GitHub VSCode
 ---
 
 先日、GitHub がブラウザ上で VS Code を使える新機能を発表しました。
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🤫 New shortcut: Press . on any GitHub repo. <a href="https://t.co/AHTSDot4qc">pic.twitter.com/AHTSDot4qc</a></p>&mdash; GitHub (@github) <a href="https://twitter.com/github/status/1425505817827151872?ref_src=twsrc%5Etfw">August 11, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 以前から予告されている Codespaces とは異なり、すべてのユーザーが無料で使用できます。
 
@@ -19,7 +18,9 @@ tags: GitHub VsCode
 ## 使い方
 使い方はとても簡単。
 
-上のツイートの動画のように、GitHub のリポジトリ画面で、キーボードの「.」(ピリオド)キーを押すだけ！
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🤫 New shortcut: Press . on any GitHub repo. <a href="https://t.co/AHTSDot4qc">pic.twitter.com/AHTSDot4qc</a></p>&mdash; GitHub (@github) <a href="https://twitter.com/github/status/1425505817827151872?ref_src=twsrc%5Etfw">August 11, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+このツイートの動画のように、GitHub のリポジトリ画面で、キーボードの「.」(ピリオド)キーを押すだけ！
 
 ## どんなものか
 
