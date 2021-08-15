@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GitHub に Web Editor が実装されたので使ってみた"
+title: "GitHub公式がブラウザ上でVS Codeを使える機能を実装したので、レビュー"
 subheading: VS Code がまんまブラウザで使える
 categories: GitHub
 tags: GitHub VSCode
