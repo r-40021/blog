@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GitHub公式がブラウザ上でVS Codeを使える機能を実装したので、レビュー"
+title: "GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー"
 subheading: VS Code がまんまブラウザで使える
 categories: GitHub
 tags: GitHub VSCode
@@ -44,8 +44,8 @@ GitHub が来月から提供を開始する類似のサービスとして、Code
 
 ## メリット
 
-### ローカルの VSCode の環境が同期される
-ローカルの VSCode で GitHub アカウントでの同期を有効にしている場合は、Web Editor にも反映されます。
+### ローカルの VS Code の環境が同期される
+ローカルの VS Code で GitHub アカウントでの同期を有効にしている場合は、Web Editor にも反映されます。
 
 ただ、拡張機能と一部の設定は同期されませんでした...
 
