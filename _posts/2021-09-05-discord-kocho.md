@@ -18,7 +18,7 @@ tags: Discord bot 自動化
 
 ### 説明書
 
-この bot を導入してみたい方は、下のリンクから見られる説明書にやり方が乗っているので参考にしてください。
+この bot を導入してみたい方は、下のリンクから見られる説明書に導入方法が載っているので、参考にしてください。
 
 <a href="https://gist.github.com/r-40021/b53cfa3c53f93b805cc53ea7b0eb0fe3" target="_blank" rel="noopener noreferrer">取扱説明書</a>
 
@@ -35,9 +35,9 @@ tags: Discord bot 自動化
 
 ### 参考にしたサイト
 
-とてもわかりやすかったです。`npm` などのパッケージ管理ツールを使ったことがあり、JavaScript がある程度できる人であれば簡単に作れると思います。
-
 <a href="https://note.com/exteoi/n/nf1c37cb26c41" target="_blank" rel="noopener noreferrer">誰でも作れる！Discord Bot（基礎編）｜EOi｜note</a>
+
+とてもわかりやすかったです。`npm` などのパッケージ管理ツールを使ったことがあり、JavaScript がある程度できる人であれば簡単に作れると思います。
 
 #### 注意点
 とても分かりやすいサイトなのですが、情報が1年前のものなので今とは違う点がいくつかあります。
