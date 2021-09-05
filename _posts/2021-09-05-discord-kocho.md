@@ -37,7 +37,7 @@ tags: Discord bot 自動化
 
 とてもわかりやすかったです。`npm` などのパッケージ管理ツールを使ったことがあり、JavaScript がある程度できる人であれば簡単に作れると思います。
 
-<a href="https://note.com/exteoi/n/nf1c37cb26c41#Wv8Lc" target="_blank" rel="noopener noreferrer">誰でも作れる！Discord Bot（基礎編）｜EOi｜note</a>
+<a href="https://note.com/exteoi/n/nf1c37cb26c41" target="_blank" rel="noopener noreferrer">誰でも作れる！Discord Bot（基礎編）｜EOi｜note</a>
 
 #### 注意点
 とても分かりやすいサイトなのですが、情報が1年前のものなので今とは違う点がいくつかあります。
