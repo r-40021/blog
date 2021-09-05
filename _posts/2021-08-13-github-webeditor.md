@@ -88,7 +88,7 @@ PC のみならず、タブレットでも開発ができます。スマホだ�
 
 フォーマッターも使えません。逆に、スニペット系はサポートされているものが多いです。
 
-Live Server に関しては、類似サービスの [Gitpod](https://www.gitpod.io/) では使えるので、 Gitpod に比べるとやや劣った印象を受けます。
+Live Server に関しては、類似サービスの <a href="https://www.gitpod.io/" target="_blank" rel="noopener noreferrer">Gitpod</a> では使えるので、 Gitpod に比べるとやや劣った印象を受けます。
 
 ただ、Gitpod は無料プランだと時間制限があるので、結局はローカル環境での開発が一番快適でしょう。
 
