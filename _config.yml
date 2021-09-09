@@ -1,11 +1,11 @@
-title: やまだ Blog
+title: あいてぃー文書箱
 author: Yamada
 
 
 copyright: "\xA9 {currentYear} {author}"
 
 
-description: やまだのブログ。ぼちぼち更新していきます。
+description: 気づいたらPCが好きになっていた人のブログ
 baseurl: "/blog"
 url: "https://r-40021.github.io"
 favicon: /favicon/apple-touch-icon.png" # the favicon for your site
