@@ -1,11 +1,11 @@
-title: IT文書箱
+title: IT 文書箱
 author: Yamada
 
 
 copyright: "\xA9 {currentYear} {author}"
 
 
-description: 気づいたらPCが好きになっていた人のブログ
+description: 気づいたらPCにのめり込んでいた人のブログ
 baseurl: "/blog"
 url: "https://r-40021.github.io"
 favicon: /favicon/apple-touch-icon.png" # the favicon for your site
