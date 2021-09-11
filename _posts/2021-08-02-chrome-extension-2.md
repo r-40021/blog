@@ -25,9 +25,9 @@ copylight: Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsp
 
 それは、「開いているページのタイトルとURLをコピーする拡張機能」です。
 
-イメージはこんな感じです。(汚くてすみません)↓
+イメージはこんな感じです↓
 
-![拡張機能のイメージ](https://user-images.githubusercontent.com/75155258/127795009-45c9c76b-df7d-4650-b1ad-9f2bf2de1829.png)
+![拡張機能のイメージ](https://user-images.githubusercontent.com/75155258/132938279-2307d4da-f781-4d5c-b5e9-2f355cf59ff1.png)
 
 では、早速作っていきましょう！
 
