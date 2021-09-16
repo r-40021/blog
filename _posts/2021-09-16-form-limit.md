@@ -371,3 +371,5 @@ JavaScript がベースになっており、Google の色々なサービスを(�
 ぜひ、本日紹介したプログラムを使ってみてください！
 
 報告不要・クレジット表記不要・商用利用可　です。
+
+なお、ここで紹介したコードは<a href="https://github.com/r-40021/form_limit" target="_blank" rel="noopener noreferrer">GitHub</a>で公開しています。
