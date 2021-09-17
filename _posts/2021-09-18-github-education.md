@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "学生は無料で GitHub Pro が使える！"
-subheading: "GitHub の学割、その名も「GitHub Education」"
+title: "学生は無料で GitHub Pro が使える？特典や申請方法などを解説！"
+subheading: "GitHub がますます好きになっちゃう"
 categories: GitHub
 tags: GitHub 学割
 ---
