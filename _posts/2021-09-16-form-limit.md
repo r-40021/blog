@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10分で定員付きの Google フォームを作ろう【コピペ可】"
+title: "10分で定員付きの Google フォームを作ろう＜コピペ可＞"
 subheading: "定員に達したらフォームを閉じるだけじゃない"
 categories: Google
 tags: Google GAS JavaScript
