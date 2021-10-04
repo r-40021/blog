@@ -106,7 +106,7 @@ header_pages:
 # excerpt_size: 350
 
 # Pagination setting
-paginate: 20
+paginate: 30
 
 # Disqus comments
 # disqus:
