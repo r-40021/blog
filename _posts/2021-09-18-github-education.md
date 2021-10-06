@@ -2,8 +2,8 @@
 layout: post
 title: "学生は無料で GitHub Pro が使える？特典や申請方法などを解説！"
 subheading: "GitHub がますます好きになっちゃう"
-categories: GitHub
-tags: GitHub 学割
+categories: プログラミング
+tags: プログラミング GitHub 学割
 ---
 
 今回は、学生限定で GitHub の有料プラン、GitHub Pro を無料で使える方法を発見したので、ご紹介します。

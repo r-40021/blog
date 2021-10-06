@@ -2,10 +2,10 @@
 layout: post
 title: Chrome 拡張機能を作って公開しよう①　〜環境構築〜
 subheading: 環境構築するほどのことでもないが。
-categories: Chrome拡張機能
+categories: プログラミング
 series: chrome_copy
 series_title: 環境構築
-tags: Chrome拡張機能 環境構築 JavaScript JSON HTML
+tags: プログラミング Chrome拡張機能 環境構築 JavaScript JSON HTML
 image: assets/images/banners/2021-07-30-develop.jpg
 copylight: Photo by <a href="https://unsplash.com/@pankajpatel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Pankaj Patel</a> on <a href="https://unsplash.com/s/photos/javascript?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---

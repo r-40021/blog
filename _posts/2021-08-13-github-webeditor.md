@@ -2,8 +2,8 @@
 layout: post
 title: "GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー"
 subheading: VS Code がまんまブラウザで使える
-categories: GitHub
-tags: GitHub VSCode
+categories: プログラミング
+tags: プログラミング GitHub VSCode
 ---
 
 先日、GitHub がブラウザ上で VS Code を使える新機能を発表しました。

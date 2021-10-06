@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "GitHub の草、17週連続フルコンボ達成！"
-categories: GitHub
-tags: GitHub 草
+categories: プログラミング
+tags: プログラミング GitHub 草
 ---
 この度、GitHub の草で、17週連続フルコンボを達成しましたことをご報告いたします。
 
