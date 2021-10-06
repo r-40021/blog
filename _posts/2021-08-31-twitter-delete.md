@@ -2,7 +2,7 @@
 layout: post
 title: "Twitter のアカウントを復活！残るデータ・消えるデータ"
 subheading: "筆者が体を張って検証！"
-categories: Twitter
+categories: SNS
 tags: Twitter 検証
 ---
 

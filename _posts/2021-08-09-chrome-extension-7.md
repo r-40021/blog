@@ -2,10 +2,10 @@
 layout: post
 title: "Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜"
 subheading: いよいよ Web ストアに公開します！
-categories: Chrome拡張機能
+categories: プログラミング
 series: chrome_copy
 series_title: Webストアに公開
-tags: Chrome拡張機能 Webストア 最終回
+tags: プログラミング Chrome拡張機能 Webストア 最終回
 image: assets/images/banners/2021-08-09-chrome.jpg
 copylight: Photo by <a href="https://unsplash.com/@firmbee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Firmbee.com</a> on <a href="https://unsplash.com/s/photos/google-chrome?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---

@@ -2,8 +2,8 @@
 layout: post
 title: "Chrome 拡張機能を作って公開しよう③　〜形にする〜"
 subheading: 1回15分でサクッと開発。いよいよ形にしていきます！
-categories: Chrome拡張機能
-tags: Chrome拡張機能 HTML JavaScript
+categories: プログラミング
+tags: プログラミング Chrome拡張機能 HTML JavaScript
 image: assets/images/banners/2021-08-03-mac.jpg
 series: chrome_copy
 series_title: 仕様に沿って開発

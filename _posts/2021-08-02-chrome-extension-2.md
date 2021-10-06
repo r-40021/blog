@@ -2,10 +2,10 @@
 layout: post
 title: "Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜"
 subheading: 1回15分でサクッと開発。今回はポップアップの作成。
-categories: Chrome拡張機能
+categories: プログラミング
 series: chrome_copy
 series_title: ポップアップ作成
-tags: Chrome拡張機能 HTML JavaScript CSS 
+tags: プログラミング Chrome拡張機能 HTML JavaScript CSS 
 image: assets/images/banners/2021-08-02-html.jpg
 copylight: Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Jackson So</a> on <a href="https://unsplash.com/s/photos/html%2Fcss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---

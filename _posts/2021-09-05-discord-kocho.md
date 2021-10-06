@@ -2,7 +2,7 @@
 layout: post
 title: "【完全無料・24時間稼働】Discord の bot を作った話"
 subheading: "1円もかけずに運営"
-categories: Discord
+categories: SNS
 tags: Discord bot 自動化
 ---
 
