@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta property="og:title" content="{% if page.layout == "home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}" />
   <meta property="twitter:title" content="{% if page.layout == "home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}" />
+  <title>{% if page.title and page.url != "/" %}{{ page.title }} | {% endif %}{{ site.title }}{% if page.title and page.url != "/" %} - {{ site.description }}{% endif %}</title>
   
   {%- seo -%}
   
