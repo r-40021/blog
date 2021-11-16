@@ -5,7 +5,7 @@
       {% if page.image %}
       <!--画像-->
         <figure>
-          <img src="{{ page.image }}" width="100%"　loading="eager">
+          <img src="{{ page.image | relative_url }}" width="100%"　loading="eager">
           {% if page.copylight %}
             <figcaption>{{ page.copylight }}</figcaption>
           {% endif %}
