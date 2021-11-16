@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ＭＳ ゴシックを使わないで(切望)"
+title: "ＭＳ ゴシックを使わないで(切実)"
 categories: PC
 tags: PC Windows ポエム
 image: assets/images/banners/2021-11-16-no-msgothic.jpg
