@@ -27,7 +27,7 @@ image: assets/images/banners/2021-11-16-no-msgothic.jpg
 
 これでは、人によっては「読みにくい」と感じるかもしれません。
 
-では、なぜそのような汚くて読みにくいフォントが、未だに PC に搭載されているのでしょうか。
+では、なぜこのような汚くて読みにくいフォントが、未だに PC に搭載されているのでしょうか。
 
 それは「互換性を保つため」です。
 
@@ -56,8 +56,9 @@ Noto Sans は、Adobe の高級なソフトウェアや Web ページ制作な�
 
 (Noto Sans は規約で、源真ゴシックのように派生品が作られることを認めています。)
 
-<a href="http://jikasei.me/font/genshin/" target="_blank" rel="noopener noreferrer">源真ゴシック公式サイト</a>
+- <a href="http://jikasei.me/font/genshin/" target="_blank" rel="noopener noreferrer">源真ゴシック公式サイト</a>
 
 
+ぜひ使ってみてください！
 
 それでは、今日はこのへんで！
