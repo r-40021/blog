@@ -1,6 +1,16 @@
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <div class="post-content e-content" itemprop="articleBody">
+      
+      {% if page.image %}
+      <!--画像-->
+        <figure>
+          <img src="{{ page.image }}" width="100%"　loading="eager">
+          {% if page.copylight %}
+            <figcaption>{{ page.copylight }}</figcaption>
+          {% endif %}
+        </figure>
+      {% endif %}
 
       {{ content }}
 
