@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "(お願い) ＭＳ ゴシックと Noto Sans を比較して、意見を聞かせて欲しいです"
+title: "ＭＳ ゴシックと Noto Sans を比較してみる(読者アンケート付き)"
 categories: PC
 tags: PC フォント ポエム
 image: assets/images/banners/2021-11-20-font-hikaku.png
