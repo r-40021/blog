@@ -58,4 +58,4 @@ series_title: フォントを比較
 
 ※公正な投票のため、Google アカウントへのログインを求められることがありますが、メールアドレスやお名前などの個人情報を当方が知ることはできませんのでご安心ください。
 
-<iframe loading="lazy" src="https://docs.google.com/forms/d/e/1FAIpQLSfg51wHAWoayFqPgaLtImxj-EKdtjpYJhF0nmyD7osRtn8Riw/viewform?embedded=true" width="100%" height="993" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+<iframe loading="lazy" src="https://docs.google.com/forms/d/e/1FAIpQLSfg51wHAWoayFqPgaLtImxj-EKdtjpYJhF0nmyD7osRtn8Riw/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
