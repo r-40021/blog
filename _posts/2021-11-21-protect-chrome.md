@@ -22,6 +22,8 @@ image: assets/images/banners/2021-11-21-protect-chrome.png
 
 おそらく聞いたことがないでしょうが、この拡張機能、とっても有能なんです。
 
+しかも完全無料。
+
 この拡張機能を使えば、Chrome のタブに表示される Web サイトのタイトルとアイコンを隠すことができます！
 
 下のリンクからインストールできます。
@@ -111,7 +113,7 @@ image: assets/images/banners/2021-11-21-protect-chrome.png
 
 <a href="https://github.com/r-40021/rename_tab" target="_blank" rel="noopener noreferrer">r-40021/rename_tab: タブの表示名を変更できるChrome拡張機能 - GitHub</a>
 
-ここまで自信があるとは...
+趣味で開発しているため、お金やユーザーの情報を得ることには一切興味がないのだとか。
 
 これなら信用できそうですね。
 
