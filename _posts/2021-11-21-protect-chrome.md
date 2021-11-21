@@ -109,14 +109,14 @@ image: assets/images/banners/2021-11-21-protect-chrome.png
 
 さらに、この拡張機能のプログラムコードはインターネット上で公開されており、誰でも閲覧できます。　
 
-<a href="https://github.com/r-40021/rename_tab" target="_blank" rel="noopener noreferrer">r-40021/rename_tab: タブの表示名を変更できるChrome拡張機能</a>
+<a href="https://github.com/r-40021/rename_tab" target="_blank" rel="noopener noreferrer">r-40021/rename_tab: タブの表示名を変更できるChrome拡張機能 - GitHub</a>
 
 ここまで自信があるとは...
 
 これなら信用できそうですね。
 
 ## まとめ
-使い勝手抜群＆安心な拡張機能「RenameTab」、ぜひ使ってみてください！！
+使い勝手抜群＆安心な拡張機能「Rename Tab」、ぜひ使ってみてください！！
 
 <a href="https://chrome.google.com/webstore/detail/rename-tab/nbpkdabdmbefnemcjehinaeklgmngdoo" target="_blank" rel="noopener noreferrer">Rename Tab - Chrome ウェブストア</a>
 
