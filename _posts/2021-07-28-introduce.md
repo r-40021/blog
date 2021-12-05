@@ -2,7 +2,7 @@
 layout: post
 title: "ブログ始めました"
 subheading: はじめまして。やまだです。
-categories: 自己紹介
+categories: その他
 ---
 
 ## ご挨拶
