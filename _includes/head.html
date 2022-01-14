@@ -18,8 +18,8 @@
     <meta property="og:type" content="website" />{% endif %}
   <link rel="shortcut icon" href="{{ site.favicon }}">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | append: site.github.build_revision | relative_url }}">
+  <script src="{{ "/assets/js/main.js" | append: site.github.build_revision | relative_url }}"></script>
   {%- feed_meta -%}
   {%- include extensions/code-highlight.html -%}
   <script data-goatcounter="https://2vyj09dj8fxuy8uygrir.goatcounter.com/count"
