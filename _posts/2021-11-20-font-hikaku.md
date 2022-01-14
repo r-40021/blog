@@ -6,6 +6,7 @@ tags: PC フォント ポエム
 image: assets/images/banners/2021-11-20-font-hikaku.png
 series: msgothic
 series_title: フォントを比較
+headAlt: フォント比較
 ---
 
 前回の記事で、「ＭＳ ゴシック」に対する私の意見を書かせていただきました。今回は実際にフォントを比較し、読者の皆様にも意見をお聞きしたいと思います。

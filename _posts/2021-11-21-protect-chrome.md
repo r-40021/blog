@@ -4,6 +4,7 @@ title: "プライバシーの宝庫、Chrome を守る〜晒し防止篇〜"
 categories: PC
 tags: PC Google Windows
 image: assets/images/banners/2021-11-21-protect-chrome.png
+headAlt: Chromeを守れ
 ---
 
 「他人に PC の画面を見せているとき、Chrome の他のタブで"アレ"な Web サイトを開いているのを見られてしまった...」
