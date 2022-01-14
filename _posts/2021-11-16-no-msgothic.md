@@ -6,6 +6,7 @@ tags: PC Windows ポエム フォント
 image: assets/images/banners/2021-11-16-no-msgothic.jpg
 series: msgothic
 series_title: ＭＳ ゴシックを使わないで(切実)
+headAlt: ＭＳ ゴシックを使わないで(切実)
 ---
 
 私からのお願いです。「ＭＳ ゴシックを使わないでください。頭痛がします。」
