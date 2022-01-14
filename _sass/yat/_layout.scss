@@ -131,12 +131,15 @@ html {
   .page-link {
     line-height: $base-line-height;
     color: $header-text-color;
-    text-decoration: underline;
     transition: 0.1s ease-in-out;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 24px;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
