@@ -3,6 +3,8 @@ layout: post
 title: "Windows 11 に関する誤解を暴く"
 categories: PC
 tags: PC Windows Windows11
+image: assets/images/banners/2022-01-18-win11.jpg
+headAlt: Windows 11 の誤解を暴く
 ---
 
 こんにちは。私は、Windows 11 を約1ヶ月間、メインで使っています。まだ新しい OS ということもあり、ネット上では「使いにくい」「改悪された」などいろいろなことが言われていますが、中には「誤解」も多く含まれています。
@@ -32,7 +34,7 @@ Windows 10 時代に「スタンダード」とされていた容量ですが、
 
 これは、Chrome で YouTube を 1080p で再生しているときのメモリ使用率ですが、70% と Windows 10 のときと大差ありません。
 
-![Windows11のChromeでYouTubeを再生しているときのメモリ使用率](assets/images/2022-01-18-RAM.jpg)
+![Windows11のChromeでYouTubeを再生しているときのメモリ使用率](/blog/assets/images/2022-01-18-RAM.jpg)
 
 仮想環境でプログラミングをすると 90% 近くになることもありますが、Windows 10 でも同じくらいメモリを消費します。
 
@@ -68,7 +70,7 @@ Windows 11 では、Windows 10 のように既定のブラウザを一括で変�
 
 下の画像のように、拡張子ごとに一つずつ変更していく必要があります。
 
-![Windows11は既定のブラウザを変えるのが大変というスクリーンショット](assets/images/2022-01-18-settings.jpg)
+![Windows11は既定のブラウザを変えるのが大変というスクリーンショット](/blog/assets/images/2022-01-18-settings.jpg)
 
 しかし、Firefox や Brave など、中にはこの一連の面倒な作業を、すべて自動でやってくれるブラウザもあります。
 
