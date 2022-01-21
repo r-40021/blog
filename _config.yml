@@ -5,7 +5,7 @@ author: Yamada
 copyright: "\xA9 {currentYear} {author}"
 
 
-description: 気づいたら PC にのめり込んでいた人のブログ
+description: 書きたいことをたらたらと
 baseurl: "/blog"
 url: "https://r-40021.github.io"
 favicon: /favicon/apple-touch-icon.png" # the favicon for your site
