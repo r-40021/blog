@@ -135,18 +135,6 @@ lazy_load_image:
   # ignore_selectors:
   #   - ".ignore-lazy-image-load"
 
-# HTML Minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  ignore:
-    envs: []
-  blanklines: true
-  profile: false
-  startings: []
-
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
