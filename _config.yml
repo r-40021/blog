@@ -126,15 +126,6 @@ markdown: kramdown
 kmarkdown:
   input: GFM
 
-# Lazy Load
-lazy_load_image:
-  src_attr_name: data-src
-  # preload_image: /path/to/image
-  # class_attr_values:
-  #   - lazyload
-  # ignore_selectors:
-  #   - ".ignore-lazy-image-load"
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
