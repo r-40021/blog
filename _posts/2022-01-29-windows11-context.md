@@ -27,7 +27,7 @@ Windows 11 になって、コンテキストメニューがシンプルな見た
 
 黒い画面が現れたら、以下のコマンドをコピー＆ペーストして、Enter キーを押してください。
 
-```
+```powershell
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ```
 
@@ -43,7 +43,7 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 
 黒い画面が現れたら、以下のコマンドをコピー＆ペーストして、Enter キーを押してください。
 
-```
+```powershell
 reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
 ```
 
