@@ -1,5 +1,5 @@
 title: IT 文書箱
-author: Yamada
+author: Frog
 
 
 copyright: "\xA9 {currentYear} {author}"
@@ -106,7 +106,7 @@ header_pages:
 # excerpt_size: 350
 
 # Pagination setting
-paginate: 30
+paginate: 20
 
 # Disqus comments
 # disqus:
