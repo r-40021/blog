@@ -46,7 +46,7 @@ $base-font-family: -apple-system, blinkMacSystemFont, "Segoe UI", "Helvetica Neu
   padding: .5em 1em;
   width: 100%;
 
-  &:first-letter {
+  &:before {
     font-family: 'Material Icons Outlined';
     content: "error_outline";
     margin-inline-end: .3em;
@@ -64,7 +64,7 @@ $base-font-family: -apple-system, blinkMacSystemFont, "Segoe UI", "Helvetica Neu
   padding: .5em 1em;
   width: 100%;
 
-  &:first-letter {
+  &:before {
     font-family: 'Material Icons Outlined';
     content: "report_problem";
     margin-inline-end: .3em;
@@ -82,7 +82,7 @@ $base-font-family: -apple-system, blinkMacSystemFont, "Segoe UI", "Helvetica Neu
   padding: .5em 1em;
   width: 100%;
 
-  &:first-letter {
+  &:before {
     font-family: 'Material Icons Outlined';
     content: "check";
     margin-inline-end: .3em;
