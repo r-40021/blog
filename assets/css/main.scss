@@ -45,6 +45,13 @@ $base-font-family: -apple-system, blinkMacSystemFont, "Segoe UI", "Helvetica Neu
   margin-bottom: 1em;
   padding: .5em 1em;
   width: 100%;
+
+  &:first-letter {
+    font-family: 'Material Icons Outlined';
+    content: "error_outline";
+    margin-inline-end: .3em;
+    vertical-align: -3px;
+  }
 }
 
 .warning-card {
@@ -56,6 +63,13 @@ $base-font-family: -apple-system, blinkMacSystemFont, "Segoe UI", "Helvetica Neu
   margin-bottom: 1em;
   padding: .5em 1em;
   width: 100%;
+
+  &:first-letter {
+    font-family: 'Material Icons Outlined';
+    content: "report_problem";
+    margin-inline-end: .3em;
+    vertical-align: -3px;
+  }
 }
 
 .success-card {
@@ -67,6 +81,13 @@ $base-font-family: -apple-system, blinkMacSystemFont, "Segoe UI", "Helvetica Neu
   margin-bottom: 1em;
   padding: .5em 1em;
   width: 100%;
+
+  &:first-letter {
+    font-family: 'Material Icons Outlined';
+    content: "check";
+    margin-inline-end: .3em;
+    vertical-align: -3px;
+  }
 }
 
 @import "yat";
