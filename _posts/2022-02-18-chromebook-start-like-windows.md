@@ -7,7 +7,7 @@ image: assets/images/banners/2022-02-18-chromebook-start-like-windows.jpg
 headAlt: WindowsのスタートメニューっぽいChromebookのランチャー
 ---
 
-# やること
+## やること
 
 お久しぶりです。最近、Chromebook の人気が出てきていますね。僕も学校で使っていますが、結構気に入っています。コスパ最高ですし、 Windows のように複雑な設定がないので使いやすいです。しかし、一つ気になる点を挙げるとすれば、
 
@@ -25,7 +25,7 @@ headAlt: WindowsのスタートメニューっぽいChromebookのランチャー
 
 ![ChromebookのWndowsっぽいランチャーのスクリーンショット](https://user-images.githubusercontent.com/75155258/154628702-65cb88b6-a1f2-49f5-9cab-ba1c27c1772a.jpg)
 
-# 設定方法
+## 設定方法
 
 設定は非常に簡単で、人によっては1分もかからずに終わると思います。
 
@@ -60,7 +60,7 @@ headAlt: WindowsのスタートメニューっぽいChromebookのランチャー
 
 再起動後、ランチャーが Windows 風になっているはずです。
 
-# ちなみに...
+## ちなみに...
 
 シェルフを右や左に置いている場合は、ランチャーもシェルフに合わせて移動します。
 
