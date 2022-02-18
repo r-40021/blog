@@ -40,17 +40,17 @@ $base-font-family: -apple-system, blinkMacSystemFont, "Segoe UI", "Helvetica Neu
   background-color: #ffe0e0;
   border-radius: 7px;
   color: #6e2121;
-  display: block;
+  display: flex;
   font-size: 1.1rem;
   margin-bottom: 1em;
   padding: .5em 1em;
-  width: 100%;
 
   &:before {
     font-family: 'Material Icons Outlined';
     content: "error_outline";
-    margin-inline-end: .3em;
-    vertical-align: -3px;
+    margin-top: 3px;
+    margin-inline-end: .7em;
+    height: 100%;
   }
 }
 
@@ -58,17 +58,17 @@ $base-font-family: -apple-system, blinkMacSystemFont, "Segoe UI", "Helvetica Neu
   background-color: #fff5bf;
   border-radius: 7px;
   color: #544321;
-  display: block;
+  display: flex;
   font-size: 1.1rem;
   margin-bottom: 1em;
   padding: .5em 1em;
-  width: 100%;
 
   &:before {
     font-family: 'Material Icons Outlined';
     content: "report_problem";
-    margin-inline-end: .3em;
-    vertical-align: -3px;
+    margin-top: 3px;
+    margin-inline-end: .7em;
+    height: 100%;
   }
 }
 
@@ -76,17 +76,17 @@ $base-font-family: -apple-system, blinkMacSystemFont, "Segoe UI", "Helvetica Neu
   background-color: #cbf5c4;
   border-radius: 7px;
   color: #0c5a0c;
-  display: block;
+  display: flex;
   font-size: 1.1rem;
   margin-bottom: 1em;
   padding: .5em 1em;
-  width: 100%;
 
   &:before {
     font-family: 'Material Icons Outlined';
     content: "check";
-    margin-inline-end: .3em;
-    vertical-align: -3px;
+    margin-top: 3px;
+    margin-inline-end: .7em;
+    height: 100%;
   }
 }
 
