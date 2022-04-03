@@ -8,7 +8,7 @@ copyright: "\xA9 {currentYear} {author}"
 description: 書きたいことをたらたらと
 baseurl: "/blog"
 url: "https://r-40021.github.io"
-favicon: /favicon/apple-touch-icon.png" # the favicon for your site
+favicon: /uploads/logo.png # the favicon for your site
 
 
 yat:
