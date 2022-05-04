@@ -1,7 +1,7 @@
 {%- if page.paginator -%}
-  {%- assign paginator = page.paginator -%}
+{%- assign paginator = page.paginator -%}
 {%- elsif paginator == nil -%}
-  {%- assign paginator = site -%}
+{%- assign paginator = site -%}
 {%- endif -%}
 
 {%- if paginator.posts.size > 0 -%}
@@ -19,19 +19,23 @@
       {%- include functions.html func='get_article_excerpt' -%}
       {% assign excerpt = return %}
       {%- assign post_url = post.url | relative_url -%}
-      <img src="{{ img }}" height="50px">
+      <a class="post-img" href="{{ post_url }}">
+        <img src="{{ img }}">
+      </a>
       <h2 class="post-title">
         <a class="post-link" href="{{ post_url }}">
           {{ post.title | escape }}
         </a>
       </h2>
       <div class="post-meta">
-        <span class="post-date"><span class="material-icons-outlined" aria-label="公開日">event</span> {{ post.date | date: date_format }}</span>
-        <span class="post-reading-time left-vsplit"><span class="material-icons-outlined" aria-label="読了時間">schedule</span> {{ reading_time }}</span>
+        <span class="post-date"><span class="material-icons-outlined" aria-label="公開日">event</span> {{ post.date | date:
+          date_format }}</span>
+        <span class="post-reading-time left-vsplit"><span class="material-icons-outlined"
+            aria-label="読了時間">schedule</span> {{ reading_time }}</span>
       </div>
       <a class="post-excerpt" href="{{ post_url }}">
         <p>
-        {{ excerpt }}
+          {{ excerpt }}
         </p>
       </a>
     </li>
@@ -39,8 +43,5 @@
   </ul>
 
   <!-- Pagination links -->
-  {%- if paginator.posts.size < site.posts.size -%}
-    {%- include views/paginator.html -%}
-  {%- endif -%}
-</div>
-{%- endif -%}
+  {%- if paginator.posts.size < site.posts.size -%} {%- include views/paginator.html -%} {%- endif -%} </div>
+    {%- endif -%}
