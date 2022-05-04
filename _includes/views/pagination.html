@@ -21,7 +21,7 @@
       {%- assign post_url = post.url | relative_url -%}
       <div class="post-img">
         <a href="{{ post_url }}" title="{{ post.title | escape }}">
-          <img src="{{ img | escape | default: " assets/images/banners/ogp.png" }}" loading="lazy"
+          <img src="{{ img | relative_url | default: " assets/images/banners/ogp.png" }}" loading="lazy"
             alt="{{ post.title | escape }} のカバー画像">
         </a>
       </div>
