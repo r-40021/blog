@@ -7,9 +7,9 @@
 {%- if paginator.posts.size > 0 -%}
 <div class="pagination">
   <!-- Post list links -->
-  <ul class="post-list">
+  <main class="post-list">
     {%- for post in paginator.posts -%}
-    <li>
+    <div class="list-item">
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
       {% assign img = post.image %}
       {% assign article = post.content %}
@@ -38,9 +38,9 @@
           {{ excerpt }}
         </p>
       </a>
-    </li>
+    </div>
     {%- endfor -%}
-  </ul>
+  </main>
 
   <!-- Pagination links -->
   {%- if paginator.posts.size < site.posts.size -%} {%- include views/paginator.html -%} {%- endif -%} </div>
