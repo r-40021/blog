@@ -9,7 +9,7 @@
   <!-- Post list links -->
   <main class="post-list">
     {%- for post in paginator.posts -%}
-    <div class="list-item">
+    <article class="list-item">
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
       {% assign img = post.image %}
       {% assign article = post.content %}
@@ -38,7 +38,7 @@
           {{ excerpt }}
         </p>
       </a>
-    </div>
+    </article>
     {%- endfor -%}
   </main>
 
