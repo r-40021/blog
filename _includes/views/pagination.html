@@ -11,7 +11,7 @@
     {%- for post in paginator.posts -%}
     <li>
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
-
+      {% assign img = post.image %}
       {% assign article = post.content %}
       {% assign lang = post.lang %}
       {%- include functions.html func='get_reading_time' -%}
@@ -19,7 +19,7 @@
       {%- include functions.html func='get_article_excerpt' -%}
       {% assign excerpt = return %}
       {%- assign post_url = post.url | relative_url -%}
-
+      <img src="{{ img }}" height="50px">
       <h2 class="post-title">
         <a class="post-link" href="{{ post_url }}">
           {{ post.title | escape }}
