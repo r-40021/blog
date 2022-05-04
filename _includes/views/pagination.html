@@ -21,7 +21,7 @@
       {%- assign post_url = post.url | relative_url -%}
       <div class="post-img">
         <a href="{{ post_url }}" title="{{ post.title | escape }}">
-          <img src="{{ img | default: " assets/images/banners/ogp.png" | relative_url }}" loading="lazy"
+          <img src="{{ img | default: "assets/images/banners/ogp.png" | relative_url }}" loading="lazy"
             alt="{{ post.title | escape }} のサムネイル画像">
         </a>
       </div>
