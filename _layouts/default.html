@@ -14,7 +14,7 @@
     {%- include extensions/theme-toggle.html -%}
 
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+      {% if page.layout == "home" %}<div class="wrapper wrapper-home">{% else %}<div class="wrapper"></div>{% endif %}
         {{ content }}
       </div>
     </main>

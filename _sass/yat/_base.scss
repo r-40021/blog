@@ -208,6 +208,9 @@ pre {
   padding-left: $spacing-unit;
   @extend %clearfix;
 }
+.wrapper.wrapper-home {
+  max-width: 1200px;
+}
 
 
 
