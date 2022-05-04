@@ -39,6 +39,9 @@ $content-width:    920px !default;
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 
+// Transition
+$default-ease-in-out: cubic-bezier(0.465, 0.183, 0.153, 0.946) !default;
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
