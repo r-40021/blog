@@ -283,7 +283,7 @@ html {
 
   .post-title {
     margin-bottom: $spacing-unit * 0.2;
-    font-size: $base-font-size * 0.9;
+    font-size: $base-font-size;
     transition: 0.2s all;
 
     a {
@@ -315,7 +315,7 @@ html {
   }
 
   .post-link {
-    @include relative-font-size(1.65);
+    @include relative-font-size(1);
     font-weight: $base-font-weight * 1.5;
     color: #333;
   }
