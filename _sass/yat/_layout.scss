@@ -315,7 +315,7 @@ html {
   }
 
   .post-link {
-    @include relative-font-size(1);
+    @include relative-font-size(1.1);
     font-weight: $base-font-weight * 1.5;
     color: #333;
   }
