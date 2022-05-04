@@ -268,12 +268,11 @@ html {
 .pagination {
   .post-list {
     margin-left: 0;
-    list-style: none;
     width: 50%;
 
-    > li {
+    > .list-item {
       margin-bottom: $spacing-unit * 1.5;
-      
+      display: inline-block;
       padding-bottom: 30px;
 
       &:not(:last-child) {
