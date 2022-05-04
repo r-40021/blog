@@ -19,9 +19,12 @@
       {%- include functions.html func='get_article_excerpt' -%}
       {% assign excerpt = return %}
       {%- assign post_url = post.url | relative_url -%}
-      <a class="post-img" href="{{ post_url }}">
-        <img src="{{ img }}" loading="lazy">
-      </a>
+      <div class="post-img">
+        <a href="{{ post_url }}" title="{{ post.title | escape }}">
+          <img src="{{ img | escape | default: " assets/images/banners/ogp.png" }}" loading="lazy"
+            alt="{{ post.title | escape }} のカバー画像">
+        </a>
+      </div>
       <h2 class="post-title">
         <a class="post-link" href="{{ post_url }}">
           {{ post.title | escape }}
