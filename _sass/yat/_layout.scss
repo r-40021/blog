@@ -281,10 +281,10 @@ html {
         height: 100%;
         object-fit: cover;
         transform-origin: center;
-        transition: transform .3s $default-ease-in-out;
+        transition: transform .4s $default-ease-in-out;
 
         &:hover{
-          transform: scale(1.5);
+          transform: scale(1.2);
         }
       }
     }
@@ -293,6 +293,10 @@ html {
       margin-bottom: $spacing-unit * 1.5;
       width: 50%;
       padding: 15px;
+
+      @include media-query($on-palm) {
+        width: 100%
+      }
     }
   }
 
