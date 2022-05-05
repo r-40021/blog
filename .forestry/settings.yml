@@ -12,8 +12,8 @@ sections:
   create: all
 upload_dir: assets/images
 public_path: assets/images
-front_matter_path: ''
-use_front_matter_path: false
+front_matter_path: "/blog/assets/images/:year:/:month:/:day:/:filename:"
+use_front_matter_path: true
 file_template: ":year:/:month:/:day:/:filename:"
 build:
   preview_env:
