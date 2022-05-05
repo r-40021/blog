@@ -71,10 +71,6 @@ html[data-theme="dark"] {
       box-shadow: 0 0 3px 1px #0000005b;
     }
 
-    .framework .main .post {
-      background-color: $dark-lighten-color;
-    }
-
     .ct-language-selected,
     .ct-language-dropdown li:hover {
       background-color: #222 !important;
@@ -89,6 +85,10 @@ html[data-theme="dark"] {
         background-color: #090909;
       }
     }
+  }
+
+  .framework .main .post {
+    background-color: $dark-lighten-color;
   }
 
   .site-footer {
