@@ -8,7 +8,6 @@
 <div class="pagination">
   <!-- Post list links -->
   <div class="post-list">
-    {{paginator.posts.size}}
     {%- for post in paginator.posts -%}
     <article class="list-item">
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
