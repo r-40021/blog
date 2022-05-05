@@ -56,3 +56,5 @@ fields:
     required: false
   label: コピーライト
   description: ヘッダー画像のコピーライト
+pages:
+- _posts/ブログをリニューアルしました.md
