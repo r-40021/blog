@@ -317,6 +317,23 @@ html {
         text-decoration: none;
         display: inline-block;
         height: 100%;
+
+        .post-title:after {
+          content: 'NEW';
+          position: absolute;
+          margin-left: 8px;
+          margin-top: 3px;
+          padding: 0px 3px;
+          background-color: $brand-color;
+          color: #fff;
+          font-size: 10px;
+          font-weight: 600;
+          border-radius: 2px;
+        }
+
+        &:visited .post-title:after {
+          background-color: #fff;
+        }
       }
 
       &:hover img {
@@ -337,27 +354,6 @@ html {
     line-height: 1.5;
     margin-bottom: $spacing-unit * 0.2;
     transition: 0.2s all;
-
-    a {
-      text-decoration: none;
-
-      &:after {
-        content: 'NEW';
-        position: absolute;
-        margin-left: 8px;
-        margin-top: 3px;
-        padding: 0px 3px;
-        background-color: $brand-color;
-        color: #fff;
-        font-size: 10px;
-        font-weight: 600;
-        border-radius: 2px;
-      }
-
-      &:visited:after {
-        background-color: #fff;
-      }
-    }
   }
 
   .post-meta {
@@ -767,7 +763,7 @@ html {
 
   .main {
     @extend %flex-1;
-    
+
     .post {
       background-color: $theme-color;
       border-radius: $card-border-radius;
