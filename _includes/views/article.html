@@ -1,11 +1,12 @@
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <div class="post-content e-content" itemprop="articleBody">
+      {% capture baseurl %}{{site.baseurl}}\/{% endcapture %}
       
       {% if page.image %}
       <!--画像-->
         <figure>
-          <img src="{{ page.image | remove: site.baseurl+"/" | relative_url }}" width="100%" loading="eager" alt="{{page.headAlt | default: 'ヘッダー画像'}}">
+          <img src="{{ page.image | remove_first: baseurl | relative_url }}" width="100%" loading="eager" alt="{{page.headAlt | default: 'ヘッダー画像'}}">
           {% if page.copylight %}
             <figcaption>{{ page.copylight }}</figcaption>
           {% endif %}
