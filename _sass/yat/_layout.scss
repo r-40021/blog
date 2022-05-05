@@ -305,6 +305,7 @@ html {
 
     >.list-item {
       background-color: $theme-color;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       border-radius: $card-border-radius;
       margin: 15px;
       margin-bottom: $spacing-unit * 1.5;
