@@ -5,6 +5,9 @@
    <meta property="og:title" content="{% if page.layout == "home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}" />
   <meta property="twitter:title" content="{% if page.layout == "home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}" />
   <title>{% if page.title and page.url != "/" %}{{ page.title }} | {% endif %}{{ site.title }}{% if page.title and page.url == "/" %} - {{ site.description }}{% endif %}</title>
+  {% capture baseurl %}{{site.baseurl}}/{% endcapture %}
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ page.image | remove_first: baseurl | escape | default: "assets/images/banners/ogp.jpg" }}" />
+  <meta property="twitter:image" content="{{ site.url }}{{ site.baseurl }}/{{ page.image | remove_first: baseurl | escape | default: "assets/images/banners/ogp.jpg" }}" />
   
   {%- seo -%}
   
