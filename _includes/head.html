@@ -12,7 +12,8 @@
   <meta property="og:title" content="{% if page.layout == "home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}" />
   <meta property="twitter:title" content="{% if page.layout == "home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ page.image | escape | default: "assets/images/banners/ogp.jpg" }}" />
+  {% capture baseurl %}{{site.baseurl}}/{% endcapture %}
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ page.image | remove_first: baseurl | escape | default: "assets/images/banners/ogp.jpg" }}" />
    {% if page.layout == "post" %}
     <meta property="og:type" content="article" />{% else %}
     <meta property="og:type" content="website" />{% endif %}
