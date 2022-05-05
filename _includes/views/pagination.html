@@ -1,13 +1,14 @@
 {%- if page.paginator -%}
-{%- assign paginator = page.paginator -%}
+  {%- assign paginator = page.paginator -%}
 {%- elsif paginator == nil -%}
-{%- assign paginator = site -%}
+  {%- assign paginator = site -%}
 {%- endif -%}
 
 {%- if paginator.posts.size > 0 -%}
 <div class="pagination">
   <!-- Post list links -->
   <div class="post-list">
+    {{paginator.posts.size}}
     {%- for post in paginator.posts -%}
     <article class="list-item">
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
@@ -21,8 +22,8 @@
       {%- assign post_url = post.url | relative_url -%}
       <a class="card-link" href="{{ post_url }}">
         <div class="post-img">
-          <img src="{{
-            img | default: "assets/images/banners/ogp.jpg" | relative_url }}" loading="lazy"
+          <img src="{% if img.start_with?("/") %}{{ img | default: "/blog/assets/images/banners/ogp.jpg" }}{% else %}{{
+            img | default: "assets/images/banners/ogp.jpg" | relative_url }}{% endif %}" loading="lazy"
             alt="{{ post.title | escape }} のサムネイル画像" title="{{ post.title | escape }}">
         </div>
         <div class="post-text">
@@ -49,4 +50,4 @@
 
   <!-- Pagination links -->
   {%- if paginator.posts.size < site.posts.size -%} {%- include views/paginator.html -%} {%- endif -%} </div>
-    {%- endif -%}
+{%- endif -%}
