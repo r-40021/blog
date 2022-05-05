@@ -303,12 +303,16 @@ html {
     }
 
     >.list-item {
+      margin: 15px;
       margin-bottom: $spacing-unit * 1.5;
-      width: 50%;
-      padding: 15px;
+      width: calc(50% - 15*2px);
 
-      & a:hover img {
+      &:hover img {
         transform: scale(1.2);
+      }
+
+      >.post-text {
+        padding: 2px 5px;
       }
 
       @include media-query($on-palm) {
