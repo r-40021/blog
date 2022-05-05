@@ -1,7 +1,7 @@
-$dark-background-color:       #0e0e0e !default;
+$dark-background-color: #0e0e0e !default;
 $dark-text-color: #bbb !default;
 
-html[data-theme="dark"]  {
+html[data-theme="dark"] {
   &[data-scroll-status='top'] {
     header.site-header-transparent {
       &.site-header {
@@ -26,7 +26,7 @@ html[data-theme="dark"]  {
     background-color: $dark-background-color;
   }
 
-  *:not(pre) > code {
+  *:not(pre)>code {
     color: $dark-text-color;
     background-color: #454545;
   }
@@ -52,7 +52,9 @@ html[data-theme="dark"]  {
 
     .site-brand {
       .site-brand-inner {
-        &, &:visited {
+
+        &,
+        &:visited {
           color: #f8f8f8;
         }
       }
@@ -68,16 +70,17 @@ html[data-theme="dark"]  {
       box-shadow: 0 0 3px 1px #0000005b;
     }
 
-    .ct-language-selected, .ct-language-dropdown li:hover {
+    .ct-language-selected,
+    .ct-language-dropdown li:hover {
       background-color: #222 !important;
     }
 
     @include media-query($on-laptop) {
-      .menu-icon > svg {
-          fill: rgba($dark-text-color, 80%);
+      .menu-icon>svg {
+        fill: rgba($dark-text-color, 80%);
       }
 
-      .site-nav input:checked ~ .trigger {
+      .site-nav input:checked~.trigger {
         background-color: #090909;
       }
     }
@@ -94,35 +97,37 @@ html[data-theme="dark"]  {
 
   .page-banner {
     .page-banner-img {
-      & > *:first-child {
+      &>*:first-child {
         opacity: 0.718;
       }
     }
   }
 
   .pagination {
-    .post-link {
-      color: $dark-text-color;
-    }
-
-    .post-title {
-      a:visited:after {
-        background-color: $dark-background-color;
+    .list-item {
+      background-color: #333;
+      
+      .post-link {
+        color: $dark-text-color;
       }
 
-      a:after {
-        color: $dark-background-color;
-      }
-    }
+      .post-title {
+        a:visited:after {
+          background-color: $dark-background-color;
+        }
 
-    .post-list {
-      & > li:not(:last-child) {
-        border-bottom: 1px solid #545454;
+        a:after {
+          color: $dark-background-color;
+        }
       }
-    }
 
-    .post-tags .post-tag:hover {
-      color: #d7d7d7;
+      .post-excerpt {
+        color: #aaa;
+      }
+
+      .post-tags .post-tag:hover {
+        color: #d7d7d7;
+      }
     }
   }
 
@@ -149,7 +154,7 @@ html[data-theme="dark"]  {
   }
 
   .post-related {
-    & > *:first-child {
+    &>*:first-child {
       color: #d7d7d7;
     }
 
@@ -209,4 +214,3 @@ html[data-theme="dark"]  {
     }
   }
 }
-
