@@ -1,6 +1,7 @@
 $dark-background-color: #0e0e0e !default;
 $dark-text-color: #bbb !default;
 $dark-lighten-color: #333 !default;
+$dark-link-color: #aaa !default;
 
 html[data-theme="dark"] {
   &[data-scroll-status='top'] {
@@ -89,6 +90,10 @@ html[data-theme="dark"] {
 
   .framework .main .post {
     background-color: $dark-lighten-color;
+
+    .post-nav a, .post-related a {
+      color: $dark-link-color
+    }
   }
 
   .site-footer {
@@ -118,11 +123,11 @@ html[data-theme="dark"] {
 
       .post-title {
         a:visited:after {
-          background-color: $dark-background-color;
+          background-color: $dark-lighten-color;
         }
 
         a:after {
-          color: $dark-background-color;
+          color: $dark-lighten-color;
         }
       }
 
@@ -143,11 +148,11 @@ html[data-theme="dark"] {
       }
 
       a:visited:after {
-        background-color: $dark-background-color;
+        background-color: $dark-lighten-color;
       }
 
       a:after {
-        color: $dark-background-color;
+        color: $dark-lighten-color;
       }
     }
   }
@@ -164,15 +169,11 @@ html[data-theme="dark"] {
     }
 
     a:visited:after {
-      background-color: $dark-background-color;
+      background-color: $dark-link-color;
     }
 
     a:after {
-      color: $dark-background-color;
-    }
-
-    a:hover {
-      color: #aaa;
+      color: $dark-link-color;
     }
   }
 
@@ -181,7 +182,7 @@ html[data-theme="dark"] {
       border-bottom: solid 1px #40404088;
 
       a {
-        color: #aaa;
+        color: $dark-link-color;
       }
 
       a:hover {
