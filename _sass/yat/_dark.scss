@@ -88,7 +88,7 @@ html[data-theme="dark"] {
     }
   }
 
-  .framework .main .post {
+  .framework .main .post, .framework .main .page-segments {
     background-color: $dark-lighten-color;
 
     .post-nav a,
