@@ -21,7 +21,7 @@
       {%- assign post_url = post.url | relative_url -%}
       <a class="card-link" href="{{ post_url }}">
         <div class="post-img">
-          <img src="{{ img | default: "assets/images/banners/ogp.jpg" | relative_url }}" loading="lazy"
+          <img src="{% if page.image.start_with?("/") %}{{ page.image | default: "/blog/assets/images/banners/ogp.jpg" }}{% else %}{{ page.image | default: "assets/images/banners/ogp.jpg" | relative_url }}{% endif %}" loading="lazy"
             alt="{{ post.title | escape }} のサムネイル画像" title="{{ post.title | escape }}">
         </div>
         <div class="post-text">
