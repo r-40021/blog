@@ -341,7 +341,7 @@ html {
       }
 
       .post-text {
-        padding: 2px 35px;
+        padding: 2px 40px;
       }
 
       @include media-query($on-palm) {
@@ -520,7 +520,7 @@ html {
 
     ul {
       margin-left: 15px;
-      padding-inline-end: 35px;
+      padding-inline-end: 40px;
 
       .post-link {
         @include relative-font-size(1.075);
@@ -770,7 +770,7 @@ html {
       padding: 15px;
     }
     .page-segments {
-      padding-inline-end: 35px;
+      padding-inline-end: 40px;
     }
   }
 
