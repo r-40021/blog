@@ -127,7 +127,7 @@ html[data-theme="dark"] {
         }
 
         a:after {
-          color: $dark-lighten-color;
+          color: $dark-background-color;
         }
       }
 
@@ -152,7 +152,7 @@ html[data-theme="dark"] {
       }
 
       a:after {
-        color: $dark-lighten-color;
+        color: $dark-background-color;
       }
     }
   }
@@ -169,11 +169,11 @@ html[data-theme="dark"] {
     }
 
     a:visited:after {
-      background-color: $dark-link-color;
+      background-color: $dark-lighten-color;
     }
 
     a:after {
-      color: $dark-link-color;
+      color: $dark-background-color;
     }
   }
 
