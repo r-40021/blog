@@ -19,7 +19,7 @@
       {%- include functions.html func='get_article_excerpt' -%}
       {% assign excerpt = return %}
       {%- assign post_url = post.url | relative_url -%}
-      {% capture baseurl %}{{site.baseurl}}\/{% endcapture %}
+      {% capture baseurl %}{{site.baseurl}}/{% endcapture %}
       <a class="card-link" href="{{ post_url }}">
         <div class="post-img">
           <img src="{{ img | remove_first: baseurl+"/" | default: "assets/images/banners/ogp.jpg" | relative_url }}" loading="lazy"
