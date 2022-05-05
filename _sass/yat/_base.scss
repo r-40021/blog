@@ -204,8 +204,8 @@ pre {
 .wrapper {
   max-width: $content-width;
   margin: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
+  padding-right: $spacing-unit / 3;
+  padding-left: $spacing-unit / 3;
   @extend %clearfix;
 }
 .wrapper.wrapper-home {

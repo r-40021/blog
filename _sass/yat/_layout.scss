@@ -756,6 +756,12 @@ html {
 
   .main {
     @extend %flex-1;
+    
+    .post {
+      background-color: $theme-color;
+      border-radius: $card-border-radius;
+      padding: 15px;
+    }
   }
 
   .sidebar {

@@ -1,5 +1,6 @@
 $dark-background-color: #0e0e0e !default;
 $dark-text-color: #bbb !default;
+$dark-lighten-color: #333 !default;
 
 html[data-theme="dark"] {
   &[data-scroll-status='top'] {
@@ -70,6 +71,10 @@ html[data-theme="dark"] {
       box-shadow: 0 0 3px 1px #0000005b;
     }
 
+    framework .main .post {
+      background-color: $dark-lighten-color;
+    }
+
     .ct-language-selected,
     .ct-language-dropdown li:hover {
       background-color: #222 !important;
@@ -105,8 +110,8 @@ html[data-theme="dark"] {
 
   .pagination {
     .list-item {
-      background-color: #333;
-      
+      background-color: $dark-lighten-color;
+
       .post-link {
         color: $dark-text-color;
       }
@@ -184,7 +189,7 @@ html[data-theme="dark"] {
       }
 
       span {
-        background-color: #333;
+        background-color: $dark-lighten-color;
       }
     }
   }
