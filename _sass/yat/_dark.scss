@@ -137,7 +137,7 @@ html[data-theme="dark"] {
         }
 
         &:visited .post-title:after {
-          background-color: #fff;
+          background-color: $dark-lighten-color;
         }
 
         .post-excerpt {
