@@ -15,7 +15,7 @@ html {
       background-color: transparent;
       transition: 0.1s height, background-color, box-shadow;
 
-      &.site-header {
+      .site-header {
 
         .site-brand-inner,
         .page-link {
@@ -312,11 +312,18 @@ html {
       margin-bottom: $spacing-unit * 1.5;
       width: calc(50% - 15*2px);
 
+      .card-link {
+        color: inherit;
+        text-decoration: none;
+        display: inline-block;
+        height: 100%;
+      }
+
       &:hover img {
         transform: scale(1.2);
       }
 
-      >.post-text {
+      .post-text {
         padding: 2px 35px;
       }
 
@@ -815,7 +822,7 @@ html {
   }
 
   li a {
-    &.post-link {
+    .post-link {
       margin-left: 5px;
     }
 

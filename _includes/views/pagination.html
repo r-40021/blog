@@ -10,7 +10,7 @@
   <div class="post-list">
     {%- for post in paginator.posts -%}
     <article class="list-item">
-      <a href="{{ post_url }}" title="{{ post.title | escape }}">
+      <a class="card-link" href="{{ post_url }}">
         {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
         {% assign img = post.image %}
         {% assign article = post.content %}
@@ -21,8 +21,8 @@
         {% assign excerpt = return %}
         {%- assign post_url = post.url | relative_url -%}
         <div class="post-img">
-          <img src="{{ img | default: " assets/images/banners/ogp.png" | relative_url }}" loading="lazy"
-            alt="{{ post.title | escape }} のサムネイル画像">
+          <img src="{{ img | default: "assets/images/banners/ogp.png" | relative_url }}" loading="lazy"
+            alt="{{ post.title | escape }} のサムネイル画像" title="{{ post.title | escape }}">
         </div>
         <div class="post-text">
           <h2 class="post-title">
