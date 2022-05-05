@@ -22,7 +22,7 @@ $theme-color: map-get($theme-colors, "snowwhite");
 $brand-color: map-get($brand-colors, "greenblue");
 $base-line-height: 1.9;
 $base-font-size: 16px;
-$base-font-family: -apple-system, blinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Roboto", "Arial", sans-serif;
+$base-font-family: sans-serif;
 
 @if map-has-key($theme-colors, $theme-name) {
   $theme-color: map-get($theme-colors, $theme-name);
