@@ -130,7 +130,7 @@ html[data-theme="dark"] {
           margin-top: 3px;
           padding: 0px 3px;
           background-color: $brand-color;
-          color: #fff;
+          color: $dark-lighten-color;
           font-size: 10px;
           font-weight: 600;
           border-radius: 2px;
