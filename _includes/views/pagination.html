@@ -10,40 +10,38 @@
   <div class="post-list">
     {%- for post in paginator.posts -%}
     <article class="list-item">
-      {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
-      {% assign img = post.image %}
-      {% assign article = post.content %}
-      {% assign lang = post.lang %}
-      {%- include functions.html func='get_reading_time' -%}
-      {% assign reading_time = return %}
-      {%- include functions.html func='get_article_excerpt' -%}
-      {% assign excerpt = return %}
-      {%- assign post_url = post.url | relative_url -%}
-      <div class="post-img">
-        <a href="{{ post_url }}" title="{{ post.title | escape }}">
-          <img src="{{ img | default: "assets/images/banners/ogp.png" | relative_url }}" loading="lazy"
+      <a href="{{ post_url }}" title="{{ post.title | escape }}">
+        {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
+        {% assign img = post.image %}
+        {% assign article = post.content %}
+        {% assign lang = post.lang %}
+        {%- include functions.html func='get_reading_time' -%}
+        {% assign reading_time = return %}
+        {%- include functions.html func='get_article_excerpt' -%}
+        {% assign excerpt = return %}
+        {%- assign post_url = post.url | relative_url -%}
+        <div class="post-img">
+          <img src="{{ img | default: " assets/images/banners/ogp.png" | relative_url }}" loading="lazy"
             alt="{{ post.title | escape }} のサムネイル画像">
-        </a>
-      </div>
-      <div class="post-text">
-        <h2 class="post-title">
-          <a class="post-link" href="{{ post_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h2>
-        <div class="post-meta">
-          <span class="post-date"><span class="material-icons-outlined" aria-label="公開日">event</span> {{ post.date |
-            date:
-            date_format }}</span>
-          <span class="post-reading-time left-vsplit"><span class="material-icons-outlined"
-              aria-label="読了時間">schedule</span> {{ reading_time }}</span>
         </div>
-        <a class="post-excerpt" href="{{ post_url }}">
-          <p>
-            {{ excerpt }}
-          </p>
-        </a>
-      </div>
+        <div class="post-text">
+          <h2 class="post-title">
+            {{ post.title | escape }}
+          </h2>
+          <div class="post-meta">
+            <span class="post-date"><span class="material-icons-outlined" aria-label="公開日">event</span> {{ post.date |
+              date:
+              date_format }}</span>
+            <span class="post-reading-time left-vsplit"><span class="material-icons-outlined"
+                aria-label="読了時間">schedule</span> {{ reading_time }}</span>
+          </div>
+          <span class="post-excerpt">
+            <p>
+              {{ excerpt }}
+            </p>
+          </span>
+        </div>
+      </a>
     </article>
     {%- endfor -%}
   </div>
