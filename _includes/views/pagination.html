@@ -10,16 +10,16 @@
   <div class="post-list">
     {%- for post in paginator.posts -%}
     <article class="list-item">
+      {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
+      {% assign img = post.image %}
+      {% assign article = post.content %}
+      {% assign lang = post.lang %}
+      {%- include functions.html func='get_reading_time' -%}
+      {% assign reading_time = return %}
+      {%- include functions.html func='get_article_excerpt' -%}
+      {% assign excerpt = return %}
+      {%- assign post_url = post.url | relative_url -%}
       <a class="card-link" href="{{ post_url }}">
-        {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
-        {% assign img = post.image %}
-        {% assign article = post.content %}
-        {% assign lang = post.lang %}
-        {%- include functions.html func='get_reading_time' -%}
-        {% assign reading_time = return %}
-        {%- include functions.html func='get_article_excerpt' -%}
-        {% assign excerpt = return %}
-        {%- assign post_url = post.url | relative_url -%}
         <div class="post-img">
           <img src="{{ img | default: "assets/images/banners/ogp.png" | relative_url }}" loading="lazy"
             alt="{{ post.title | escape }} のサムネイル画像" title="{{ post.title | escape }}">
