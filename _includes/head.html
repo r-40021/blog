@@ -9,7 +9,7 @@
   <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ page.image | remove_first: baseurl | escape | default: "assets/images/banners/ogp.jpg" }}" />
   <meta property="twitter:image" content="{{ site.url }}{{ site.baseurl }}/{{ page.image | remove_first: baseurl | escape | default: "assets/images/banners/ogp.jpg" }}" />
   
-  {%- seo -%}
+  {%- seo title=false -%}
   
   <!-- OGP -->
   <meta property="og:title" content="{% if page.layout == "home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}" />
