@@ -91,7 +91,8 @@ html[data-theme="dark"] {
   .framework .main .post {
     background-color: $dark-lighten-color;
 
-    .post-nav a, .post-related a {
+    .post-nav a,
+    .post-related a {
       color: $dark-link-color
     }
   }
@@ -121,22 +122,31 @@ html[data-theme="dark"] {
         color: $dark-text-color;
       }
 
-      .post-title {
-        a:visited:after {
-          background-color: $dark-lighten-color;
+      .card-link {
+        .post-title:after {
+          content: 'NEW';
+          position: absolute;
+          margin-left: 8px;
+          margin-top: 3px;
+          padding: 0px 3px;
+          background-color: $brand-color;
+          color: #fff;
+          font-size: 10px;
+          font-weight: 600;
+          border-radius: 2px;
         }
 
-        a:after {
-          color: $dark-lighten-color;
+        &:visited .post-title:after {
+          background-color: #fff;
         }
-      }
 
-      .post-excerpt {
-        color: #aaa;
-      }
+        .post-excerpt {
+          color: #aaa;
+        }
 
-      .post-tags .post-tag:hover {
-        color: #d7d7d7;
+        .post-tags .post-tag:hover {
+          color: #d7d7d7;
+        }
       }
     }
   }

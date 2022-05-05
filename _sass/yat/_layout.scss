@@ -25,7 +25,7 @@ html {
 
         @include media-query($on-laptop) {
           .page-link {
-            color: $header-text-color;
+            color: #fff;
           }
 
           .menu-icon {
