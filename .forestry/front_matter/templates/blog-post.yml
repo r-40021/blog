@@ -27,6 +27,7 @@ fields:
     - SNS
     - その他
     - プログラミング
+    - トラブル解決
     source:
       type: simple
       section: 
