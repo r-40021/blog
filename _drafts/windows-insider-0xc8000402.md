@@ -1,0 +1,31 @@
+---
+layout: post
+categories: PC
+tags:
+- Windows
+- Windows11
+title: Windows Insider で 0xc8000402 エラーになりビルドをインストール出来ない場合の対処法(結構簡単)
+image: "/blog/assets/images/2022/05/20/dog-using-ipad.jpg"
+headAlt: iPadを使う犬
+copylight: ''
+
+---
+## 現象
+
+Windows Insider Program に登録後ビルドをインストールしようとしたが、0xc8000402 エラーが出て進まない。
+
+## 対処法
+
+まず、前提条件として
+
+* 現在 Windows 10 を使っていること
+
+を確認してください。
+
+対処法自体は非常に簡単で、**一度製品版の Windows 11 にアップグレードしてから Windows Insider のビルドをインストール**するだけです。
+
+一度製品版の Windows 11 にアップグレードするところが肝です。
+
+製品版の Windows 11 には、Microsoft 公式サイトからインストールアシスタントをダウンロードして実行すれば簡単にアップグレードできます。
+
+<a href="https://www.microsoft.com/ja-jp/software-download/windows11" target="_blank" rel="noopener noreferrer">Windows 11 をダウンロードする (Microsoft)</a>
