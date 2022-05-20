@@ -229,7 +229,6 @@ html {
 
   .post-title {
     @include relative-font-size(2.625);
-    letter-spacing: -1px;
     line-height: 1.5;
 
     @include media-query($on-laptop) {
@@ -684,7 +683,6 @@ html {
 
       > :nth-child(1) {
         @include relative-font-size(3.9);
-        letter-spacing: -1px;
         margin-bottom: 0.1em;
         font-weight: normal;
         transition: 0.2s all;
