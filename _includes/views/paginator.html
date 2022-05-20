@@ -6,7 +6,7 @@
   <div class="paginator">
     <span class="previous">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">前へ</a>
+      <a href="{{ paginator.previous_page_path | relative_url }}#post-list">前へ</a>
     {% else %}
       <span>前へ</span>
     {% endif %}
@@ -16,7 +16,7 @@
 
     <span class="next">
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}">次へ</a>
+      <a href="{{ paginator.next_page_path | relative_url }}#post-list">次へ</a>
     {% else %}
       <span>次へ</span>
     {% endif %}
