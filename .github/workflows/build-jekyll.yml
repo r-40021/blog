@@ -3,7 +3,7 @@ name: Github Pages
 on:
   push:
     branches:
-      - main  # Here source code branch is `master`, it could be other branch
+      - master  # Here source code branch is `master`, it could be other branch
 
 jobs:
   build_and_deploy:
@@ -30,4 +30,6 @@ jobs:
           jekyll_cfg: '_config.yml'  # Default is _config.yml
           jekyll_baseurl: '/jekyll-theme-yat'  # Default is empty
           cname: ''                  # Default is to not use a cname
-          actor: ''                  # Default is the GITHUB_ACTOR          
+          actor: ''                  # Default is the GITHUB_ACTOR
+        env:
+          TZ: 'Asia/Tokyo'
