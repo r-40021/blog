@@ -22,3 +22,10 @@ layout: default
   <p><strong>お探しのページは見つかりませんでした。</strong></p>
   <p>メニューから他のページをご覧ください。</p>
 </div>
+
+<script>
+  const path = location.pathname.split('/');
+  if (path.length > 5) {
+    location.pathname = path[1] + '/' + path[3] + '-' + path[4] + '/' + path[6].replace('.html', '');
+  }
+</script>
