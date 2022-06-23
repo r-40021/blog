@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Aviutl の勉強をはじめました"
-subheading: "早速初投稿"
-categories: YouTube
+title: Aviutl の勉強をはじめました
+subheading: 早速初投稿
+categories:
+- PC
 tags: Aviutl YouTube
----
 
+---
 この度、Aviutl の勉強をはじめました。
 
 そしてその第１作目を YouTube に公開しました。
