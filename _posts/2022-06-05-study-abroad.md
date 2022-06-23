@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: その他
+categories: 雑記
 tags:
 - ポエム
 - 英語
