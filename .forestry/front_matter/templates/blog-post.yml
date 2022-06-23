@@ -25,9 +25,9 @@ fields:
     - Google
     - PC
     - SNS
-    - その他
     - プログラミング
     - スマホ
+    - 雑記
     source:
       type: simple
       section: 
