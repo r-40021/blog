@@ -16,6 +16,15 @@ fields:
     required: true
   label: タイトル
   description: タイトル
+- name: lastmod
+  type: datetime
+  label: 最終更新
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
 - name: categories
   type: select
   default: PC
