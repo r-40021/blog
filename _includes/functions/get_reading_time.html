@@ -24,7 +24,7 @@
 {% assign hours = total_mins | divided_by: 60 %}
 {% assign mins = total_mins | modulo: 60 %}
 
-{% assign return = "約" %}
+{% assign return = "" %}
 
 {% if hours > 0 %}
   {% assign unit = "時間" %}
