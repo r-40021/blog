@@ -45,7 +45,7 @@ fields:
     description: ''
     config:
       required: false
-      date_format: 
+      date_format: YYYY/MM/DD
       time_format: 
       display_utc: false
   label: 最終更新日設定
