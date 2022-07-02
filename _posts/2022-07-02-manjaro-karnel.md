@@ -51,7 +51,7 @@ Xubuntuは起動するのにManjaroくんが起動しない…
 
 出力は以下のようになります(一例です)。
 
-    [user@mainpc ~]$ sudo grub-install /dev/nvme0n1p2                               ✔ 
+    [user@mainpc ~]$ sudo grub-install /dev/nvme0n1p2
     Installing for x86_64-efi platform.
     Installation finished. No error reported.
 
