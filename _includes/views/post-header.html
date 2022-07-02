@@ -6,8 +6,8 @@
     <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
       <span class="material-icons-outlined" aria-label="公開日">event</span> {{ page.date | date: date_format }}
-      {%- if page.lastmod -%}
-        <span class="post-reading-time left-vsplit"><span class="material-icons-outlined" aria-label="最終更新日">sync</span> {{ page.lastmod | date: date_format }}
+      {%- if page.date_modified -%}
+        <span class="post-reading-time left-vsplit"><span class="material-icons-outlined" aria-label="最終更新日">sync</span> {{ page.date_modified | date: date_format }}
       {%- endif -%}
     </time>
 
