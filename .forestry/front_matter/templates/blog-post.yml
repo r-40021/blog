@@ -16,15 +16,6 @@ fields:
     required: true
   label: タイトル
   description: タイトル
-- name: date_modified
-  type: datetime
-  label: 最終更新
-  description: ''
-  config:
-    required: false
-    date_format: YYYY/MM/DD
-    time_format: 
-    display_utc: false
 - name: categories
   type: select
   default: PC
@@ -44,6 +35,20 @@ fields:
       file: 
       path: 
   label: カテゴリー
+- name: SEO
+  type: field_group
+  config: {}
+  fields:
+  - name: date_modified
+    type: datetime
+    label: 最終更新
+    description: ''
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
+  label: SEO
 - name: tags
   type: tag_list
   default: []
