@@ -47,6 +47,8 @@ Xubuntuは起動するのにManjaroくんが起動しない…
 
 `${disk}` となっている箇所には、先程調べたパーティションの"NAME"(例：nvme0n1p2)を入れてください。
 
+    sudo grub-install /dev/${disk}
+
 出力は以下のようになります(一例です)。
 
     [user@mainpc ~]$ sudo grub-install /dev/nvme0n1p2                               ✔ 
