@@ -35,7 +35,7 @@ fields:
       file: 
       path: 
   label: カテゴリー
-- name: SEO
+- name: seo
   type: field_group
   config: {}
   fields:
