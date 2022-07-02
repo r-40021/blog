@@ -16,7 +16,7 @@ fields:
     required: true
   label: タイトル
   description: タイトル
-- name: lastmod
+- name: date_modified
   type: datetime
   label: 最終更新
   description: ''
