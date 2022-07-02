@@ -31,14 +31,14 @@ Xubuntuは起動するのにManjaroくんが起動しない…
 (これで起動できなかった場合、もしくはGRUBメニューが現れなかった場合は、この記事の最後の「"fallback"のカーネルで起動しない場合」をお読みください。)
 
 まず、`lsblk -l`コマンドを実行してディスクの状況を調べます。
-
+```bash
     [user@mainpc ~]$ lsblk -l
     NAME      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
     nvme0n1   259:0    0 238.5G  0 disk 
     nvme0n1p1 259:1    0   300M  0 part /boot/efi
     nvme0n1p2 259:2    0 192.5G  0 part /
     nvme0n1p3 259:3    0  45.6G  0 part
-
+```
 容量を頼りに、Manjaroがインストールされているパーティションを探し、その列の「NAME」を確認します。
 
 (ここでは、"nvme0n1p2"にManjaroがインストールされています。)
