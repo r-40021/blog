@@ -33,8 +33,8 @@
             <span class="post-date"><span class="material-icons-outlined" aria-label="公開日">event</span> {{ post.date |
               date:
               date_format }}</span>
-            {%- if page.lastmod -%}
-              <span class="post-reading-time left-vsplit"><span class="material-icons-outlined" aria-label="最終更新日">sync</span> {{ page.lastmod | date: date_format }}
+            {%- if post.lastmod -%}
+              <span class="post-reading-time left-vsplit"><span class="material-icons-outlined" aria-label="最終更新日">sync</span> {{ post.lastmod | date: date_format }}
             {%- endif -%}
             <span class="post-reading-time left-vsplit"><span class="material-icons-outlined"
                 aria-label="読了時間">schedule</span> {{ reading_time }}</span>
