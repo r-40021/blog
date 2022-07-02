@@ -31,7 +31,7 @@ Xubuntuは起動するのにManjaroくんが起動しない…
 (これで起動できなかった場合、もしくはGRUBメニューが現れなかった場合は、この記事の最後の「"fallback"のカーネルで起動しない場合」をお読みください。)
 
 まず、`lsblk -l`コマンドを実行してディスクの状況を調べます。
-```shell
+```bash
     [user@mainpc ~]$ lsblk -l
     NAME      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
     nvme0n1   259:0    0 238.5G  0 disk 
