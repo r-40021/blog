@@ -46,7 +46,7 @@ fields:
     config:
       required: false
       date_format: YYYY/MM/DD
-      time_format: 
+      time_format: hh:mm
       display_utc: false
   label: 最終更新日設定
 - name: tags
