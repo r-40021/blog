@@ -127,6 +127,10 @@ paginate: 30
 #   client_secret: "Your client secret"
 #   redirect_uri: "Your redirect url"   # If you use a custom domain name
 
+# timezone
+timezone: Asia/Tokyo
+
+
 # Build settings
 # highlighter: none
 markdown: kramdown
