@@ -44,10 +44,11 @@ fields:
     label: 最終更新
     description: ''
     config:
-      required: false
+      required: true
       date_format: YYYY/MM/DD
       time_format: hh:mm
       display_utc: false
+    default: '2022-07-10 13:48:51 +0900'
   label: 最終更新日設定
 - name: tags
   type: tag_list
