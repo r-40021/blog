@@ -1,0 +1,25 @@
+---
+layout: post
+categories: PC
+seo:
+  date_modified: 2022-07-11 20:00:51 +0900
+tags:
+- Linux
+- Arch
+copylight: ' Photo by <a href="https://unsplash.com/@anagani_saikiran?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+  target="_blank" rel="noopener noreferrer">Sai Kiran Anagani</a> on <a href="https://unsplash.com/s/photos/linux?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+  target="_blank" rel="noopener noreferrer">Unsplash</a>'
+title: 'yayで「patch: コマンドが見つかりません」エラーが出たときの対処法'
+image: "/blog/assets/images/2022/07/11/terminal.jpg"
+headAlt: ターミナル
+
+---
+## 現象
+
+yayでGriveを再インストールしようとしたら「patch: コマンドが見つかりません」というエラーが出てインストールできなくなりました。
+
+## 解決策
+
+以下のコマンドを実行してパッケージをビルドするために必要なツール群をインストールします。
+
+    pacman -S base-devel
