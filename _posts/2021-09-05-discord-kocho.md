@@ -14,11 +14,11 @@ seo:
 
 <div>
 
-以下の記事で、「GASを使ってGlitchのサーバーがスリープ状態に入らないようにする」方法が紹介されていますが、今後禁止される可能性があるとのことです。
+<p>以下の記事で、「GASを使ってGlitchのサーバーがスリープ状態に入らないようにする」方法が紹介されていますが、今後禁止される可能性があるとのことです。</p>
 
-ちょっとしたDiscordのbotを作る程度であれば問題ないと思われますが、Glitchに過度な負担をかけないように十分注意してください。
+<p>ちょっとしたDiscordのbotを作る程度であれば問題ないと思われますが、Glitchに過度な負担をかけないように十分注意してください。</p>
 
-<a href="https://blog.glitch.com/post/ping-services" target="_blank" rel="noopener noreferrer">Ping Services on Glitch — Glitch Blog</a>
+<p><a href="https://blog.glitch.com/post/ping-services" target="_blank" rel="noopener noreferrer">Ping Services on Glitch — Glitch Blog</a></p>
 
 </div>
 
