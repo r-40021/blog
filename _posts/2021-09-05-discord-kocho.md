@@ -5,18 +5,22 @@ subheading: 1円もかけずに運営
 categories: SNS
 tags: Discord bot 自動化 Glitch
 seo:
-  date_modified: 2022-07-27 23:00:00 +0900
+  date_modified: 2022-07-27T23:00:00.000+09:00
 
 ---
 こんにちは！今回は、**1円もかけずに** Discord の bot を作ったのでその話をしていこうと思います。
 
 <div class="alert-card">
 
+<div>
+
 以下の記事で、「GASを使ってGlitchのサーバーがスリープ状態に入らないようにする」方法が紹介されていますが、今後禁止される可能性があるとのことです。
 
 ちょっとしたDiscordのbotを作る程度であれば問題ないと思われますが、Glitchに過度な負担をかけないように十分注意してください。
 
 <a href="https://blog.glitch.com/post/ping-services" target="_blank" rel="noopener noreferrer">Ping Services on Glitch — Glitch Blog</a>
+
+</div>
 
 </div>
 
