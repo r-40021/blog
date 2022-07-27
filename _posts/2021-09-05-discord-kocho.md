@@ -1,20 +1,30 @@
 ---
 layout: post
 title: "【完全無料・24時間稼働】Discord の bot を作った話"
-subheading: "1円もかけずに運営"
+subheading: 1円もかけずに運営
 categories: SNS
 tags: Discord bot 自動化 Glitch
----
 
+---
 こんにちは！今回は、**1円もかけずに** Discord の bot を作ったのでその話をしていこうと思います。
 
+<div class="alert-card">
+
+以下の記事で、「GASを使ってGlitchのサーバーがスリープ状態に入らないようにする」方法が紹介されていますが、今後禁止される可能性があるとのことです。
+
+ちょっとしたDiscordのbotを作る程度であれば問題ないと思われますが、Glitchに過度な負担をかけないように十分注意してください。
+
+<a href="https://blog.glitch.com/post/ping-services" target="_blank" rel="noopener noreferrer">Ping Services on Glitch — Glitch Blog</a>
+
+</div>
+
 ## 作ったもの
+
 「校長先生風の bot」を作りました。
 
 サーバーがにぎやかになっていい感じです。
 
 ![動いている様子](https://user-images.githubusercontent.com/75155258/132112814-bbe4b7ab-eaea-4732-b9ed-66f0148ea31c.png)
-
 
 ### 説明書
 
@@ -30,8 +40,8 @@ tags: Discord bot 自動化 Glitch
 
 すべて無料のものです。
 
-- Glitch (Node.js で色々動かせるサービス)
-- Google Apps Script (Glitch サーバーのスリープ防止)
+* Glitch (Node.js で色々動かせるサービス)
+* Google Apps Script (Glitch サーバーのスリープ防止)
 
 ### 参考にしたサイト
 
@@ -40,6 +50,7 @@ tags: Discord bot 自動化 Glitch
 とてもわかりやすかったです。`npm` などのパッケージ管理ツールを使ったことがあり、JavaScript がある程度できる人であれば簡単に作れると思います。
 
 #### 注意点
+
 とても分かりやすいサイトなのですが、情報が1年前のものなので今とは違う点がいくつかあります。
 
 ##### 「New Project」から「glitch-hello-node」を選ぶ
@@ -59,6 +70,7 @@ tags: Discord bot 自動化 Glitch
 機密情報はコードに書かないで、確実に環境変数に入れるようにしてください。
 
 ## まとめ
+
 いかがでしたか？
 
 このように、簡単かつ無料で Discord の bot を作成できるので、ぜひ試してみてください！
