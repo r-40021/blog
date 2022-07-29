@@ -75,6 +75,7 @@ fields:
   description: ヘッダー画像のコピーライト
   default: ' target="_blank" rel="noopener noreferrer"'
 pages:
+- _posts/1.md
 - _posts/2022-05-05-renewal.md
 - _posts/2022-05-20-insider.md
 - _posts/2022-05-21-noto.md
