@@ -9,7 +9,7 @@ tags:
 copylight: 'Photo by <a href="https://unsplash.com/@tncjpg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
   target="_blank" rel="noopener noreferrer">tanmay</a> on <a href="https://unsplash.com/s/photos/anniversary?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
   target="_blank" rel="noopener noreferrer">Unsplash</a>   '
-title: "【ブログ1周年記念】ブログを書くのは非効率だが…"
+title: "【ブログ1周年記念】ブログを書くのは非効率だが、いいこともある＆今後について"
 image: "/blog/assets/images/2022/07/28/anniversary.jpg"
 headAlt: 誕生日ケーキ
 
