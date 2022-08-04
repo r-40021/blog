@@ -30,13 +30,7 @@
             {{ post.title | escape }}
           </h2>
           <div class="post-meta">
-            {%- if post.seo.date_modified -%}
-              <span class="material-icons-outlined" aria-label="最終更新日" title="最終更新日">sync</span> {{ post.seo.date_modified | date: date_format }}
-            {%- else -%}
-               <span class="post-date"><span class="material-icons-outlined" aria-label="公開日" title="公開日">event</span> {{ post.date |
-                date:
-                date_format }}</span>
-            {%- endif -%}
+            <span class="post-date"><span class="material-icons-outlined" aria-label="公開日" title="公開日">event</span> {{ post.date | date:  date_format }}</span>
             <span class="post-reading-time left-vsplit"><span class="material-icons-outlined"
                 aria-label="読了時間" title="読了時間の目安">schedule</span> {{ reading_time }}</span>
           </div>
