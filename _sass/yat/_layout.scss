@@ -451,6 +451,13 @@ html {
       color: #808080;
     }
   }
+  
+  a[target="_blank"]:after {
+      font-family: "Material Icons";
+      font-size: .8rem;
+      content: "\e89e";
+      margin-inline-start: .3em;
+  }
 
   .post-content {
     margin-bottom: $spacing-unit;
