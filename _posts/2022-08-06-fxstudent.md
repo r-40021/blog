@@ -30,9 +30,9 @@ Firefoxの広報活動を行う、学生主体のチームです。学生にFire
 
 ## 活動内容
 
-現在はメンバー不足のため<a href="https://twitter.com/firefox_st" target="_blank"  target="_blank" rel="noopener noreferrer"rel="noopener noreferrer">Twitter</a>や<a href="https://line.me/R/ti/p/TT5Rx0HQLP">LINE公式アカウント</a>での活動がメインです。
+現在はメンバー不足のため<a href="https://twitter.com/firefox_st" target="_blank" rel="noopener noreferrer">Twitter</a>や<a href="https://line.me/R/ti/p/TT5Rx0HQLP" target="_blank" rel="noopener noreferrer">LINE公式アカウント</a>での活動がメインです。
 
-<a href="https://fxstudent.tumblr.com/" target="_blank" rel="noopener noreferre">ブログ</a>もありますが、現在は更新を停止しています。
+<a href="https://fxstudent.tumblr.com/" target="_blank" rel="noopener noreferrer">ブログ</a>もありますが、現在は更新を停止しています。
 
 以前は勉強会やワークショップも企画していましたが、人手不足に加えてコロナ禍ということもあり最近は開催できていないそうです。
 
@@ -42,8 +42,8 @@ Firefoxの広報活動を行う、学生主体のチームです。学生にFire
 
 よろしければTwitterのフォローとLINE公式アカウントへの登録をお願いします。私が書いた文章が流れてくるかもしれません…
 
-* <a href="https://twitter.com/firefox_st" target="_blank"  target="_blank" rel="noopener noreferrer"rel="noopener noreferrer">Twitter</a>
-* <a href="https://line.me/R/ti/p/TT5Rx0HQLP">LINE公式アカウント</a>
+* <a href="https://twitter.com/firefox_st" target="_blank" rel="noopener noreferrer">Twitter</a>
+* <a href="https://line.me/R/ti/p/TT5Rx0HQLP" target="_blank" rel="noopener noreferrer">LINE公式アカウント</a>
 
 また、私はFirefoxのことが好きですが、「Chromeはクソ」とか「Edgeを使うやつは情弱」みたいなことは一切思っていませんので、今後もこれまでと変わらず接していただければ幸いです。
 
@@ -59,5 +59,5 @@ Firefox学生マーケティングチームは現在、メンバー不足に陥�
 
 参加をご希望の方は、以下のいずれかの方法でお知らせください。お待ちしております！
 
-* <a href="https://twitter.com/firefox_st" target="_blank"  target="_blank" rel="noopener noreferrer"rel="noopener noreferrer">Twitterアカウント</a>にDM
-* <a href="https://join.slack.com/t/mozillajp/shared_invite/MjI2NDMwODUwNzY5LTE1MDI4MjEyMjktYjE2MThlMmM4OA" target="_blank"  target="_blank" rel="noopener noreferrer"rel="noopener noreferrer">Slack</a>の #fxstudent チャンネルにメッセージを送信
+* <a href="https://twitter.com/firefox_st" target="_blank" rel="noopener noreferrer">Twitterアカウント</a>にDM
+* <a href="https://join.slack.com/t/mozillajp/shared_invite/MjI2NDMwODUwNzY5LTE1MDI4MjEyMjktYjE2MThlMmM4OA" target="_blank" rel="noopener noreferrer">Slack</a>の #fxstudent チャンネルにメッセージを送信
