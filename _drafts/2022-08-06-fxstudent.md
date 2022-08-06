@@ -37,16 +37,18 @@ Firefoxの広報活動を行う、学生主体のチームです。学生にFire
 以前は勉強会やワークショップも企画していましたが、人手不足に加えてコロナ禍ということもあり最近は開催できていないそうです。
 
 ## 意気込み
+
 少しでもFirefoxに興味を持ってくれる方が増えるように、頑張ってFirefoxの魅力を発信していきます。
 
 よろしければTwitterのフォローとLINE公式アカウントへの登録をお願いします。私が書いた文章が流れてくるかもしれません…
 
-- <a href="https://twitter.com/firefox_st" target="_blank"  target="_blank" rel="noopener noreferrer"rel="noopener noreferrer">Twitter</a>
-- <a href="https://line.me/R/ti/p/TT5Rx0HQLP">LINE公式アカウント</a>
+* <a href="https://twitter.com/firefox_st" target="_blank"  target="_blank" rel="noopener noreferrer"rel="noopener noreferrer">Twitter</a>
+* <a href="https://line.me/R/ti/p/TT5Rx0HQLP">LINE公式アカウント</a>
 
 また、私はFirefoxのことが好きですが、「Chromeはクソ」とか「Edgeを使うやつは情弱」みたいなことは一切思っていませんので、今後もこれまでと変わらず接していただければ幸いです。
 
 ## 最後に
+
 Firefox学生マーケティングチームは現在、メンバー不足に陥っています。
 
 少しでも興味があるという方は参加してくださると助かります！
@@ -57,5 +59,5 @@ Firefox学生マーケティングチームは現在、メンバー不足に陥�
 
 参加をご希望の方は、以下のいずれかの方法でお知らせください。お待ちしております！
 
-- <a href="https://twitter.com/firefox_st" target="_blank"  target="_blank" rel="noopener noreferrer"rel="noopener noreferrer">Twitterアカウント</a>にDM
-- <a href="https://join.slack.com/t/mozillajp/shared_invite/MjI2NDMwODUwNzY5LTE1MDI4MjEyMjktYjE2MThlMmM4OA" target="_blank"  target="_blank" rel="noopener noreferrer"rel="noopener noreferrer">Slack</a>の #fxstudent チャンネルにメッセージを送信
+* <a href="https://twitter.com/firefox_st" target="_blank"  target="_blank" rel="noopener noreferrer"rel="noopener noreferrer">Twitterアカウント</a>にDM
+* <a href="https://join.slack.com/t/mozillajp/shared_invite/MjI2NDMwODUwNzY5LTE1MDI4MjEyMjktYjE2MThlMmM4OA" target="_blank"  target="_blank" rel="noopener noreferrer"rel="noopener noreferrer">Slack</a>の #fxstudent チャンネルにメッセージを送信
