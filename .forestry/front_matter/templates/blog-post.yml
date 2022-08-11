@@ -48,7 +48,7 @@ fields:
       date_format: YYYY/MM/DD
       time_format: hh:mm
       display_utc: false
-    default: '2022-07-10 13:48:51 +0900'
+    default: now
   label: 最終更新日設定
 - name: tags
   type: tag_list
