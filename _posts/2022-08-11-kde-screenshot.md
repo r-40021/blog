@@ -33,4 +33,4 @@ KDEやDebian、Ubuntu、Fedoraからも、インテル第4世代以降のGPUを�
 ## 参考サイト
 
 * <a href="https://bbs.archlinux.org/viewtopic.php?id=263247" target="_blank" rel="noopener noreferrer">\[SOLVED\] KDE Plasma 5 / Spectacle Screenshot uses old screen state / Applications Desktop Environments / Arch Linux Forums</a>
-* <a href="https://wiki.archlinux.jp/index.php/Intel_Graphics" target="_blank" rel="noopener noreferrer">Intel Graphics - ArchWiki</a>
+* <a href="https://wiki.archlinux.jp/index.php/Intel_Graphics#.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB" target="_blank" rel="noopener noreferrer">Intel Graphics - ArchWiki</a>
