@@ -2,7 +2,7 @@
 layout: post
 categories: PC
 seo:
-  date_modified: 2022-08-13 10:20:14 +0900
+  date_modified: 2022-08-13 12:00:14 +0900
 tags:
 - PC
 - 作業効率化
@@ -61,7 +61,7 @@ CapsLockをEnterにするメリットは他にもいくつかあります。
 
 そうすると、テキストボックスに入力できる状態になると思います。そこに`KEY_ENTER`と入力してください。
 
-![KEY](/blog/assets/images/2022/08/13/key-enter-2.jpg)
+![KEY_ENTERと入力する](/blog/assets/images/2022/08/13/key-enter.jpg)
 
 最後に、画面左側の\[Autoload\]のスイッチをオンにしてログイン時に自動で設定が読み込まれるようにし、\[Apply\]を押して設定を適用します。
 
