@@ -41,7 +41,7 @@ title: About
 
 どの記事が伸びたかを知ることで、今後の記事執筆に役立てるためです。
 
-詳しくは<a href="/privacy" target="_blank" rel="noopener">プライバシーポリシー</a>にて。
+詳しくは<a href="https://frogapp.net/privacy" target="_blank" rel="noopener">プライバシーポリシー</a>にて。
 
 月1で今月のPV数などを記事にまとめるかも検討中。
 
@@ -72,8 +72,8 @@ Web アプリを開発している学生。
 - ~~AWS~~
 
 
-<p><a href="/" target="_blank" rel="noopener">＞＞ポートフォリオサイト</a></p>
+<p><a href="https://frogapp.net" target="_blank" rel="noopener">＞＞ポートフォリオサイト</a></p>
 
-<p><a href="/contact" target="_blank" rel="noopener">＞＞お問い合わせ</a></p>
+<p><a href="httpe://frogapp.net/contact" target="_blank" rel="noopener">＞＞お問い合わせ</a></p>
          
 <p><a href="https://github.com/r-40021/" target="_blank" rel="noopener noreferrer">＞＞GitHub</a></p>
