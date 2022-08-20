@@ -10,7 +10,7 @@ copylight: 'Photo by <a href="https://unsplash.com/@cytonn_photography?utm_sourc
   target="_blank" rel="noopener noreferrer">Cytonn Photography</a> on <a href="https://unsplash.com/s/photos/typing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
   target="_blank" rel="noopener noreferrer">Unsplash</a>   '
 title: 左Enterキーのすゝめ(Linux、Windows対応)
-image: "/blog/assets/images/2022/08/13/keyboard.jpg"
+image: "/assets/images/2022/08/13/keyboard.jpg"
 headAlt: タイピングしている様子
 
 ---
@@ -51,21 +51,21 @@ CapsLockをEnterにするメリットは他にもいくつかあります。
 
 起動したら、まずはデバイスを選択します。「Keyboard」の文字が含まれているものを選びます。キーボードが複数ある場合は機種名から推測してください。
 
-![キーボードを選択](/blog/assets/images/2022/08/13/select-keyboard.jpg)
+![キーボードを選択](/assets/images/2022/08/13/select-keyboard.jpg)
 
 その後、\[new entry\]の右側にある\[Change Key\]をクリックし、キーボードのCapsLockキーを押します。
 
-![\[new entry\]の右側にある\[Change Key\]をクリックし、キーボードのCapsLockキーを押す](/blog/assets/images/2022/08/13/change-key.jpg)
+![\[new entry\]の右側にある\[Change Key\]をクリックし、キーボードのCapsLockキーを押す](/assets/images/2022/08/13/change-key.jpg)
 
 \[new entry\]の上に\[CAPSLOCK\]という項目が現れればOKです。
 
 そうすると、テキストボックスに入力できる状態になると思います。そこに`KEY_ENTER`と入力してください。
 
-![KEY_ENTERと入力する](/blog/assets/images/2022/08/13/key-enter.jpg)
+![KEY_ENTERと入力する](/assets/images/2022/08/13/key-enter.jpg)
 
 最後に、画面左側の\[Autoload\]のスイッチをオンにしてログイン時に自動で設定が読み込まれるようにし、\[Apply\]を押して設定を適用します。
 
-![設定を適用](/blog/assets/images/2022/08/13/apply.jpg)
+![設定を適用](/assets/images/2022/08/13/apply.jpg)
 
 これで完了です。
 
@@ -81,7 +81,7 @@ CapsLockをEnterにするメリットは他にもいくつかあります。
 
 画面右側のキーボードの模式図をポチポチしていって、下の画像のようになるようにします。
 
-![KeySwapの設定](/blog/assets/images/2022/07/23/keyswap-1.jpg)
+![KeySwapの設定](/assets/images/2022/07/23/keyswap-1.jpg)
 
 過去画像を使いまわしている都合上、かなキーをBackspaceに置き換える設定も写っていますがあまり気にしないでください。
 

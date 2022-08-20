@@ -10,7 +10,7 @@ copylight: 'Photo by <a href="https://unsplash.com/@qgrignet?utm_source=unsplash
   target="_blank" rel="noopener noreferrer">Quentin Grignet</a> on <a href="https://unsplash.com/s/photos/firefox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
   target="_blank" rel="noopener noreferrer">Unsplash</a>   '
 title: Firefox学生マーケティングチームに参加しました
-image: "/blog/assets/images/2022/08/06/fox.jpg"
+image: "/assets/images/2022/08/06/fox.jpg"
 headAlt: レッサーパンダ
 
 ---

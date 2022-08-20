@@ -303,7 +303,7 @@ JavaScript がベースになっており、Google の色々なサービスを(�
 
 私の環境では再現できなかったのですが(Google に開発者登録をしているからかも)、もしそのような警告が出た場合は、下のサイトの手順通りに対処してください。
 
-<a href="https://auto-worker.com/blog/?p=609#toc_id_2" target="_blank" rel="noopener noreferrer">Google Apps Script(GAS)入門 初回コード実行時の承認・許可方法を解説【図説】 | AutoWorker〜Google Apps Script(GAS)とSikuliで始める業務改善入門</a>
+<a href="https://auto-worker.com/?p=609#toc_id_2" target="_blank" rel="noopener noreferrer">Google Apps Script(GAS)入門 初回コード実行時の承認・許可方法を解説【図説】 | AutoWorker〜Google Apps Script(GAS)とSikuliで始める業務改善入門</a>
 
 ※私のコードが信用できないという方は、「安全なページに戻る」をクリックしても構いません。
 

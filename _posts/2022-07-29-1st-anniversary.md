@@ -10,7 +10,7 @@ copylight: 'Photo by <a href="https://unsplash.com/@tncjpg?utm_source=unsplash&u
   target="_blank" rel="noopener noreferrer">tanmay</a> on <a href="https://unsplash.com/s/photos/anniversary?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
   target="_blank" rel="noopener noreferrer">Unsplash</a>   '
 title: "【1周年記念】ブログを書くのは非効率だが、いいこともある＆今後について"
-image: "/blog/assets/images/2022/07/28/anniversary.jpg"
+image: "/assets/images/2022/07/28/anniversary.jpg"
 headAlt: 誕生日ケーキ
 
 ---
@@ -34,7 +34,7 @@ headAlt: 誕生日ケーキ
 
 一部リンク切れが起きていますが、そこはご愛嬌。今こうしてみてみると、こっちのデザインも案外いいですね。
 
-当時は毎日更新で[Chrome拡張機能の作り方](https://r-40021.github.io/blog/2021-07/chrome-extension-1)を書いていました。今はブログを毎日書く気力なんてありませんが、当時は1日の半分はブログの記事を書く生活でした。
+当時は毎日更新で[Chrome拡張機能の作り方](https://r-40021.github.io/2021-07/chrome-extension-1)を書いていました。今はブログを毎日書く気力なんてありませんが、当時は1日の半分はブログの記事を書く生活でした。
 
 そしてこのブログを開設して約1ヶ月後、現在使用している<a href="https://jamstackthemes.dev/theme/jekyll-theme-yat/" target="_blank" rel="noopener noreferrer">Yat Theme</a>に移行します。これによりブログのデザインがかなりリッチになりました。
 
@@ -46,11 +46,11 @@ headAlt: 誕生日ケーキ
 
 一時期は月間1000PVほどになりました。
 
-しかし、最近[ブログのURL構成を変更した](https://r-40021.github.io/blog/2022-05/renewal#h-%E8%A8%98%E4%BA%8B-url-%E3%81%AE%E5%A4%89%E6%9B%B4)影響でPV数がガクッと下がっています。
+しかし、最近[ブログのURL構成を変更した](https://r-40021.github.io/2022-05/renewal#h-%E8%A8%98%E4%BA%8B-url-%E3%81%AE%E5%A4%89%E6%9B%B4)影響でPV数がガクッと下がっています。
 
 半年くらいすればまた元に戻ると思うので、気長に待ちます。
 
-特に伸びていたのは、[GitHub Educationの記事](https://r-40021.github.io/blog/2021-09/github-education)と、[Discord botを作る記事](https://r-40021.github.io/blog/2021-09/discord-kocho)、[定員付きフォームを作る記事](https://r-40021.github.io/blog/2021-09/form-limit)の3つです。これらがそれぞれ月間300PV強を獲得していました。
+特に伸びていたのは、[GitHub Educationの記事](https://r-40021.github.io/2021-09/github-education)と、[Discord botを作る記事](https://r-40021.github.io/2021-09/discord-kocho)、[定員付きフォームを作る記事](https://r-40021.github.io/2021-09/form-limit)の3つです。これらがそれぞれ月間300PV強を獲得していました。
 
 ## 感想(悪いこと)
 
@@ -60,7 +60,7 @@ headAlt: 誕生日ケーキ
 
 僕が書いている記事はせいぜい5分もあれば読めるような記事ばかりなのですが、それでも書くのには1時間以上かかります。
 
-最近書いた「[Windowsを入れたらすること](https://r-40021.github.io/blog/2022-07/windows)」の場合は2時間くらいかかりました。スクショが多いのと、そもそもの文章量が多いというのが原因です。
+最近書いた「[Windowsを入れたらすること](https://r-40021.github.io/2022-07/windows)」の場合は2時間くらいかかりました。スクショが多いのと、そもそもの文章量が多いというのが原因です。
 
 とにかく、情報発信は想像以上に大変だということを身を持って体感しました。
 
@@ -100,7 +100,7 @@ SEOとは、検索エンジン(Googleなど)で自分の記事が上の方に表
 
 最近はSNSでの宣伝も多いですが、ブログへの流入元は依然としてGoogleなどの検索サイトがダントツで多いです。
 
-![流入元の統計](/blog/assets/images/2022/07/29/referrers.png)
+![流入元の統計](/assets/images/2022/07/29/referrers.png)
 
 (2022/7/22\~2022/7/29の記録、ブログ以外へのアクセスも含む)
 
@@ -152,7 +152,7 @@ Twitterが140字であることと比較すれば、ものすごい量だとわ�
 
 今後もブログは継続する予定です。
 
-最近では、[一言日記](https://r-40021.github.io/blog/categories.html#h-%E4%B8%80%E8%A8%80%E6%97%A5%E8%A8%98)という企画を始めました。今までに何度か日記を書こうとしようとしたことがありましたが、結局3日も続きませんでした。しかし、ブログに日記を書くとなると外からの目を意識するようになるので、現時点で1ヶ月続いています。これはすごいことです。(当社比)
+最近では、[一言日記](https://r-40021.github.io/categories.html#h-%E4%B8%80%E8%A8%80%E6%97%A5%E8%A8%98)という企画を始めました。今までに何度か日記を書こうとしようとしたことがありましたが、結局3日も続きませんでした。しかし、ブログに日記を書くとなると外からの目を意識するようになるので、現時点で1ヶ月続いています。これはすごいことです。(当社比)
 
 数年後の自分がこの日記を見たらどう思うのか楽しみにしながら日記を書いています。
 

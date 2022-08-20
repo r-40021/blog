@@ -11,7 +11,7 @@ copylight: Photo by <a href="https://unsplash.com/@sigmund?utm_source=unsplash&u
 ---
 
 ## お詫びと訂正
-[本連載第4回 「コピー機能の実装」](https://r-40021.github.io/blog/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/2021/08/04/chrome-extension-4.html)のコードの一部に誤りがありました。お詫びして訂正いたします。
+[本連載第4回 「コピー機能の実装」](https://r-40021.github.io/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/2021/08/04/chrome-extension-4.html)のコードの一部に誤りがありました。お詫びして訂正いたします。
 
 誤
 

@@ -71,7 +71,7 @@ copylight: Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsp
 
 `.zip`形式ですので、解凍して拡張機能の開発用フォルダの一番上の階層に、3つの画像を配置してください。
 
-[ダウンロード](https://github.com/r-40021/blog/raw/main/assets/2021-08-02-icon.zip)
+[ダウンロード](https://github.com/r-40021/raw/main/assets/2021-08-02-icon.zip)
 
 今回は、「ICOOON MONO」様からお借りしました。この場をお借りして御礼申し上げます。
 

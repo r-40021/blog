@@ -6,7 +6,7 @@ tags:
 - Manjaro
 copylight: ''
 title: ManjaroとXubuntuをデュアルブートしたらKarnel Panicになった！！！
-image: "/blog/assets/images/2022/06/23/manjaro-gnome.jpg"
+image: "/assets/images/2022/06/23/manjaro-gnome.jpg"
 headAlt: Manjaroのデスクトップ画面
 
 ---

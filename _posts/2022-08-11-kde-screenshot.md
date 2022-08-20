@@ -10,7 +10,7 @@ copylight: 'Photo by <a href="https://unsplash.com/@quaritsch?utm_source=unsplas
   target="_blank" rel="noopener noreferrer">Quaritsch Photography</a> on <a href="https://unsplash.com/s/photos/screen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
   target="_blank" rel="noopener noreferrer">Unsplash</a>   '
 title: KDE Plasmaでスクリーンショットが昔の画面になってしまう時の対処法
-image: "/blog/assets/images/2022/08/11/screen.jpg"
+image: "/assets/images/2022/08/11/screen.jpg"
 headAlt: スクリーン
 
 ---

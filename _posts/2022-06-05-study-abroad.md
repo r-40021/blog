@@ -5,7 +5,7 @@ tags:
 - ポエム
 - 英語
 title: 留学体験記を聞いて
-image: "/blog/assets/images/2022/06/05/airport.jpg"
+image: "/assets/images/2022/06/05/airport.jpg"
 headAlt: 飛行機を見る人
 copylight: Photo by <a href="https://unsplash.com/@jeshoots?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
   target="_blank" rel="noopener noreferrer">JESHOOTS.COM</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
