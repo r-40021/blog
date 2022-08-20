@@ -8,7 +8,7 @@ copyright: "\xA9 {currentYear} {author}"
 description: デジタルから間違い探しまで、種々雑多なブログ
 baseurl: "/"
 url: "https://r-40021.github.io"
-favicon: /uploads/logo.png # the favicon for your site
+favicon: /assets/images/logo.png # the favicon for your site
 
 
 yat:
