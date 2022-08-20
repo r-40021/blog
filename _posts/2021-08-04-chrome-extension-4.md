@@ -6,7 +6,7 @@ categories: プログラミング
 series: chrome_copy
 series_title: コピー機能実装
 tags: プログラミング Chrome拡張機能 JavaScript
-image: assets/images/banners/2021-08-04-twitter.jpg
+image: /assets/images/banners/2021-08-04-twitter.jpg
 copylight: Photo by <a href="https://unsplash.com/@alexbemore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Alexander Shatov</a> on <a href="https://unsplash.com/s/photos/twitter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---
 

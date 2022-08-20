@@ -6,7 +6,7 @@ categories: プログラミング
 series: chrome_copy
 series_title: Webストアに公開
 tags: プログラミング Chrome拡張機能
-image: assets/images/banners/2021-08-09-chrome.jpg
+image: /assets/images/banners/2021-08-09-chrome.jpg
 copylight: Photo by <a href="https://unsplash.com/@firmbee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Firmbee.com</a> on <a href="https://unsplash.com/s/photos/google-chrome?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---
 

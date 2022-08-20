@@ -3,7 +3,7 @@ layout: post
 title: "Chromebook のランチャーを Windows のスタートメニューっぽくする"
 categories: PC
 tags: PC Chromebook
-image: assets/images/banners/2022-02-18-chromebook-start-like-windows.jpg
+image: /assets/images/banners/2022-02-18-chromebook-start-like-windows.jpg
 headAlt: WindowsのスタートメニューっぽいChromebookのランチャー
 ---
 

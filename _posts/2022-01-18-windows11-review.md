@@ -3,7 +3,7 @@ layout: post
 title: "Windows 11 に関する誤解を暴く"
 categories: PC
 tags: PC Windows Windows11
-image: assets/images/banners/2022-01-18-win11.jpg
+image: /assets/images/banners/2022-01-18-win11.jpg
 headAlt: Windows 11 の誤解を暴く
 ---
 

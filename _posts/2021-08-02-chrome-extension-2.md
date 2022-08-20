@@ -6,7 +6,7 @@ categories: プログラミング
 series: chrome_copy
 series_title: ポップアップ作成
 tags: プログラミング Chrome拡張機能 HTML JavaScript CSS 
-image: assets/images/banners/2021-08-02-html.jpg
+image: /assets/images/banners/2021-08-02-html.jpg
 copylight: Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Jackson So</a> on <a href="https://unsplash.com/s/photos/html%2Fcss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---
 拡張機能を作るシリーズ第2弾！今回は拡張機能のポップアップを作成していきます！

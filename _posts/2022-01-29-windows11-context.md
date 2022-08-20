@@ -3,7 +3,7 @@ layout: post
 title: "【ソフト不要】Windows 11 のコンテキストメニューを従来の見た目に戻す"
 categories: PC
 tags: PC Windows Windows11
-image: assets/images/banners/2022-01-29-win11-context.jpg
+image: /assets/images/banners/2022-01-29-win11-context.jpg
 headAlt: Windows 11 のコンテキストメニューを戻す
 ---
 

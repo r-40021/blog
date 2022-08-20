@@ -6,7 +6,7 @@ categories: プログラミング
 series: chrome_copy
 series_title: 権限を減らす
 tags: プログラミング Chrome拡張機能 JSON JavaScript
-image: assets/images/banners/2021-08-07-debug.jpg
+image: /assets/images/banners/2021-08-07-debug.jpg
 copylight: Photo by <a href="https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Sigmund</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---
 

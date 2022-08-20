@@ -3,7 +3,7 @@ layout: post
 title: "プライバシーの宝庫、Chrome を守る〜晒し防止篇〜"
 categories: PC
 tags: PC Google Windows
-image: assets/images/banners/2021-11-21-protect-chrome.png
+image: /assets/images/banners/2021-11-21-protect-chrome.png
 headAlt: Chromeを守れ
 ---
 
