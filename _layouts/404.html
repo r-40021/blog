@@ -16,16 +16,16 @@ layout: default
   }
 </style>
 
+<script>
+  const path = location.pathname.split('/');
+  if (path.length > 4) {
+    location.pathname = '/' + path[2] + '-' + path[3] + '/' + path[5].replace('.html', '');
+  }
+</script>
+
 <div class="container">
   <h1>404</h1>
 
   <p><strong>アクセスしようとしたページは存在しません。</strong></p>
   <p><a href="{{ site.baseurl }}">トップページ</a>から目的の記事を見つけることができます。</p>
 </div>
-
-<script>
-  const path = location.pathname.split('/');
-  if (path.length > 5) {
-    location.pathname = path[1] + '/' + path[3] + '-' + path[4] + '/' + path[6].replace('.html', '');
-  }
-</script>
