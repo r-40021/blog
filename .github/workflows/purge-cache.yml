@@ -7,9 +7,14 @@ on:
 
 jobs:
   cache:
+    name: 🗑 Purge Cache
     runs-on: ubuntu-latest
 
     steps:
+      - name: Wait      
+        run: |
+          wait 90s
+          
       - name: Purge Cache
         env: 
           ZONE_ID: ${{ secrets.ZONE_ID }}
