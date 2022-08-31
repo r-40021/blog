@@ -60,6 +60,16 @@ fields:
     maxSize: 64
   label: 画像
   description: ヘッダー画像
+- name: ___
+  type: text
+  config:
+    required: false
+  label: 連載名
+- name: series_title
+  type: text
+  config:
+    required: false
+  label: 連載の中でのタイトル
 - name: headAlt
   type: text
   config:
