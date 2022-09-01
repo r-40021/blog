@@ -3,7 +3,7 @@ layout: post
 title: Chrome 拡張機能を作って公開しよう①　〜環境構築〜
 subheading: 環境構築するほどのことでもないが。
 categories: プログラミング
-series: chrome_copy
+series: Chrome 拡張機能を作ろう
 series_title: 環境構築
 tags: プログラミング Chrome拡張機能 環境構築 JavaScript JSON HTML
 image: /assets/images/banners/2021-07-30-develop.jpg

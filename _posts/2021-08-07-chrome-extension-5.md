@@ -3,7 +3,7 @@ layout: post
 title: "Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜"
 subheading: 1回15分でサクッと開発。今回は「権限多すぎ問題」を解決していきます。
 categories: プログラミング
-series: chrome_copy
+series: Chrome 拡張機能を作ろう
 series_title: 権限を減らす
 tags: プログラミング Chrome拡張機能 JSON JavaScript
 image: /assets/images/banners/2021-08-07-debug.jpg

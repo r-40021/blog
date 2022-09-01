@@ -4,7 +4,7 @@ title: "ＭＳ ゴシックと Noto Sans を比較してみる(読者アンケ�
 categories: PC
 tags: PC フォント ポエム
 image: /assets/images/banners/2021-11-20-font-hikaku.png
-series: msgothic
+series: フォントの話
 series_title: フォントを比較
 headAlt: フォント比較
 ---

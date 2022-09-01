@@ -3,7 +3,7 @@ layout: post
 title: "Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜"
 subheading: いよいよ Web ストアに公開します！
 categories: プログラミング
-series: chrome_copy
+series: Chrome 拡張機能を作ろう
 series_title: Webストアに公開
 tags: プログラミング Chrome拡張機能
 image: /assets/images/banners/2021-08-09-chrome.jpg

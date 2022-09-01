@@ -4,7 +4,7 @@ title: "ＭＳ ゴシックを使わないで(切実)"
 categories: PC
 tags: PC Windows ポエム フォント
 image: /assets/images/banners/2021-11-16-no-msgothic.jpg
-series: msgothic
+series: フォントの話
 series_title: ＭＳ ゴシックを使わないで(切実)
 headAlt: ＭＳ ゴシックを使わないで(切実)
 ---

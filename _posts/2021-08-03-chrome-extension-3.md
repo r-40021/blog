@@ -5,7 +5,7 @@ subheading: 1回15分でサクッと開発。いよいよ形にしていきま�
 categories: プログラミング
 tags: プログラミング Chrome拡張機能 HTML JavaScript
 image: /assets/images/banners/2021-08-03-mac.jpg
-series: chrome_copy
+series: Chrome 拡張機能を作ろう
 series_title: 仕様に沿って開発
 copylight: Photo by <a href="https://unsplash.com/@jantined?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Jantine Doornbos</a> on <a href="https://unsplash.com/s/photos/develop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>
 ---

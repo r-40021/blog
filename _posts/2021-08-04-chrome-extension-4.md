@@ -3,7 +3,7 @@ layout: post
 title: "Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜"
 subheading: 1回30分でサクッと開発。要となるコピー機能の実装を行います
 categories: プログラミング
-series: chrome_copy
+series: Chrome 拡張機能を作ろう
 series_title: コピー機能実装
 tags: プログラミング Chrome拡張機能 JavaScript
 image: /assets/images/banners/2021-08-04-twitter.jpg

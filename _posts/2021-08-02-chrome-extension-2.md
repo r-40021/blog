@@ -3,7 +3,7 @@ layout: post
 title: "Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜"
 subheading: 1回15分でサクッと開発。今回はポップアップの作成。
 categories: プログラミング
-series: chrome_copy
+series: Chrome 拡張機能を作ろう
 series_title: ポップアップ作成
 tags: プログラミング Chrome拡張機能 HTML JavaScript CSS 
 image: /assets/images/banners/2021-08-02-html.jpg

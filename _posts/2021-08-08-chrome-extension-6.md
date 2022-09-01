@@ -3,7 +3,7 @@ layout: post
 title: "Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜"
 subheading: 1回15分でサクッと開発。今回は、拡張機能をコンテキストメニューからも起動できるようにします。
 categories: プログラミング
-series: chrome_copy
+series: Chrome 拡張機能を作ろう
 series_title: コンテキストメニューの作成
 tags: プログラミング Chrome拡張機能 JSON JavaScript
 ---
