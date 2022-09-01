@@ -60,16 +60,6 @@ fields:
     maxSize: 64
   label: 画像
   description: ヘッダー画像
-- name: series
-  type: text
-  config:
-    required: false
-  label: 連載名
-- name: series_title
-  type: text
-  config:
-    required: false
-  label: 連載の中でのタイトル
 - name: headAlt
   type: text
   config:
@@ -84,6 +74,16 @@ fields:
   label: コピーライト
   description: ヘッダー画像のコピーライト
   default: ' target="_blank" rel="noopener noreferrer"'
+- name: series
+  type: text
+  config:
+    required: false
+  label: 連載名
+- name: series_title
+  type: text
+  config:
+    required: false
+  label: 連載の中でのタイトル
 pages:
 - _posts/2022-05-05-renewal.md
 - _posts/2022-05-20-insider.md
@@ -105,3 +105,4 @@ pages:
 - _posts/2022-08-13-left-enter.md
 - _posts/2022-08-21-domain.md
 - _posts/2022-08-27-ads.md
+- _posts/2022-09-01-diary.md
