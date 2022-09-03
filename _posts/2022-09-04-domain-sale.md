@@ -2,11 +2,11 @@
 layout: post
 categories: プログラミング
 seo:
-  date_modified: 2022-09-04 01:00:13 +0900
+  date_modified: 2022-09-04T01:00:13.000+09:00
 tags:
 - ドメイン
 copylight: ''
-title: ".com .netドメインが2年間0円で使える！"
+title: ".com .netドメインが1年間0円で使える！"
 image: "/assets/images/2022/09/03/domain-sale.webp"
 headAlt: ".com .net がお一人さま1個0円"
 series: ''
