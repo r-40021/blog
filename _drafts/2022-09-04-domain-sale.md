@@ -5,7 +5,7 @@ seo:
   date_modified: 2022-09-04 01:00:13 +0900
 tags:
 - ドメイン
-copylight: ' target="_blank" rel="noopener noreferrer"'
+copylight: ''
 title: ".com .netドメインが2年間0円で使える！"
 image: "/assets/images/2022/09/03/domain-sale.webp"
 headAlt: ".com .net がおひとりさま1個0円"
