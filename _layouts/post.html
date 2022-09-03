@@ -25,7 +25,7 @@ sidebar:
 
     {%- include views/article.html -%}
 
-    {% if page.series %}
+    {% if page.series and page.series != "" %}
       <br><br><br>
       <p>【「{{ page.series }}」の記事一覧】</p>
       <ol>
