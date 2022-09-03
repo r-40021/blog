@@ -48,6 +48,10 @@ html[data-theme="dark"] {
       background-color: #080808;
     }
   }
+  
+  a {
+    color: lighten($brand-color, 20%);
+  }
 
   .site-header {
     background-color: #090909;
