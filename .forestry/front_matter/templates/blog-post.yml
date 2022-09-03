@@ -85,6 +85,7 @@ fields:
     required: false
   label: 連載の中でのタイトル
 pages:
+- _posts/.com.net-2-0.md
 - _posts/2022-05-05-renewal.md
 - _posts/2022-05-20-insider.md
 - _posts/2022-05-21-noto.md
