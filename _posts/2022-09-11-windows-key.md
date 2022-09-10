@@ -7,7 +7,7 @@ tags:
 - Windows
 - Linux
 copylight: 'Photo by <a href="https://unsplash.com/@meymigrou?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-  target="_blank" rel="noopener noreferrer">Panos Sakalakis</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+  target="_blank" rel="noopener noreferrer">Panos Sakalakis</a> on <a href="https://unsplash.com/photos/Ik0wTGgZYYM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
   target="_blank" rel="noopener noreferrer">Unsplash</a>   '
 title: LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法
 image: "/assets/images/2022/09/10/win10.webp"
