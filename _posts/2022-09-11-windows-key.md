@@ -23,7 +23,9 @@ Linux上でWindowsの仮想環境を建てる際にはWindowsのプロダクト�
 </div>
 
 ## 確認方法
+
 ### Linux編
+
 OEM版Windowsのライセンス情報はマザーボードに保存されています。以下のコマンドを実行すればそのライセンス情報を読み出すことができます。
 
 結構簡単です。
@@ -43,6 +45,7 @@ wmic path softwarelicensingservice get OA3xOriginalProductKey
 ```
 
 ## これってライセンス的にどうなの？
+
 OEM版Windowsのプロダクトキーを仮想環境で使用することはライセンス的に問題がないのか気になる方も多いと思います。
 
 結論としては、問題ありません。
@@ -53,5 +56,5 @@ OEM版ライセンスが適用されているPC上であれば、仮想環境上
 
 ## 参考サイト
 
-- <a href="https://www.cyberciti.biz/faq/linux-find-windows-10-oem-product-key-command/" target="_blank" rel=”noopener noreferrer”>Linux find Windows 10/11 OEM product key command - nixCraft</a>
-- <a href="http://blog.yottun8.com/archives/794" target="_blank" rel=”noopener noreferrer”>OEM 版 Windows 10 の仮想化に必要なライセンス - Yottun8</a>
+* <a href="https://www.cyberciti.biz/faq/linux-find-windows-10-oem-product-key-command/" target="_blank" rel="noopener noreferrer">Linux find Windows 10/11 OEM product key command - nixCraft</a>
+* <a href="http://blog.yottun8.com/archives/794" target="_blank" rel="noopener noreferrer">OEM 版 Windows 10 の仮想化に必要なライセンス - Yottun8</a>
