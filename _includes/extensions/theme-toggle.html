@@ -13,7 +13,7 @@
 {%- include functions.html func='get_value' default='auto' -%}
 {%- assign night_mode = return -%}
 
-<script>
+<script data-cfasync="false">
   (function() {
     var sw = document.getElementById('theme-switch');
     var html = document.getElementsByTagName('html')[0];
