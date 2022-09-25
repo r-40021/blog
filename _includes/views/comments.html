@@ -58,9 +58,13 @@
   <!-- done customizing labels of htmlcommentbox.com -->
 
   <style>
-    #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
       background:none; /* Clear twitter bootstrap style. */
-      background-color:#389092;
-      color: white;
+      border: 0;
+      background-color: #fff;
+      color: #0e0e0e;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .hcb-door-in {
+      filter: invert(100%);
     }
   </style>
