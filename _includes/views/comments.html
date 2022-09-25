@@ -12,7 +12,7 @@
   hcb_user = {
       /* L10N */
       comments_header : 'コメント',
-      name_label : '名前',
+      name_label : 'お名前',
       content_label: 'コメントを入力',
       submit : 'コメントする',
       no_comments_msg: 'この記事にはまだコメントがついていません。最初のコメントをしましょう！',
@@ -22,27 +22,23 @@
       showing:'表示中',
       to:'返信先: ',
       website_label:'ウェブサイト(任意)',
-      email_label:'メールアドレス',
+      email_label:'メールアドレス(任意)',
       anonymous:'名無し',
       mod_label:'(管理人)',
-      subscribe:'返信があったらメールで通知する',
+      subscribe:'返信がついたらメールで通知する',
       add_image:'画像を追加',
       are_you_sure:'不適切なコメントとして報告してよろしいですか？',
-  
       reply:'返信',
       flag:'報告',
       like:'いいね',
-  
       /* dates */
       days_ago:'日前',
       hours_ago:'時間前',
       minutes_ago:'分前',
       within_the_last_minute:'数秒前',
-  
       msg_thankyou:'コメントありがとうございます！',
-      msg_approval:'注意：このコメントは許可次第反映されます。',
+      msg_approval:'このコメントは許可次第反映されます。',
       msg_approval_required:'コメントありがとうございます！このコメントは管理人が許可次第反映されます。',
-  
       err_bad_html:'コメントに不正な HTML タグが含まれています。',
       err_bad_email:'有効なメールアドレスを入力してください。',
       err_too_frequent:'コメントを連続投稿するには数秒待つ必要があります。',
@@ -53,7 +49,7 @@
       err_blocked:'サイトポリシーによりこのコメントは削除されました。',
   
       /* SETTINGS */
-      MAX_CHARS: 8192,
+      MAX_CHARS: 256,
       PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
       ON_COMMENT: function(){}, /* Function to call after commenting. */
       RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
