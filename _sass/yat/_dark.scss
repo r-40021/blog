@@ -235,10 +235,6 @@ html[data-theme="dark"] {
   }
 
   #HCB_comment_box{ 
-    .submit {
-      background-color: lighten($brand-color, 10%);;
-    }
-
     #hcb_subscribe span {
       color: $dark-text-color
     }
