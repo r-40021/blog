@@ -58,15 +58,18 @@
   <!-- done customizing labels of htmlcommentbox.com -->
 
   <style>
+    #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+      transition: opacity .3s;
+    }
+    #HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
+      opacity: .7;
+    }
     html[data-theme="dark"] #HCB_comment_box #hcb_form .btn,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn {
       background:none; /* Clear twitter bootstrap style. */
       border: 0;
       background-color: #fff;
       color: #0e0e0e;
       transition: opacity 0.2s;
-    }
-    html[data-theme="dark"] #HCB_comment_box #hcb_form .btn:hover,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn:hover {
-      opacity: .5;
     }
     html[data-theme="dark"] #HCB_comment_box blockquote {
       color:#bbb;
