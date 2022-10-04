@@ -2,7 +2,7 @@
 layout: post
 categories: PC
 seo:
-  date_modified: 2022-10-04 22:04:38 +0900
+  date_modified: 2022-10-05 00:00:00 +0900
 tags:
 - PC
 - レビュー
@@ -28,17 +28,14 @@ series_title: ''
 
 私が購入したPCのスペックは以下のとおりです。
 
-CPU…Core i5-1135G7
-
-RAM…8GB(増設不可)
-
-Storage…M.2 SSD 256GB
-
-OS…Windows 10 Home
-
-Office…有り
-
-インターフェース…USB Type-C、HDMI、USB Type A × 2、イヤホンジャック、セキュリティースロット
+| 項目 | スペック |
+| :----: | :----------- |
+| CPU | Core i5-1135G7 |
+| RAM | 8GB(増設不可) |
+| ストレージ | M.2 SSD 256GB |
+| OS | Windows 10 Home |
+| Office | 有り |
+| インターフェース | USB Type-C、HDMI、USB Type A × 2、イヤホンジャック、セキュリティースロット |
 
 アウトレットの新品未開封品で、価格は8万円台後半でした。
 
@@ -46,7 +43,7 @@ Office…有り
 
 古い知識でメモリは8GBあれば十分だと思っていましたが、最近は徐々に16GBにシフトしているらしいです。
 
-まぁ、Linux使っているのでそこまで気にしてないですが。
+まぁ、Linuxを使っているのでそこまで気になりませんが。
 
 ## 付加価値が豊富
 
