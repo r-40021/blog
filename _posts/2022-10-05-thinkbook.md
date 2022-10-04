@@ -2,7 +2,7 @@
 layout: post
 categories: PC
 seo:
-  date_modified: 2022-10-05 00:00:00 +0900
+  date_modified: 2022-10-05T00:00:00.000+09:00
 tags:
 - PC
 - レビュー
