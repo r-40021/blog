@@ -2,12 +2,12 @@
 layout: post
 categories: PC
 seo:
-  date_modified: 2022-10-05T00:00:00.000+09:00
+  date_modified: 2022-10-05 19:00:00 +0900
 tags:
 - PC
 - レビュー
 copylight: ''
-title: メインPC (ThinkBook 13s gen2)を1年弱使ってみて
+title: メインPC (ThinkBook 13s Gen2)を1年弱使ってみて
 image: "/assets/images/2022/10/04/stab.webp"
 headAlt: スタバで ThinkBook を開いている様子
 series: ''
@@ -29,7 +29,7 @@ series_title: ''
 私が購入したPCのスペックは以下のとおりです。
 
 | 項目 | スペック |
-| :----: | :----------- |
+| :---: | :--- |
 | CPU | Core i5-1135G7 |
 | RAM | 8GB(増設不可) |
 | ストレージ | M.2 SSD 256GB |
@@ -61,9 +61,11 @@ series_title: ''
 * そこそこ打ちやすいキーボード
 * MIL-STD-810Gテストを合格した耐久性
 * 国内対応の無償サポート(1年間)
-* 指紋センサー付き
+* 指紋センサー搭載
 
 少し解説します。
+
+※これらの付加価値は、全てのThinkBookシリーズに搭載されているとは限りません。
 
 ### Thunderbolt 4
 
