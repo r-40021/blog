@@ -46,9 +46,10 @@ $base-font-family: sans-serif;
 
   &:before {
     content: "";
-    margin-top: .5px;
+    margin-top: 7px;
     margin-inline-end: .7em;
-    height: 100%;
+    height: 1em;
+    width: 1em;
     mask: url("/assets/symbol-defs.svg#ico_report");
     -webkit-mask: url("/assets/symbol-defs.svg#ico_report");
     mask-size: cover;
@@ -67,9 +68,10 @@ $base-font-family: sans-serif;
 
   &:before {
     content: "";
-    margin-top: .5px;
+    margin-top: 7px;
     margin-inline-end: .7em;
-    height: 100%;
+    height: 1em;
+    width: 1em;
     mask: url("/assets/symbol-defs.svg#ico_warning");
     -webkit-mask: url("/assets/symbol-defs.svg#ico_warning");
     mask-size: cover;
@@ -88,9 +90,10 @@ $base-font-family: sans-serif;
 
   &:before {
     content: "";
-    margin-top: .5px;
+    margin-top: 7px;
     margin-inline-end: .7em;
-    height: 100%;
+    height: 1em;
+    width: 1em;
     mask: url("/assets/symbol-defs.svg#ico_info");
     -webkit-mask: url("/assets/symbol-defs.svg#ico_info");
     mask-size: cover;
