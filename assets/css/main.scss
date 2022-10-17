@@ -49,12 +49,21 @@ $base-font-family: sans-serif;
     margin-top: 7px;
     margin-inline-end: .7em;
     height: 1em;
-    width: 1em;
+    width: 2.5em;
     mask: url("/assets/symbol-defs.svg#ico_report");
     -webkit-mask: url("/assets/symbol-defs.svg#ico_report");
     mask-size: cover;
     -webkit-mask-size: cover;
     background-color: #6e2121;
+  }
+
+  a {
+    color: inherit
+    text-decoration: underline;
+
+    &[target="_blank"]:after {
+      background-color: #6e2121;
+    }
   }
 }
 
@@ -71,12 +80,21 @@ $base-font-family: sans-serif;
     margin-top: 7px;
     margin-inline-end: .7em;
     height: 1em;
-    width: 1em;
+    width: 2.5em;
     mask: url("/assets/symbol-defs.svg#ico_warning");
     -webkit-mask: url("/assets/symbol-defs.svg#ico_warning");
     mask-size: cover;
     -webkit-mask-size: cover;
     background-color: #544321;
+  }
+  
+  a {
+    color: inherit
+    text-decoration: underline;
+    
+    &[target="_blank"]:after {
+      background-color: #544321;
+    }
   }
 }
 
@@ -93,12 +111,21 @@ $base-font-family: sans-serif;
     margin-top: 7px;
     margin-inline-end: .7em;
     height: 1em;
-    width: 1em;
+    width: 2.5em;
     mask: url("/assets/symbol-defs.svg#ico_info");
     -webkit-mask: url("/assets/symbol-defs.svg#ico_info");
     mask-size: cover;
     -webkit-mask-size: cover;
     background-color: #164d7a;
+  }
+  
+  a {
+    color: inherit
+    text-decoration: underline;
+    
+    &[target="_blank"]:after {
+      background-color: #164d7a;
+    }
   }
 }
 
