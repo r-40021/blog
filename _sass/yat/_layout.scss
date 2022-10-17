@@ -522,6 +522,96 @@ html {
       background-color: #ebebeb;
       border: none;
     }
+
+    .alert-card {
+      background-color: #ffe0e0;
+      border-radius: 7px;
+      color: #6e2121;
+      display: flex;
+      margin-bottom: 1em;
+      padding: .5em 1em;
+    
+      &:before {
+        content: "";
+        margin-top: 7px;
+        margin-inline-end: .7em;
+        height: 1em;
+        width: 2.5em;
+        mask: url("/assets/symbol-defs.svg#ico_report");
+        -webkit-mask: url("/assets/symbol-defs.svg#ico_report");
+        mask-size: cover;
+        -webkit-mask-size: cover;
+        background-color: #6e2121;
+      }
+    
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+      a[target="_blank"]:after {
+        background-color: #6e2121;
+      }
+    }
+    
+    .warning-card {
+      background-color: #fff5bf;
+      border-radius: 7px;
+      color: #544321;
+      display: flex;
+      margin-bottom: 1em;
+      padding: .5em 1em;
+    
+      &:before {
+        content: "";
+        margin-top: 7px;
+        margin-inline-end: .7em;
+        height: 1em;
+        width: 2.5em;
+        mask: url("/assets/symbol-defs.svg#ico_warning");
+        -webkit-mask: url("/assets/symbol-defs.svg#ico_warning");
+        mask-size: cover;
+        -webkit-mask-size: cover;
+        background-color: #544321;
+      }
+      
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+      a[target="_blank"]:after {
+        background-color: #544321;
+      }
+    }
+    
+    .info-card {
+      background-color: #cfe8ff;
+      border-radius: 7px;
+      color: #164d7a;
+      display: flex;
+      margin-bottom: 1em;
+      padding: .5em 1em;
+    
+      &:before {
+        content: "";
+        margin-top: 7px;
+        margin-inline-end: .7em;
+        height: 1em;
+        width: 2.5em;
+        mask: url("/assets/symbol-defs.svg#ico_info");
+        -webkit-mask: url("/assets/symbol-defs.svg#ico_info");
+        mask-size: cover;
+        -webkit-mask-size: cover;
+        background-color: #164d7a;
+      }
+      
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+      a[target="_blank"]:after {
+        background-color: #164d7a;
+      }
+    }    
   }
 
   .post-related {
