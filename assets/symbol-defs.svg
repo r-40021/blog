@@ -32,22 +32,12 @@
 <path d="M3.867 28.133q-0.934 0-1.4-0.782-0.467-0.784 0-1.584l12.166-21q0.467-0.8 1.366-0.8t1.366 0.8l12.166 21q0.467 0.8 0 1.584-0.466 0.782-1.4 0.782zM16.034 13.467q-0.566 0-0.984 0.416-0.416 0.418-0.416 0.984v3.632q0 0.568 0.416 0.984 0.418 0.418 0.984 0.418t0.982-0.418q0.418-0.416 0.418-0.984v-3.632q0-0.566-0.418-0.984-0.416-0.416-0.982-0.416zM16.034 23.966q0.566 0 1-0.434 0.434-0.432 0.434-1 0-0.566-0.434-1-0.434-0.432-1-0.432t-1 0.432q-0.434 0.434-0.434 1 0 0.568 0.434 1 0.434 0.434 1 0.434zM6.366 25.101h19.267l-9.634-16.602z"></path>
 </symbol>
 </defs>
-<view id="ico_dark_mode" viewBox="0 0 32 32" />
-<view id="ico_light_mode" viewBox="0 32 32 32" />
-<view id="ico_open_in_new" viewBox="0 64 32 32" />
-<view id="ico_sync" viewBox="0 96 32 32" />
-<view id="ico_event" viewBox="0 128 32 32" />
-<view id="ico_schedule" viewBox="0 160 32 32"/>
-<view id="ico_info" viewBox="0 192 32 32"/>
-<view id="ico_report" viewBox="0 224 32 32"/>
-<view id="ico_warning" viewBox="0 256 32 32"/>
-<use xlink:href="#dark_mode" x="0" y="0" width="32" height="32" />
-<use xlink:href="#light_mode" x="0" y="32" width="32" height="32" />
-<use xlink:href="#open_in_new" x="0" y="64" width="32" height="32" />
-<use xlink:href="#sync" x="0" y="96" width="32" height="32" />
-<use xlink:href="#event" x="0" y="128" width="32" height="32" />
-<use xlink:href="#schedule" x="0" y="160" width="32" height="32" />
-<use xlink:href="#info" x="0" y="192" width="32" height="32" />
-<use xlink:href="#report" x="0" y="224" width="32" height="32" />
-<use xlink:href="#warning" x="0" y="256" width="32" height="32" />
+<view id="ico_open_in_new" viewBox="0 0 32 32" />
+<view id="ico_info" viewBox="0 32 32 32"/>
+<view id="ico_report" viewBox="0 64 32 32"/>
+<view id="ico_warning" viewBox="0 96 32 32"/>
+<use xlink:href="#open_in_new" x="0" y="0" width="32" height="32" />
+<use xlink:href="#info" x="0" y="32" width="32" height="32" />
+<use xlink:href="#report" x="0" y="64" width="32" height="32" />
+<use xlink:href="#warning" x="0" y="96" width="32" height="32" />
 </svg>

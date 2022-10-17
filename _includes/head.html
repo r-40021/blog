@@ -23,7 +23,7 @@
     <meta property="og:type" content="website" />{% endif %}
   <link rel="shortcut icon" href="{{ site.favicon }}">
   <link rel="stylesheet" href="{{ "/assets/css/main.css?v=" | append: site.github.build_revision | relative_url }}">
-  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
   {%- feed_meta -%}
-  {%- include extensions/code-highlight.html -%}
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" media="print" onload="this.media='all'">
 </head>
