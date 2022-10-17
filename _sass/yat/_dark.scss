@@ -51,9 +51,33 @@ html[data-theme="dark"] {
   
   a {
     color: lighten($brand-color, 20%);
+  }
+  a[target="_blank"]:after {
+    background-color: lighten($brand-color, 20%);
+  }
 
-    &[target="_blank"]:after {
-      background-color: lighten($brand-color, 20%);
+  .alert-card {
+    a {
+      color: inherit;
+    }
+    a[target="_blank"]:after {
+      background-color: #6e2121;
+    }
+  }
+  .warning-card {
+    a {
+      color: inherit;
+    }
+    a[target="_blank"]:after {
+      background-color: #544321;
+    }
+  }
+  .info-card {
+    a {
+      color: inherit;
+    }
+    a[target="_blank"]:after {
+      background-color: #164d7a;
     }
   }
 

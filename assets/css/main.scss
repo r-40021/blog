@@ -60,10 +60,9 @@ $base-font-family: sans-serif;
   a {
     color: inherit;
     text-decoration: underline;
-
-    &[target="_blank"]:after {
-      background-color: #6e2121;
-    }
+  }
+  a[target="_blank"]:after {
+    background-color: #6e2121;
   }
 }
 
@@ -91,10 +90,9 @@ $base-font-family: sans-serif;
   a {
     color: inherit;
     text-decoration: underline;
-    
-    &[target="_blank"]:after {
-      background-color: #544321;
-    }
+  }
+  a[target="_blank"]:after {
+    background-color: #544321;
   }
 }
 
@@ -122,10 +120,9 @@ $base-font-family: sans-serif;
   a {
     color: inherit;
     text-decoration: underline;
-    
-    &[target="_blank"]:after {
-      background-color: #164d7a;
-    }
+  }
+  a[target="_blank"]:after {
+    background-color: #164d7a;
   }
 }
 
