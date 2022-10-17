@@ -45,11 +45,15 @@ $base-font-family: sans-serif;
   padding: .5em 1em;
 
   &:before {
-    font-family: 'Material Icons Outlined';
-    content: "error_outline";
+    content: "";
     margin-top: .5px;
     margin-inline-end: .7em;
     height: 100%;
+    mask: url("/assets/symbol-defs.svg#ico_report");
+    -webkit-mask: url("/assets/symbol-defs.svg#ico_report");
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    background-color: #6e2121;
   }
 }
 
@@ -62,28 +66,36 @@ $base-font-family: sans-serif;
   padding: .5em 1em;
 
   &:before {
-    font-family: 'Material Icons Outlined';
-    content: "report_problem";
+    content: "";
     margin-top: .5px;
     margin-inline-end: .7em;
     height: 100%;
+    mask: url("/assets/symbol-defs.svg#ico_warning");
+    -webkit-mask: url("/assets/symbol-defs.svg#ico_warning");
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    background-color: #544321;
   }
 }
 
-.success-card {
-  background-color: #cbf5c4;
+.info-card {
+  background-color: #cfe8ff;
   border-radius: 7px;
-  color: #0c5a0c;
+  color: #164d7a;
   display: flex;
   margin-bottom: 1em;
   padding: .5em 1em;
 
   &:before {
-    font-family: 'Material Icons Outlined';
-    content: "check";
+    content: "";
     margin-top: .5px;
     margin-inline-end: .7em;
     height: 100%;
+    mask: url("/assets/symbol-defs.svg#ico_info");
+    -webkit-mask: url("/assets/symbol-defs.svg#ico_info");
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    background-color: #164d7a;
   }
 }
 

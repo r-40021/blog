@@ -317,9 +317,11 @@ table {
 }
 
 /**
- * Material Icon
+ * SVG Icon
  */
- span.material-icons-outlined {
-  font-size: inherit;
+.ico-svg {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
   vertical-align: -3px;
 }

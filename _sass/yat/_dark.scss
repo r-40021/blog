@@ -51,6 +51,10 @@ html[data-theme="dark"] {
   
   a {
     color: lighten($brand-color, 20%);
+
+    &[target="_blank"]:after {
+      background-color: lighten($brand-color, 20%);
+    }
   }
 
   .site-header {

@@ -453,10 +453,16 @@ html {
   }
   
   a[target="_blank"]:after {
-      font-family: "Material Icons Outlined";
-      font-size: .8rem;
-      content: "\e89e";
+      display: inline-block;
+      width: .8rem;
+      height: .8rem;
+      content: "";
       margin: 0 .2em;
+      background-color: $brand-color;
+      mask: url("/assets/symbol-defs.svg#ico_open_in_new");
+      -webkit-mask: url("/assets/symbol-defs.svg#ico_open_in_new");
+      mask-size: cover;
+      -webkit-mask-size: cover;
   }
 
   .post-content {

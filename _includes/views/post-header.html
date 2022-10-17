@@ -5,11 +5,11 @@
   <p class="post-meta">
     <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
-      <span class="material-icons-outlined" aria-label="公開日" title="公開日">event</span> {{ page.date | date: date_format }}
+      <svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event" /></svg> {{ page.date | date: date_format }}
     </time>
     {%- if page.seo.date_modified -%}
       <time class="dt-published" datetime="{{ page.seo.date_modified | date_to_xmlschema }}" itemprop="dateModified">
-        &ensp;<span class="material-icons-outlined" aria-label="最終更新日" title="最終更新日">sync</span> {{ page.seo.date_modified | date: date_format }}
+        &ensp;<svg class="ico-svg" aria-label="最終更新日" title="最終更新日"><use xlink:href="/assets/symbol-defs.svg#sync" /></svg> {{ page.seo.date_modified | date: date_format }}
       </time>
     {%- endif -%}
 
@@ -17,7 +17,7 @@
     {% assign lang = page.lang %}
     {%- include functions.html func='get_reading_time' -%}
     {% assign reading_time = return %}
-    <span class="post-reading-time left-vsplit"><span class="material-icons-outlined" aria-label="読了時間" title="読了時間の目安">schedule</span> {{ reading_time }}</span>
+    <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule" /></svg> {{ reading_time }}</span>
   </p>
 
   {%- if page.tags.size > 0 -%}
