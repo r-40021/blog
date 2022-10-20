@@ -2,7 +2,7 @@
 layout: post
 title: "10分で定員付きの Google フォームを作ろう＜コピペ可＞"
 subheading: "定員に達したらフォームを閉じるだけじゃない"
-categories: Google
+categories: プログラミング
 tags: Google GAS JavaScript
 ---
 

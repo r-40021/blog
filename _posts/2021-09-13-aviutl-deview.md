@@ -2,8 +2,7 @@
 layout: post
 title: Aviutl の勉強をはじめました
 subheading: 早速初投稿
-categories:
-- PC
+categories: PC
 tags: Aviutl YouTube
 
 ---

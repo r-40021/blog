@@ -2,7 +2,7 @@
 layout: post
 title: "Google ドライブの動画が再生できないときの対処法"
 subheading: "原因は、Chrome のアレ"
-categories: Google
+categories: PC
 tags: Google Chrome Safari
 ---
 

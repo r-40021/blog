@@ -1,8 +1,7 @@
 ---
 layout: post
 title: アイコンを変えました
-categories:
-- 雑記
+categories: お知らせ
 tags: お知らせ
 
 ---

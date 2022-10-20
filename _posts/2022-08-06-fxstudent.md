@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: 雑記
+categories: お知らせ
 seo:
   date_modified: 2022-08-06 19:48:51 +0900
 tags:

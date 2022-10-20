@@ -1,8 +1,7 @@
 ---
 layout: post
 title: 年末年始の楽しい時間までカウントダウン！
-categories:
-- 雑記
+categories: 雑記
 
 ---
 年末年始には楽しみなイベントがたくさんありますよね。
