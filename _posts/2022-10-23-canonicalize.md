@@ -2,7 +2,7 @@
 layout: post
 categories: プログラミング
 seo:
-  date_modified: 2022-10-23 21:00:00 +0900
+  date_modified: 2022-10-23T21:00:00.000+09:00
 tags:
 - Cloudflare
 - ドメイン
