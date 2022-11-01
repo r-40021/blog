@@ -31,7 +31,7 @@ sidebar:
       <ol>
       {% for post in site.posts reversed %}
         {% if post.series == page.series %}
-        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.series_title }}</a>{% if post.url == page.url %} (←今ココ){% endif %}</li>
+        <li><a href="{{post.url | relative_url}}">{{ post.series_title }}</a>{% if post.url == page.url %} (←今ココ){% endif %}</li>
         {% endif %}
       
       {% endfor %}
