@@ -522,161 +522,100 @@
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="framework">
-  <section class="main">
-
-     <div class="post">
-  <section>
-
-
-
-
-
-
-
-
-
+ <section class="main">
+    <div class="post">
+ <section>
 <header class="post-header">
-  <h1 class="post-title p-name" itemprop="name headline">ローカリゼーションの難しさ</h1>
-  <h2 class="post-subtitle"></h2>
-
-  <p class="post-meta">
+ <h1 class="post-title p-name" itemprop="name headline">ローカリゼーションの難しさ</h1>
+ <h2 class="post-subtitle"></h2>
+ <p class="post-meta">
     <time class="dt-published" datetime="2022-09-25T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2022/09/25
     </time><time class="dt-published" datetime="2022-09-25T12:00:07+09:00" itemprop="dateModified">
          <svg class="ico-svg" aria-label="最終更新日" title="最終更新日"><use xlink:href="/assets/symbol-defs.svg#sync"></use></svg> 2022/09/25
       </time>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  4 分</span>
-  </p>
+ </p>
 <div class="post-tags">
 <a class="post-tag" href="/tags.html#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AA%E3%82%BC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">#ローカリゼーション</a><a class="post-tag" href="/tags.html#%E7%BF%BB%E8%A8%B3">#翻訳</a><a class="post-tag" href="/tags.html#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a>
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <div class="post-content e-content" itemprop="articleBody">
-      
-      
-      
-      <!--画像-->
-        <figure>
+   <div class="post-content e-content" itemprop="articleBody">
+       <figure>
           <img src="/assets/images/2022/09/25/l10n.webp" width="100%" loading="eager" alt="ローカリゼーションの難しさ">
-          
-            <figcaption></figcaption>
-          
-        </figure>
-      
-
-      <p>「ローカリゼーション」という言葉を知っていますか？ローカリゼーションの意味や目的は多種多様ですが、ここでは「外国のソフトウェアをその国の言語や文化に適応させること」と定義します。</p>
-
-<p>ローカリゼーションは英語で “localization”、LとNの間に10文字あることから “L10N” と略されることもあります。</p>
-
-<p>このローカリゼーション、「所詮英語を日本語にするだけでしょ」と思うかもしれませんが、そうでもないのです。</p>
-
+           <figcaption></figcaption>
+       </figure>
+     <p>「ローカリゼーション」という言葉を知っていますか？ローカリゼーションの意味や目的は多種多様ですが、ここでは「外国のソフトウェアをその国の言語や文化に適応させること」と定義します。
+</p>
+<p>ローカリゼーションは英語で “localization”、LとNの間に10文字あることから “L10N” と略されることもあります。
+</p>
+<p>このローカリゼーション、「所詮英語を日本語にするだけでしょ」と思うかもしれませんが、そうでもないのです。
+</p>
 <h2 id="難しさ1自然な翻訳にするのが難しい">難しさ1　自然な翻訳にするのが難しい</h2>
-
-<p>まず、英語を自然な日本語にすることが難しいです。</p>
-
-<p>Mozilla JapanコミュニティのL10Nガイドラインでは、ローカリゼーションの目的を以下のように定めています。</p>
-
+<p>まず、英語を自然な日本語にすることが難しいです。
+</p>
+<p>Mozilla JapanコミュニティのL10Nガイドラインでは、ローカリゼーションの目的を以下のように定めています。
+</p>
 <blockquote>
-  <p>Mozilla の日本語ローカライズコミュニティでは Mozilla 製品が日本語化されたソフトであることを感じさせることなく、日本語で自然に使ってもらえるようにと意識してローカライズを行っています。</p>
-
-  <p><a href="https://github.com/mozilla-japan/translation/wiki/L10N-Guideline" target="_blank" rel="noopener noreferrer">L10N Guideline (Mozilla Japan Community)</a> 最終閲覧: 2022/9/24</p>
+ <p>Mozilla の日本語ローカライズコミュニティでは Mozilla 製品が日本語化されたソフトであることを感じさせることなく、日本語で自然に使ってもらえるようにと意識してローカライズを行っています。
+ </p>
+<p><a href="https://github.com/mozilla-japan/translation/wiki/L10N-Guideline" target="_blank" rel="noopener noreferrer">L10N Guideline (Mozilla Japan Community)</a> 最終閲覧: 2022/9/24
+</p>
 </blockquote>
-
-<p>日本語化されたソフトであることを感じさせてはならない、言い換えれば、極論ではありますがそのソフトは初めから日本で日本語をベースに作られていると錯覚させるくらいである必要があります。</p>
-
-<p>しかし、そこまで自然に翻訳するのは非常に大変です。</p>
-
-<p>そもそも英語と日本語では文構造が全く違います。</p>
-
-<p>英語は述語が先に来るのに対して、日本語は述語が後に来ます。それだけでなく、英語は主語をはっきりさせる傾向にありますが、日本語では主語を曖昧にすることが少なくありません。</p>
-
-<p>ただ機械的に翻訳しているだけでは、最近のWindowsのように「？？？」な文章になってしまいます。</p>
-
-<p>また、学校の試験における英語の和訳問題は、自然な日本語にすることも必要ですがどちらかと言うと文法や単語の意味を辞書通りに正確に訳す能力が求められます。一方のローカリゼーションでは、時には「原文に忠実にならない」という選択を取ることも必要です。原文に忠実であることよりも、自然な日本語であることを重要視します。</p>
-
-<p>とは言っても、ローカリゼーションに参加したところで英語力を高められないというわけではありません。前提として基本的な文法知識や語彙が必要だからです。英語(特に和訳)が苦手で、かつテキストエディタを使える人であればローカリゼーションに参加するのがおすすめです。</p>
-
+<p>日本語化されたソフトであることを感じさせてはならない、言い換えれば、極論ではありますがそのソフトは初めから日本で日本語をベースに作られていると錯覚させるくらいである必要があります。
+</p>
+<p>しかし、そこまで自然に翻訳するのは非常に大変です。
+</p>
+<p>そもそも英語と日本語では文構造が全く違います。
+</p>
+<p>英語は述語が先に来るのに対して、日本語は述語が後に来ます。それだけでなく、英語は主語をはっきりさせる傾向にありますが、日本語では主語を曖昧にすることが少なくありません。
+</p>
+<p>ただ機械的に翻訳しているだけでは、最近のWindowsのように「？？？」な文章になってしまいます。
+</p>
+<p>また、学校の試験における英語の和訳問題は、自然な日本語にすることも必要ですがどちらかと言うと文法や単語の意味を辞書通りに正確に訳す能力が求められます。一方のローカリゼーションでは、時には「原文に忠実にならない」という選択を取ることも必要です。原文に忠実であることよりも、自然な日本語であることを重要視します。
+</p>
+<p>とは言っても、ローカリゼーションに参加したところで英語力を高められないというわけではありません。前提として基本的な文法知識や語彙が必要だからです。英語(特に和訳)が苦手で、かつテキストエディタを使える人であればローカリゼーションに参加するのがおすすめです。
+</p>
 <h2 id="難しさ2文化の違い">難しさ2　文化の違い</h2>
-<p>ローカリゼーションでは、ときに文化の違いが壁になることがあります。</p>
-
-<p>例をあげると、最近Firefoxというブラウザで「Colorways」という機能が追加されようとしているのですが、これは「自分のありのままの個性をブラウザの色を変えることで出そう！」という意図を含んでいます。</p>
-
-<p>しかしながら、日本ではこういった感覚が欧米に比べてあまりありません。普段からアンテナを高くし、自分自身をアップデートし続けている人であればこの意図を理解できると思いますが、残念ながらそのような人ばかりではありません。</p>
-
-<p>これをどのように訳すか、あるいはあえて英語のままにしておくか、2022年9月時点では現在進行形で活発な議論が行われています。</p>
-
-<p><a href="https://github.com/mozilla-japan/gecko-l10n/issues/339" target="_blank" rel="noopener noreferrer">[v106] Colorways のローカライズ改善アイデアの募集 · Issue #339 · mozilla-japan/gecko-l10n</a></p>
-
+<p>ローカリゼーションでは、ときに文化の違いが壁になることがあります。
+</p>
+<p>例をあげると、最近Firefoxというブラウザで「Colorways」という機能が追加されようとしているのですが、これは「自分のありのままの個性をブラウザの色を変えることで出そう！」という意図を含んでいます。
+</p>
+<p>しかしながら、日本ではこういった感覚が欧米に比べてあまりありません。普段からアンテナを高くし、自分自身をアップデートし続けている人であればこの意図を理解できると思いますが、残念ながらそのような人ばかりではありません。
+</p>
+<p>これをどのように訳すか、あるいはあえて英語のままにしておくか、2022年9月時点では現在進行形で活発な議論が行われています。
+</p>
+<p><a href="https://github.com/mozilla-japan/gecko-l10n/issues/339" target="_blank" rel="noopener noreferrer">[v106] Colorways のローカライズ改善アイデアの募集 · Issue #339 · mozilla-japan/gecko-l10n</a>
+</p>
 <h2 id="苦労するのは1が多い">苦労するのは1が多い</h2>
-<p>ローカリゼーションの難しさを2つ挙げましたが、苦労することが多いのは圧倒的に1番目の方です。2番目の文化の違いはあまり遭遇することがありません。</p>
-
-<p>実は私も以前は、「ローカリゼーションなんて英語を日本語にするだけでしょ」と思っていました。しかし、実際にこの世界に足を踏み入れてみて、その難しさに驚愕しました。</p>
-
-<p>日々使っているソフトが、言語や文化に真剣に向き合っている人たちによって日本語化されていることを知って頂けたなら幸いです。</p>
-
+<p>ローカリゼーションの難しさを2つ挙げましたが、苦労することが多いのは圧倒的に1番目の方です。2番目の文化の違いはあまり遭遇することがありません。
+</p>
+<p>実は私も以前は、「ローカリゼーションなんて英語を日本語にするだけでしょ」と思っていました。しかし、実際にこの世界に足を踏み入れてみて、その難しさに驚愕しました。
+</p>
+<p>日々使っているソフトが、言語や文化に真剣に向き合っている人たちによって日本語化されていることを知って頂けたなら幸いです。
+</p>
 <h2 id="宣伝">宣伝</h2>
-
-<p>私も<a href="https://snapdrop.net" target="_blank" rel="noopener noreferrer">Snapdrop</a>というファイル転送アプリを日本語化した<a href="https://share.frogapp.net" target="_blank" rel="noopener noreferrer">Snapdrop JP</a>というサービスを運営しています。</p>
-
-<p>ぜひ使ってみてください。</p>
-
-
-    </div>
-
+<p>私も<a href="https://snapdrop.net" target="_blank" rel="noopener noreferrer">Snapdrop</a>というファイル転送アプリを日本語化した<a href="https://share.frogapp.net" target="_blank" rel="noopener noreferrer">Snapdrop JP</a>というサービスを運営しています。
+</p>
+<p>ぜひ使ってみてください。
+   </p>
+</div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2022-09/comment" title="コメント欄の試験運用を開始します">コメント欄の試験運用を開始します</a><a class="next" href="/2022-10/diary" title="一言日記(2022年10月)">一言日記(2022年10月)</a>
 </div>
 <div class="post-related">
-      <div>関連記事</div>
-      <ul>
-        <li><a class="post-link" href="/2021-09/aviutl-deview" title="一言日記(2022年10月)">Aviutl の勉強をはじめました</a></li>
-<li><a class="post-link" href="/2022-05/noto" title="一言日記(2022年10月)">汚いフォントに別れを告げられる拡張機能を作った</a></li>
-<li><a class="post-link" href="/2022-09/bot-2" title="一言日記(2022年10月)">5人で使っていたbotが学年の半数の人に使われるようになった話(後編)</a></li>
+     <div>関連記事</div>
+     <ul>
+       <li><a class="post-link" href="/2022-01/windows11-review" title="一言日記(2022年10月)">Windows 11 に関する誤解を暴く</a></li>
+<li><a class="post-link" href="/2022-07/manjaro-karnel" title="一言日記(2022年10月)">ManjaroとXubuntuをデュアルブートしたらKarnel Panicになった！！！</a></li>
 <li><a class="post-link" href="/2022-09/comment" title="一言日記(2022年10月)">コメント欄の試験運用を開始します</a></li>
+<li><a class="post-link" href="/2022-01/windows11-context" title="一言日記(2022年10月)">【ソフト不要】Windows 11 のコンテキストメニューを従来の見た目に戻す</a></li>
 </ul>
-    </div>
-<!-- begin wwww.htmlcommentbox.com -->
+   </div>
 <div id="HCB_comment_box">
 <a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
 <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
-<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-
-
-<!-- customize labels of htmlcommentbox.com -->
+<script type="text/javascript" id="hcb"> /**/ </script>
 <script>
   /* This code goes ABOVE the main HTML Comment Box code!
    replace the text in the single quotes below to customize labels.*/
@@ -718,7 +657,6 @@
       err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
       err_spam:'スパムと認定されたためこのコメントは削除されました。',
       err_blocked:'サイトポリシーによりこのコメントは削除されました。',
-  
       /* SETTINGS */
       MAX_CHARS: 256,
       PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
@@ -726,9 +664,7 @@
       RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
   };
   </script>
-  <!-- done customizing labels of htmlcommentbox.com -->
-
-  <style>
+ <style>
     #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
       transition: opacity .3s;
     }
@@ -753,65 +689,51 @@
       border: solid 1px #777;
       color: #ddd;
     }
-  </style>
+ </style>
 </section>
 </div>
-   
-
-  </section>
-
-
-  
-  <section class="sidebar" style="margin-left: 15px;">
-    <!-- Get sidebar items --><style type="text/css" media="screen">
+ </section>
+ 
+ <section class="sidebar" style="margin-left: 15px;">
+   <style type="text/css" media="screen">
 .post-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 </style>
-
 <div class="post-menu">
-  <div class="post-menu-title">目次</div>
-  <div class="post-menu-content"></div>
+ <div class="post-menu-title">目次</div>
+ <div class="post-menu-content"></div>
 </div>
-
 <script>
   function generateContent() {
     var menu = document.querySelector(".post-menu");
     var menuContent =  menu.querySelector(".post-menu-content");
     var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
-
     // Hide menu when no headings
     if (headings.length === 0) {
       return menu.style.display = "none";
     }
-
     // Generate post menu
     var menuHTML = '';
     for (var i = 0; i < headings.length; i++) {
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
     }
-
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
-
     // The header element
     var header = document.querySelector('header.site-header');
-
     function doMenuCollapse(index, over_items) {
       var items = menuContent.firstChild.children;
-
       if (over_items == undefined) {
         over_items = 20;
       }
-
       if (items.length < over_items) {
         return;
       }
-
       var activeItem = items[index];
       var beginItem = activeItem
       var endItem = activeItem
@@ -844,10 +766,8 @@
         }
       }
     }
-
     // Init menu collapsed
     doMenuCollapse(-1);
-
     // Active the menu item
     window.addEventListener('scroll', function (event) {
       var lastActive = menuContent.querySelector('.active');
@@ -886,10 +806,8 @@
   generateContent();
 </script>
 </section>
-</div>
-
       </div>
-    </main><footer class="site-footer h-card">
+    <footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
@@ -994,5 +912,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: none;
   }
 </style>
+</div></main>
 </body>
 </html>

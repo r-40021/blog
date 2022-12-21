@@ -520,83 +520,33 @@
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="framework">
-  <section class="main">
-
-     <div class="post">
-  <section>
-
-
-
-
-
-
-
-
-
+ <section class="main">
+    <div class="post">
+ <section>
 <header class="post-header">
-  <h1 class="post-title p-name" itemprop="name headline">三項演算子が便利すぎて感動した</h1>
-  <h2 class="post-subtitle"></h2>
-
-  <p class="post-meta">
+ <h1 class="post-title p-name" itemprop="name headline">三項演算子が便利すぎて感動した</h1>
+ <h2 class="post-subtitle"></h2>
+ <p class="post-meta">
     <time class="dt-published" datetime="2021-10-20T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2021/10/20
     </time>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  3 分</span>
-  </p>
+ </p>
 <div class="post-tags">
 <a class="post-tag" href="/tags.html#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a><a class="post-tag" href="/tags.html#JavaScript">#JavaScript</a>
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <div class="post-content e-content" itemprop="articleBody">
-      
-      
-      
-
-      <p>数ヶ月前、三項演算子に出会って感動したので、まだこの感動を味わっていない方向けに記事を書きました。</p>
-
+   <div class="post-content e-content" itemprop="articleBody">
+     <p>数ヶ月前、三項演算子に出会って感動したので、まだこの感動を味わっていない方向けに記事を書きました。
+</p>
 <h2 id="三項演算子の便利さ">三項演算子の便利さ</h2>
-<p>このような処理をしようとしているとします。</p>
-
+<p>このような処理をしようとしているとします。
+</p>
 <blockquote>
-  <p>変数 <code class="language-plaintext highlighter-rouge">age</code> には数値（年齢）が入る<br>
+ <p>変数 <code class="language-plaintext highlighter-rouge">age</code> には数値（年齢）が入る<br>
 <code class="language-plaintext highlighter-rouge">age</code> が18以上なら、変数 <code class="language-plaintext highlighter-rouge">message</code> に「あなたは成人です」を代入する<br>
-その他の場合は、変数 <code class="language-plaintext highlighter-rouge">message</code> に「あなたは成人ではありません」を代入する<br></p>
+その他の場合は、変数 <code class="language-plaintext highlighter-rouge">message</code> に「あなたは成人ではありません」を代入する<br>
+</p>
 </blockquote>
-
-<p>三項演算子を知らない人がプログラムを書くと、こんな感じになると思います。</p>
-
 <pre><code class="language-JavaScript">let message;
 if (age &gt;= 18) {
     message = "あなたは成人です";
@@ -604,83 +554,71 @@ if (age &gt;= 18) {
     message = "あなたは成人ではありません";
 }
 </code></pre>
-
-<p>しかし、三項演算子を使うと…</p>
-
 <pre><code class="language-JavaScript">const message = age &gt;= 18 ? "あなたは成人です" : "あなたは成人ではありません";
 </code></pre>
-
-<p>なんと美しいコード…</p>
-
-<p>では、三項演算子について解説していきます。</p>
-
+<p>なんと美しいコード…
+</p>
+<p>では、三項演算子について解説していきます。
+</p>
 <h2 id="三項演算子の使い方">三項演算子の使い方</h2>
-<p>三項演算子は「if-else」文をまとめたものですが、三項演算子には、三項演算子自身が条件判定で得られたデータに「化ける」という性質があります。これは if 文にはない性質です。</p>
-
-<p>このことにより、三項演算子を変数に代入することができます。</p>
-
-<p>次に、使い方についです。</p>
-
-<p>三項演算子は長いですが、3つの部分に分かれます。</p>
-
-<p>① 条件式</p>
-
-<p>② ①が true と判定されたときの処理</p>
-
-<p>③ ②が false と判定されたときの処理</p>
-
+<p>三項演算子は「if-else」文をまとめたものですが、三項演算子には、三項演算子自身が条件判定で得られたデータに「化ける」という性質があります。これは if 文にはない性質です。
+</p>
+<p>このことにより、三項演算子を変数に代入することができます。
+</p>
+<p>次に、使い方についです。
+</p>
+<p>三項演算子は長いですが、3つの部分に分かれます。
+</p>
+<p>① 条件式
+</p>
+<p>② ①が true と判定されたときの処理
+</p>
+<p>③ ②が false と判定されたときの処理
+</p>
 <p>① の書き方は if 文の条件式と同じなので、覚えやすいです。<code class="language-plaintext highlighter-rouge">&amp;&amp;</code> や <code class="language-plaintext highlighter-rouge">||</code> を使い、条件式を複数連結させられます。 ①の後には “?” が必要です
-。</p>
-
-<p>② ①の条件式が <code class="language-plaintext highlighter-rouge">true</code> のときに、三項演算子が何に化けるかを指定します。文字列でも数値でも数式でも、何でもOKです。</p>
-
-<p>③ ①の条件式が <code class="language-plaintext highlighter-rouge">false</code> のときに、三項演算子が何に化けるかを指定します。文字列でも数値でも数式でも、何でもOKです。</p>
-
-<p>なお、②と③の間には “:” が付きます。</p>
-
-<p>ここまで読んだ上で先ほどのサンプルコートを見てみると、初見のときとは違ったものが感じられます…</p>
-
-<p>ぜひ、今回ご紹介した「三項演算子」を使ってみてください！！</p>
-
+。
+</p>
+<p>② ①の条件式が <code class="language-plaintext highlighter-rouge">true</code> のときに、三項演算子が何に化けるかを指定します。文字列でも数値でも数式でも、何でもOKです。
+</p>
+<p>③ ①の条件式が <code class="language-plaintext highlighter-rouge">false</code> のときに、三項演算子が何に化けるかを指定します。文字列でも数値でも数式でも、何でもOKです。
+</p>
+<p>なお、②と③の間には “:” が付きます。
+</p>
+<p>ここまで読んだ上で先ほどのサンプルコートを見てみると、初見のときとは違ったものが感じられます…
+</p>
+<p>ぜひ、今回ご紹介した「三項演算子」を使ってみてください！！
+</p>
 <h2 id="参考">参考</h2>
 <ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank" rel="noopener noreferrer">条件 (三項) 演算子 - JavaScript</a></td>
-          <td>MDN&lt;/a&gt;</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+ <li>
+   <table>
+     <tbody>
+       <tr>
+         <td><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank" rel="noopener noreferrer">条件 (三項) 演算子 - JavaScript</a></td>
+<td>MDN&lt;/a&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
-
-
-    </div>
-
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2021-10/delete-glitch-project" title="Glitch のプロジェクトを削除する方法を調べてみた！">Glitch のプロジェクトを削除する方法を調べてみた！</a><a class="next" href="/2021-10/pixel6" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">Pixel 6 のレビューはしないけどレビューもどきはしてみた</a>
 </div>
 <div class="post-related">
-      <div>関連記事</div>
-      <ul>
-        <li><a class="post-link" href="/2022-09/comment" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">コメント欄の試験運用を開始します</a></li>
-<li><a class="post-link" href="/2022-09/domain-sale" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">.com .netドメインが1年間0円で使える！</a></li>
-<li><a class="post-link" href="/2021-08/chrome-extension-6" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜</a></li>
-<li><a class="post-link" href="/2022-09/bot-2" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">5人で使っていたbotが学年の半数の人に使われるようになった話(後編)</a></li>
+     <div>関連記事</div>
+     <ul>
+       <li><a class="post-link" href="/2022-07/1st-anniversary" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">【1周年記念】ブログを書くのは非効率だが、いいこともある＆今後について</a></li>
+<li><a class="post-link" href="/2021-09/aviutl-deview" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">Aviutl の勉強をはじめました</a></li>
+<li><a class="post-link" href="/2022-05/subset" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a></li>
+<li><a class="post-link" href="/2022-12/news" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">自分に合ったニュースアプリを探し求めて</a></li>
 </ul>
-    </div>
-<!-- begin wwww.htmlcommentbox.com -->
+   </div>
 <div id="HCB_comment_box">
 <a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
 <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
-<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-
-
-<!-- customize labels of htmlcommentbox.com -->
+<script type="text/javascript" id="hcb"> /**/ </script>
 <script>
   /* This code goes ABOVE the main HTML Comment Box code!
    replace the text in the single quotes below to customize labels.*/
@@ -722,7 +660,6 @@ if (age &gt;= 18) {
       err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
       err_spam:'スパムと認定されたためこのコメントは削除されました。',
       err_blocked:'サイトポリシーによりこのコメントは削除されました。',
-  
       /* SETTINGS */
       MAX_CHARS: 256,
       PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
@@ -730,9 +667,7 @@ if (age &gt;= 18) {
       RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
   };
   </script>
-  <!-- done customizing labels of htmlcommentbox.com -->
-
-  <style>
+ <style>
     #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
       transition: opacity .3s;
     }
@@ -757,65 +692,51 @@ if (age &gt;= 18) {
       border: solid 1px #777;
       color: #ddd;
     }
-  </style>
+ </style>
 </section>
 </div>
-   
-
-  </section>
-
-
-  
-  <section class="sidebar" style="margin-left: 15px;">
-    <!-- Get sidebar items --><style type="text/css" media="screen">
+ </section>
+ 
+ <section class="sidebar" style="margin-left: 15px;">
+   <style type="text/css" media="screen">
 .post-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 </style>
-
 <div class="post-menu">
-  <div class="post-menu-title">目次</div>
-  <div class="post-menu-content"></div>
+ <div class="post-menu-title">目次</div>
+ <div class="post-menu-content"></div>
 </div>
-
 <script>
   function generateContent() {
     var menu = document.querySelector(".post-menu");
     var menuContent =  menu.querySelector(".post-menu-content");
     var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
-
     // Hide menu when no headings
     if (headings.length === 0) {
       return menu.style.display = "none";
     }
-
     // Generate post menu
     var menuHTML = '';
     for (var i = 0; i < headings.length; i++) {
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
     }
-
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
-
     // The header element
     var header = document.querySelector('header.site-header');
-
     function doMenuCollapse(index, over_items) {
       var items = menuContent.firstChild.children;
-
       if (over_items == undefined) {
         over_items = 20;
       }
-
       if (items.length < over_items) {
         return;
       }
-
       var activeItem = items[index];
       var beginItem = activeItem
       var endItem = activeItem
@@ -848,10 +769,8 @@ if (age &gt;= 18) {
         }
       }
     }
-
     // Init menu collapsed
     doMenuCollapse(-1);
-
     // Active the menu item
     window.addEventListener('scroll', function (event) {
       var lastActive = menuContent.querySelector('.active');
@@ -890,10 +809,8 @@ if (age &gt;= 18) {
   generateContent();
 </script>
 </section>
-</div>
-
       </div>
-    </main><footer class="site-footer h-card">
+    <footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
@@ -998,5 +915,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: none;
   }
 </style>
+</div></main>
 </body>
 </html>

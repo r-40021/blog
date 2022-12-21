@@ -520,102 +520,44 @@
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="framework">
-  <section class="main">
-
-     <div class="post">
-  <section>
-
-
-
-
-
-
-
-
-
+ <section class="main">
+    <div class="post">
+ <section>
 <header class="post-header">
-  <h1 class="post-title p-name" itemprop="name headline">Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜</h1>
-  <h2 class="post-subtitle"></h2>
-
-  <p class="post-meta">
+ <h1 class="post-title p-name" itemprop="name headline">Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜</h1>
+ <h2 class="post-subtitle"></h2>
+ <p class="post-meta">
     <time class="dt-published" datetime="2021-08-08T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2021/08/08
     </time>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  19 分</span>
-  </p>
+ </p>
 <div class="post-tags">
 <a class="post-tag" href="/tags.html#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a><a class="post-tag" href="/tags.html#Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD">#Chrome拡張機能</a><a class="post-tag" href="/tags.html#JSON">#JSON</a><a class="post-tag" href="/tags.html#JavaScript">#JavaScript</a>
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <div class="post-content e-content" itemprop="articleBody">
-      
-      
-      
-
-      <p>1回15分で拡張機能を作るシリーズ、第6弾！</p>
-
-<p>拡張機能も完成に近づいてきました！今回は、更に利便性を向上させるため、コンテキストメニュー(右クリックで開けるメニュー)からも拡張機能を起動できるようにします。</p>
-
+   <div class="post-content e-content" itemprop="articleBody">
+     <p>1回15分で拡張機能を作るシリーズ、第6弾！
+</p>
+<p>拡張機能も完成に近づいてきました！今回は、更に利便性を向上させるため、コンテキストメニュー(右クリックで開けるメニュー)からも拡張機能を起動できるようにします。
+</p>
 <h2 id="backgroundjs-の作成">background.js の作成</h2>
-
-<p>開発用フォルダの一番上の階層に、<code class="language-plaintext highlighter-rouge">background.js</code> を作成してください。</p>
-
-<p>これは、バックグラウンドで動く JavaScript ファイルで、ここからコンテキストメニューを作成することができます。</p>
-
-<p>また、これを使用するにあたって、<code class="language-plaintext highlighter-rouge">manifest.json</code> の変更が必要になります。</p>
-
+<p>開発用フォルダの一番上の階層に、<code class="language-plaintext highlighter-rouge">background.js</code> を作成してください。
+</p>
+<p>これは、バックグラウンドで動く JavaScript ファイルで、ここからコンテキストメニューを作成することができます。
+</p>
+<p>また、これを使用するにあたって、<code class="language-plaintext highlighter-rouge">manifest.json</code> の変更が必要になります。
+</p>
 <h2 id="manifestjson-の書き換え">manifest.json の書き換え</h2>
-
-<p><code class="language-plaintext highlighter-rouge">manifest.json</code> の <code class="language-plaintext highlighter-rouge">permissions</code> を以下のように書き換えてください。</p>
-
 <pre><code class="language-JSON">"permissions": ["activeTab","scripting","contextMenus"],
 </code></pre>
-
-<p><code class="language-plaintext highlighter-rouge">scripting</code> は、<code class="language-plaintext highlighter-rouge">background.js</code> が、表示しているページに対してスクリプトを実行するために必要な権限です。通常、<code class="language-plaintext highlighter-rouge">background.js</code> は DOM にアクセスできないのですが、この権限を追加することにより、多少不便ではありますが、DOM にアクセスすることが可能になります。</p>
-
-<p><code class="language-plaintext highlighter-rouge">contextMenus</code> は、コンテキストメニューを使用するために必要な権限です。</p>
-
-<p>また、以下の内容を追記してください。<code class="language-plaintext highlighter-rouge">background.js</code> を使用することを明示します。</p>
-
+<p><code class="language-plaintext highlighter-rouge">scripting</code> は、<code class="language-plaintext highlighter-rouge">background.js</code> が、表示しているページに対してスクリプトを実行するために必要な権限です。通常、<code class="language-plaintext highlighter-rouge">background.js</code> は DOM にアクセスできないのですが、この権限を追加することにより、多少不便ではありますが、DOM にアクセスすることが可能になります。
+</p>
+<p><code class="language-plaintext highlighter-rouge">contextMenus</code> は、コンテキストメニューを使用するために必要な権限です。
+</p>
 <pre><code class="language-JSON">"background": {
   "service_worker": "background.js"
 }
 </code></pre>
-
-<p>全体で以下のようになります。</p>
-
 <pre><code class="language-JSON">{
   "name": "タイトルとURLをコピー",
   "description": "ページのタイトルとURLを簡単にコピーできます。",
@@ -637,11 +579,7 @@
   }
 }
 </code></pre>
-
 <h2 id="コンテキストメニューの作成">コンテキストメニューの作成</h2>
-
-<p><code class="language-plaintext highlighter-rouge">background.js</code> に以下の内容を記述してください。</p>
-
 <pre><code class="language-JavaScript">/* コンテキストメニューを作成 */
 const parent = chrome.contextMenus.create({
   id: "share",
@@ -649,65 +587,61 @@ const parent = chrome.contextMenus.create({
   contexts: ["all"],
 });
 </code></pre>
-
-<p>ここまでできたら、コードを保存して、<code class="language-plaintext highlighter-rouge">chrome://extensions</code> を開き、更新ボタンをクリックしてください。</p>
-
-<p>※以下、この操作を「拡張機能を更新する」と表現します。</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/128589985-e072d29d-d87e-4f11-afa6-9d66016b6c7f.png" alt="更新"></p>
-
-<p>下の画像のように、コンテキストメニューに「ページを共有」という項目が現れたでしょうか。</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/128617746-3cc15158-0ac1-47e3-b52e-ca9b637a2c23.png" alt="コンテキストメニュー"></p>
-
-<p>もしも現れない場合は、</p>
-
+<p>ここまでできたら、コードを保存して、<code class="language-plaintext highlighter-rouge">chrome://extensions</code> を開き、更新ボタンをクリックしてください。
+</p>
+<p>※以下、この操作を「拡張機能を更新する」と表現します。
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/128589985-e072d29d-d87e-4f11-afa6-9d66016b6c7f.png" alt="更新">
+</p>
+<p>下の画像のように、コンテキストメニューに「ページを共有」という項目が現れたでしょうか。
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/128617746-3cc15158-0ac1-47e3-b52e-ca9b637a2c23.png" alt="コンテキストメニュー">
+</p>
+<p>もしも現れない場合は、
+</p>
 <ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">chrome://extensions</code> の更新ボタンを押したか</li>
-  <li>書いたプログラムを保存したか</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">manifest.json</code> の記述は正しいか</li>
+ <li>
+<code class="language-plaintext highlighter-rouge">chrome://extensions</code> の更新ボタンを押したか
+ </li>
+<li>書いたプログラムを保存したか
+ </li>
+<li>
+<code class="language-plaintext highlighter-rouge">manifest.json</code> の記述は正しいか
+</li>
 </ul>
-
-<p>を確認してみてください。</p>
-
+<p>を確認してみてください。
+</p>
 <h3 id="コードの解説">コードの解説</h3>
-
-<p><code class="language-plaintext highlighter-rouge">chrome.contextMenus.create</code> でコンテキストメニューを作成することができます。また、この時にコンテキストメニューの設定をオブジェクト形式で行います。</p>
-
+<p><code class="language-plaintext highlighter-rouge">chrome.contextMenus.create</code> でコンテキストメニューを作成することができます。また、この時にコンテキストメニューの設定をオブジェクト形式で行います。
+</p>
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">項目</th>
-      <th style="text-align: left">説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">id</code></td>
-      <td style="text-align: left">後で参照する時に用いる ID</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">title </code></td>
-      <td style="text-align: left">コンテキストメニューに表示する文字列</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">contexts</code></td>
-      <td style="text-align: left">どこを右クリックした際のコンテキストメニューに追加するか。<br><a href="https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-ContextType" target="_blank" rel="noopener noreferrer">詳細情報</a>
+<thead>
+   <tr>
+     <th style="text-align: center">項目</th>
+<th style="text-align: left">説明</th>
+</tr>
+</thead>
+<tbody>
+   <tr>
+     <td style="text-align: center"><code class="language-plaintext highlighter-rouge">id</code></td>
+<td style="text-align: left">後で参照する時に用いる ID</td>
+</tr>
+<tr>
+     <td style="text-align: center"><code class="language-plaintext highlighter-rouge">title </code></td>
+<td style="text-align: left">コンテキストメニューに表示する文字列</td>
+</tr>
+<tr>
+     <td style="text-align: center"><code class="language-plaintext highlighter-rouge">contexts</code></td>
+<td style="text-align: left">どこを右クリックした際のコンテキストメニューに追加するか。<br><a href="https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-ContextType" target="_blank" rel="noopener noreferrer">詳細情報</a>
 </td>
-    </tr>
-  </tbody>
+</tr>
+</tbody>
 </table>
-
 <h2 id="子コンテキストメニューを作成する">子コンテキストメニューを作成する</h2>
-
-<p>それでは、コンテキストメニューの一つ下の階層を作っていきましょう。</p>
-
-<p>やり方は簡単。先程のコードに <code class="language-plaintext highlighter-rouge">parentId</code> プロパティを追加して、親コンテキストメニューを指定するだけです。</p>
-
-<p>以下のコードを追加してください。</p>
-
+<p>それでは、コンテキストメニューの一つ下の階層を作っていきましょう。
+</p>
+<p>やり方は簡単。先程のコードに <code class="language-plaintext highlighter-rouge">parentId</code> プロパティを追加して、親コンテキストメニューを指定するだけです。
+</p>
 <pre><code class="language-JavaScript">chrome.contextMenus.create({
   parentId: parent,
   id: "title",
@@ -745,15 +679,11 @@ chrome.contextMenus.create({
   contexts: ["all"],
 });
 </code></pre>
-
 <h2 id="インストール更新時にのみ実行する">インストール・更新時にのみ実行する</h2>
-
-<p>(2021/08/28追記) インストール・更新時にのみ実行するようにしないとエラーが発生し、動作しなくなることが判明したため、このセクションを追加しました。記述するべきコードが抜けてしまっていたことをお詫び申し上げます。</p>
-
-<p>コンテキストメニューを作成する処理を何度も行ってしまうと、エラーを引き起こすため、拡張機能をインストール / 更新したときのみ実行されるようにします。</p>
-
-<p><code class="language-plaintext highlighter-rouge">background.js</code> を以下のように変更してください。</p>
-
+<p>(2021/08/28追記) インストール・更新時にのみ実行するようにしないとエラーが発生し、動作しなくなることが判明したため、このセクションを追加しました。記述するべきコードが抜けてしまっていたことをお詫び申し上げます。
+</p>
+<p>コンテキストメニューを作成する処理を何度も行ってしまうと、エラーを引き起こすため、拡張機能をインストール / 更新したときのみ実行されるようにします。
+</p>
 <pre><code class="language-JavaScript">chrome.runtime.onInstalled.addListener(function (details) {
     /* コンテキストメニューを作成 */
     const parent = chrome.contextMenus.create({
@@ -766,17 +696,13 @@ chrome.contextMenus.create({
 });
 
 </code></pre>
-
-<p>ここまでできたら、拡張機能を更新してください。</p>
-
-<p>下の画像のようなコンテキストメニューになったでしょうか。</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/128617869-6ef85ba5-1362-4bc1-b351-1f46fc1a36f2.png" alt="階層化したコンテキストメニュー"></p>
-
+<p>ここまでできたら、拡張機能を更新してください。
+</p>
+<p>下の画像のようなコンテキストメニューになったでしょうか。
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/128617869-6ef85ba5-1362-4bc1-b351-1f46fc1a36f2.png" alt="階層化したコンテキストメニュー">
+</p>
 <h2 id="動作をつける">動作をつける</h2>
-
-<p><code class="language-plaintext highlighter-rouge">background.js</code> に以下のコードを追加してください。</p>
-
 <pre><code class="language-JavaScript">/* コンテキストメニューがクリックされた時の処理 */
 chrome.contextMenus.onClicked.addListener((info, tab) =&gt; {
   switch (info.menuItemId) {
@@ -876,338 +802,106 @@ function LINE() {
   );
 }
 </code></pre>
-
 <h3 id="コードの解説-1">コードの解説</h3>
-
-<p><code class="language-plaintext highlighter-rouge">chrome.contextMenus.onClicked.addListener((info, tab) =&gt; {})</code> で、コンテキストメニューがクリックされた際の処理を指定できます。</p>
-
-<p>引数の <code class="language-plaintext highlighter-rouge">info</code> にクリックされたコンテキストメニューの情報が、<code class="language-plaintext highlighter-rouge">tab</code> に現在のタブの情報が格納されています。</p>
-
-<p><code class="language-plaintext highlighter-rouge">info.menuItemId</code> に、先程コンテキストメニューを作成した際に指定した ID が格納されているので、それで処理を分けます。</p>
-
+<p><code class="language-plaintext highlighter-rouge">chrome.contextMenus.onClicked.addListener((info, tab) =&gt; {})</code> で、コンテキストメニューがクリックされた際の処理を指定できます。
+</p>
+<p>引数の <code class="language-plaintext highlighter-rouge">info</code> にクリックされたコンテキストメニューの情報が、<code class="language-plaintext highlighter-rouge">tab</code> に現在のタブの情報が格納されています。
+</p>
+<p><code class="language-plaintext highlighter-rouge">info.menuItemId</code> に、先程コンテキストメニューを作成した際に指定した ID が格納されているので、それで処理を分けます。
+</p>
 <p><code class="language-plaintext highlighter-rouge">switch</code> 文は <code class="language-plaintext highlighter-rouge">if ... else if ... else if ... else ... </code> と同じような処理が簡単に行える文です。
-<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/switch" target="_blank" rel="noopener noreferrer">詳細情報</a></p>
-
-<p><code class="language-plaintext highlighter-rouge">chrome.scripting.executeScript</code> で、指定したタブに指定した JavaScript のコードを挿入できます。</p>
-
-<p>これを用いることで、<code class="language-plaintext highlighter-rouge">background.js</code> から DOM を操作することができます。</p>
-
-<p>タブを指定する際にはタブの ID を用いるのですが、これは <code class="language-plaintext highlighter-rouge">chrome.contextMenus.onClicked.addListener((info, tab) =&gt; {})</code> の引数 <code class="language-plaintext highlighter-rouge">tab</code> 内に格納されているため、<code class="language-plaintext highlighter-rouge">tab.id</code> で参照できます。</p>
-
-<p>これが <code class="language-plaintext highlighter-rouge">target: { tabId: tab.id }</code> の部分に当たります。</p>
-
-<p><code class="language-plaintext highlighter-rouge">function:</code> で、挿入する JavaScript の関数を指定します。</p>
-
-<p>これで、拡張機能を更新すると、コンテキストメニューからも各種操作が行えるようになります。</p>
-
+<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/switch" target="_blank" rel="noopener noreferrer">詳細情報</a>
+</p>
+<p><code class="language-plaintext highlighter-rouge">chrome.scripting.executeScript</code> で、指定したタブに指定した JavaScript のコードを挿入できます。
+</p>
+<p>これを用いることで、<code class="language-plaintext highlighter-rouge">background.js</code> から DOM を操作することができます。
+</p>
+<p>タブを指定する際にはタブの ID を用いるのですが、これは <code class="language-plaintext highlighter-rouge">chrome.contextMenus.onClicked.addListener((info, tab) =&gt; {})</code> の引数 <code class="language-plaintext highlighter-rouge">tab</code> 内に格納されているため、<code class="language-plaintext highlighter-rouge">tab.id</code> で参照できます。
+</p>
+<p>これが <code class="language-plaintext highlighter-rouge">target: { tabId: tab.id }</code> の部分に当たります。
+</p>
+<p><code class="language-plaintext highlighter-rouge">function:</code> で、挿入する JavaScript の関数を指定します。
+</p>
+<p>これで、拡張機能を更新すると、コンテキストメニューからも各種操作が行えるようになります。
+</p>
 <h2 id="まとめ">まとめ</h2>
 <ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">background.js</code> でコンテキストメニューを作成できる。</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">background.js</code> から DOM を操作するには、<code class="language-plaintext highlighter-rouge">scripting</code> 権限が必要である。<code class="language-plaintext highlighter-rouge">chrome.contextMenus.onClicked.addListener((info, tab) =&gt; {})</code> で JavaScript コードを指定のタブに挿入できる。</li>
+ <li>
+<code class="language-plaintext highlighter-rouge">background.js</code> でコンテキストメニューを作成できる。
+ </li>
+<li>
+<code class="language-plaintext highlighter-rouge">background.js</code> から DOM を操作するには、<code class="language-plaintext highlighter-rouge">scripting</code> 権限が必要である。<code class="language-plaintext highlighter-rouge">chrome.contextMenus.onClicked.addListener((info, tab) =&gt; {})</code> で JavaScript コードを指定のタブに挿入できる。
+</li>
 </ul>
-
-<p>今回扱ったコードは <a href="https://github.com/r-40021/copy_title-URL/tree/lesson_6" target="_blank" rel="noopener noreferrer">こちら</a> から見られます。ぜひ参考にしてみてください。</p>
-
+<p>今回扱ったコードは <a href="https://github.com/r-40021/copy_title-URL/tree/lesson_6" target="_blank" rel="noopener noreferrer">こちら</a> から見られます。ぜひ参考にしてみてください。
+</p>
 <h2 id="次回予告">次回予告</h2>
-<p>次回はいよいよ、作成した拡張機能を Web ストアに出品していきます。</p>
-
-<p>以下のものが必要になるので、次回までに用意しておいてください。</p>
-
+<p>次回はいよいよ、作成した拡張機能を Web ストアに出品していきます。
+</p>
+<p>以下のものが必要になるので、次回までに用意しておいてください。
+</p>
 <ul>
-  <li>Google アカウント(できれば開発用に新しく作ったほうが良い<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>)</li>
-  <li>5ドル(Web ストアに開発者登録をする際に必要)</li>
-  <li>クレジットカードまたはデビットカード　本人確認を済ませた LINE プリペイドカードでも可</li>
+ <li>Google アカウント(できれば開発用に新しく作ったほうが良い<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>)
+ </li>
+<li>5ドル(Web ストアに開発者登録をする際に必要)
+ </li>
+<li>クレジットカードまたはデビットカード　本人確認を済ませた LINE プリペイドカードでも可
+</li>
 </ul>
-
-<p>それでは、次回をお楽しみに！本日もお疲れさまでした！</p>
-
+<p>それでは、次回をお楽しみに！本日もお疲れさまでした！
+</p>
 <div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1" role="doc-endnote">
-      <p>問い合わせ用のメールアドレスが必要になります。これは公開されるので、本名を隠したい人は匿名の Google アカウントを用意しておいてください。 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
-    </li>
-  </ol>
+ <ol>
+   <li id="fn:1" role="doc-endnote">
+     <p>問い合わせ用のメールアドレスが必要になります。これは公開されるので、本名を隠したい人は匿名の Google アカウントを用意しておいてください。 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a>
+ </p>
+</li>
+</ol>
 </div>
-
-
-    </div>
-
+   </div>
 </article>
-
       <br><br><br>
-      <p>【「Chrome 拡張機能を作ろう」の記事一覧】</p>
-      <ol>
-      
-        
-      
-      
-        
-        <li><a href="/2021-07/chrome-extension-1">環境構築</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-2">ポップアップ作成</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-3">仕様に沿って開発</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-4">コピー機能実装</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-5">権限を減らす</a></li>
-        
-      
-      
-        
-        <li>
-<a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a> (←今ココ)</li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-7">Webストアに公開</a></li>
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-      </ol>
-       <div class="post-nav">
+     <p>【「Chrome 拡張機能を作ろう」の記事一覧】
+     </p>
+<ol>
+       <li>
+<a href="/2021-07/chrome-extension-1">環境構築</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-2">ポップアップ作成</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-3">仕様に沿って開発</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-4">コピー機能実装</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-5">権限を減らす</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a> (←今ココ)
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-7">Webストアに公開</a>
+     </li>
+</ol>
+      <div class="post-nav">
 <a class="previous" href="/2021-08/chrome-extension-5" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜</a><a class="next" href="/2021-08/chrome-extension-7" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜</a>
 </div>
 <div class="post-related">
-      <div>関連記事</div>
-      <ul>
-        <li><a class="post-link" href="/2022-05/noto" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">汚いフォントに別れを告げられる拡張機能を作った</a></li>
-<li><a class="post-link" href="/2022-08/ads" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">僕が広告を一切入れていない理由(本音)</a></li>
-<li><a class="post-link" href="/2021-07/jekyll" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">Jekyll について</a></li>
-<li><a class="post-link" href="/2021-08/chrome-extension-4" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜</a></li>
+     <div>関連記事</div>
+     <ul>
+       <li><a class="post-link" href="/2021-11/no-msgothic" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">ＭＳ ゴシックを使わないで(切実)</a></li>
+<li><a class="post-link" href="/2022-09/bot-1" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">5人で使っていたbotが学年の半数の人に使われるようになった話(前編)</a></li>
+<li><a class="post-link" href="/2021-11/protect-chrome" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">プライバシーの宝庫、Chrome を守る〜晒し防止篇〜</a></li>
+<li><a class="post-link" href="/2021-12/winter" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">冬</a></li>
 </ul>
-    </div>
-<!-- begin wwww.htmlcommentbox.com -->
+   </div>
 <div id="HCB_comment_box">
 <a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
 <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
-<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-
-
-<!-- customize labels of htmlcommentbox.com -->
+<script type="text/javascript" id="hcb"> /**/ </script>
 <script>
   /* This code goes ABOVE the main HTML Comment Box code!
    replace the text in the single quotes below to customize labels.*/
@@ -1249,7 +943,6 @@ function LINE() {
       err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
       err_spam:'スパムと認定されたためこのコメントは削除されました。',
       err_blocked:'サイトポリシーによりこのコメントは削除されました。',
-  
       /* SETTINGS */
       MAX_CHARS: 256,
       PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
@@ -1257,9 +950,7 @@ function LINE() {
       RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
   };
   </script>
-  <!-- done customizing labels of htmlcommentbox.com -->
-
-  <style>
+ <style>
     #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
       transition: opacity .3s;
     }
@@ -1284,65 +975,51 @@ function LINE() {
       border: solid 1px #777;
       color: #ddd;
     }
-  </style>
+ </style>
 </section>
 </div>
-   
-
-  </section>
-
-
-  
-  <section class="sidebar" style="margin-left: 15px;">
-    <!-- Get sidebar items --><style type="text/css" media="screen">
+ </section>
+ 
+ <section class="sidebar" style="margin-left: 15px;">
+   <style type="text/css" media="screen">
 .post-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 </style>
-
 <div class="post-menu">
-  <div class="post-menu-title">目次</div>
-  <div class="post-menu-content"></div>
+ <div class="post-menu-title">目次</div>
+ <div class="post-menu-content"></div>
 </div>
-
 <script>
   function generateContent() {
     var menu = document.querySelector(".post-menu");
     var menuContent =  menu.querySelector(".post-menu-content");
     var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
-
     // Hide menu when no headings
     if (headings.length === 0) {
       return menu.style.display = "none";
     }
-
     // Generate post menu
     var menuHTML = '';
     for (var i = 0; i < headings.length; i++) {
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
     }
-
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
-
     // The header element
     var header = document.querySelector('header.site-header');
-
     function doMenuCollapse(index, over_items) {
       var items = menuContent.firstChild.children;
-
       if (over_items == undefined) {
         over_items = 20;
       }
-
       if (items.length < over_items) {
         return;
       }
-
       var activeItem = items[index];
       var beginItem = activeItem
       var endItem = activeItem
@@ -1375,10 +1052,8 @@ function LINE() {
         }
       }
     }
-
     // Init menu collapsed
     doMenuCollapse(-1);
-
     // Active the menu item
     window.addEventListener('scroll', function (event) {
       var lastActive = menuContent.querySelector('.active');
@@ -1417,10 +1092,8 @@ function LINE() {
   generateContent();
 </script>
 </section>
-</div>
-
       </div>
-    </main><footer class="site-footer h-card">
+    <footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
@@ -1525,5 +1198,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: none;
   }
 </style>
+</div></main>
 </body>
 </html>

@@ -520,200 +520,138 @@
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="framework">
-  <section class="main">
-
-     <div class="post">
-  <section>
-
-
-
-
-
-
-
-
-
+ <section class="main">
+    <div class="post">
+ <section>
 <header class="post-header">
-  <h1 class="post-title p-name" itemprop="name headline">GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー</h1>
-  <h2 class="post-subtitle"></h2>
-
-  <p class="post-meta">
+ <h1 class="post-title p-name" itemprop="name headline">GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー</h1>
+ <h2 class="post-subtitle"></h2>
+ <p class="post-meta">
     <time class="dt-published" datetime="2021-08-13T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2021/08/13
     </time>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  5 分</span>
-  </p>
+ </p>
 <div class="post-tags">
 <a class="post-tag" href="/tags.html#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a><a class="post-tag" href="/tags.html#GitHub">#GitHub</a><a class="post-tag" href="/tags.html#VSCode">#VSCode</a>
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <div class="post-content e-content" itemprop="articleBody">
-      
-      
-      
-
-      <p>先日、GitHub がブラウザ上で VS Code を使える新機能を発表しました。</p>
-
-<p>以前から予告されている Codespaces とは異なり、すべてのユーザーが無料で使用できます。</p>
-
-<p>ということで、私も使ってみました。</p>
-
-<p>ちなみに、この記事も Web Editor を使って書いています。</p>
-
+   <div class="post-content e-content" itemprop="articleBody">
+     <p>先日、GitHub がブラウザ上で VS Code を使える新機能を発表しました。
+</p>
+<p>以前から予告されている Codespaces とは異なり、すべてのユーザーが無料で使用できます。
+</p>
+<p>ということで、私も使ってみました。
+</p>
+<p>ちなみに、この記事も Web Editor を使って書いています。
+</p>
 <h2 id="使い方">使い方</h2>
-<p>使い方はとても簡単。</p>
-
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">🤫 New shortcut: Press . on any GitHub repo. <a href="https://t.co/AHTSDot4qc">pic.twitter.com/AHTSDot4qc</a></p>— GitHub (@github) <a href="https://twitter.com/github/status/1425505817827151872?ref_src=twsrc%5Etfw">August 11, 2021</a>
-</blockquote>
+<p>使い方はとても簡単。
+</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🤫 New shortcut: Press . on any GitHub repo. <a href="https://t.co/AHTSDot4qc">pic.twitter.com/AHTSDot4qc</a>— GitHub (@github) <a href="https://twitter.com/github/status/1425505817827151872?ref_src=twsrc%5Etfw">August 11, 2021</a></p></blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>このツイートの動画のように、GitHub のリポジトリ画面で、キーボードの「.」(ピリオド)キーを押すだけ！</p>
-
+<p>このツイートの動画のように、GitHub のリポジトリ画面で、キーボードの「.」(ピリオド)キーを押すだけ！
+</p>
 <h2 id="どんなものか">どんなものか</h2>
-
-<p>簡単に行ってしまえば、「VS Code がブラウザ上でも動く」サービスです。</p>
-
-<p>GitHub が来月から提供を開始する類似のサービスとして、Codespaces がありますが、これは法人向けで、料金も発生します。その分機能が多いです。</p>
-
-<p>一方、こちらの Web  Editor は誰でも無料で使えるサービスですが、機能は限られています。</p>
-
+<p>簡単に行ってしまえば、「VS Code がブラウザ上でも動く」サービスです。
+</p>
+<p>GitHub が来月から提供を開始する類似のサービスとして、Codespaces がありますが、これは法人向けで、料金も発生します。その分機能が多いです。
+</p>
+<p>一方、こちらの Web  Editor は誰でも無料で使えるサービスですが、機能は限られています。
+</p>
 <h2 id="使用感">使用感</h2>
-
-<p>使ってみましたが、とてもサクサク動きます。使っているのは、Celeron CPU の低スペノートPCなのですが、もっさりすることもなく、快適に使えます。</p>
-
-<p>気になった点として、画面右下に「Layout: us」と表示されており、JIS配列では使えないのかと思っていましたが、問題なく使えました。記号の入力も含めてバッチリです。</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/129321958-cced00cc-e868-48f3-9dd5-b496114f544b.png" alt="レイアウトがUSになっている"></p>
-
-<p>では、この Web Editor のメリット・デメリットをご紹介します。</p>
-
+<p>使ってみましたが、とてもサクサク動きます。使っているのは、Celeron CPU の低スペノートPCなのですが、もっさりすることもなく、快適に使えます。
+</p>
+<p>気になった点として、画面右下に「Layout: us」と表示されており、JIS配列では使えないのかと思っていましたが、問題なく使えました。記号の入力も含めてバッチリです。
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/129321958-cced00cc-e868-48f3-9dd5-b496114f544b.png" alt="レイアウトがUSになっている">
+</p>
+<p>では、この Web Editor のメリット・デメリットをご紹介します。
+</p>
 <h2 id="メリット">メリット</h2>
-
 <h3 id="ローカルの-vs-code-の環境が同期される">ローカルの VS Code の環境が同期される</h3>
-<p>ローカルの VS Code で GitHub アカウントでの同期を有効にしている場合は、Web Editor にも反映されます。</p>
-
-<p>ただ、拡張機能と一部の設定は同期されませんでした…</p>
-
+<p>ローカルの VS Code で GitHub アカウントでの同期を有効にしている場合は、Web Editor にも反映されます。
+</p>
+<p>ただ、拡張機能と一部の設定は同期されませんでした…
+</p>
 <h3 id="動作が軽い">動作が軽い</h3>
-
-<p>低スペックのパソコンでも、快適に動作します。</p>
-
+<p>低スペックのパソコンでも、快適に動作します。
+</p>
 <h3 id="github-との相性が抜群">GitHub との相性が抜群</h3>
-<p>当たり前ですが、GitHub との相性は抜群です！</p>
-
-<p>Commit はもちろん、Issue や Pull Request だってできます。</p>
-
-<p>ちなみに、Web Editor でコミットをすると、GitHub の方にも反映されます。<code class="language-plaintext highlighter-rouge">git push</code> の工程がないので、はじめは戸惑うかもしれませんが、すぐに慣れます。</p>
-
+<p>当たり前ですが、GitHub との相性は抜群です！
+</p>
+<p>Commit はもちろん、Issue や Pull Request だってできます。
+</p>
+<p>ちなみに、Web Editor でコミットをすると、GitHub の方にも反映されます。<code class="language-plaintext highlighter-rouge">git push</code> の工程がないので、はじめは戸惑うかもしれませんが、すぐに慣れます。
+</p>
 <h3 id="拡張機能が使える">拡張機能が使える</h3>
-
-<p>拡張機能もインストールできます。スニペット等もそのまま使えるので、安心です。</p>
-
+<p>拡張機能もインストールできます。スニペット等もそのまま使えるので、安心です。
+</p>
 <h3 id="os-を問わない">OS を問わない</h3>
-<p>PC のみならず、タブレットでも開発ができます。スマホだと画面が小さすぎて無理がありますが。</p>
-
+<p>PC のみならず、タブレットでも開発ができます。スマホだと画面が小さすぎて無理がありますが。
+</p>
 <h2 id="デメリット">デメリット</h2>
-
 <h3 id="ターミナルが使えない">ターミナルが使えない</h3>
-<p>ターミナルは残念ながら使えません。Codespaces だと使えるようですが…</p>
-
-<p>拡張機能でカバーできる部分もあるかもしれませんが、あまりハードな開発はできません。</p>
-
+<p>ターミナルは残念ながら使えません。Codespaces だと使えるようですが…
+</p>
+<p>拡張機能でカバーできる部分もあるかもしれませんが、あまりハードな開発はできません。
+</p>
 <h3 id="使えない拡張機能が多い">使えない拡張機能が多い</h3>
-
-<p>ローカルでは使えても、Web Editor では使えない拡張機能が結構多いです。</p>
-
-<p>個人的には、</p>
-
+<p>ローカルでは使えても、Web Editor では使えない拡張機能が結構多いです。
+</p>
+<p>個人的には、
+</p>
 <ul>
-  <li>Live Server</li>
-  <li>テキスト校正くん</li>
+ <li>Live Server
+ </li>
+<li>テキスト校正くん
+</li>
 </ul>
-
-<p>が使えないのが痛いですね…</p>
-
-<p>フォーマッターも使えません。逆に、スニペット系はサポートされているものが多いです。</p>
-
-<p>Live Server に関しては、類似サービスの <a href="https://www.gitpod.io/" target="_blank" rel="noopener noreferrer">Gitpod</a> では使えるので、 Gitpod に比べるとやや劣った印象を受けます。</p>
-
-<p>ただ、Gitpod は無料プランだと時間制限があるので、結局はローカル環境での開発が一番快適でしょう。</p>
-
-<p>法人の場合は Codespaces が良いと思います。実際に GitHub 社のエンジニアの方々が使いながら改善されているので、「かゆいところに手が届く」仕様になっていると思います。Codespaces ならターミナルも使えますし。</p>
-
+<p>が使えないのが痛いですね…
+</p>
+<p>フォーマッターも使えません。逆に、スニペット系はサポートされているものが多いです。
+</p>
+<p>Live Server に関しては、類似サービスの <a href="https://www.gitpod.io/" target="_blank" rel="noopener noreferrer">Gitpod</a> では使えるので、 Gitpod に比べるとやや劣った印象を受けます。
+</p>
+<p>ただ、Gitpod は無料プランだと時間制限があるので、結局はローカル環境での開発が一番快適でしょう。
+</p>
+<p>法人の場合は Codespaces が良いと思います。実際に GitHub 社のエンジニアの方々が使いながら改善されているので、「かゆいところに手が届く」仕様になっていると思います。Codespaces ならターミナルも使えますし。
+</p>
 <h3 id="markdown-を扱っている時画像を挿入できない">Markdown を扱っている時、画像を挿入できない</h3>
-<p>昔からある GitHub のブラウザ上の編集画面では、画像をドラッグ&amp;ドロップすれば Markdown で書いているものに画像を挿入できたのですが、Web Editor ではできません。</p>
-
-<p>これが地味に面倒。いちいち Issue かなんかの編集画面に画像をアップロードして、URL を Web Editor にコピペしないといけない。</p>
-
-<p>ただ、昔ながらのブラウザ上の編集画面とは違って、リアルタイムで作業が保存される(コミットはされない)点は便利です。</p>
-
+<p>昔からある GitHub のブラウザ上の編集画面では、画像をドラッグ&amp;ドロップすれば Markdown で書いているものに画像を挿入できたのですが、Web Editor ではできません。
+</p>
+<p>これが地味に面倒。いちいち Issue かなんかの編集画面に画像をアップロードして、URL を Web Editor にコピペしないといけない。
+</p>
+<p>ただ、昔ながらのブラウザ上の編集画面とは違って、リアルタイムで作業が保存される(コミットはされない)点は便利です。
+</p>
 <h2 id="どのような用途に向いているか">どのような用途に向いているか</h2>
 <ul>
-  <li>コンパイルがいらない言語(JavaScript、Python など)での軽いプログラミング</li>
-  <li>ブログの執筆</li>
-  <li>コードの閲覧</li>
+ <li>コンパイルがいらない言語(JavaScript、Python など)での軽いプログラミング
+ </li>
+<li>ブログの執筆
+ </li>
+<li>コードの閲覧
+</li>
 </ul>
-
-<p>Web Editor の用途はかなり限られてしまいますが、手軽な開発環境としてはかなり優秀ではないのでしょうか。</p>
-
-
-    </div>
-
+<p>Web Editor の用途はかなり限られてしまいますが、手軽な開発環境としてはかなり優秀ではないのでしょうか。
+   </p>
+</div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2021-08/chrome-extension-7" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜</a><a class="next" href="/2021-08/twitter-delete" title="Twitter のアカウントを復活！残るデータ・消えるデータ">Twitter のアカウントを復活！残るデータ・消えるデータ</a>
 </div>
 <div class="post-related">
-      <div>関連記事</div>
-      <ul>
-        <li><a class="post-link" href="/2022-01/browser" title="Twitter のアカウントを復活！残るデータ・消えるデータ">1年間いろんなブラウザを試した結果、結局Chromeに戻った話</a></li>
-<li><a class="post-link" href="/2022-01/windows11-context" title="Twitter のアカウントを復活！残るデータ・消えるデータ">【ソフト不要】Windows 11 のコンテキストメニューを従来の見た目に戻す</a></li>
-<li><a class="post-link" href="/2021-09/github-education" title="Twitter のアカウントを復活！残るデータ・消えるデータ">学生は無料で GitHub Pro が使える？特典や申請方法などを解説！</a></li>
-<li><a class="post-link" href="/2022-05/noto" title="Twitter のアカウントを復活！残るデータ・消えるデータ">汚いフォントに別れを告げられる拡張機能を作った</a></li>
+     <div>関連記事</div>
+     <ul>
+       <li><a class="post-link" href="/2021-12/winter" title="Twitter のアカウントを復活！残るデータ・消えるデータ">冬</a></li>
+<li><a class="post-link" href="/2022-12/chromebook" title="Twitter のアカウントを復活！残るデータ・消えるデータ">改めて感じた Chromebook の良さ〜心配がいらない PC〜</a></li>
+<li><a class="post-link" href="/2022-05/renewal" title="Twitter のアカウントを復活！残るデータ・消えるデータ">ブログをリニューアルしました</a></li>
+<li><a class="post-link" href="/2021-08/chrome-extension-6" title="Twitter のアカウントを復活！残るデータ・消えるデータ">Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜</a></li>
 </ul>
-    </div>
-<!-- begin wwww.htmlcommentbox.com -->
+   </div>
 <div id="HCB_comment_box">
 <a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
 <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
-<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-
-
-<!-- customize labels of htmlcommentbox.com -->
+<script type="text/javascript" id="hcb"> /**/ </script>
 <script>
   /* This code goes ABOVE the main HTML Comment Box code!
    replace the text in the single quotes below to customize labels.*/
@@ -755,7 +693,6 @@
       err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
       err_spam:'スパムと認定されたためこのコメントは削除されました。',
       err_blocked:'サイトポリシーによりこのコメントは削除されました。',
-  
       /* SETTINGS */
       MAX_CHARS: 256,
       PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
@@ -763,9 +700,7 @@
       RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
   };
   </script>
-  <!-- done customizing labels of htmlcommentbox.com -->
-
-  <style>
+ <style>
     #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
       transition: opacity .3s;
     }
@@ -790,65 +725,51 @@
       border: solid 1px #777;
       color: #ddd;
     }
-  </style>
+ </style>
 </section>
 </div>
-   
-
-  </section>
-
-
-  
-  <section class="sidebar" style="margin-left: 15px;">
-    <!-- Get sidebar items --><style type="text/css" media="screen">
+ </section>
+ 
+ <section class="sidebar" style="margin-left: 15px;">
+   <style type="text/css" media="screen">
 .post-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 </style>
-
 <div class="post-menu">
-  <div class="post-menu-title">目次</div>
-  <div class="post-menu-content"></div>
+ <div class="post-menu-title">目次</div>
+ <div class="post-menu-content"></div>
 </div>
-
 <script>
   function generateContent() {
     var menu = document.querySelector(".post-menu");
     var menuContent =  menu.querySelector(".post-menu-content");
     var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
-
     // Hide menu when no headings
     if (headings.length === 0) {
       return menu.style.display = "none";
     }
-
     // Generate post menu
     var menuHTML = '';
     for (var i = 0; i < headings.length; i++) {
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
     }
-
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
-
     // The header element
     var header = document.querySelector('header.site-header');
-
     function doMenuCollapse(index, over_items) {
       var items = menuContent.firstChild.children;
-
       if (over_items == undefined) {
         over_items = 20;
       }
-
       if (items.length < over_items) {
         return;
       }
-
       var activeItem = items[index];
       var beginItem = activeItem
       var endItem = activeItem
@@ -881,10 +802,8 @@
         }
       }
     }
-
     // Init menu collapsed
     doMenuCollapse(-1);
-
     // Active the menu item
     window.addEventListener('scroll', function (event) {
       var lastActive = menuContent.querySelector('.active');
@@ -923,10 +842,8 @@
   generateContent();
 </script>
 </section>
-</div>
-
       </div>
-    </main><footer class="site-footer h-card">
+    <footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
@@ -1031,5 +948,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: none;
   }
 </style>
+</div></main>
 </body>
 </html>

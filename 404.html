@@ -531,23 +531,20 @@
     letter-spacing: -1px;
   }
 </style>
-
 <script>
   const path = location.pathname.split('/');
   if (path.length > 4) {
     location.pathname = '/' + path[2] + '-' + path[3] + '/' + path[5].replace('.html', '');
   }
 </script>
-
 <div class="container">
-  <h1>404</h1>
-
-  <p><strong>アクセスしようとしたページは存在しません。</strong></p>
-  <p><a href="/">トップページ</a>から目的の記事を見つけることができます。</p>
+ <h1>404</h1>
+ <p><strong>アクセスしようとしたページは存在しません。</strong>
+ </p>
+<p><a href="/">トップページ</a>から目的の記事を見つけることができます。
+      </p>
 </div>
-
-      </div>
-    </main><footer class="site-footer h-card">
+    <footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
@@ -652,5 +649,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: none;
   }
 </style>
+</div></main>
 </body>
 </html>

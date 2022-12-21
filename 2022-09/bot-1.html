@@ -522,412 +522,126 @@
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="framework">
-  <section class="main">
-
-     <div class="post">
-  <section>
-
-
-
-
-
-
-
-
-
+ <section class="main">
+    <div class="post">
+ <section>
 <header class="post-header">
-  <h1 class="post-title p-name" itemprop="name headline">5人で使っていたbotが学年の半数の人に使われるようになった話(前編)</h1>
-  <h2 class="post-subtitle"></h2>
-
-  <p class="post-meta">
+ <h1 class="post-title p-name" itemprop="name headline">5人で使っていたbotが学年の半数の人に使われるようになった話(前編)</h1>
+ <h2 class="post-subtitle"></h2>
+ <p class="post-meta">
     <time class="dt-published" datetime="2022-09-10T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2022/09/10
     </time><time class="dt-published" datetime="2022-09-10T18:00:00+09:00" itemprop="dateModified">
          <svg class="ico-svg" aria-label="最終更新日" title="最終更新日"><use xlink:href="/assets/symbol-defs.svg#sync"></use></svg> 2022/09/10
       </time>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  4 分</span>
-  </p>
+ </p>
 <div class="post-tags">
 <a class="post-tag" href="/tags.html#bot">#bot</a><a class="post-tag" href="/tags.html#%E3%83%9D%E3%82%A8%E3%83%A0">#ポエム</a><a class="post-tag" href="/tags.html#%E9%9B%91%E8%A8%98">#雑記</a>
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <div class="post-content e-content" itemprop="articleBody">
-      
-      
-      
-      <!--画像-->
-        <figure>
+   <div class="post-content e-content" itemprop="articleBody">
+       <figure>
           <img src="/assets/images/2022/09/10/bot-1.webp" width="100%" loading="eager" alt="5人で使っていたbotが学年の半数の人に使われるようになった話　前編：オリジンストーリー">
-          
-            <figcaption></figcaption>
-          
-        </figure>
-      
-
-      <p>先週予告したとおり、今週・来週の2回に渡って、「5人で使っていたbotが学年の半数の人に使われるようになった話」をしていこうと思います。今回は前編として、botのオリジンストーリーを書いていきます。</p>
-
+           <figcaption></figcaption>
+       </figure>
+     <p>先週予告したとおり、今週・来週の2回に渡って、「5人で使っていたbotが学年の半数の人に使われるようになった話」をしていこうと思います。今回は前編として、botのオリジンストーリーを書いていきます。
+</p>
 <h2 id="運営している-bot">運営している bot</h2>
-<p>僕は、翌日の提出物をLINEやTwitter、Discordに通知するbotを運営しています。</p>
-
-<p>提出日の前日に通知を受け取ることが出来るほか、今後の提出物の一覧を確認したり、ダジャレを教わったり(?)もできます。</p>
-
-<p>最近は提出物に限らず小テストの日程等も入れているため、そろそろ改名しないといけないと思っていますが、良い名前が思いつかず結局名前はそのままになっています。</p>
-
-<p>ちなみにbotはGAS (Google Apps Script)によって作成されているため運営費自体は無料です。</p>
-
-<p><del>とは言っても提出物を登録する手間がかなりの負担になっているから利用料を取りたいなぁー</del> 利用料も一切頂いていません(当たり前だ)。</p>
-
+<p>僕は、翌日の提出物をLINEやTwitter、Discordに通知するbotを運営しています。
+</p>
+<p>提出日の前日に通知を受け取ることが出来るほか、今後の提出物の一覧を確認したり、ダジャレを教わったり(?)もできます。
+</p>
+<p>最近は提出物に限らず小テストの日程等も入れているため、そろそろ改名しないといけないと思っていますが、良い名前が思いつかず結局名前はそのままになっています。
+</p>
+<p>ちなみにbotはGAS (Google Apps Script)によって作成されているため運営費自体は無料です。
+</p>
+<p><del>とは言っても提出物を登録する手間がかなりの負担になっているから利用料を取りたいなぁー</del> 利用料も一切頂いていません(当たり前だ)。
+</p>
 <h2 id="はじまり">はじまり</h2>
-<p>一昨年の冬、僕は6人1組で出場するとある大会に参加していました。</p>
-
-<p>その大会は事前に提出する書類がいくつかあったり、大会の日程が複雑だったりしていたため、チーム内での情報共有が生死に関わると言っても過言ではありませんでした。</p>
-
-<p>正直あまり良く覚えていないのですが、「こんなに多くの予定を頭で覚えようとしたら絶対抜けが出るなー」と思った記憶があります。</p>
-
-<p>若干話がそれますが、僕は手帳やスマホのカレンダーアプリを使わないタイプです。基本すべて頭に入れておきます。それで10何年間の人生を生きてきました。<br>(あまりにも先の予定など、絶対に忘れる自信がある場合はスマホに入れています。)</p>
-
-<p>そこで、僕はチーム内での情報共有を円滑にするためにbotを作成しました。大会に関する予定をLINEで流すbotです。これが、提出物botのすべての始まりです。</p>
-
-<p>(記事タイトルには「5人で使っていた」とありますが、大会メンバーの6人の内1人がLINEを使っていなかったので「5人」となっています。)</p>
-
-<p>当時はGASはおろかJavaScriptやHTMLすらよく分かっていませんでした。当初はネット上のサンプルコードをコピペして作ったため、もちろん仕組みなんて一切理解していませんでした。</p>
-
+<p>一昨年の冬、僕は6人1組で出場するとある大会に参加していました。
+</p>
+<p>その大会は事前に提出する書類がいくつかあったり、大会の日程が複雑だったりしていたため、チーム内での情報共有が生死に関わると言っても過言ではありませんでした。
+</p>
+<p>正直あまり良く覚えていないのですが、「こんなに多くの予定を頭で覚えようとしたら絶対抜けが出るなー」と思った記憶があります。
+</p>
+<p>若干話がそれますが、僕は手帳やスマホのカレンダーアプリを使わないタイプです。基本すべて頭に入れておきます。それで10何年間の人生を生きてきました。<br>(あまりにも先の予定など、絶対に忘れる自信がある場合はスマホに入れています。)
+</p>
+<p>そこで、僕はチーム内での情報共有を円滑にするためにbotを作成しました。大会に関する予定をLINEで流すbotです。これが、提出物botのすべての始まりです。
+</p>
+<p>(記事タイトルには「5人で使っていた」とありますが、大会メンバーの6人の内1人がLINEを使っていなかったので「5人」となっています。)
+</p>
+<p>当時はGASはおろかJavaScriptやHTMLすらよく分かっていませんでした。当初はネット上のサンプルコードをコピペして作ったため、もちろん仕組みなんて一切理解していませんでした。
+</p>
 <h2 id="予定通知botから提出物通知botへの変貌">予定通知botから提出物通知botへの変貌</h2>
-<p>では、なぜ予定通知botが提出物通知botに変わったのでしょうか。</p>
-
-<p>実は、大会出場メンバーのうちの1人に、課題を全然出さない人が居ました。</p>
-
-<p>課題を出さなければ、当然その人は居残りになります。すると、大会メンバー全員が放課後に集まって練習するということが難しくなってしまいます。</p>
-
-<p>そこで、予定通知botに課題の提出日の情報を入れるようになりました。提出物通知botの誕生です。</p>
-
-<p>提出物通知botによってその人が課題を出すようになったかと言うと、、、相変わらず課題は出していませんでした。</p>
-
-<p>それでも、半分冗談半分真面目な思いで課題の提出日をbotに登録し続けていました。</p>
-
-<p>そして何ヶ月かが経ち、大会関連のすべての日程が終了しました。予定通知botには大会関連の予定はもう何も残っていません。、、が！課題関連の予定はいくつか残っていました。</p>
-
-<p>そこで考えました。このbotを提出物botとして本格的に運用していこうと。</p>
-
+<p>では、なぜ予定通知botが提出物通知botに変わったのでしょうか。
+</p>
+<p>実は、大会出場メンバーのうちの1人に、課題を全然出さない人が居ました。
+</p>
+<p>課題を出さなければ、当然その人は居残りになります。すると、大会メンバー全員が放課後に集まって練習するということが難しくなってしまいます。
+</p>
+<p>そこで、予定通知botに課題の提出日の情報を入れるようになりました。提出物通知botの誕生です。
+</p>
+<p>提出物通知botによってその人が課題を出すようになったかと言うと、、、相変わらず課題は出していませんでした。
+</p>
+<p>それでも、半分冗談半分真面目な思いで課題の提出日をbotに登録し続けていました。
+</p>
+<p>そして何ヶ月かが経ち、大会関連のすべての日程が終了しました。予定通知botには大会関連の予定はもう何も残っていません。、、が！課題関連の予定はいくつか残っていました。
+</p>
+<p>そこで考えました。このbotを提出物botとして本格的に運用していこうと。
+</p>
 <h2 id="次回予告">次回予告</h2>
-<p>次回は、提出物botとして歩み始めたbotが、いかにして学年の半数の人に使われるようになったか、そしてLINE公式アカウントの裏側について書きたいと思います。</p>
-
+<p>次回は、提出物botとして歩み始めたbotが、いかにして学年の半数の人に使われるようになったか、そしてLINE公式アカウントの裏側について書きたいと思います。
+</p>
 <h2 id="あとがき">あとがき</h2>
-<p>今回記事を2回に分けた理由ですが、来週はネタを考えずに済むようにするためです。</p>
-
-<p>毎週のように書くネタに悩んでいます。</p>
-
-<p>それでもブログを書き続けてしまうのは、一種の魔法なんですかねぇ……</p>
-
-<p>ちなみに今後のざっくりした記事の予定です。変更される可能性超特大ですので、予定とは違った記事になっても怒らないでください。</p>
-
+<p>今回記事を2回に分けた理由ですが、来週はネタを考えずに済むようにするためです。
+</p>
+<p>毎週のように書くネタに悩んでいます。
+</p>
+<p>それでもブログを書き続けてしまうのは、一種の魔法なんですかねぇ……
+</p>
+<p>ちなみに今後のざっくりした記事の予定です。変更される可能性超特大ですので、予定とは違った記事になっても怒らないでください。
+</p>
 <ul>
-  <li>9/17 or 18 この話の後編</li>
-  <li>9/24 or 25 ローカライズの話</li>
-  <li>10/1 or 2 メインPCのレビュー</li>
-  <li>10/8 or 9 Pixelイベントを見た感想</li>
-  <li>10/15 or 16 スマホを買い換えるかどうか</li>
+ <li>9/17 or 18 この話の後編
+ </li>
+<li>9/24 or 25 ローカライズの話
+ </li>
+<li>10/1 or 2 メインPCのレビュー
+ </li>
+<li>10/8 or 9 Pixelイベントを見た感想
+ </li>
+<li>10/15 or 16 スマホを買い換えるかどうか
+</li>
 </ul>
-
-
-    </div>
-
+   </div>
 </article>
-
       <br><br><br>
-      <p>【「5人で使っていたbotが学年の半数の人に使われるようになった話」の記事一覧】</p>
-      <ol>
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-        <li>
-<a href="/2022-09/bot-1">前編　オリジンストーリー</a> (←今ココ)</li>
-        
-      
-      
-        
-      
-      
-        
-        <li><a href="/2022-09/bot-2">後編　急速な普及と LINE 公式アカウントの裏側</a></li>
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-      </ol>
-       <div class="post-nav">
+     <p>【「5人で使っていたbotが学年の半数の人に使われるようになった話」の記事一覧】
+     </p>
+<ol>
+       <li>
+<a href="/2022-09/bot-1">前編　オリジンストーリー</a> (←今ココ)
+       </li>
+<li>
+<a href="/2022-09/bot-2">後編　急速な普及と LINE 公式アカウントの裏側</a>
+     </li>
+</ol>
+      <div class="post-nav">
 <a class="previous" href="/2022-09/domain-sale" title=".com .netドメインが1年間0円で使える！">.com .netドメインが1年間0円で使える！</a><a class="next" href="/2022-09/windows-key" title="LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法">LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法</a>
 </div>
 <div class="post-related">
-      <div>関連記事</div>
-      <ul>
-        <li><a class="post-link" href="/2022-01/windows11-review" title="LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法">Windows 11 に関する誤解を暴く</a></li>
-<li><a class="post-link" href="/2021-08/twitter-delete" title="LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法">Twitter のアカウントを復活！残るデータ・消えるデータ</a></li>
-<li><a class="post-link" href="/2021-08/chrome-extension-5" title="LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法">Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜</a></li>
-<li><a class="post-link" href="/2022-08/diary" title="LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法">一言日記(2022年8月)</a></li>
+     <div>関連記事</div>
+     <ul>
+       <li><a class="post-link" href="/2022-06/ie" title="LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法">IE サポート終了によせて</a></li>
+<li><a class="post-link" href="/2022-06/linux-at-school" title="LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法">学校でLinuxを使う上で困ったこと</a></li>
+<li><a class="post-link" href="/2022-11/colab" title="LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法">Colaboratory を楽しくする設定</a></li>
+<li><a class="post-link" href="/2022-11/presentation" title="LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法">プレゼンで気をつけていること (自己流)</a></li>
 </ul>
-    </div>
-<!-- begin wwww.htmlcommentbox.com -->
+   </div>
 <div id="HCB_comment_box">
 <a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
 <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
-<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-
-
-<!-- customize labels of htmlcommentbox.com -->
+<script type="text/javascript" id="hcb"> /**/ </script>
 <script>
   /* This code goes ABOVE the main HTML Comment Box code!
    replace the text in the single quotes below to customize labels.*/
@@ -969,7 +683,6 @@
       err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
       err_spam:'スパムと認定されたためこのコメントは削除されました。',
       err_blocked:'サイトポリシーによりこのコメントは削除されました。',
-  
       /* SETTINGS */
       MAX_CHARS: 256,
       PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
@@ -977,9 +690,7 @@
       RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
   };
   </script>
-  <!-- done customizing labels of htmlcommentbox.com -->
-
-  <style>
+ <style>
     #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
       transition: opacity .3s;
     }
@@ -1004,65 +715,51 @@
       border: solid 1px #777;
       color: #ddd;
     }
-  </style>
+ </style>
 </section>
 </div>
-   
-
-  </section>
-
-
-  
-  <section class="sidebar" style="margin-left: 15px;">
-    <!-- Get sidebar items --><style type="text/css" media="screen">
+ </section>
+ 
+ <section class="sidebar" style="margin-left: 15px;">
+   <style type="text/css" media="screen">
 .post-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 </style>
-
 <div class="post-menu">
-  <div class="post-menu-title">目次</div>
-  <div class="post-menu-content"></div>
+ <div class="post-menu-title">目次</div>
+ <div class="post-menu-content"></div>
 </div>
-
 <script>
   function generateContent() {
     var menu = document.querySelector(".post-menu");
     var menuContent =  menu.querySelector(".post-menu-content");
     var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
-
     // Hide menu when no headings
     if (headings.length === 0) {
       return menu.style.display = "none";
     }
-
     // Generate post menu
     var menuHTML = '';
     for (var i = 0; i < headings.length; i++) {
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
     }
-
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
-
     // The header element
     var header = document.querySelector('header.site-header');
-
     function doMenuCollapse(index, over_items) {
       var items = menuContent.firstChild.children;
-
       if (over_items == undefined) {
         over_items = 20;
       }
-
       if (items.length < over_items) {
         return;
       }
-
       var activeItem = items[index];
       var beginItem = activeItem
       var endItem = activeItem
@@ -1095,10 +792,8 @@
         }
       }
     }
-
     // Init menu collapsed
     doMenuCollapse(-1);
-
     // Active the menu item
     window.addEventListener('scroll', function (event) {
       var lastActive = menuContent.querySelector('.active');
@@ -1137,10 +832,8 @@
   generateContent();
 </script>
 </section>
-</div>
-
       </div>
-    </main><footer class="site-footer h-card">
+    <footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
@@ -1245,5 +938,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: none;
   }
 </style>
+</div></main>
 </body>
 </html>

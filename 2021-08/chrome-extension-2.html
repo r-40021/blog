@@ -522,105 +522,53 @@
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="framework">
-  <section class="main">
-
-     <div class="post">
-  <section>
-
-
-
-
-
-
-
-
-
+ <section class="main">
+    <div class="post">
+ <section>
 <header class="post-header">
-  <h1 class="post-title p-name" itemprop="name headline">Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜</h1>
-  <h2 class="post-subtitle"></h2>
-
-  <p class="post-meta">
+ <h1 class="post-title p-name" itemprop="name headline">Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜</h1>
+ <h2 class="post-subtitle"></h2>
+ <p class="post-meta">
     <time class="dt-published" datetime="2021-08-02T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2021/08/02
     </time>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  8 分</span>
-  </p>
+ </p>
 <div class="post-tags">
 <a class="post-tag" href="/tags.html#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a><a class="post-tag" href="/tags.html#Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD">#Chrome拡張機能</a><a class="post-tag" href="/tags.html#HTML">#HTML</a><a class="post-tag" href="/tags.html#JavaScript">#JavaScript</a><a class="post-tag" href="/tags.html#CSS">#CSS</a>
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <div class="post-content e-content" itemprop="articleBody">
-      
-      
-      
-      <!--画像-->
-        <figure>
+   <div class="post-content e-content" itemprop="articleBody">
+       <figure>
           <img src="/assets/images/banners/2021-08-02-html.jpg" width="100%" loading="eager" alt="ヘッダー画像">
-          
-            <figcaption>Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Jackson So</a> on <a href="https://unsplash.com/s/photos/html%2Fcss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
-          
-        </figure>
-      
-
-      <p>拡張機能を作るシリーズ第2弾！今回は拡張機能のポップアップを作成していきます！</p>
-
-<p>これでかなり拡張機能っぽくなります。</p>
-
+           <figcaption>Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Jackson So</a> on <a href="https://unsplash.com/s/photos/html%2Fcss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
+       </figure>
+     <p>拡張機能を作るシリーズ第2弾！今回は拡張機能のポップアップを作成していきます！
+</p>
+<p>これでかなり拡張機能っぽくなります。
+</p>
 <h2 id="ポップアップとは">ポップアップとは</h2>
-<p>拡張機能のアイコンをクリックした時に出てくるもののことです。ここから拡張機能の設定や操作を行うことができます。拡張機能を使ったことがあれば、一度は目にしたことがあるでしょう。</p>
-
-<p>実は、このポップアップは、<strong>HTMLとCSSでできています</strong>！</p>
-
-<p>ということで、サクッと作っちゃいましょう！</p>
-
+<p>拡張機能のアイコンをクリックした時に出てくるもののことです。ここから拡張機能の設定や操作を行うことができます。拡張機能を使ったことがあれば、一度は目にしたことがあるでしょう。
+</p>
+<p>実は、このポップアップは、<strong>HTMLとCSSでできています</strong>！
+</p>
+<p>ということで、サクッと作っちゃいましょう！
+</p>
 <h2 id="今回作っていくもの">今回作っていくもの</h2>
-<p>前回、「作るものはお楽しみ」と言っておきましたが、今回作っていく拡張機能が、ついに決まりました。</p>
-
-<p>それは、「開いているページのタイトルとURLをコピーする拡張機能」です。</p>
-
-<p>イメージはこんな感じです↓</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/132938279-2307d4da-f781-4d5c-b5e9-2f355cf59ff1.png" alt="拡張機能のイメージ"></p>
-
-<p>では、早速作っていきましょう！</p>
-
+<p>前回、「作るものはお楽しみ」と言っておきましたが、今回作っていく拡張機能が、ついに決まりました。
+</p>
+<p>それは、「開いているページのタイトルとURLをコピーする拡張機能」です。
+</p>
+<p>イメージはこんな感じです↓
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/132938279-2307d4da-f781-4d5c-b5e9-2f355cf59ff1.png" alt="拡張機能のイメージ">
+</p>
+<p>では、早速作っていきましょう！
+</p>
 <h2 id="設定ファイルを作る">設定ファイルを作る</h2>
-<p>ブラウザに、「これはこのような拡張機能ですよ」と教えてあげるための、設定ファイルを作っていきます。</p>
-
-<p>拡張機能開発用のフォルダを作って、<code class="language-plaintext highlighter-rouge">manifest.json</code> を作成してください。その後、下のコードを記述してください。</p>
-
+<p>ブラウザに、「これはこのような拡張機能ですよ」と教えてあげるための、設定ファイルを作っていきます。
+</p>
+<p>拡張機能開発用のフォルダを作って、<code class="language-plaintext highlighter-rouge">manifest.json</code> を作成してください。その後、下のコードを記述してください。
+</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"タイトルとURLをコピー"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subheading"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ページのタイトルとURLを簡単にコピーできます。"</span><span class="p">,</span><span class="w">
@@ -638,64 +586,60 @@
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
-
-<p>では、この<code class="language-plaintext highlighter-rouge">manifest.json</code>について解説していきます。</p>
-
+<p>では、この<code class="language-plaintext highlighter-rouge">manifest.json</code>について解説していきます。
+</p>
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">名称</th>
-      <th style="text-align: left">説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">name</code></td>
-      <td style="text-align: left">拡張機能の名称</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">subheading</code></td>
-      <td style="text-align: left">拡張機能の説明。ブラウザの「拡張機能の管理」ページなどに表示される。</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">version</code></td>
-      <td style="text-align: left">拡張機能のバージョン。　1.0→1.0.1→1.0.2→…→1.1→…→2.0 のように新しくなっていく。アップデートのたびにバージョン番号を新しくしていく。</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">manifest_version</code></td>
-      <td style="text-align: left">この設定ファイル(<code class="language-plaintext highlighter-rouge">manifest.json</code>)の仕様のバージョン。ここでは最新の <code class="language-plaintext highlighter-rouge">3</code> を指定。</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">icons</code></td>
-      <td style="text-align: left">拡張機能のアイコン。<code class="language-plaintext highlighter-rouge">16x16</code>、<code class="language-plaintext highlighter-rouge">48x48</code>、<code class="language-plaintext highlighter-rouge">128x128</code>の3種類の大きさを用意しなくてはならない。アイコンの画像は後ほど配布します。</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">action</code></td>
-      <td style="text-align: left">ポップアップに関する設定。<br><br><code class="language-plaintext highlighter-rouge">default_title</code>で、拡張機能のアイコンにカーソルをホバーした時に表示されるテキストを指定。<br><br><code class="language-plaintext highlighter-rouge">default_icon</code>で、ブラウザのURLバーの右側に表示される、拡張機能のアイコンを指定。ここでは、先程の<code class="language-plaintext highlighter-rouge">icons</code>で指定した<code class="language-plaintext highlighter-rouge">48x48</code>の画像を流用。<br><br><code class="language-plaintext highlighter-rouge">default_popup</code>で、ポップアップとして表示させるHTMLファイルを指定。</td>
-    </tr>
-  </tbody>
+<thead>
+   <tr>
+     <th style="text-align: center">名称</th>
+<th style="text-align: left">説明</th>
+</tr>
+</thead>
+<tbody>
+   <tr>
+     <td style="text-align: center"><code class="language-plaintext highlighter-rouge">name</code></td>
+<td style="text-align: left">拡張機能の名称</td>
+</tr>
+<tr>
+     <td style="text-align: center"><code class="language-plaintext highlighter-rouge">subheading</code></td>
+<td style="text-align: left">拡張機能の説明。ブラウザの「拡張機能の管理」ページなどに表示される。</td>
+</tr>
+<tr>
+     <td style="text-align: center"><code class="language-plaintext highlighter-rouge">version</code></td>
+<td style="text-align: left">拡張機能のバージョン。　1.0→1.0.1→1.0.2→…→1.1→…→2.0 のように新しくなっていく。アップデートのたびにバージョン番号を新しくしていく。</td>
+</tr>
+<tr>
+     <td style="text-align: center"><code class="language-plaintext highlighter-rouge">manifest_version</code></td>
+<td style="text-align: left">この設定ファイル(<code class="language-plaintext highlighter-rouge">manifest.json</code>)の仕様のバージョン。ここでは最新の <code class="language-plaintext highlighter-rouge">3</code> を指定。</td>
+</tr>
+<tr>
+     <td style="text-align: center"><code class="language-plaintext highlighter-rouge">icons</code></td>
+<td style="text-align: left">拡張機能のアイコン。<code class="language-plaintext highlighter-rouge">16x16</code>、<code class="language-plaintext highlighter-rouge">48x48</code>、<code class="language-plaintext highlighter-rouge">128x128</code>の3種類の大きさを用意しなくてはならない。アイコンの画像は後ほど配布します。</td>
+</tr>
+<tr>
+     <td style="text-align: center"><code class="language-plaintext highlighter-rouge">action</code></td>
+<td style="text-align: left">ポップアップに関する設定。<br><br><code class="language-plaintext highlighter-rouge">default_title</code>で、拡張機能のアイコンにカーソルをホバーした時に表示されるテキストを指定。<br><br><code class="language-plaintext highlighter-rouge">default_icon</code>で、ブラウザのURLバーの右側に表示される、拡張機能のアイコンを指定。ここでは、先程の<code class="language-plaintext highlighter-rouge">icons</code>で指定した<code class="language-plaintext highlighter-rouge">48x48</code>の画像を流用。<br><br><code class="language-plaintext highlighter-rouge">default_popup</code>で、ポップアップとして表示させるHTMLファイルを指定。</td>
+</tr>
+</tbody>
 </table>
-
 <h2 id="アイコン">アイコン</h2>
-<p>アイコンは下のリンクからダウンロードできます。</p>
-
-<p><code class="language-plaintext highlighter-rouge">.zip</code>形式ですので、解凍して拡張機能の開発用フォルダの一番上の階層に、3つの画像を配置してください。</p>
-
-<p><a href="https://github.com/r-40021/raw/main/assets/2021-08-02-icon.zip">ダウンロード</a></p>
-
-<p>今回は、「ICOOON MONO」様からお借りしました。この場をお借りして御礼申し上げます。</p>
-
-<p><a href="https://icooon-mono.com/15757/" target="_blank" rel="noopener noreferrer">本家様</a></p>
-
-<p>なお、現在のフォルダの中身はこのようになっています。</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/127797042-5be976a0-d12a-4653-a309-3afe987167fb.png" alt="フォルダ"></p>
-
+<p>アイコンは下のリンクからダウンロードできます。
+</p>
+<p><code class="language-plaintext highlighter-rouge">.zip</code>形式ですので、解凍して拡張機能の開発用フォルダの一番上の階層に、3つの画像を配置してください。
+</p>
+<p><a href="https://github.com/r-40021/raw/main/assets/2021-08-02-icon.zip">ダウンロード</a>
+</p>
+<p>今回は、「ICOOON MONO」様からお借りしました。この場をお借りして御礼申し上げます。
+</p>
+<p><a href="https://icooon-mono.com/15757/" target="_blank" rel="noopener noreferrer">本家様</a>
+</p>
+<p>なお、現在のフォルダの中身はこのようになっています。
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/127797042-5be976a0-d12a-4653-a309-3afe987167fb.png" alt="フォルダ">
+</p>
 <h2 id="html-ファイルの作成">HTML ファイルの作成</h2>
-<p>それでは、HTML ファイルを記述してポップアップを作っていきます。</p>
-
-<p>開発用フォルダの一番上の階層に、<code class="language-plaintext highlighter-rouge">popup.html</code> を作成し、以下のコードを記述してください。</p>
-
+<p>それでは、HTML ファイルを記述してポップアップを作っていきます。
+</p>
 <pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
 &lt;html lang="ja"&gt;
 &lt;head&gt;
@@ -708,9 +652,6 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-
-<p>同様に、<code class="language-plaintext highlighter-rouge">popup.css</code>も作成し、以下のコードを記述してください。</p>
-
 <pre><code class="language-CSS">body{
     width: 400px;
 }
@@ -719,344 +660,117 @@
     font-size: 30px;
 }
 </code></pre>
-
-<p>最後に、<code class="language-plaintext highlighter-rouge">popup.js</code>を作成し、以下のコードを記述してください。</p>
-
 <pre><code class="language-JavaScript">setTimeout(() =&gt; {
     alert("Hello, world! (from js)");
 }, 700);
 </code></pre>
-
-<p>現時点でのフォルダの中身はこのようになっています。</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/127799634-641102be-ddef-43c8-9b93-80e54d0c24a7.png" alt="ファルダの中身"></p>
-
+<p>現時点でのフォルダの中身はこのようになっています。
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/127799634-641102be-ddef-43c8-9b93-80e54d0c24a7.png" alt="ファルダの中身">
+</p>
 <h2 id="テストする">テストする</h2>
-<p>ここまで、</p>
+<p>ここまで、
+</p>
 <ul>
-  <li>設定ファイル(<code class="language-plaintext highlighter-rouge">manifest.json</code>)</li>
-  <li>HTMLファイル(<code class="language-plaintext highlighter-rouge">popup.html</code>)</li>
-  <li>CSSファイル(<code class="language-plaintext highlighter-rouge">popup.css</code>)</li>
-  <li>JavaScriptファイル(<code class="language-plaintext highlighter-rouge">popup.js</code>)</li>
+ <li>設定ファイル(<code class="language-plaintext highlighter-rouge">manifest.json</code>)
+ </li>
+<li>HTMLファイル(<code class="language-plaintext highlighter-rouge">popup.html</code>)
+ </li>
+<li>CSSファイル(<code class="language-plaintext highlighter-rouge">popup.css</code>)
+ </li>
+<li>JavaScriptファイル(<code class="language-plaintext highlighter-rouge">popup.js</code>)
+</li>
 </ul>
-
-<p>を作成してきました。</p>
-
-<p>それでは、ちゃんと動作するかテストしてみましょう。</p>
-
-<p>テストの手順は以下のとおりです。</p>
-
+<p>を作成してきました。
+</p>
+<p>それでは、ちゃんと動作するかテストしてみましょう。
+</p>
+<p>テストの手順は以下のとおりです。
+</p>
 <ol>
-  <li>Chrome で <code class="language-plaintext highlighter-rouge">chrome://extensions</code> を開く</li>
-  <li>画面右上の「デベロッパーモード」をオン</li>
-  <li>「パッケージ化されていない拡張機能を読み込む」</li>
-  <li>拡張機能の開発用フォルダを「開く」</li>
+ <li>Chrome で <code class="language-plaintext highlighter-rouge">chrome://extensions</code> を開く
+ </li>
+<li>画面右上の「デベロッパーモード」をオン
+ </li>
+<li>「パッケージ化されていない拡張機能を読み込む」
+ </li>
+<li>拡張機能の開発用フォルダを「開く」
+</li>
 </ol>
-
-<p>このように、拡張機能がリストに追加されていれば成功です。</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/127798492-4675f125-a582-471d-bef1-b5ac7d2e1051.png" alt="拡張機能のリスト"></p>
-
-<p>リストに追加されていることを確認できたら、URLバーの右側にある「パズルのピースのマーク」をクリックすると表示される拡張機能の一覧に、「タイトルとURLをコピー」という拡張機能が追加されているはずなので、クリックして開いてみてください。</p>
-
-<p>このようなものが表示された後、「Hello, world! (from js)」というアラートが表示されたら完璧です！</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/127800066-956b1e03-1684-4c93-8aa3-8360e03fd955.png" alt="ポップアップ"></p>
-
-<p>なお、拡張機能の一覧のピンのマークをクリックすると、URLバーの右側に固定されるので、今後テストをする際に便利です。</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/127799053-701f68c1-05f0-4ebf-86d6-2a9f8843346d.png" alt="拡張機能をピン留め"></p>
-
+<p>このように、拡張機能がリストに追加されていれば成功です。
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/127798492-4675f125-a582-471d-bef1-b5ac7d2e1051.png" alt="拡張機能のリスト">
+</p>
+<p>リストに追加されていることを確認できたら、URLバーの右側にある「パズルのピースのマーク」をクリックすると表示される拡張機能の一覧に、「タイトルとURLをコピー」という拡張機能が追加されているはずなので、クリックして開いてみてください。
+</p>
+<p>このようなものが表示された後、「Hello, world! (from js)」というアラートが表示されたら完璧です！
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/127800066-956b1e03-1684-4c93-8aa3-8360e03fd955.png" alt="ポップアップ">
+</p>
+<p>なお、拡張機能の一覧のピンのマークをクリックすると、URLバーの右側に固定されるので、今後テストをする際に便利です。
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/127799053-701f68c1-05f0-4ebf-86d6-2a9f8843346d.png" alt="拡張機能をピン留め">
+</p>
 <h2 id="まとめ">まとめ</h2>
 <ul>
-  <li>ポップアップ付き拡張機能の作成には、<code class="language-plaintext highlighter-rouge">manifest.json</code>、HTMLファイル、JavaScript ファイル、CSS ファイルが必要である。</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">manifest.json</code>は拡張機能の情報を、ブラウザに伝えるためのファイルである。</li>
-  <li>HTML、CSS、JavaScript でポップアップを作成する。ここは、普通のWebアプリと変わらない。</li>
-  <li>Chromeの「デベロッパーモード」を使えば、拡張機能を簡単にテストできる。</li>
+ <li>ポップアップ付き拡張機能の作成には、<code class="language-plaintext highlighter-rouge">manifest.json</code>、HTMLファイル、JavaScript ファイル、CSS ファイルが必要である。
+ </li>
+<li>
+<code class="language-plaintext highlighter-rouge">manifest.json</code>は拡張機能の情報を、ブラウザに伝えるためのファイルである。
+ </li>
+<li>HTML、CSS、JavaScript でポップアップを作成する。ここは、普通のWebアプリと変わらない。
+ </li>
+<li>Chromeの「デベロッパーモード」を使えば、拡張機能を簡単にテストできる。
+</li>
 </ul>
-
-<p>いかがでしたか？</p>
-
-<p>次回は、このポップアップを更に充実させていきます！お楽しみに！</p>
-
-
-    </div>
-
+<p>いかがでしたか？
+</p>
+<p>次回は、このポップアップを更に充実させていきます！お楽しみに！
+   </p>
+</div>
 </article>
-
       <br><br><br>
-      <p>【「Chrome 拡張機能を作ろう」の記事一覧】</p>
-      <ol>
-      
-        
-      
-      
-        
-        <li><a href="/2021-07/chrome-extension-1">環境構築</a></li>
-        
-      
-      
-        
-        <li>
-<a href="/2021-08/chrome-extension-2">ポップアップ作成</a> (←今ココ)</li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-3">仕様に沿って開発</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-4">コピー機能実装</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-5">権限を減らす</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-7">Webストアに公開</a></li>
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-      </ol>
-       <div class="post-nav">
+     <p>【「Chrome 拡張機能を作ろう」の記事一覧】
+     </p>
+<ol>
+       <li>
+<a href="/2021-07/chrome-extension-1">環境構築</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-2">ポップアップ作成</a> (←今ココ)
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-3">仕様に沿って開発</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-4">コピー機能実装</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-5">権限を減らす</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-7">Webストアに公開</a>
+     </li>
+</ol>
+      <div class="post-nav">
 <a class="previous" href="/2021-07/chrome-extension-1" title="Chrome 拡張機能を作って公開しよう①　〜環境構築〜">Chrome 拡張機能を作って公開しよう①　〜環境構築〜</a><a class="next" href="/2021-08/chrome-extension-3" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">Chrome 拡張機能を作って公開しよう③　〜形にする〜</a>
 </div>
 <div class="post-related">
-      <div>関連記事</div>
-      <ul>
-        <li><a class="post-link" href="/2022-05/insider" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">Windows Insider で 0xc8000402 エラーになりビルドをインストール出来ない場合の対処法(結構簡単)</a></li>
-<li><a class="post-link" href="/2022-01/windows11-review" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">Windows 11 に関する誤解を暴く</a></li>
-<li><a class="post-link" href="/2021-08/github-webeditor" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー</a></li>
-<li><a class="post-link" href="/2021-09/github-education" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">学生は無料で GitHub Pro が使える？特典や申請方法などを解説！</a></li>
+     <div>関連記事</div>
+     <ul>
+       <li><a class="post-link" href="/2022-11/background" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">自分のアプリが作られた背景を語る</a></li>
+<li><a class="post-link" href="/2022-06/study-abroad" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">留学体験記を聞いて</a></li>
+<li><a class="post-link" href="/2022-05/noto" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">汚いフォントに別れを告げられる拡張機能を作った</a></li>
+<li><a class="post-link" href="/2022-11/presentation" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">プレゼンで気をつけていること (自己流)</a></li>
 </ul>
-    </div>
-<!-- begin wwww.htmlcommentbox.com -->
+   </div>
 <div id="HCB_comment_box">
 <a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
 <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
-<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-
-
-<!-- customize labels of htmlcommentbox.com -->
+<script type="text/javascript" id="hcb"> /**/ </script>
 <script>
   /* This code goes ABOVE the main HTML Comment Box code!
    replace the text in the single quotes below to customize labels.*/
@@ -1098,7 +812,6 @@
       err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
       err_spam:'スパムと認定されたためこのコメントは削除されました。',
       err_blocked:'サイトポリシーによりこのコメントは削除されました。',
-  
       /* SETTINGS */
       MAX_CHARS: 256,
       PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
@@ -1106,9 +819,7 @@
       RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
   };
   </script>
-  <!-- done customizing labels of htmlcommentbox.com -->
-
-  <style>
+ <style>
     #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
       transition: opacity .3s;
     }
@@ -1133,65 +844,51 @@
       border: solid 1px #777;
       color: #ddd;
     }
-  </style>
+ </style>
 </section>
 </div>
-   
-
-  </section>
-
-
-  
-  <section class="sidebar" style="margin-left: 15px;">
-    <!-- Get sidebar items --><style type="text/css" media="screen">
+ </section>
+ 
+ <section class="sidebar" style="margin-left: 15px;">
+   <style type="text/css" media="screen">
 .post-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 </style>
-
 <div class="post-menu">
-  <div class="post-menu-title">目次</div>
-  <div class="post-menu-content"></div>
+ <div class="post-menu-title">目次</div>
+ <div class="post-menu-content"></div>
 </div>
-
 <script>
   function generateContent() {
     var menu = document.querySelector(".post-menu");
     var menuContent =  menu.querySelector(".post-menu-content");
     var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
-
     // Hide menu when no headings
     if (headings.length === 0) {
       return menu.style.display = "none";
     }
-
     // Generate post menu
     var menuHTML = '';
     for (var i = 0; i < headings.length; i++) {
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
     }
-
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
-
     // The header element
     var header = document.querySelector('header.site-header');
-
     function doMenuCollapse(index, over_items) {
       var items = menuContent.firstChild.children;
-
       if (over_items == undefined) {
         over_items = 20;
       }
-
       if (items.length < over_items) {
         return;
       }
-
       var activeItem = items[index];
       var beginItem = activeItem
       var endItem = activeItem
@@ -1224,10 +921,8 @@
         }
       }
     }
-
     // Init menu collapsed
     doMenuCollapse(-1);
-
     // Active the menu item
     window.addEventListener('scroll', function (event) {
       var lastActive = menuContent.querySelector('.active');
@@ -1266,10 +961,8 @@
   generateContent();
 </script>
 </section>
-</div>
-
       </div>
-    </main><footer class="site-footer h-card">
+    <footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
@@ -1374,5 +1067,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: none;
   }
 </style>
+</div></main>
 </body>
 </html>

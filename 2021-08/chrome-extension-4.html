@@ -522,90 +522,37 @@
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="framework">
-  <section class="main">
-
-     <div class="post">
-  <section>
-
-
-
-
-
-
-
-
-
+ <section class="main">
+    <div class="post">
+ <section>
 <header class="post-header">
-  <h1 class="post-title p-name" itemprop="name headline">Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜</h1>
-  <h2 class="post-subtitle"></h2>
-
-  <p class="post-meta">
+ <h1 class="post-title p-name" itemprop="name headline">Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜</h1>
+ <h2 class="post-subtitle"></h2>
+ <p class="post-meta">
     <time class="dt-published" datetime="2021-08-04T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2021/08/04
     </time>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  1 時間 15 分</span>
-  </p>
+ </p>
 <div class="post-tags">
 <a class="post-tag" href="/tags.html#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a><a class="post-tag" href="/tags.html#Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD">#Chrome拡張機能</a><a class="post-tag" href="/tags.html#JavaScript">#JavaScript</a>
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <div class="post-content e-content" itemprop="articleBody">
-      
-      
-      
-      <!--画像-->
-        <figure>
+   <div class="post-content e-content" itemprop="articleBody">
+       <figure>
           <img src="/assets/images/banners/2021-08-04-twitter.jpg" width="100%" loading="eager" alt="ヘッダー画像">
-          
-            <figcaption>Photo by <a href="https://unsplash.com/@alexbemore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Alexander Shatov</a> on <a href="https://unsplash.com/s/photos/twitter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
-          
-        </figure>
-      
-
-      <p>こんにちは！1回30分で拡張機能を作るシリーズ、第4弾です。今回は、この拡張機能の要、「コピー機能」を実装していきます。</p>
-
-<p>「あれ？15分じゃなかったのかよ！」と気づかれた方、そうです。1回分のボリュームが15分に収まりきらないということで、誠に勝手ながら30分に延長させていただきました。</p>
-
-<p>「15分しか時間がない」という方、ご安心ください。最後にも触れますが、明日・明後日の連載はお休みします。ということで、ゆとりを持って取り組んでみてください。</p>
-
-<p>では、本題に入っていきましょう。(切り替えが早い)</p>
-
+           <figcaption>Photo by <a href="https://unsplash.com/@alexbemore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Alexander Shatov</a> on <a href="https://unsplash.com/s/photos/twitter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
+       </figure>
+     <p>こんにちは！1回30分で拡張機能を作るシリーズ、第4弾です。今回は、この拡張機能の要、「コピー機能」を実装していきます。
+</p>
+<p>「あれ？15分じゃなかったのかよ！」と気づかれた方、そうです。1回分のボリュームが15分に収まりきらないということで、誠に勝手ながら30分に延長させていただきました。
+</p>
+<p>「15分しか時間がない」という方、ご安心ください。最後にも触れますが、明日・明後日の連載はお休みします。ということで、ゆとりを持って取り組んでみてください。
+</p>
+<p>では、本題に入っていきましょう。(切り替えが早い)
+</p>
 <h2 id="コピーボタンの配置">コピーボタンの配置</h2>
 <p><code class="language-plaintext highlighter-rouge">popup.html</code> を次のように書き換えてください。
-<code class="language-plaintext highlighter-rouge">&lt;!--ここから--&gt;</code> という部分から、<code class="language-plaintext highlighter-rouge">&lt;!--ここまで--&gt;</code> という部分までが追加する分です。追加する部分は2箇所あります。</p>
-
+</p>
 <pre><code class="language-HTML">&lt;div class="text"&gt;
  &lt;input type="text" id="pageTitle" class="column" readonly&gt;
 &lt;/div&gt;
@@ -641,9 +588,6 @@
 &lt;/div&gt;
 &lt;!--ここまで--&gt;
 </code></pre>
-
-<p>また、<code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> タグの直前に、以下のコードを追記してください。</p>
-
 <pre><code class="language-HTML">&lt;div class="content"&gt;
     &lt;div class="both"&gt;
       &lt;button title="タイトルとURLをコピー" id="copyBoth"&gt;
@@ -655,11 +599,8 @@
     &lt;/div&gt;
   &lt;/div&gt;
 </code></pre>
-
-<p>このままではボタンがむき出しになっていてかっこ悪いので、<code class="language-plaintext highlighter-rouge">popup.css</code> に以下の内容を追記してください。</p>
-
-<p>一応、コメントに解説のようなものを載せました。よかったら参考にしてください。</p>
-
+<p>このままではボタンがむき出しになっていてかっこ悪いので、<code class="language-plaintext highlighter-rouge">popup.css</code> に以下の内容を追記してください。
+</p>
 <pre><code class="language-CSS">/*ボタンに適用するCSS*/
 button {
   appearance: none; /*デフォルトの見た目を無効に*/
@@ -692,27 +633,25 @@ svg.withText{
     margin-right: .7em; /*右側に余白をあける*/
 }
 </code></pre>
-
-<p>ここまでやると、以下の画像のようになります。ボタンにスタイルが適用されていて、いい感じですね！</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/128103219-9d6ebeaa-f9c2-42da-83da-5e7b2d233983.png" alt="CSS適用後"></p>
-
+<p>ここまでやると、以下の画像のようになります。ボタンにスタイルが適用されていて、いい感じですね！
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/128103219-9d6ebeaa-f9c2-42da-83da-5e7b2d233983.png" alt="CSS適用後">
+</p>
 <h2 id="コピー機能の実装">コピー機能の実装</h2>
-
-<p>それでは、本題の「コピー機能の実装」に移ります。</p>
-
-<p>流れとしては、</p>
+<p>それでは、本題の「コピー機能の実装」に移ります。
+</p>
+<p>流れとしては、
+</p>
 <ol>
-  <li>コピーボタンをクリックする</li>
-  <li>クリップボードに URL またはタイトルがコピーされる</li>
+ <li>コピーボタンをクリックする
+ </li>
+<li>クリップボードに URL またはタイトルがコピーされる
+</li>
 </ol>
-
-<p>「コピーボタンをクリックしたとき」は、<code class="language-plaintext highlighter-rouge">addEventListener</code> を使えばいけそうです。</p>
-
-<p>また、クリップボードにコピーするという動作は、<code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText(コピーしたい文字列)</code> でできます。</p>
-
-<p>それでは、これを組み合わせてみましょう。<code class="language-plaintext highlighter-rouge">popup.js</code> に、以下のようにコードを追加してください。<code class="language-plaintext highlighter-rouge">/*ここから*/</code> から、<code class="language-plaintext highlighter-rouge">/*ここまで*/</code> の部分が追加するコードです。</p>
-
+<p>「コピーボタンをクリックしたとき」は、<code class="language-plaintext highlighter-rouge">addEventListener</code> を使えばいけそうです。
+</p>
+<p>また、クリップボードにコピーするという動作は、<code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText(コピーしたい文字列)</code> でできます。
+</p>
 <pre><code class="language-JavaScript">chrome.tabs.query({ 'active': true, 'lastFocusedWindow': true }, tabs =&gt; {
     title.value = tabs[0].title;
     url.value = tabs[0].url;
@@ -733,39 +672,35 @@ svg.withText{
     
 });
 </code></pre>
-
-<p>それでは、「コピー」ボタンを押して、動作を確認してみてください！</p>
-
-<p>ちなみに、「タイトルとURLを両方コピー」した場合は、タイトルとURLの間に改行が入ります。これが、上記のコードの <code class="language-plaintext highlighter-rouge">\n</code> に当たる部分です。JavaScriptでは、<code class="language-plaintext highlighter-rouge">\n</code> を使うと文字列を改行させることができます。</p>
-
+<p>それでは、「コピー」ボタンを押して、動作を確認してみてください！
+</p>
+<p>ちなみに、「タイトルとURLを両方コピー」した場合は、タイトルとURLの間に改行が入ります。これが、上記のコードの <code class="language-plaintext highlighter-rouge">\n</code> に当たる部分です。JavaScriptでは、<code class="language-plaintext highlighter-rouge">\n</code> を使うと文字列を改行させることができます。
+</p>
 <h2 id="コピーしたことを伝える">コピーしたことを伝える</h2>
-<p>しかし、これではボタンを押しても何も起こらないので、本当にコピーされたのか疑問に思いますよね。</p>
-
-<p>そこで、コピーボタンを押したら、クリップボードのアイコンが「チェックアイコン」に変わるようにしましょう。</p>
-
-<p>仕組みはこうです。</p>
-
+<p>しかし、これではボタンを押しても何も起こらないので、本当にコピーされたのか疑問に思いますよね。
+</p>
+<p>そこで、コピーボタンを押したら、クリップボードのアイコンが「チェックアイコン」に変わるようにしましょう。
+</p>
+<p>仕組みはこうです。
+</p>
 <ol>
-  <li>コピーボタンが押されたら、クリップボードのアイコンを非表示にし、チェックアイコンを表示する</li>
-  <li>5秒後にもとに戻す</li>
-  <li>ボタンがクリックされたとき、他のボタンがチェックアイコンだったらもとに戻す</li>
+ <li>コピーボタンが押されたら、クリップボードのアイコンを非表示にし、チェックアイコンを表示する
+ </li>
+<li>5秒後にもとに戻す
+ </li>
+<li>ボタンがクリックされたとき、他のボタンがチェックアイコンだったらもとに戻す
+</li>
 </ol>
-
-<p>まずは、<code class="language-plaintext highlighter-rouge">popup.html</code> から変更していきます。すべてのクリップボードアイコンのあとに、以下のコードを追加してください。(クリップボードアイコンには、<code class="language-plaintext highlighter-rouge">bi-clipboard</code> というクラス名がついています。目印にしてください。)</p>
-
 <pre><code class="language-HTML">&lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 checkIcon" viewBox="0 0 16 16" style="display: none;"&gt;
     &lt;path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/&gt;
 &lt;/svg&gt;
 </code></pre>
-
-<p>ただ、この時点でポップアップを開いてもなんの変化もありません。先程追加したチェックアイコンには、<code class="language-plaintext highlighter-rouge">style="display: none;"</code> とあります。これにより、非表示になっているからです。</p>
-
-<p>では、<code class="language-plaintext highlighter-rouge">popup.js</code> に、ボタンを押したときにチェックアイコンを表示させるようにプログラムします。</p>
-
-<p>「クリップボードアイコンをチェックアイコンに入れ替える」という処理は何度か使いそうなので、関数にまとめます。</p>
-
-<p><code class="language-plaintext highlighter-rouge">popup.js</code> の末尾に以下のコードを追加してください。</p>
-
+<p>ただ、この時点でポップアップを開いてもなんの変化もありません。先程追加したチェックアイコンには、<code class="language-plaintext highlighter-rouge">style="display: none;"</code> とあります。これにより、非表示になっているからです。
+</p>
+<p>では、<code class="language-plaintext highlighter-rouge">popup.js</code> に、ボタンを押したときにチェックアイコンを表示させるようにプログラムします。
+</p>
+<p>「クリップボードアイコンをチェックアイコンに入れ替える」という処理は何度か使いそうなので、関数にまとめます。
+</p>
 <pre><code class="language-JavaScript">let timeout;
 function showCheck(parentId) {
     clearTimeout(timeout); //5秒後に予定されている処理をキャンセル
@@ -788,11 +723,8 @@ function showCheck(parentId) {
     }, 5000);
 }
 </code></pre>
-
-<p>そして、ボタンがクリックされた際にこの関数を呼び出すようにします。引数 <code class="language-plaintext highlighter-rouge">parentId</code> には、ボタンのIDを代入します。</p>
-
-<p><code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText()</code> の次の行に、下記の「候補1」〜「候補3」のいずれかを追加してください。どの <code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText()</code> の後に、どのコードを追加するのかは、是非自分で考えてみてください！</p>
-
+<p>そして、ボタンがクリックされた際にこの関数を呼び出すようにします。引数 <code class="language-plaintext highlighter-rouge">parentId</code> には、ボタンのIDを代入します。
+</p>
 <pre><code class="language-JavaScript">/*候補１*/
 showCheck("copyTitle");
 
@@ -802,20 +734,17 @@ showCheck("copyURL");
 /*候補3*/
 showCheck("copyBoth");
 </code></pre>
-
-<p>これで、コピーボタンをクリックするとチェックアイコンに切り替わるはずです。</p>
-
-<p>もし、クリックしたのと違うボタンのアイコンが変化している場合は、上記のコードを追加する場所を間違えています。</p>
-
+<p>これで、コピーボタンをクリックするとチェックアイコンに切り替わるはずです。
+</p>
+<p>もし、クリックしたのと違うボタンのアイコンが変化している場合は、上記のコードを追加する場所を間違えています。
+</p>
 <h2 id="sns-へのシェアボタンを追加する">SNS へのシェアボタンを追加する</h2>
-<p>SNS で直接投稿・送信ができるボタンを設置します。</p>
-
-<p>このようなボタンについては、公式が「このURLにアクセスすればシェアできるよ」と公開してくれているので、それに則って作成していきます。</p>
-
-<p>まずは <code class="language-plaintext highlighter-rouge">popup.html</code> から行きましょう。</p>
-
-<p><code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> タグの直前にある <code class="language-plaintext highlighter-rouge">&lt;div class="content"&gt;</code> の中身をすべて削除してください。そして、以下のコードに書き換えてください。</p>
-
+<p>SNS で直接投稿・送信ができるボタンを設置します。
+</p>
+<p>このようなボタンについては、公式が「このURLにアクセスすればシェアできるよ」と公開してくれているので、それに則って作成していきます。
+</p>
+<p>まずは <code class="language-plaintext highlighter-rouge">popup.html</code> から行きましょう。
+</p>
 <pre><code class="language-HTML">&lt;div class="both"&gt;
   &lt;button title="タイトルとURLをコピー" id="copyBoth" class="shareSNS copyBoth"&gt;
     &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard withText" viewBox="0 0 16 16" aria-label="タイトルとURLをコピー"&gt;
@@ -854,9 +783,6 @@ showCheck("copyBoth");
   &lt;/button&gt;
 &lt;/div&gt;
 </code></pre>
-
-<p>しかし、これではレイアウトやデザインがメチャクチャなので、CSS で整えます。<code class="language-plaintext highlighter-rouge">popup.css</code> の末尾に以下のコードを追加してください。</p>
-
 <pre><code class="language-CSS">.shareSNS{
     background-color: #fff;
     width: 100%;
@@ -917,25 +843,19 @@ showCheck("copyBoth");
     fill: #fff;
 }
 </code></pre>
-
-<p>下の画像のようになっていればOKです。</p>
-
-<p><img src="https://user-images.githubusercontent.com/75155258/128118980-3cdc3850-cf07-4da1-99b3-0f130a1f68e6.png" alt="SNS シェア"></p>
-
-<p>では、<code class="language-plaintext highlighter-rouge">popup.js</code> で動きを付け加えていきます。</p>
-
-<p>これと同時に、<code class="language-plaintext highlighter-rouge">tabs[0].title</code> と <code class="language-plaintext highlighter-rouge">tabs[0].url</code> を定数に格納します。後で参照しやすくするためです。</p>
-
-<p>ということで、<code class="language-plaintext highlighter-rouge">chrome.tabs.query</code> の中身の先頭に以下のコードを追加してください。</p>
-
+<p>下の画像のようになっていればOKです。
+</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/128118980-3cdc3850-cf07-4da1-99b3-0f130a1f68e6.png" alt="SNS シェア">
+</p>
+<p>では、<code class="language-plaintext highlighter-rouge">popup.js</code> で動きを付け加えていきます。
+</p>
+<p>これと同時に、<code class="language-plaintext highlighter-rouge">tabs[0].title</code> と <code class="language-plaintext highlighter-rouge">tabs[0].url</code> を定数に格納します。後で参照しやすくするためです。
+</p>
 <pre><code class="language-JavaScript">const tabTitle = tabs[0].title;
 const tabUrl = tabs[0].url;
 </code></pre>
-
-<p>そして、コードの中の <code class="language-plaintext highlighter-rouge">tabs[0].title</code> と <code class="language-plaintext highlighter-rouge">tabs[0].url</code> をそれぞれ、<code class="language-plaintext highlighter-rouge">tabTitle</code> と <code class="language-plaintext highlighter-rouge">tabUrl</code> に書き換えてください。</p>
-
-<p>その後、以下のコードを <code class="language-plaintext highlighter-rouge">chrome.tabs.query</code> の中身の末尾に追加してください。</p>
-
+<p>そして、コードの中の <code class="language-plaintext highlighter-rouge">tabs[0].title</code> と <code class="language-plaintext highlighter-rouge">tabs[0].url</code> をそれぞれ、<code class="language-plaintext highlighter-rouge">tabTitle</code> と <code class="language-plaintext highlighter-rouge">tabUrl</code> に書き換えてください。
+</p>
 <pre><code class="language-JavaScript">/*Facebook*/
 document.getElementById("shareToFB").addEventListener("click", () =&gt; {
     windowOpen("https://www.facebook.com/share.php?u=" + encodeURIComponent(tabUrl));
@@ -951,54 +871,47 @@ document.getElementById("LINE").addEventListener("click", ()=&gt;{
     windowOpen("https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(tabUrl));
 }, false);
 </code></pre>
-
-<p>下の関数も定義してください。これは、ポップアップを開く際に用いられています。引数 <code class="language-plaintext highlighter-rouge">url</code> がポップアップを開くURLに当たります。</p>
-
 <pre><code class="language-JavaScript">function windowOpen(url) {
     window.open(url, 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1')
     this.close();
     return false;
 }
 </code></pre>
-
-<p>では、SNS シェア部分のコードの解説をします。</p>
-
-<p>主要SNS では、指定された URL にアクセスすることで、シェアができるようになっています。SNS サービス毎の URL は以下のとおりです。</p>
-
+<p>では、SNS シェア部分のコードの解説をします。
+</p>
+<p>主要SNS では、指定された URL にアクセスすることで、シェアができるようになっています。SNS サービス毎の URL は以下のとおりです。
+</p>
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">サービス名</th>
-      <th style="text-align: left">URL</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">Facebook</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://www.facebook.com/share.php?u={{ URL }}</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">Twitter</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://twitter.com/share?text={{ ツイート文 }}&amp;url={{ URL }}&amp;hashtags={{ ハッシュタグ (カンマ区切りで複数指定可能) }}</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">LINE</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://social-plugins.line.me/lineit/share?url={{ URL }}</code></td>
-    </tr>
-  </tbody>
+<thead>
+   <tr>
+     <th style="text-align: center">サービス名</th>
+<th style="text-align: left">URL</th>
+</tr>
+</thead>
+<tbody>
+   <tr>
+     <td style="text-align: center">Facebook</td>
+<td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://www.facebook.com/share.php?u={{ URL }}</code></td>
+</tr>
+<tr>
+     <td style="text-align: center">Twitter</td>
+<td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://twitter.com/share?text={{ ツイート文 }}&amp;url={{ URL }}&amp;hashtags={{ ハッシュタグ (カンマ区切りで複数指定可能) }}</code></td>
+</tr>
+<tr>
+     <td style="text-align: center">LINE</td>
+<td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://social-plugins.line.me/lineit/share?url={{ URL }}</code></td>
+</tr>
+</tbody>
 </table>
-
-<p><code class="language-plaintext highlighter-rouge">{{ URL }}</code>の部分に共有したい URL を入れると、上記のような SNS でシェアすることができます。</p>
-
-<p>また、Twitter の場合は、ツイート文やハッシュタグも指定できます。要領は URL と同じで、指定された部分に文字を入れるだけです。</p>
-
-<p>上記のコードの中に、<code class="language-plaintext highlighter-rouge">encodeURIComponent()</code> というものが頻繁に使われていますが、これは日本語や記号などを、コンピューターが扱いやすいように変換するためのものです。URL の中に日本語などが紛れていると、予期せぬトラブルの原因になります。そこで、この処理が必要になるわけです。</p>
-
+<p><code class="language-plaintext highlighter-rouge">{{ URL }}</code>の部分に共有したい URL を入れると、上記のような SNS でシェアすることができます。
+</p>
+<p>また、Twitter の場合は、ツイート文やハッシュタグも指定できます。要領は URL と同じで、指定された部分に文字を入れるだけです。
+</p>
+<p>上記のコードの中に、<code class="language-plaintext highlighter-rouge">encodeURIComponent()</code> というものが頻繁に使われていますが、これは日本語や記号などを、コンピューターが扱いやすいように変換するためのものです。URL の中に日本語などが紛れていると、予期せぬトラブルの原因になります。そこで、この処理が必要になるわけです。
+</p>
 <h2 id="コード全体">コード全体</h2>
-<p>最後に、コードの全体を提示します。「うまく動かない」等の場合は参考にしてみてください。</p>
-
-<p><code class="language-plaintext highlighter-rouge">popup.html</code></p>
-
+<p>最後に、コードの全体を提示します。「うまく動かない」等の場合は参考にしてみてください。
+</p>
 <pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
 &lt;html lang="ja"&gt;
 
@@ -1091,9 +1004,6 @@ document.getElementById("LINE").addEventListener("click", ()=&gt;{
 
 &lt;/html&gt;
 </code></pre>
-
-<p><code class="language-plaintext highlighter-rouge">popup.css</code></p>
-
 <pre><code class="language-CSS">body {
   letter-spacing: 0.15em;
   width: 400px;
@@ -1259,9 +1169,6 @@ svg.withText{
     fill: #fff;
 }
 </code></pre>
-
-<p><code class="language-plaintext highlighter-rouge">popup.js</code></p>
-
 <pre><code class="language-JavaScript">const title = document.getElementById("pageTitle");
 const url = document.getElementById("pageURL");
 
@@ -1325,310 +1232,78 @@ function windowOpen(url) {
     return false;
 }
 </code></pre>
-
-<p>さて、今日はここまでです。お疲れさまでした！</p>
-
+<p>さて、今日はここまでです。お疲れさまでした！
+</p>
 <h2 id="todo">TODO</h2>
 <ul>
-  <li>前回予告した、「権限を少なくする作業」(次回)</li>
-  <li>Chrome Web ストアで公開(次々回)</li>
+ <li>前回予告した、「権限を少なくする作業」(次回)
+ </li>
+<li>Chrome Web ストアで公開(次々回)
+</li>
 </ul>
-
-<p>※今後の予定は変更になる可能性があります</p>
-
+<p>※今後の予定は変更になる可能性があります
+</p>
 <h2 id="まとめ">まとめ</h2>
 <ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText(コピーしたい文字列)</code> で文字列をクリップボードにコピーできる。</li>
-  <li>指定のURLにアクセスすれば、各種SNSでシェアすることができる。</li>
+ <li>
+<code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText(コピーしたい文字列)</code> で文字列をクリップボードにコピーできる。
+ </li>
+<li>指定のURLにアクセスすれば、各種SNSでシェアすることができる。
+</li>
 </ul>
-
-<p>今回は前回以上にボリューミーでしたが、ここまで読んでいただきありがとうございました。</p>
-
-<p>さて、ここまで駆け足でやってきてしまったので、明日、明後日、の連載はお休みします。今までの復習を行ったり、少し息抜きしたりしてください。</p>
-
-<p>それでは、次回(8/7)をお楽しみに！</p>
-
+<p>今回は前回以上にボリューミーでしたが、ここまで読んでいただきありがとうございました。
+</p>
+<p>さて、ここまで駆け足でやってきてしまったので、明日、明後日、の連載はお休みします。今までの復習を行ったり、少し息抜きしたりしてください。
+</p>
+<p>それでは、次回(8/7)をお楽しみに！
+</p>
 <h2 id="202187-追記">2021/8/7 追記</h2>
-<p>「LINE で送る」ボタンに関するコードに誤りがあったため訂正しました。</p>
-
-
-    </div>
-
+<p>「LINE で送る」ボタンに関するコードに誤りがあったため訂正しました。
+   </p>
+</div>
 </article>
-
       <br><br><br>
-      <p>【「Chrome 拡張機能を作ろう」の記事一覧】</p>
-      <ol>
-      
-        
-      
-      
-        
-        <li><a href="/2021-07/chrome-extension-1">環境構築</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-2">ポップアップ作成</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-3">仕様に沿って開発</a></li>
-        
-      
-      
-        
-        <li>
-<a href="/2021-08/chrome-extension-4">コピー機能実装</a> (←今ココ)</li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-5">権限を減らす</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a></li>
-        
-      
-      
-        
-        <li><a href="/2021-08/chrome-extension-7">Webストアに公開</a></li>
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-      </ol>
-       <div class="post-nav">
+     <p>【「Chrome 拡張機能を作ろう」の記事一覧】
+     </p>
+<ol>
+       <li>
+<a href="/2021-07/chrome-extension-1">環境構築</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-2">ポップアップ作成</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-3">仕様に沿って開発</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-4">コピー機能実装</a> (←今ココ)
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-5">権限を減らす</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a>
+       </li>
+<li>
+<a href="/2021-08/chrome-extension-7">Webストアに公開</a>
+     </li>
+</ol>
+      <div class="post-nav">
 <a class="previous" href="/2021-08/chrome-extension-3" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">Chrome 拡張機能を作って公開しよう③　〜形にする〜</a><a class="next" href="/2021-08/chrome-extension-5" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜</a>
 </div>
 <div class="post-related">
-      <div>関連記事</div>
-      <ul>
-        <li><a class="post-link" href="/2022-05/insider" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">Windows Insider で 0xc8000402 エラーになりビルドをインストール出来ない場合の対処法(結構簡単)</a></li>
-<li><a class="post-link" href="/2021-10/conditional-operator" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">三項演算子が便利すぎて感動した</a></li>
-<li><a class="post-link" href="/2022-06/manjaro" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">Windows ユーザーが Manjaro に乗り換えて感じたメリット・デメリット</a></li>
-<li><a class="post-link" href="/2022-08/domain" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">ドメインが変わりました</a></li>
+     <div>関連記事</div>
+     <ul>
+       <li><a class="post-link" href="/2021-12/winter" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">冬</a></li>
+<li><a class="post-link" href="/2021-11/font-hikaku" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">ＭＳ ゴシックと Noto Sans を比較してみる(読者アンケート付き)</a></li>
+<li><a class="post-link" href="/2022-09/diary" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">一言日記(2022年9月)</a></li>
+<li><a class="post-link" href="/2022-04/spring" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">春</a></li>
 </ul>
-    </div>
-<!-- begin wwww.htmlcommentbox.com -->
+   </div>
 <div id="HCB_comment_box">
 <a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
 <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
-<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-
-
-<!-- customize labels of htmlcommentbox.com -->
+<script type="text/javascript" id="hcb"> /**/ </script>
 <script>
   /* This code goes ABOVE the main HTML Comment Box code!
    replace the text in the single quotes below to customize labels.*/
@@ -1670,7 +1345,6 @@ function windowOpen(url) {
       err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
       err_spam:'スパムと認定されたためこのコメントは削除されました。',
       err_blocked:'サイトポリシーによりこのコメントは削除されました。',
-  
       /* SETTINGS */
       MAX_CHARS: 256,
       PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
@@ -1678,9 +1352,7 @@ function windowOpen(url) {
       RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
   };
   </script>
-  <!-- done customizing labels of htmlcommentbox.com -->
-
-  <style>
+ <style>
     #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
       transition: opacity .3s;
     }
@@ -1705,65 +1377,51 @@ function windowOpen(url) {
       border: solid 1px #777;
       color: #ddd;
     }
-  </style>
+ </style>
 </section>
 </div>
-   
-
-  </section>
-
-
-  
-  <section class="sidebar" style="margin-left: 15px;">
-    <!-- Get sidebar items --><style type="text/css" media="screen">
+ </section>
+ 
+ <section class="sidebar" style="margin-left: 15px;">
+   <style type="text/css" media="screen">
 .post-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 </style>
-
 <div class="post-menu">
-  <div class="post-menu-title">目次</div>
-  <div class="post-menu-content"></div>
+ <div class="post-menu-title">目次</div>
+ <div class="post-menu-content"></div>
 </div>
-
 <script>
   function generateContent() {
     var menu = document.querySelector(".post-menu");
     var menuContent =  menu.querySelector(".post-menu-content");
     var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
-
     // Hide menu when no headings
     if (headings.length === 0) {
       return menu.style.display = "none";
     }
-
     // Generate post menu
     var menuHTML = '';
     for (var i = 0; i < headings.length; i++) {
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
     }
-
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
-
     // The header element
     var header = document.querySelector('header.site-header');
-
     function doMenuCollapse(index, over_items) {
       var items = menuContent.firstChild.children;
-
       if (over_items == undefined) {
         over_items = 20;
       }
-
       if (items.length < over_items) {
         return;
       }
-
       var activeItem = items[index];
       var beginItem = activeItem
       var endItem = activeItem
@@ -1796,10 +1454,8 @@ function windowOpen(url) {
         }
       }
     }
-
     // Init menu collapsed
     doMenuCollapse(-1);
-
     // Active the menu item
     window.addEventListener('scroll', function (event) {
       var lastActive = menuContent.querySelector('.active');
@@ -1838,10 +1494,8 @@ function windowOpen(url) {
   generateContent();
 </script>
 </section>
-</div>
-
       </div>
-    </main><footer class="site-footer h-card">
+    <footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
@@ -1946,5 +1600,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: none;
   }
 </style>
+</div></main>
 </body>
 </html>
