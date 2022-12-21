@@ -137,6 +137,17 @@ markdown: kramdown
 kmarkdown:
   input: GFM
 
+# Compress HTML
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  ignore:
+    envs: []
+  blanklines: true
+  profile: false
+  startings: []
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
