@@ -13,12 +13,8 @@ jobs:
       - name: Install Ruby and Gems
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0' # Not needed with a .ruby-version file
-#           bundler-cache: true # Runs 'bundle install' and caches installed gems automatically
-      - name: bundle install
-        run: |
-          bundle config set path 'vendor/bundle'
-          bundle install
+          ruby-version: '2.7' # Not needed with a .ruby-version file
+          bundler-cache: true # Runs 'bundle install' and caches installed gems automatically
 
       - name: Build with Jekyll
         run: JEKYLL_ENV=production bundle exec jekyll build
