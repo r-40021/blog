@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜">
+  <meta property="twitter:title" content="Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜">
+  <title>Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜 | カエル文書箱</title>
+  
+  <meta property="og:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-04-twitter.jpg">
+  <meta property="twitter:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-04-twitter.jpg">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.1">
+<meta property="og:title" content="Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜">
+<meta name="author" content="Frog">
+<meta property="og:locale" content="ja">
+<meta name="description" content="こんにちは！1回30分で拡張機能を作るシリーズ、第4弾です。今回は、この拡張機能の要、「コピー機能」を実装していきます。">
+<meta property="og:description" content="こんにちは！1回30分で拡張機能を作るシリーズ、第4弾です。今回は、この拡張機能の要、「コピー機能」を実装していきます。">
+<link rel="canonical" href="https://blog.frogapp.net/2021-08/chrome-extension-4">
+<meta property="og:url" content="https://blog.frogapp.net/2021-08/chrome-extension-4">
+<meta property="og:site_name" content="カエル文書箱">
+<meta property="og:image" content="https://blog.frogapp.net/assets/images/banners/2021-08-04-twitter.jpg">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-08-04T00:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="https://blog.frogapp.net/assets/images/banners/2021-08-04-twitter.jpg">
+<meta property="twitter:title" content="Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Frog"},"dateModified":"2021-08-04T00:00:00+09:00","datePublished":"2021-08-04T00:00:00+09:00","description":"こんにちは！1回30分で拡張機能を作るシリーズ、第4弾です。今回は、この拡張機能の要、「コピー機能」を実装していきます。","headline":"Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜","image":"https://blog.frogapp.net/assets/images/banners/2021-08-04-twitter.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.frogapp.net/2021-08/chrome-extension-4"},"url":"https://blog.frogapp.net/2021-08/chrome-extension-4"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- OGP -->
+  <meta property="og:title" content="Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜">
+  <meta property="twitter:title" content="Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta property="og:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-04-twitter.jpg">
+  <meta property="twitter:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-04-twitter.jpg">
+   
+    <meta property="og:type" content="article">
+  <link rel="shortcut icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=">
+<link type="application/atom+xml" rel="alternate" href="https://blog.frogapp.net/feed.xml" title="カエル文書箱">
+<!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+  <img class="site-favicon" title="カエル文書箱" src="/assets/images/logo.png" onerror="this.style.display='none'">
+  カエル文書箱
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/archives.html">ARCHIVES</a><a class="page-link" href="/categories.html">CATEGORIES</a><a class="page-link" href="/tags.html">TAGS</a>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+      <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script data-cfasync="false">
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2021-08-04T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2021/08/04
+    </time>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  1 時間 15 分</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/tags.html#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a><a class="post-tag" href="/tags.html#Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD">#Chrome拡張機能</a><a class="post-tag" href="/tags.html#JavaScript">#JavaScript</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+      
+      
+      
+      <!--画像-->
+        <figure>
+          <img src="/assets/images/banners/2021-08-04-twitter.jpg" width="100%" loading="eager" alt="ヘッダー画像">
+          
+            <figcaption>Photo by <a href="https://unsplash.com/@alexbemore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Alexander Shatov</a> on <a href="https://unsplash.com/s/photos/twitter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
+          
+        </figure>
+      
+
+      <p>こんにちは！1回30分で拡張機能を作るシリーズ、第4弾です。今回は、この拡張機能の要、「コピー機能」を実装していきます。</p>
+
+<p>「あれ？15分じゃなかったのかよ！」と気づかれた方、そうです。1回分のボリュームが15分に収まりきらないということで、誠に勝手ながら30分に延長させていただきました。</p>
+
+<p>「15分しか時間がない」という方、ご安心ください。最後にも触れますが、明日・明後日の連載はお休みします。ということで、ゆとりを持って取り組んでみてください。</p>
+
+<p>では、本題に入っていきましょう。(切り替えが早い)</p>
+
+<h2 id="コピーボタンの配置">コピーボタンの配置</h2>
+<p><code class="language-plaintext highlighter-rouge">popup.html</code> を次のように書き換えてください。
+<code class="language-plaintext highlighter-rouge">&lt;!--ここから--&gt;</code> という部分から、<code class="language-plaintext highlighter-rouge">&lt;!--ここまで--&gt;</code> という部分までが追加する分です。追加する部分は2箇所あります。</p>
+
+<pre><code class="language-HTML">&lt;div class="text"&gt;
+ &lt;input type="text" id="pageTitle" class="column" readonly&gt;
+&lt;/div&gt;
+
+
+&lt;!--ここから--&gt;
+&lt;div class="copy"&gt;
+  &lt;button title="ページタイトルをコピー" id="copyTitle"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" aria-label="ページタイトルをコピー"&gt;
+      &lt;path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/&gt;
+      &lt;path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;!--ここまで--&gt;
+
+
+&lt;!--省略--&gt;
+
+&lt;div class="text"&gt;
+  &lt;input type="url" id="pageURL" class="column" readonly&gt;
+&lt;/div&gt;
+
+
+&lt;!--ここから--&gt;
+&lt;div class="copy"&gt;
+  &lt;button title="URLをコピー" id="copyURL"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" aria-label="URLをコピー"&gt;
+      &lt;path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/&gt;
+      &lt;path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;!--ここまで--&gt;
+</code></pre>
+
+<p>また、<code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> タグの直前に、以下のコードを追記してください。</p>
+
+<pre><code class="language-HTML">&lt;div class="content"&gt;
+    &lt;div class="both"&gt;
+      &lt;button title="タイトルとURLをコピー" id="copyBoth"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard withText" viewBox="0 0 16 16" aria-label="タイトルとURLをコピー"&gt;
+          &lt;path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/&gt;
+          &lt;path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/&gt;
+        &lt;/svg&gt;タイトルと URL をコピー
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
+
+<p>このままではボタンがむき出しになっていてかっこ悪いので、<code class="language-plaintext highlighter-rouge">popup.css</code> に以下の内容を追記してください。</p>
+
+<p>一応、コメントに解説のようなものを載せました。よかったら参考にしてください。</p>
+
+<pre><code class="language-CSS">/*ボタンに適用するCSS*/
+button {
+  appearance: none; /*デフォルトの見た目を無効に*/
+  -webkit-appearance: none; /*あまり意味はないが、古いブラウザ向け。デフォルトの見た目を無効にする。*/
+  border: 0; /*枠線を消す*/
+  background-color: #4c3cda; /*背景色を指定*/
+  color: #fff;/*文字色を白に*/
+  padding: 8px 16px; /*内側の余白を指定*/
+  font-size: 16px; /*フォントサイズを16pxに*/
+  border-radius: 5px; /*角を丸くする*/
+  cursor: pointer; /*カーソルを手のひらの形状にする*/
+  transition: background-color .2s; /*背景色が変わるときにアニメーション*/
+}
+button:hover {
+/*カーソルがボタンに乗っているとき*/
+  background-color: #2f22a3; /*背景色を変更*/
+}
+button:focus {
+/*tabキーなどで、ボタンがフォーカスされているとき*/
+  outline: none; /*デフォルトの枠線を消す*/
+  box-shadow: 0 0 0 4px #cbd6ee; /*代わりの枠線*/
+}
+
+/*ボタンの中のアイコンに適用するCSS*/
+button svg {
+  fill: #fff; /*ボタンの中のアイコンの色を白色にする*/
+}
+svg.withText{
+    vertical-align: middle; /*隣接するテキストを、アイコンの上下中央にラインに配置*/
+    margin-right: .7em; /*右側に余白をあける*/
+}
+</code></pre>
+
+<p>ここまでやると、以下の画像のようになります。ボタンにスタイルが適用されていて、いい感じですね！</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128103219-9d6ebeaa-f9c2-42da-83da-5e7b2d233983.png" alt="CSS適用後"></p>
+
+<h2 id="コピー機能の実装">コピー機能の実装</h2>
+
+<p>それでは、本題の「コピー機能の実装」に移ります。</p>
+
+<p>流れとしては、</p>
+<ol>
+  <li>コピーボタンをクリックする</li>
+  <li>クリップボードに URL またはタイトルがコピーされる</li>
+</ol>
+
+<p>「コピーボタンをクリックしたとき」は、<code class="language-plaintext highlighter-rouge">addEventListener</code> を使えばいけそうです。</p>
+
+<p>また、クリップボードにコピーするという動作は、<code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText(コピーしたい文字列)</code> でできます。</p>
+
+<p>それでは、これを組み合わせてみましょう。<code class="language-plaintext highlighter-rouge">popup.js</code> に、以下のようにコードを追加してください。<code class="language-plaintext highlighter-rouge">/*ここから*/</code> から、<code class="language-plaintext highlighter-rouge">/*ここまで*/</code> の部分が追加するコードです。</p>
+
+<pre><code class="language-JavaScript">chrome.tabs.query({ 'active': true, 'lastFocusedWindow': true }, tabs =&gt; {
+    title.value = tabs[0].title;
+    url.value = tabs[0].url;
+    
+    
+    /*ここから*/
+   document.getElementById("copyTitle").addEventListener("click",()=&gt;{
+        navigator.clipboard.writeText(tabs[0].title);
+    }, false);
+    document.getElementById("copyURL").addEventListener("click",()=&gt;{
+        navigator.clipboard.writeText(tabs[0].url);
+    }, false);
+    document.getElementById("copyBoth").addEventListener("click",()=&gt;{
+        navigator.clipboard.writeText(tabs[0].title + "\n" + tabs[0].url);
+    }, false);
+    /*ここまで*/
+    
+    
+});
+</code></pre>
+
+<p>それでは、「コピー」ボタンを押して、動作を確認してみてください！</p>
+
+<p>ちなみに、「タイトルとURLを両方コピー」した場合は、タイトルとURLの間に改行が入ります。これが、上記のコードの <code class="language-plaintext highlighter-rouge">\n</code> に当たる部分です。JavaScriptでは、<code class="language-plaintext highlighter-rouge">\n</code> を使うと文字列を改行させることができます。</p>
+
+<h2 id="コピーしたことを伝える">コピーしたことを伝える</h2>
+<p>しかし、これではボタンを押しても何も起こらないので、本当にコピーされたのか疑問に思いますよね。</p>
+
+<p>そこで、コピーボタンを押したら、クリップボードのアイコンが「チェックアイコン」に変わるようにしましょう。</p>
+
+<p>仕組みはこうです。</p>
+
+<ol>
+  <li>コピーボタンが押されたら、クリップボードのアイコンを非表示にし、チェックアイコンを表示する</li>
+  <li>5秒後にもとに戻す</li>
+  <li>ボタンがクリックされたとき、他のボタンがチェックアイコンだったらもとに戻す</li>
+</ol>
+
+<p>まずは、<code class="language-plaintext highlighter-rouge">popup.html</code> から変更していきます。すべてのクリップボードアイコンのあとに、以下のコードを追加してください。(クリップボードアイコンには、<code class="language-plaintext highlighter-rouge">bi-clipboard</code> というクラス名がついています。目印にしてください。)</p>
+
+<pre><code class="language-HTML">&lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 checkIcon" viewBox="0 0 16 16" style="display: none;"&gt;
+    &lt;path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/&gt;
+&lt;/svg&gt;
+</code></pre>
+
+<p>ただ、この時点でポップアップを開いてもなんの変化もありません。先程追加したチェックアイコンには、<code class="language-plaintext highlighter-rouge">style="display: none;"</code> とあります。これにより、非表示になっているからです。</p>
+
+<p>では、<code class="language-plaintext highlighter-rouge">popup.js</code> に、ボタンを押したときにチェックアイコンを表示させるようにプログラムします。</p>
+
+<p>「クリップボードアイコンをチェックアイコンに入れ替える」という処理は何度か使いそうなので、関数にまとめます。</p>
+
+<p><code class="language-plaintext highlighter-rouge">popup.js</code> の末尾に以下のコードを追加してください。</p>
+
+<pre><code class="language-JavaScript">let timeout;
+function showCheck(parentId) {
+    clearTimeout(timeout); //5秒後に予定されている処理をキャンセル
+    const checkIcons = document.getElementsByClassName("checkIcon");
+    for (let i = 0; i &lt; checkIcons.length; i++) {
+        checkIcons[i].style.display = "none"; //一旦すべてのチェックアイコンを非表示に
+    }
+    const clipIcons = document.getElementsByClassName("bi-clipboard");
+    for (let i = 0; i &lt; clipIcons.length; i++) {
+        clipIcons[i].style.display = ""; //一旦すべてのクリップボードアイコンを表示
+    }
+    const child = document.getElementById(parentId).children; //ボタンの子要素を取得
+    child[0].style.display = "none"; //ボタンの子要素のうち1番目、つまりクリップボードアイコンを非表示に
+    child[1].style.display = ""; //ボタンの子要素のうち2番目、つまりチェックアイコンを表示する
+
+    timeout = setTimeout(() =&gt; {
+    /*5秒後の処理*/
+        child[0].style.display = ""; //クリップボードアイコンを表示する
+        child[1].style.display = "none"; //チェックアイコンを非表示に
+    }, 5000);
+}
+</code></pre>
+
+<p>そして、ボタンがクリックされた際にこの関数を呼び出すようにします。引数 <code class="language-plaintext highlighter-rouge">parentId</code> には、ボタンのIDを代入します。</p>
+
+<p><code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText()</code> の次の行に、下記の「候補1」〜「候補3」のいずれかを追加してください。どの <code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText()</code> の後に、どのコードを追加するのかは、是非自分で考えてみてください！</p>
+
+<pre><code class="language-JavaScript">/*候補１*/
+showCheck("copyTitle");
+
+/*候補2*/
+showCheck("copyURL");
+
+/*候補3*/
+showCheck("copyBoth");
+</code></pre>
+
+<p>これで、コピーボタンをクリックするとチェックアイコンに切り替わるはずです。</p>
+
+<p>もし、クリックしたのと違うボタンのアイコンが変化している場合は、上記のコードを追加する場所を間違えています。</p>
+
+<h2 id="sns-へのシェアボタンを追加する">SNS へのシェアボタンを追加する</h2>
+<p>SNS で直接投稿・送信ができるボタンを設置します。</p>
+
+<p>このようなボタンについては、公式が「このURLにアクセスすればシェアできるよ」と公開してくれているので、それに則って作成していきます。</p>
+
+<p>まずは <code class="language-plaintext highlighter-rouge">popup.html</code> から行きましょう。</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> タグの直前にある <code class="language-plaintext highlighter-rouge">&lt;div class="content"&gt;</code> の中身をすべて削除してください。そして、以下のコードに書き換えてください。</p>
+
+<pre><code class="language-HTML">&lt;div class="both"&gt;
+  &lt;button title="タイトルとURLをコピー" id="copyBoth" class="shareSNS copyBoth"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard withText" viewBox="0 0 16 16" aria-label="タイトルとURLをコピー"&gt;
+      &lt;path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/&gt;
+      &lt;path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/&gt;
+    &lt;/svg&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 checkIcon withText" viewBox="0 0 16 16" style="display: none;"&gt;
+      &lt;path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/&gt;
+    &lt;/svg&gt;
+    タイトルと URL をコピー
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="toFB"&gt;
+  &lt;button title="シェア" id="shareToFB" class="FB shareSNS"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook withText" viewBox="0 0 16 16" aria-label="Facebook"&gt;
+      &lt;path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/&gt;
+    &lt;/svg&gt;
+    シェア
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="toTwitter"&gt;
+  &lt;button title="ツイート" id="tweet" class="twitter shareSNS"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter withText" viewBox="0 0 16 16" aria-label="Twitter"&gt;
+      &lt;path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/&gt;
+    &lt;/svg&gt;
+    ツイート
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="toLINE"&gt;
+  &lt;button title="LINE で送る" id="LINE" class="LINE shareSNS"&gt;
+    &lt;svg class="withText" xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 448 512" aria-label="LINEで送る"&gt;
+      &lt;!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --&gt;
+      &lt;path d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2H219c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z"&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+    LINE で送る
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>しかし、これではレイアウトやデザインがメチャクチャなので、CSS で整えます。<code class="language-plaintext highlighter-rouge">popup.css</code> の末尾に以下のコードを追加してください。</p>
+
+<pre><code class="language-CSS">.shareSNS{
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    margin: .3em 0;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.copyBoth{
+    color: #4c3cda;
+    border-color: #4c3cda;
+}
+.copyBoth svg{
+    fill: #4c3cda;
+}
+.copyBoth:hover{
+    background-color: #4c3cda;
+}
+
+.FB{
+    color: #1877f2;
+    border-color: #1877f2;
+}
+.FB svg{
+    fill: #1877f2;
+}
+.FB:hover{
+    background-color: #1877f2;
+}
+
+.twitter{
+    color: #1DA1F2;
+    border-color: #1DA1F2;
+}
+.twitter svg{
+    fill: #1DA1F2;
+}
+.twitter:hover{
+    background-color: #1DA1F2;
+}
+
+.LINE{
+    color: #00B900;
+    border-color: #00B900;
+}
+.LINE svg{
+    fill: #00B900;
+}
+.LINE:hover{
+    background-color: #00B900;
+}
+
+.shareSNS:hover{
+    color: #fff;
+}
+.shareSNS:hover svg{
+    fill: #fff;
+}
+</code></pre>
+
+<p>下の画像のようになっていればOKです。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128118980-3cdc3850-cf07-4da1-99b3-0f130a1f68e6.png" alt="SNS シェア"></p>
+
+<p>では、<code class="language-plaintext highlighter-rouge">popup.js</code> で動きを付け加えていきます。</p>
+
+<p>これと同時に、<code class="language-plaintext highlighter-rouge">tabs[0].title</code> と <code class="language-plaintext highlighter-rouge">tabs[0].url</code> を定数に格納します。後で参照しやすくするためです。</p>
+
+<p>ということで、<code class="language-plaintext highlighter-rouge">chrome.tabs.query</code> の中身の先頭に以下のコードを追加してください。</p>
+
+<pre><code class="language-JavaScript">const tabTitle = tabs[0].title;
+const tabUrl = tabs[0].url;
+</code></pre>
+
+<p>そして、コードの中の <code class="language-plaintext highlighter-rouge">tabs[0].title</code> と <code class="language-plaintext highlighter-rouge">tabs[0].url</code> をそれぞれ、<code class="language-plaintext highlighter-rouge">tabTitle</code> と <code class="language-plaintext highlighter-rouge">tabUrl</code> に書き換えてください。</p>
+
+<p>その後、以下のコードを <code class="language-plaintext highlighter-rouge">chrome.tabs.query</code> の中身の末尾に追加してください。</p>
+
+<pre><code class="language-JavaScript">/*Facebook*/
+document.getElementById("shareToFB").addEventListener("click", () =&gt; {
+    windowOpen("https://www.facebook.com/share.php?u=" + encodeURIComponent(tabUrl));
+}, false);
+
+/*Twitter*/
+document.getElementById("tweet").addEventListener("click", () =&gt; {
+    windowOpen("https://twitter.com/intent/tweet?text=" + encodeURIComponent(tabTitle) + "%0a&amp;url=" + encodeURIComponent(tabUrl));
+}, false);
+
+/*LINE*/
+document.getElementById("LINE").addEventListener("click", ()=&gt;{
+    windowOpen("https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(tabUrl));
+}, false);
+</code></pre>
+
+<p>下の関数も定義してください。これは、ポップアップを開く際に用いられています。引数 <code class="language-plaintext highlighter-rouge">url</code> がポップアップを開くURLに当たります。</p>
+
+<pre><code class="language-JavaScript">function windowOpen(url) {
+    window.open(url, 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1')
+    this.close();
+    return false;
+}
+</code></pre>
+
+<p>では、SNS シェア部分のコードの解説をします。</p>
+
+<p>主要SNS では、指定された URL にアクセスすることで、シェアができるようになっています。SNS サービス毎の URL は以下のとおりです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">サービス名</th>
+      <th style="text-align: left">URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Facebook</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://www.facebook.com/share.php?u={{ URL }}</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Twitter</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://twitter.com/share?text={{ ツイート文 }}&amp;url={{ URL }}&amp;hashtags={{ ハッシュタグ (カンマ区切りで複数指定可能) }}</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">LINE</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://social-plugins.line.me/lineit/share?url={{ URL }}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">{{ URL }}</code>の部分に共有したい URL を入れると、上記のような SNS でシェアすることができます。</p>
+
+<p>また、Twitter の場合は、ツイート文やハッシュタグも指定できます。要領は URL と同じで、指定された部分に文字を入れるだけです。</p>
+
+<p>上記のコードの中に、<code class="language-plaintext highlighter-rouge">encodeURIComponent()</code> というものが頻繁に使われていますが、これは日本語や記号などを、コンピューターが扱いやすいように変換するためのものです。URL の中に日本語などが紛れていると、予期せぬトラブルの原因になります。そこで、この処理が必要になるわけです。</p>
+
+<h2 id="コード全体">コード全体</h2>
+<p>最後に、コードの全体を提示します。「うまく動かない」等の場合は参考にしてみてください。</p>
+
+<p><code class="language-plaintext highlighter-rouge">popup.html</code></p>
+
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;link rel="stylesheet" type="text/css" href="popup.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class="content"&gt;
+  &lt;label for="pageTitle" class="column"&gt;タイトル&lt;/label&gt;
+  &lt;div class="grid"&gt;
+    &lt;div class="text"&gt;
+      &lt;input type="text" id="pageTitle" class="column" readonly&gt;
+    &lt;/div&gt;
+    &lt;div class="copy"&gt;
+      &lt;button title="ページタイトルをコピー" id="copyTitle"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" aria-label="ページタイトルをコピー"&gt;
+          &lt;path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/&gt;
+          &lt;path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/&gt;
+        &lt;/svg&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 checkIcon" viewBox="0 0 16 16" style="display: none;"&gt;
+          &lt;path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="content"&gt;
+  &lt;label for="pageURL" class="column"&gt;URL&lt;/label&gt;
+  &lt;div class="grid"&gt;
+    &lt;div class="text"&gt;
+      &lt;input type="url" id="pageURL" class="column" readonly&gt;
+    &lt;/div&gt;
+    &lt;div class="copy"&gt;
+      &lt;button title="URLをコピー" id="copyURL"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" aria-label="URLをコピー"&gt;
+          &lt;path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/&gt;
+          &lt;path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/&gt;
+        &lt;/svg&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 checkIcon" viewBox="0 0 16 16" style="display: none;"&gt;
+          &lt;path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="content"&gt;
+    &lt;div class="both"&gt;
+      &lt;button title="タイトルとURLをコピー" id="copyBoth" class="shareSNS copyBoth"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard withText" viewBox="0 0 16 16" aria-label="タイトルとURLをコピー"&gt;
+          &lt;path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/&gt;
+          &lt;path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/&gt;
+        &lt;/svg&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 checkIcon withText" viewBox="0 0 16 16" style="display: none;"&gt;
+          &lt;path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/&gt;
+        &lt;/svg&gt;
+        タイトルと URL をコピー
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toFB"&gt;
+      &lt;button title="シェア" id="shareToFB" class="FB shareSNS"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook withText" viewBox="0 0 16 16" aria-label="Facebook"&gt;
+          &lt;path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/&gt;
+        &lt;/svg&gt;
+        シェア
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toTwitter"&gt;
+      &lt;button title="ツイート" id="tweet" class="twitter shareSNS"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter withText" viewBox="0 0 16 16" aria-label="Twitter"&gt;
+          &lt;path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/&gt;
+        &lt;/svg&gt;
+        ツイート
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toLINE"&gt;
+      &lt;button title="LINE で送る" id="LINE" class="LINE shareSNS"&gt;
+        &lt;svg class="withText" xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 448 512" aria-label="LINEで送る"&gt;
+          &lt;!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --&gt;
+          &lt;path d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2H219c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z"&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+        LINE で送る
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src="popup.js" defer&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">popup.css</code></p>
+
+<pre><code class="language-CSS">body {
+  letter-spacing: 0.15em;
+  width: 400px;
+  font-size: 16px;
+}
+
+* {
+  color: #606c76;
+  box-sizing: border-box;
+  font-family: -apple-system, blinkMacSystemFont, "Helvetica Neue", "Segoe UI",
+    "Arial", "Roboto", "Hiragino Kaku Gothic ProN", YuGothicM, YuGothic, Meiryo,
+    "Noto Sans JP", sans-serif;
+}
+
+@font-face {
+  font-family: YuGothicM;
+  font-weight: normal;
+  src: local("YuGothic-Medium"), local("Yu Gothic Medium"),
+    local("YuGothic-Regular");
+  /* Windows8.1ではMediumがないのでRegularを指定 */
+}
+
+@font-face {
+  font-family: YuGothicM;
+  font-weight: bold;
+  src: local("YoGothic-Bold"), local("Yu Gothic");
+}
+
+.content {
+  margin: 2em 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.2em 1em;
+  width: 100%;
+  margin-top: 0.3em;
+}
+
+.text {
+  position: relative;
+}
+
+.text input {
+  color: #727d86;
+  font: 16px sans-serif;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 0.1em;
+  letter-spacing: 1px;
+  border: 0;
+}
+
+.text input:focus {
+  outline: none;
+}
+
+.text input:focus::after {
+  outline: none;
+}
+
+.text::after {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 0;
+  content: "";
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #4c3cda;
+}
+
+.text .column {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background-color: #4c3cda;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+button:hover {
+  background-color: #2f22a3;
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+button svg {
+  fill: #fff;
+}
+svg.withText{
+    vertical-align: middle;
+    margin-right: .7em;
+}
+
+.shareSNS{
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    margin: .3em 0;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.copyBoth{
+    color: #4c3cda;
+    border-color: #4c3cda;
+}
+.copyBoth svg{
+    fill: #4c3cda;
+}
+.copyBoth:hover{
+    background-color: #4c3cda;
+}
+
+.FB{
+    color: #1877f2;
+    border-color: #1877f2;
+}
+.FB svg{
+    fill: #1877f2;
+}
+.FB:hover{
+    background-color: #1877f2;
+}
+
+.twitter{
+    color: #1DA1F2;
+    border-color: #1DA1F2;
+}
+.twitter svg{
+    fill: #1DA1F2;
+}
+.twitter:hover{
+    background-color: #1DA1F2;
+}
+
+.LINE{
+    color: #00B900;
+    border-color: #00B900;
+}
+.LINE svg{
+    fill: #00B900;
+}
+.LINE:hover{
+    background-color: #00B900;
+}
+
+.shareSNS:hover{
+    color: #fff;
+}
+.shareSNS:hover svg{
+    fill: #fff;
+}
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">popup.js</code></p>
+
+<pre><code class="language-JavaScript">const title = document.getElementById("pageTitle");
+const url = document.getElementById("pageURL");
+
+chrome.tabs.query({ 'active': true, 'lastFocusedWindow': true }, tabs =&gt; {
+    const tabTitle = tabs[0].title;
+    const tabUrl = tabs[0].url;
+
+    title.value = tabTitle;
+    url.value = tabUrl;
+    document.getElementById("copyTitle").addEventListener("click", () =&gt; {
+        navigator.clipboard.writeText(tabTitle);
+        showCheck("copyTitle");
+    }, false);
+    document.getElementById("copyURL").addEventListener("click", () =&gt; {
+        navigator.clipboard.writeText(tabUrl);
+        showCheck("copyURL");
+    }, false);
+    document.getElementById("copyBoth").addEventListener("click", () =&gt; {
+        navigator.clipboard.writeText(tabTitle + "\n" + tabUrl);
+        showCheck("copyBoth");
+    }, false);
+
+    document.getElementById("shareToFB").addEventListener("click", () =&gt; {
+        windowOpen("https://www.facebook.com/share.php?u=" + encodeURIComponent(tabUrl));
+    }, false);
+
+    document.getElementById("tweet").addEventListener("click", () =&gt; {
+        windowOpen("https://twitter.com/intent/tweet?text=" + encodeURIComponent(tabTitle) + "%0a&amp;url=" + encodeURIComponent(tabUrl));
+    }, false);
+    document.getElementById("LINE").addEventListener("click", ()=&gt;{
+        windowOpen("https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(tabUrl));
+    }, false);
+
+});
+
+let timeout;
+function showCheck(parentId) {
+    clearTimeout(timeout);
+    const checkIcons = document.getElementsByClassName("checkIcon");
+    for (let i = 0; i &lt; checkIcons.length; i++) {
+        checkIcons[i].style.display = "none";
+    }
+    const clipIcons = document.getElementsByClassName("bi-clipboard");
+    for (let i = 0; i &lt; clipIcons.length; i++) {
+        clipIcons[i].style.display = "";
+
+    }
+    const child = document.getElementById(parentId).children;
+    child[0].style.display = "none";
+    child[1].style.display = "";
+
+    timeout = setTimeout(() =&gt; {
+        child[0].style.display = "";
+        child[1].style.display = "none";
+    }, 5000);
+}
+
+function windowOpen(url) {
+    window.open(url, 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1')
+    this.close();
+    return false;
+}
+</code></pre>
+
+<p>さて、今日はここまでです。お疲れさまでした！</p>
+
+<h2 id="todo">TODO</h2>
+<ul>
+  <li>前回予告した、「権限を少なくする作業」(次回)</li>
+  <li>Chrome Web ストアで公開(次々回)</li>
+</ul>
+
+<p>※今後の予定は変更になる可能性があります</p>
+
+<h2 id="まとめ">まとめ</h2>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText(コピーしたい文字列)</code> で文字列をクリップボードにコピーできる。</li>
+  <li>指定のURLにアクセスすれば、各種SNSでシェアすることができる。</li>
+</ul>
+
+<p>今回は前回以上にボリューミーでしたが、ここまで読んでいただきありがとうございました。</p>
+
+<p>さて、ここまで駆け足でやってきてしまったので、明日、明後日、の連載はお休みします。今までの復習を行ったり、少し息抜きしたりしてください。</p>
+
+<p>それでは、次回(8/7)をお楽しみに！</p>
+
+<h2 id="202187-追記">2021/8/7 追記</h2>
+<p>「LINE で送る」ボタンに関するコードに誤りがあったため訂正しました。</p>
+
+
+    </div>
+
+</article>
+
+      <br><br><br>
+      <p>【「Chrome 拡張機能を作ろう」の記事一覧】</p>
+      <ol>
+      
+        
+      
+      
+        
+        <li><a href="/2021-07/chrome-extension-1">環境構築</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-2">ポップアップ作成</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-3">仕様に沿って開発</a></li>
+        
+      
+      
+        
+        <li>
+<a href="/2021-08/chrome-extension-4">コピー機能実装</a> (←今ココ)</li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-5">権限を減らす</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-7">Webストアに公開</a></li>
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+      </ol>
+       <div class="post-nav">
+<a class="previous" href="/2021-08/chrome-extension-3" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">Chrome 拡張機能を作って公開しよう③　〜形にする〜</a><a class="next" href="/2021-08/chrome-extension-5" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜</a>
+</div>
+<div class="post-related">
+      <div>関連記事</div>
+      <ul>
+        <li><a class="post-link" href="/2022-01/browser" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">1年間いろんなブラウザを試した結果、結局Chromeに戻った話</a></li>
+<li><a class="post-link" href="/2021-10/windows11" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">Windows 11 まもなく正式リリース！新機能やアップグレード方法を解説</a></li>
+<li><a class="post-link" href="/2021-12/winter" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">冬</a></li>
+<li><a class="post-link" href="/2021-10/conditional-operator" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">三項演算子が便利すぎて感動した</a></li>
+</ul>
+    </div>
+<!-- begin wwww.htmlcommentbox.com -->
+<div id="HCB_comment_box">
+<a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
+<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+
+
+<!-- customize labels of htmlcommentbox.com -->
+<script>
+  /* This code goes ABOVE the main HTML Comment Box code!
+   replace the text in the single quotes below to customize labels.*/
+  hcb_user = {
+      /* L10N */
+      comments_header : 'コメント',
+      name_label : 'お名前',
+      content_label: 'コメントを入力',
+      submit : 'コメントする',
+      no_comments_msg: 'この記事にはまだコメントがついていません。最初のコメントをしましょう！',
+      add:'コメントを追加',
+      again: 'さらにコメントする',
+      said:'さん',
+      showing:'表示中',
+      to:'返信先: ',
+      website_label:'ウェブサイト(任意)',
+      email_label:'(任意・公開されます)メールアドレス',
+      anonymous:'名無し',
+      mod_label:'(管理人)',
+      subscribe:'返信がついたらメールで通知する',
+      add_image:'画像を追加',
+      are_you_sure:'不適切なコメントとして報告してよろしいですか？',
+      reply:'返信',
+      flag:'報告',
+      like:'いいね',
+      /* dates */
+      days_ago:'日前',
+      hours_ago:'時間前',
+      minutes_ago:'分前',
+      within_the_last_minute:'数秒前',
+      msg_thankyou:'コメントありがとうございます！',
+      msg_approval:'このコメントは許可次第反映されます。',
+      msg_approval_required:'コメントありがとうございます！このコメントは管理人が許可次第反映されます。',
+      err_bad_html:'コメントに不正な HTML タグが含まれています。',
+      err_bad_email:'有効なメールアドレスを入力してください。',
+      err_too_frequent:'コメントを連続投稿するには数秒待つ必要があります。',
+      err_comment_empty:'コメントが空欄のため、投稿されませんでした。',
+      err_denied:'このコメントは却下されました。',
+      err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
+      err_spam:'スパムと認定されたためこのコメントは削除されました。',
+      err_blocked:'サイトポリシーによりこのコメントは削除されました。',
+  
+      /* SETTINGS */
+      MAX_CHARS: 256,
+      PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+      ON_COMMENT: function(){}, /* Function to call after commenting. */
+      RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
+  };
+  </script>
+  <!-- done customizing labels of htmlcommentbox.com -->
+
+  <style>
+    #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+      transition: opacity .3s;
+    }
+    #HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
+      opacity: .7;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .btn,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn {
+      background:none; /* Clear twitter bootstrap style. */
+      border: 0;
+      background-color: #fff;
+      color: #0e0e0e;
+      transition: opacity 0.2s;
+    }
+    html[data-theme="dark"] #HCB_comment_box blockquote {
+      color:#bbb;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .hcb-door-in {
+      filter: invert(100%);
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form_content,html[data-theme="dark"] #HCB_comment_box #hcb_form_email,html[data-theme="dark"] #HCB_comment_box #hcb_form_name,html[data-theme="dark"] #HCB_comment_box #hcb_form_website {
+      background-color:#555;
+      border: solid 1px #777;
+      color: #ddd;
+    }
+  </style>
+</section>
+</div>
+   
+
+  </section>
+
+
+  
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">目次</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>© 2022 Frog</div>
+       <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat" target="_blank" rel="noopener noreferrer">Yat Theme</a>.</div>
+       <div class="footer-col rss-subscribe">
+<a href="/feed.xml">RSS 購読</a> ・ <a href="https://frogapp.net/privacy">プライバシーポリシー</a>
+</div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</body>
+</html>

@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">
+  <meta property="twitter:title" content="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">
+  <title>GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー | カエル文書箱</title>
+  
+  <meta property="og:image" content="https://blog.frogapp.net//assets/images/banners/ogp.jpg">
+  <meta property="twitter:image" content="https://blog.frogapp.net//assets/images/banners/ogp.jpg">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.1">
+<meta property="og:title" content="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">
+<meta name="author" content="Frog">
+<meta property="og:locale" content="ja">
+<meta name="description" content="先日、GitHub がブラウザ上で VS Code を使える新機能を発表しました。">
+<meta property="og:description" content="先日、GitHub がブラウザ上で VS Code を使える新機能を発表しました。">
+<link rel="canonical" href="https://blog.frogapp.net/2021-08/github-webeditor">
+<meta property="og:url" content="https://blog.frogapp.net/2021-08/github-webeditor">
+<meta property="og:site_name" content="カエル文書箱">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-08-13T00:00:00+09:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Frog"},"dateModified":"2021-08-13T00:00:00+09:00","datePublished":"2021-08-13T00:00:00+09:00","description":"先日、GitHub がブラウザ上で VS Code を使える新機能を発表しました。","headline":"GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.frogapp.net/2021-08/github-webeditor"},"url":"https://blog.frogapp.net/2021-08/github-webeditor"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- OGP -->
+  <meta property="og:title" content="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">
+  <meta property="twitter:title" content="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta property="og:image" content="https://blog.frogapp.net//assets/images/banners/ogp.jpg">
+  <meta property="twitter:image" content="https://blog.frogapp.net//assets/images/banners/ogp.jpg">
+   
+    <meta property="og:type" content="article">
+  <link rel="shortcut icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=">
+<link type="application/atom+xml" rel="alternate" href="https://blog.frogapp.net/feed.xml" title="カエル文書箱">
+<!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+  <img class="site-favicon" title="カエル文書箱" src="/assets/images/logo.png" onerror="this.style.display='none'">
+  カエル文書箱
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/archives.html">ARCHIVES</a><a class="page-link" href="/categories.html">CATEGORIES</a><a class="page-link" href="/tags.html">TAGS</a>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+      <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script data-cfasync="false">
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2021-08-13T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2021/08/13
+    </time>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  5 分</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/tags.html#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a><a class="post-tag" href="/tags.html#GitHub">#GitHub</a><a class="post-tag" href="/tags.html#VSCode">#VSCode</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+      
+      
+      
+
+      <p>先日、GitHub がブラウザ上で VS Code を使える新機能を発表しました。</p>
+
+<p>以前から予告されている Codespaces とは異なり、すべてのユーザーが無料で使用できます。</p>
+
+<p>ということで、私も使ってみました。</p>
+
+<p>ちなみに、この記事も Web Editor を使って書いています。</p>
+
+<h2 id="使い方">使い方</h2>
+<p>使い方はとても簡単。</p>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">🤫 New shortcut: Press . on any GitHub repo. <a href="https://t.co/AHTSDot4qc">pic.twitter.com/AHTSDot4qc</a></p>— GitHub (@github) <a href="https://twitter.com/github/status/1425505817827151872?ref_src=twsrc%5Etfw">August 11, 2021</a>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>このツイートの動画のように、GitHub のリポジトリ画面で、キーボードの「.」(ピリオド)キーを押すだけ！</p>
+
+<h2 id="どんなものか">どんなものか</h2>
+
+<p>簡単に行ってしまえば、「VS Code がブラウザ上でも動く」サービスです。</p>
+
+<p>GitHub が来月から提供を開始する類似のサービスとして、Codespaces がありますが、これは法人向けで、料金も発生します。その分機能が多いです。</p>
+
+<p>一方、こちらの Web  Editor は誰でも無料で使えるサービスですが、機能は限られています。</p>
+
+<h2 id="使用感">使用感</h2>
+
+<p>使ってみましたが、とてもサクサク動きます。使っているのは、Celeron CPU の低スペノートPCなのですが、もっさりすることもなく、快適に使えます。</p>
+
+<p>気になった点として、画面右下に「Layout: us」と表示されており、JIS配列では使えないのかと思っていましたが、問題なく使えました。記号の入力も含めてバッチリです。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/129321958-cced00cc-e868-48f3-9dd5-b496114f544b.png" alt="レイアウトがUSになっている"></p>
+
+<p>では、この Web Editor のメリット・デメリットをご紹介します。</p>
+
+<h2 id="メリット">メリット</h2>
+
+<h3 id="ローカルの-vs-code-の環境が同期される">ローカルの VS Code の環境が同期される</h3>
+<p>ローカルの VS Code で GitHub アカウントでの同期を有効にしている場合は、Web Editor にも反映されます。</p>
+
+<p>ただ、拡張機能と一部の設定は同期されませんでした…</p>
+
+<h3 id="動作が軽い">動作が軽い</h3>
+
+<p>低スペックのパソコンでも、快適に動作します。</p>
+
+<h3 id="github-との相性が抜群">GitHub との相性が抜群</h3>
+<p>当たり前ですが、GitHub との相性は抜群です！</p>
+
+<p>Commit はもちろん、Issue や Pull Request だってできます。</p>
+
+<p>ちなみに、Web Editor でコミットをすると、GitHub の方にも反映されます。<code class="language-plaintext highlighter-rouge">git push</code> の工程がないので、はじめは戸惑うかもしれませんが、すぐに慣れます。</p>
+
+<h3 id="拡張機能が使える">拡張機能が使える</h3>
+
+<p>拡張機能もインストールできます。スニペット等もそのまま使えるので、安心です。</p>
+
+<h3 id="os-を問わない">OS を問わない</h3>
+<p>PC のみならず、タブレットでも開発ができます。スマホだと画面が小さすぎて無理がありますが。</p>
+
+<h2 id="デメリット">デメリット</h2>
+
+<h3 id="ターミナルが使えない">ターミナルが使えない</h3>
+<p>ターミナルは残念ながら使えません。Codespaces だと使えるようですが…</p>
+
+<p>拡張機能でカバーできる部分もあるかもしれませんが、あまりハードな開発はできません。</p>
+
+<h3 id="使えない拡張機能が多い">使えない拡張機能が多い</h3>
+
+<p>ローカルでは使えても、Web Editor では使えない拡張機能が結構多いです。</p>
+
+<p>個人的には、</p>
+
+<ul>
+  <li>Live Server</li>
+  <li>テキスト校正くん</li>
+</ul>
+
+<p>が使えないのが痛いですね…</p>
+
+<p>フォーマッターも使えません。逆に、スニペット系はサポートされているものが多いです。</p>
+
+<p>Live Server に関しては、類似サービスの <a href="https://www.gitpod.io/" target="_blank" rel="noopener noreferrer">Gitpod</a> では使えるので、 Gitpod に比べるとやや劣った印象を受けます。</p>
+
+<p>ただ、Gitpod は無料プランだと時間制限があるので、結局はローカル環境での開発が一番快適でしょう。</p>
+
+<p>法人の場合は Codespaces が良いと思います。実際に GitHub 社のエンジニアの方々が使いながら改善されているので、「かゆいところに手が届く」仕様になっていると思います。Codespaces ならターミナルも使えますし。</p>
+
+<h3 id="markdown-を扱っている時画像を挿入できない">Markdown を扱っている時、画像を挿入できない</h3>
+<p>昔からある GitHub のブラウザ上の編集画面では、画像をドラッグ&amp;ドロップすれば Markdown で書いているものに画像を挿入できたのですが、Web Editor ではできません。</p>
+
+<p>これが地味に面倒。いちいち Issue かなんかの編集画面に画像をアップロードして、URL を Web Editor にコピペしないといけない。</p>
+
+<p>ただ、昔ながらのブラウザ上の編集画面とは違って、リアルタイムで作業が保存される(コミットはされない)点は便利です。</p>
+
+<h2 id="どのような用途に向いているか">どのような用途に向いているか</h2>
+<ul>
+  <li>コンパイルがいらない言語(JavaScript、Python など)での軽いプログラミング</li>
+  <li>ブログの執筆</li>
+  <li>コードの閲覧</li>
+</ul>
+
+<p>Web Editor の用途はかなり限られてしまいますが、手軽な開発環境としてはかなり優秀ではないのでしょうか。</p>
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/2021-08/chrome-extension-7" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜</a><a class="next" href="/2021-08/twitter-delete" title="Twitter のアカウントを復活！残るデータ・消えるデータ">Twitter のアカウントを復活！残るデータ・消えるデータ</a>
+</div>
+<div class="post-related">
+      <div>関連記事</div>
+      <ul>
+        <li><a class="post-link" href="/2021-12/winter" title="Twitter のアカウントを復活！残るデータ・消えるデータ">冬</a></li>
+<li><a class="post-link" href="/2021-09/drive-preview" title="Twitter のアカウントを復活！残るデータ・消えるデータ">Google ドライブの動画が再生できないときの対処法</a></li>
+<li><a class="post-link" href="/2022-08/ads" title="Twitter のアカウントを復活！残るデータ・消えるデータ">僕が広告を一切入れていない理由(本音)</a></li>
+<li><a class="post-link" href="/2021-09/aviutl-deview" title="Twitter のアカウントを復活！残るデータ・消えるデータ">Aviutl の勉強をはじめました</a></li>
+</ul>
+    </div>
+<!-- begin wwww.htmlcommentbox.com -->
+<div id="HCB_comment_box">
+<a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
+<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+
+
+<!-- customize labels of htmlcommentbox.com -->
+<script>
+  /* This code goes ABOVE the main HTML Comment Box code!
+   replace the text in the single quotes below to customize labels.*/
+  hcb_user = {
+      /* L10N */
+      comments_header : 'コメント',
+      name_label : 'お名前',
+      content_label: 'コメントを入力',
+      submit : 'コメントする',
+      no_comments_msg: 'この記事にはまだコメントがついていません。最初のコメントをしましょう！',
+      add:'コメントを追加',
+      again: 'さらにコメントする',
+      said:'さん',
+      showing:'表示中',
+      to:'返信先: ',
+      website_label:'ウェブサイト(任意)',
+      email_label:'(任意・公開されます)メールアドレス',
+      anonymous:'名無し',
+      mod_label:'(管理人)',
+      subscribe:'返信がついたらメールで通知する',
+      add_image:'画像を追加',
+      are_you_sure:'不適切なコメントとして報告してよろしいですか？',
+      reply:'返信',
+      flag:'報告',
+      like:'いいね',
+      /* dates */
+      days_ago:'日前',
+      hours_ago:'時間前',
+      minutes_ago:'分前',
+      within_the_last_minute:'数秒前',
+      msg_thankyou:'コメントありがとうございます！',
+      msg_approval:'このコメントは許可次第反映されます。',
+      msg_approval_required:'コメントありがとうございます！このコメントは管理人が許可次第反映されます。',
+      err_bad_html:'コメントに不正な HTML タグが含まれています。',
+      err_bad_email:'有効なメールアドレスを入力してください。',
+      err_too_frequent:'コメントを連続投稿するには数秒待つ必要があります。',
+      err_comment_empty:'コメントが空欄のため、投稿されませんでした。',
+      err_denied:'このコメントは却下されました。',
+      err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
+      err_spam:'スパムと認定されたためこのコメントは削除されました。',
+      err_blocked:'サイトポリシーによりこのコメントは削除されました。',
+  
+      /* SETTINGS */
+      MAX_CHARS: 256,
+      PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+      ON_COMMENT: function(){}, /* Function to call after commenting. */
+      RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
+  };
+  </script>
+  <!-- done customizing labels of htmlcommentbox.com -->
+
+  <style>
+    #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+      transition: opacity .3s;
+    }
+    #HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
+      opacity: .7;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .btn,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn {
+      background:none; /* Clear twitter bootstrap style. */
+      border: 0;
+      background-color: #fff;
+      color: #0e0e0e;
+      transition: opacity 0.2s;
+    }
+    html[data-theme="dark"] #HCB_comment_box blockquote {
+      color:#bbb;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .hcb-door-in {
+      filter: invert(100%);
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form_content,html[data-theme="dark"] #HCB_comment_box #hcb_form_email,html[data-theme="dark"] #HCB_comment_box #hcb_form_name,html[data-theme="dark"] #HCB_comment_box #hcb_form_website {
+      background-color:#555;
+      border: solid 1px #777;
+      color: #ddd;
+    }
+  </style>
+</section>
+</div>
+   
+
+  </section>
+
+
+  
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">目次</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>© 2022 Frog</div>
+       <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat" target="_blank" rel="noopener noreferrer">Yat Theme</a>.</div>
+       <div class="footer-col rss-subscribe">
+<a href="/feed.xml">RSS 購読</a> ・ <a href="https://frogapp.net/privacy">プライバシーポリシー</a>
+</div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</body>
+</html>

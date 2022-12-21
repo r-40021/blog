@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">
+  <meta property="twitter:title" content="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">
+  <title>Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜 | カエル文書箱</title>
+  
+  <meta property="og:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-09-chrome.jpg">
+  <meta property="twitter:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-09-chrome.jpg">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.1">
+<meta property="og:title" content="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">
+<meta name="author" content="Frog">
+<meta property="og:locale" content="ja">
+<meta name="description" content="拡張機能を作るシリーズ、最終回！いよいよ、拡張機能を Web ストアに公開していきます！">
+<meta property="og:description" content="拡張機能を作るシリーズ、最終回！いよいよ、拡張機能を Web ストアに公開していきます！">
+<link rel="canonical" href="https://blog.frogapp.net/2021-08/chrome-extension-7">
+<meta property="og:url" content="https://blog.frogapp.net/2021-08/chrome-extension-7">
+<meta property="og:site_name" content="カエル文書箱">
+<meta property="og:image" content="https://blog.frogapp.net/assets/images/banners/2021-08-09-chrome.jpg">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-08-09T00:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="https://blog.frogapp.net/assets/images/banners/2021-08-09-chrome.jpg">
+<meta property="twitter:title" content="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Frog"},"dateModified":"2021-08-09T00:00:00+09:00","datePublished":"2021-08-09T00:00:00+09:00","description":"拡張機能を作るシリーズ、最終回！いよいよ、拡張機能を Web ストアに公開していきます！","headline":"Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜","image":"https://blog.frogapp.net/assets/images/banners/2021-08-09-chrome.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.frogapp.net/2021-08/chrome-extension-7"},"url":"https://blog.frogapp.net/2021-08/chrome-extension-7"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- OGP -->
+  <meta property="og:title" content="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">
+  <meta property="twitter:title" content="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta property="og:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-09-chrome.jpg">
+  <meta property="twitter:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-09-chrome.jpg">
+   
+    <meta property="og:type" content="article">
+  <link rel="shortcut icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=">
+<link type="application/atom+xml" rel="alternate" href="https://blog.frogapp.net/feed.xml" title="カエル文書箱">
+<!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+  <img class="site-favicon" title="カエル文書箱" src="/assets/images/logo.png" onerror="this.style.display='none'">
+  カエル文書箱
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/archives.html">ARCHIVES</a><a class="page-link" href="/categories.html">CATEGORIES</a><a class="page-link" href="/tags.html">TAGS</a>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+      <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script data-cfasync="false">
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2021-08-09T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2021/08/09
+    </time>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  9 分</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/tags.html#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a><a class="post-tag" href="/tags.html#Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD">#Chrome拡張機能</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+      
+      
+      
+      <!--画像-->
+        <figure>
+          <img src="/assets/images/banners/2021-08-09-chrome.jpg" width="100%" loading="eager" alt="ヘッダー画像">
+          
+            <figcaption>Photo by <a href="https://unsplash.com/@firmbee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Firmbee.com</a> on <a href="https://unsplash.com/s/photos/google-chrome?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
+          
+        </figure>
+      
+
+      <p>拡張機能を作るシリーズ、最終回！いよいよ、拡張機能を Web ストアに公開していきます！</p>
+
+<h2 id="開発者登録">開発者登録</h2>
+
+<p>まずは、<a href="https://chrome.google.com/webstore/" target="_blank" rel="noopener noreferrer">Web ストア</a>にアクセスします。</p>
+
+<p>アクセスしたら、拡張機能を公開する Google アカウントにログインし、「デベロッパーダッシュボード」に移動してください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128621571-d554706e-b0b7-4715-ba80-aad5ddb0bba6.png" alt="デベロッパーダッシュボードに移動"></p>
+
+<p>本人確認を求められたら、指示に従って本人確認を行ってください。</p>
+
+<p>余談ですが、Google アカウントはサイバー攻撃の対象にされやすいので、複雑なパスワードに加えて2段階認証をかけておくことを強くおすすめします。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128621601-fc33a101-406b-4fa6-81b1-d7c1623faa40.png" alt="デベロッパー登録"></p>
+
+<p>このような画面になったら、デベロッパー契約とプライバシー ポリシーを確認し、同意する場合はチェックボックスにチェックを入れてください。</p>
+
+<p>その後、画面右側の「登録料の支払い」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128621654-318814ae-e1c0-4951-9e4b-c2528659c146.png" alt="登録料の支払い"></p>
+
+<p>Web ストアでは、悪意のある開発者の登録を防ぐため、5ドルの登録料が必要になります。この支払いは、登録時の1回のみで、拡張機能をアップデートする際や新たな拡張機能をリリースする際に支払いを求められることはありません。</p>
+
+<h2 id="プロフィール登録">プロフィール登録</h2>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128621768-274c1043-d2ca-4f7b-a33f-f7d913cea934.png" alt="左側のタブ"></p>
+
+<p>左側のタブから、「アカウント」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128621824-e58d553b-0d78-40cb-a63d-282f0513b4d3.png" alt="プロフィールの登録"></p>
+
+<p>そうしたら、「投稿者の表示名」と「メールアドレス」を入力してください。これらは公開されるので、公開しても良い名前(偽名でも OK)・メールアドレス(メールアドレスは正確に)にしてください。</p>
+
+<p>プライバシーポリシーがある場合は、3番目のテキストボックスに、その URL を入力してください。(これは任意です。)</p>
+
+<p>下の方にスクロールしていくと、「通知」という設定項目があります。これをすべてオンにしておくと、拡張機能が公開された時や拡張機能にレビューが付いた時などに通知を受け取れるので便利です。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128621899-4acab53c-ae98-445b-86ea-948210f8acf0.png" alt="通知の設定"></p>
+
+<p>設定を終えたら、一番下にある <strong>「変更を保存」をクリック</strong> してください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128622066-1318f17c-a14a-4522-8265-28906d3fae5c.png" alt="変更を保存"></p>
+
+<h2 id="拡張機能のアップロード">拡張機能のアップロード</h2>
+
+<p>「投稿者の設定が正常に更新されました」と表示されたら、左側のタブから「アイテム」をクリックしてください。</p>
+
+<p>ここでは、拡張機能の公開・公開した拡張機能の管理などを行うことができます。</p>
+
+<p>まずは、「新しいアイテム」ボタンをクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128621991-c0791c2b-8f31-4ff4-8ffb-4d3a29965f8d.png" alt="新しいアイテム"></p>
+
+<p>「ZIP ファイルをここにドロップするか、ファイルを選択します。」とあるので、拡張機能の開発用フォルダを <code class="language-plaintext highlighter-rouge">.zip</code> 形式に圧縮したものをこの枠の中にドラッグ＆ドロップします。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128622006-a4097903-260f-484e-b979-85d84be14f5e.png" alt="アップロード"></p>
+
+<p><code class="language-plaintext highlighter-rouge">.zip</code> ファイルへの圧縮は、開発用フォルダの中にある8個のファイルを全選択して、右クリック→「送信」→「圧縮 (zip 形式) フォルダー」のように選んでいくと行えます。</p>
+
+<p><a href="https://support.microsoft.com/ja-jp/windows/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E5%9C%A7%E7%B8%AE%E3%81%8A%E3%82%88%E3%81%B3%E5%B1%95%E9%96%8B%E3%81%99%E3%82%8B-8d28fa72-f2f9-712f-67df-f80cf89fd4e5" target="_blank" rel="noopener noreferrer">Windows での手順</a></p>
+
+<p><a href="https://support.apple.com/ja-jp/guide/mac-help/mchlp2528/mac" target="_blank" rel="noopener noreferrer">Mac での手順</a></p>
+
+<p><a href="https://support.google.com/chromebook/answer/1700055" target="_blank" rel="noopener noreferrer">Chromebook での手順</a></p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128622400-87976405-8bf5-46b7-827e-f631f96ce8b2.png" alt="アップロード後"></p>
+
+<p>アップロードが完了すると、拡張機能に関する情報を入力する画面に遷移します。</p>
+
+<p>※「パッケージのタイトル」や「パッケージの概要」が途中までしか表示されていませんが、横にスクロールするとすべて見られます。分かりにくいですね。</p>
+
+<h2 id="必要事項の入力">必要事項の入力</h2>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128624644-bd434b4a-8ffa-4a0a-bd70-2e85b2164304.png" alt="下書き保存ボタン"></p>
+
+<p>画面右上に「下書きとして保存する」ボタンがあるので、こまめに保存しておくとトラブルを回避できます。</p>
+
+<p>また、その左側に「送信できない理由」というボタンがあるので、そこをクリックすると、何が不足しているのかがわかります。</p>
+
+<p>※「送信できない理由」は、下書きとして保存したあとに、最新の状態が反映されます。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128625033-1e4e8d8d-d0d6-49ca-b477-6e078cb4f5d5.png" alt="image"></p>
+
+<p>「プレビュー」をクリックすると、実際のWebストアの画面が開き、どのように拡張機能が公開されるのかがイメージしやすくなります。</p>
+
+<p>それでは、拡張機能を公開する上での必要事項を入力していきます。</p>
+
+<p>どのような感じで書くのかを説明しますが、具体的な内容はご自身でお考えください。</p>
+
+<h3 id="説明">説明</h3>
+<p>拡張機能に関する説明。できるだけ詳しく書いたほうが良いです。GitHub などでコードを公開している場合は、その URL も入れるとさらに良いです。なお、「パッケージの概要」の内容は公開時に自動で説明欄に追加されるので、同じ内容を説明欄に書く必要はありません。</p>
+
+<h3 id="カテゴリ">カテゴリ</h3>
+<p>この拡張機能がどのカテゴリに属すかを選んでください。Web ストア上の似たような拡張機能を見てみると、「仕事効率化」や「ユーザー補助機能」を選んでいるものが多かったです。</p>
+
+<h3 id="言語">言語</h3>
+<p>拡張機能で使われている言語。基本的に日本語(？)</p>
+
+<h3 id="ショップアイコン">ショップアイコン</h3>
+<p>Web ストアで表示されるアイコン。128ピクセル×128ピクセル。</p>
+
+<p>【2021/8/8 以前に第2回を終えられた方へ】</p>
+
+<p>大変申し訳無いのですが、以前第2回で配布していた画像のサイズが間違えていたので、ご自身でリサイズしてくださると幸いです。なお、現時点では、第2回でダウンロードできる画像は正常なサイズになっていますので、再度ダウンロードしてくださっても大丈夫です。</p>
+
+<h3 id="全言語向けプロモーション動画">全言語向けプロモーション動画</h3>
+<p>プロモーション動画を YouTube にアップロードしている場合は、その URL を入力してください。 <strong>任意</strong></p>
+
+<h3 id="スクリーンショット">スクリーンショット</h3>
+<p>この拡張機能がどのようなものかがわかる画像。最低1枚、最大5枚まで指定可能。画像サイズに指定があるので、よくご確認ください。</p>
+
+<p>※プロモーション画像のようにするにも、可能な限りスクリーンショットは入れたほうがよいです。</p>
+
+<h3 id="プロモーションタイトル小大マーキープロモーションタイトル">プロモーションタイトル（小）・（大）、マーキープロモーションタイトル</h3>
+<p>検索結果のページなどに表示される画像。こちらも画像サイズに指定があるので、よくご確認ください。 <strong>任意</strong></p>
+
+<h3 id="追加フィールド">追加フィールド</h3>
+<p>ホームページの URL など、必要に応じて入力してください。 <strong>任意</strong></p>
+
+<p>ここまで書けたら、下書きとして保存した後、左側のタブから「プライバシーへの取り組み」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128624029-b4e55900-ee75-4dde-b2ea-4f89bd355bd9.png" alt="プライバシーへの取り組み"></p>
+
+<h3 id="単一用途の目的">単一用途の目的</h3>
+<p>「要するにこの拡張機能の目的はなにか」を書きます。</p>
+
+<h3 id="権限が必要な理由">権限が必要な理由</h3>
+<p>その権限をどのように利用するのかを書きます。</p>
+
+<p>下に書いてあるものはあくまでも参考程度にし、より詳しく記述するようにしてください。</p>
+
+<h4 id="activetab">activeTab</h4>
+<p>ユーザーが閲覧しているタブのID、タイトル、URLを取得するため</p>
+
+<h4 id="scripting">scripting</h4>
+<p>URLやページタイトル、あるいはその両方をクリップボードにコピーするスクリプトや、各種 SNS の投稿画面をポップアップで開くスクリプトを挿入するため</p>
+
+<h4 id="contextmenus">contextMenus</h4>
+<p>コンテキストメニューからもページを共有できるようにするため</p>
+
+<h3 id="リモートコード">リモートコード</h3>
+<p>外部から、JavaScript、CSS、フォントを読み込んでいるか。</p>
+
+<p>1つでも読み込んでいる場合は「はい」を選択し、なぜ外部から読み込む必要があるのかを記述してください。</p>
+
+<h3 id="データ使用">データ使用</h3>
+<p>ユーザーのどのようなデータを開発者が得るのか、当てはまるものすべてにチェックを入れてください。</p>
+
+<p>下の方に、3つのチェックボックスがあるので、「デベロッパー プログラム ポリシー」を遵守している場合は、チェックを入れてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128624601-bd857ca6-5cd9-4e8e-b46c-013c8e0b5a4b.png" alt="決済と配布地域"></p>
+
+<p>ここまで入力できたら、下書きとして保存した後、左側のタブから「決済と配布地域」をクリックし、課金要素の有無・公開範囲・配布地域を設定してください。</p>
+
+<p>ただ、このブログを見た方が全員「一般公開」にしてしまうと、類似品が複数出回ることになるので、 <u><strong>「限定公開」か「非公開」にしてください。</strong></u></p>
+
+<p>もし一般公開したい場合は、アイコンやデザイン、機能に、<strong>元がわからない程度のオリジナリティを加えるようお願いします。</strong></p>
+
+<p>「決済と配布地域」の設定も終えたら、もう一度下書きとして保存してください。</p>
+
+<p>最後にもう一度見直して、不備がなければ「審査のため送信」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/128624933-a124f144-ffb0-4da5-bada-0e41388f6a4e.png" alt="送信確認"></p>
+
+<p>送信確認画面が現れます。</p>
+
+<p>また、審査終了後に自動で公開するか否かを選択できます。お好きな方を選んでください。</p>
+
+<p>再度「審査のため送信」をクリックすると、拡張機能が審査に提出されます。</p>
+
+<p>これで、早くてその日のうちに、場合によっては数週間後に拡張機能の審査が終わります。</p>
+
+<p>先程、審査合格後に手動で拡張機能を公開することを選んだ方は、審査合格のメールが来たら30日以内にデベロッパーダッシュボードから拡張機能を公開してください。</p>
+
+<h2 id="おわりに">おわりに</h2>
+<p>1週間連載が行われたこの企画ですが、ついに終わりを迎えます。</p>
+
+<p>Chrome 拡張機能づくりの一連の流れがわかっていただけたのであれば、これ以上の喜びはありません。</p>
+
+<p>これにて、連載企画「Chrome 拡張機能を作って公開しよう」を終わります。本当にお疲れさまでした！</p>
+
+
+
+    </div>
+
+</article>
+
+      <br><br><br>
+      <p>【「Chrome 拡張機能を作ろう」の記事一覧】</p>
+      <ol>
+      
+        
+      
+      
+        
+        <li><a href="/2021-07/chrome-extension-1">環境構築</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-2">ポップアップ作成</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-3">仕様に沿って開発</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-4">コピー機能実装</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-5">権限を減らす</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a></li>
+        
+      
+      
+        
+        <li>
+<a href="/2021-08/chrome-extension-7">Webストアに公開</a> (←今ココ)</li>
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+      </ol>
+       <div class="post-nav">
+<a class="previous" href="/2021-08/chrome-extension-6" title="Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜">Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜</a><a class="next" href="/2021-08/github-webeditor" title="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー</a>
+</div>
+<div class="post-related">
+      <div>関連記事</div>
+      <ul>
+        <li><a class="post-link" href="/2021-08/github-webeditor" title="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー</a></li>
+<li><a class="post-link" href="/2022-10/canonicalize" title="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">Cloudflare Pages で WWW あり・なしを正規化する</a></li>
+<li><a class="post-link" href="/2021-08/twitter-delete" title="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">Twitter のアカウントを復活！残るデータ・消えるデータ</a></li>
+<li><a class="post-link" href="/2022-01/windows11-review" title="GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー">Windows 11 に関する誤解を暴く</a></li>
+</ul>
+    </div>
+<!-- begin wwww.htmlcommentbox.com -->
+<div id="HCB_comment_box">
+<a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
+<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+
+
+<!-- customize labels of htmlcommentbox.com -->
+<script>
+  /* This code goes ABOVE the main HTML Comment Box code!
+   replace the text in the single quotes below to customize labels.*/
+  hcb_user = {
+      /* L10N */
+      comments_header : 'コメント',
+      name_label : 'お名前',
+      content_label: 'コメントを入力',
+      submit : 'コメントする',
+      no_comments_msg: 'この記事にはまだコメントがついていません。最初のコメントをしましょう！',
+      add:'コメントを追加',
+      again: 'さらにコメントする',
+      said:'さん',
+      showing:'表示中',
+      to:'返信先: ',
+      website_label:'ウェブサイト(任意)',
+      email_label:'(任意・公開されます)メールアドレス',
+      anonymous:'名無し',
+      mod_label:'(管理人)',
+      subscribe:'返信がついたらメールで通知する',
+      add_image:'画像を追加',
+      are_you_sure:'不適切なコメントとして報告してよろしいですか？',
+      reply:'返信',
+      flag:'報告',
+      like:'いいね',
+      /* dates */
+      days_ago:'日前',
+      hours_ago:'時間前',
+      minutes_ago:'分前',
+      within_the_last_minute:'数秒前',
+      msg_thankyou:'コメントありがとうございます！',
+      msg_approval:'このコメントは許可次第反映されます。',
+      msg_approval_required:'コメントありがとうございます！このコメントは管理人が許可次第反映されます。',
+      err_bad_html:'コメントに不正な HTML タグが含まれています。',
+      err_bad_email:'有効なメールアドレスを入力してください。',
+      err_too_frequent:'コメントを連続投稿するには数秒待つ必要があります。',
+      err_comment_empty:'コメントが空欄のため、投稿されませんでした。',
+      err_denied:'このコメントは却下されました。',
+      err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
+      err_spam:'スパムと認定されたためこのコメントは削除されました。',
+      err_blocked:'サイトポリシーによりこのコメントは削除されました。',
+  
+      /* SETTINGS */
+      MAX_CHARS: 256,
+      PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+      ON_COMMENT: function(){}, /* Function to call after commenting. */
+      RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
+  };
+  </script>
+  <!-- done customizing labels of htmlcommentbox.com -->
+
+  <style>
+    #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+      transition: opacity .3s;
+    }
+    #HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
+      opacity: .7;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .btn,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn {
+      background:none; /* Clear twitter bootstrap style. */
+      border: 0;
+      background-color: #fff;
+      color: #0e0e0e;
+      transition: opacity 0.2s;
+    }
+    html[data-theme="dark"] #HCB_comment_box blockquote {
+      color:#bbb;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .hcb-door-in {
+      filter: invert(100%);
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form_content,html[data-theme="dark"] #HCB_comment_box #hcb_form_email,html[data-theme="dark"] #HCB_comment_box #hcb_form_name,html[data-theme="dark"] #HCB_comment_box #hcb_form_website {
+      background-color:#555;
+      border: solid 1px #777;
+      color: #ddd;
+    }
+  </style>
+</section>
+</div>
+   
+
+  </section>
+
+
+  
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">目次</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>© 2022 Frog</div>
+       <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat" target="_blank" rel="noopener noreferrer">Yat Theme</a>.</div>
+       <div class="footer-col rss-subscribe">
+<a href="/feed.xml">RSS 購読</a> ・ <a href="https://frogapp.net/privacy">プライバシーポリシー</a>
+</div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</body>
+</html>

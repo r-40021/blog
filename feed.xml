@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2022-12-22T00:08:34+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">改めて感じた Chromebook の良さ〜心配がいらない PC〜</title><link href="https://blog.frogapp.net/2022-12/chromebook" rel="alternate" type="text/html" title="改めて感じた Chromebook の良さ〜心配がいらない PC〜" /><published>2022-12-18T00:00:00+09:00</published><updated>2022-12-18T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/chromebook</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/chromebook"><![CDATA[<p>個性的な CM が流れたり、GIGA スクール構想で大量導入されたりしてかなり知名度が上がった Chromebook。普段は Windows を使用している僕が久しぶりに使用してみて感じた良さを書きます。</p>
+
+<p>※この記事で言う「Chromebook」は現在僕が使っているものを指します。全ての Chromebook で同じことが言えるとは限りませんのでご注意ください。</p>
+
+<h2 id="なぜ-chromebook-を使っているの">なぜ Chromebook を使っているの？</h2>
+
+<p>ご存知の通り、僕は普段は Windows、たまに気が向いた時に Linux を入れて使っており、Chromebook とは疎遠の存在です。</p>
+
+<p>しかし、先月学校用兼メインの PC が壊れたので学校から代替機として Chromebook を借りて使用している、というわけです。</p>
+
+<p>ちなみにメイン PC は先週いったん帰還したものの、申告した2つの症状の内1つが修理前よりも悪化していたので送り返し、只今再修理中です。</p>
+
+<p>ということで、約1ヶ月間 Chromebook のみで生活しています。</p>
+
+<h2 id="chromebook-は低スペックでもそれが良い">Chromebook は低スペック、でもそれが良い</h2>
+
+<p>例外はありますが、市場に出ている Chromebook はだいたい低スペックです。Celeron CPU、4GB メモリ、32 or 64GB eMMCと数字だけで見たらたいへん心もとないスペックです。</p>
+
+<p>でも、低スペックが必ずしも悪いとは限りません。</p>
+
+<p>性能が低ければ、</p>
+
+<ul>
+  <li>消費電力が少ない→バッテリーが持つ</li>
+  <li>発熱が少ない→ファンレスで静か</li>
+  <li>低価格</li>
+</ul>
+
+<p>といった利点もあります。</p>
+
+<p>先週普段の PC が一時帰還して触っていた際も、「ファンいちいち回るなよ」とか「もうバッテリー10%減ったの？」と感じました。</p>
+
+<p>「じゃぁ低スペックな Windows ノートで良くない？できることも Windows のほうが多いし。」と思うかもしれませんが、Celeron CPU、4GB メモリ、32 or 64GB eMMC は Windows ではきついです。特にストレージ容量、64GB なんて Windows 11 の最低要件ですからね。まともに使えません。</p>
+
+<p>しかも OS 自体が重い上にバックグラウンドで色々動いているので正直快適とは言えません。</p>
+
+<p>一方の ChromeOS は、超軽量とは言いませんが少なくとも Windows よりは軽い上に、Chrome ブラウザーの使用に最適化されているのでよほどの重い作業をしない限りは普通に使えます。</p>
+
+<p>「低スペックの利点を享受できる上にそこそこ快適」、というのが Chromebook です。</p>
+
+<h2 id="特に感動したバッテリー持ち">特に感動したバッテリー持ち</h2>
+
+<p>上で挙げた利点の中で、特に感動したのがバッテリー持ちです。</p>
+
+<p>普段の PC は毎日充電が必須でしたが、Chromebook は2日に1回、場合によっては3日に1回の充電で事足ります。</p>
+
+<p>また、Windows は次いつ使うかでシャットダウンや休止状態、スリープを使い分けていましたが、Chromebook はスリープ時の電力消費が抑えめなので基本スリープで大丈夫です。</p>
+
+<p>使い終わったらとりあえず蓋を閉じる。たとえ次使うのが翌日だろうと翌々日だろうとです。</p>
+
+<p>以前、金曜日にスリープして月曜まで放置していたことがありますが、それでもバッテリー消費は15%くらいでした。</p>
+
+<p>普段の PC で同じことをやったらバッテリーはすっからかんになっているでしょう。</p>
+
+<p>スリープ状態で放置してもバッテリーがなかなか空にならないというのは安心です。</p>
+
+<h2 id="アップデートや同期も楽">アップデートや同期も楽</h2>
+
+<p>あとはアップデートも楽です。</p>
+
+<p>たまに「更新が必要なので再起動してくれ」という通知が来て再起動するのですが、Windows と違って再起動で待たされることはありません。</p>
+
+<p>再起動ボタンを押してから再び使えるようになるまで1分程度で終わります。</p>
+
+<p>同期に関しても、普段 Chrome で使っているデータがそのまま引き継がれるので Chrome 使いの人は楽だと思います。</p>
+
+<p>僕は Firefox 派なのでちょっと大変でしたが…</p>
+
+<p>あとは Google のクラウドに上げておけば Chromebook からも簡単にアクセスできるのは魅力です。</p>
+
+<p>僕はプログラム以外のデータは基本 Google ドライブに上げており、文書やスライドも不都合がなければ Google ドキュメント・スライドで作成しているのでここらへんのデータに関しては心配無用でした。</p>
+
+<h2 id="進化し続ける-os">進化し続ける OS</h2>
+
+<p>ChromeOS はアップデートで少しずつ進化しています。</p>
+
+<p>例えば、最近のアップデートでは待望のゴミ箱機能が実装されました。(「逆になんで今までなかったの？」という感じですが…)</p>
+
+<p><img src="/assets/images/2022/12/18/trash.webp" alt="「ファイルアプリ」のゴミ箱の画面" title="「ファイルアプリ」のゴミ箱の画面" /></p>
+
+<h2 id="残念だった点">残念だった点</h2>
+
+<p>ここまで Chromebook の良い点ばかりを挙げてきましたが、もちろん残念な点もあります。</p>
+
+<h3 id="できることは-windows-のほうが断然多い">できることは Windows のほうが断然多い</h3>
+
+<p>プログラミングなど、Chromebook では難しいものもあります。</p>
+
+<p>プログラミングは Linux 仮想環境を入れればできないことはないのですが、最適化されていないのと元々のスペックが低いので激重。</p>
+
+<p>GitHub Codespace も使ってみましたが、開発用サーバー (いわゆる localhost) のレスポンスが遅すぎてとても快適とは言えませんでした。</p>
+
+<p>プログラミングに関しては、ちゃんとしたスペックの PC でローカルでやるのが快適です。</p>
+
+<h3 id="画面解像度が低い">画面解像度が低い</h3>
+
+<p>市場の Chromebook の多くは HD 画質のディスプレイを搭載しています。普段使いには特に支障はないのですが、プログラミングのような細かい字を扱う作業には不向きです。</p>
+
+<p>解像度の低さが原因でアルファベットの判別が付きづらく、作業効率が下がってしまうことが多々ありました。</p>
+
+<p>外部ディスプレイに繋げば解決するのですが、毎回つなげるのは面倒です。</p>
+
+<p>…と2つ残念な点を挙げましたが、お分かりの通りプログラミングのような高度な作業を Chromebook でやろうとした僕が悪いです。</p>
+
+<p>逆にプログラミング以外ではほとんど欠点を感じていません。</p>
+
+<h2 id="結論">結論</h2>
+
+<p>以上、僕が Chromebook を1ヶ月ほど使ってみての感想でした。</p>
+
+<p>この記事で伝えたいのは、「Chromebook 普通に使えるよ！！」ということです。</p>
+
+<p>もちろん自分も久しぶりに Chromebook を使ってみて、Chromebook もいい PC だなと感じています。</p>
+
+<p>従来は PC と言えば Windows 一強でしたが、今や Chromebook も強力な選択肢になっています。</p>
+
+<p>プログラミングのような高度な作業には不向きですが、ブラウジングやメール、ちょっとした資料作成程度であれば Chromebook で十分対応できます。それも Windows より低価格で。</p>
+
+<p>ということで、次 PC の購入を検討する場合には、「Chromebook？どうせポンコツでしょ？」と思わずにぜひ視野に入れてあげてください。</p>
+
+<p>今週も読んでいただきありがとうございました。</p>
+
+<h2 id="関連リンク">関連リンク</h2>
+
+<p><a href="https://www.google.com/chromebook/" target="_blank" rel="noopener noreferrer">Google Chromebooks - ノートパソコン、セパレート タイプ、タブレット</a></p>]]></content><author><name>Frog</name></author><category term="PC" /><category term="PC" /><category term="Google" /><category term="Chromebook" /><summary type="html"><![CDATA[個性的な CM が流れたり、GIGA スクール構想で大量導入されたりしてかなり知名度が上がった Chromebook。普段は Windows を使用している僕が久しぶりに使用してみて感じた良さを書きます。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/12/18/chromebook.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/12/18/chromebook.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">自分に合ったニュースアプリを探し求めて</title><link href="https://blog.frogapp.net/2022-12/news" rel="alternate" type="text/html" title="自分に合ったニュースアプリを探し求めて" /><published>2022-12-11T00:00:00+09:00</published><updated>2022-12-11T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/news</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/news"><![CDATA[<p>先日スマホを買い換えてアプリを入れ直していた際に、今まで使っていたニュースアプリを変えようと思い数種類試してみました。</p>
+
+<p>注：予め言っておきますが、ここで紹介するアプリの運営会社・組織とはいずれも一切関わりがありません。もちろん提供記事でもありません。純粋に僕が感じたことを書いています。</p>
+
+<p>また、紹介したアプリのダウンロード URL はこの記事の最後にまとめて掲載しています。</p>
+
+<h2 id="ニュースアプリは2種類を併用">ニュースアプリは2種類を併用</h2>
+
+<p>僕はニュースアプリを2種類併用しています。「自分の興味ある分野のニュースを見る用」と「世の中全般のニュースを知る用」の2つです。</p>
+
+<p>「自分の興味ある分野のニュースを見る用」としては Flipboard を使用しています。こちらはキュレーションの精度が高い上、UI も見やすく大変気に入っています。</p>
+
+<p>また、RSS を登録すれば、お気に入りのサイトの記事をアプリ内で読むことができます。</p>
+
+<p>何なら、気になる人の Twitter アカウントを登録して、最新のツイートを追いかけることだってできます。</p>
+
+<p>好きな分野のニュース、好きなブログの記事、好きな Twitter アカウントなど、自分の「好き」な情報が1箇所に集約されるのが Flipboard の特徴です。</p>
+
+<p>ただし、使うのであれば設定からレイアウトを「スクロール」に変更することをおすすめします。初期設定では雑誌のようにめくっていく形式ですが、スクロールが面倒です。</p>
+
+<p><img src="/assets/images/2022/12/11/flipboard.webp" alt="Flipboard" title="Flipboard" /></p>
+
+<p>さて、問題は「世の中全般のニュースを知る用」の方です。今までは Google ニュースを使用していたのですが、使っているうちにだんだんと表示される記事の分野が偏ってきました。自分の場合は、テクノロジーの系のニュースがやたら出てくるようになりました。</p>
+
+<p>考えてみれば当然のことなのですが、これでは「世の中全般のニュースを知る」という目的にそぐわなくなってしまいます。</p>
+
+<p>また、ネットニュースでよくある「〇〇は〇〇？調べてみたら…」や「〇〇がヤバい！」といった見出しが不快に感じるようになってきたのもニュースアプリの乗り換えを決めた一因です。</p>
+
+<p>ということで、様々な分野が万遍なく出てきて、かつ見出しも平穏なアプリを探しました。</p>
+
+<h2 id="試したアプリ">試したアプリ</h2>
+
+<p>パッと思いついたものを数種類試しただけですが、試したアプリは以下のとおりです。</p>
+
+<ul>
+  <li>スマートニュース</li>
+  <li>NewsPicks</li>
+  <li>グノシー</li>
+  <li>Yahoo! ニュース</li>
+  <li>NHK ニュース・防災</li>
+</ul>
+
+<p>たったの5種類ですが、そこはご容赦を…</p>
+
+<p>使ってみた感想ですが、スマートニュース・グノシー・Yahoo! ニュースは他のニュースサイトから引っ張ってくる仕組みなので見出しが過激でした。とにかく PV を稼ぎたいという、提供元ニュースサイトの意思がひしひしと伝わってきます。</p>
+
+<p>NewsPicks も他のサイトから引っ張ってきている (NewsPicks オリジナルコンテンツもあるが、こちらは有料会員限定なので割愛) のですが、見出しは割と平穏。</p>
+
+<p>ただ、「経済ニュースアプリ」を名乗っているだけあって経済以外のニュースはあまり出てこないので候補から外れました。逆に経済ニュースを見たい人にはぜひおすすめしたいアプリです。</p>
+
+<p>(どうでもいい話ですが、NewsPicks は「ニュースピックス」ではなく「ニュー<strong>ズ</strong>ピックス」と読むらしいです。)</p>
+
+<p>ということで残った「NHK ニュース・防災」ですが、これが結構良かったです。万遍なくニュースが出てくる上、見出しもまさに「記事をそのまま要約した内容」で非常に快適。</p>
+
+<p>変な思想の偏りもないし、無料で広告も出ません。</p>
+
+<p>ということで、ニュースアプリはこれを使うことに決めました。</p>
+
+<p><img src="/assets/images/2022/12/11/nhk-news.webp" alt="NHK ニュース・防災" title="NHK ニュース・防災" /></p>
+
+<p>あと念のため言っておきますが、「NHK ニュース・防災」以外の試したアプリも決して悪いものではありません。ただ、僕が求めている目的や条件にそぐわなかっただけです。</p>
+
+<h2 id="紹介したアプリの-url-一覧">紹介したアプリの URL 一覧</h2>
+
+<p>最後にこの記事で紹介したアプリの URL を貼っておきます。気になったものがあればぜひインストールしてみてください。</p>
+
+<ul>
+  <li>Flipboard…<a href="https://apps.apple.com/jp/app/id358801284" target="_blank" rel="noopener noreferrer">iPhone</a>　<a href="https://play.google.com/store/apps/details?id=flipboard.app" target="_blank" rel="noopener noreferrer">Android</a></li>
+  <li>スマートニュース…<a href="https://apps.apple.com/jp/app/id579581125" target="_blank" rel="noopener noreferrer">iPhone</a>　<a href="https://play.google.com/store/apps/details?id=jp.gocro.smartnews.android" target="_blank" rel="noopener noreferrer">Android</a></li>
+  <li>NewsPicks…<a href="https://apps.apple.com/jp/app/id640956497" target="_blank" rel="noopener noreferrer">iPhone</a>　<a href="https://play.google.com/store/apps/details?id=com.newspicks" target="_blank" rel="noopener noreferrer">Android</a></li>
+  <li>グノシー…<a href="https://apps.apple.com/jp/app/id590384791" target="_blank" rel="noopener noreferrer">iPhone</a>　<a href="https://play.google.com/store/apps/details?id=com.gunosy.android" target="_blank" rel="noopener noreferrer">Android</a></li>
+  <li>Yahoo! ニュース…<a href="https://apps.apple.com/jp/app/id407906756" target="_blank" rel="noopener noreferrer">iPhone</a>　<a href="https://play.google.com/store/apps/details?id=jp.co.yahoo.android.news" target="_blank" rel="noopener noreferrer">Android</a></li>
+  <li>NHK ニュース・防災…<a href="https://apps.apple.com/jp/app/id1121104608" target="_blank" rel="noopener noreferrer">iPhone</a>　<a href="https://play.google.com/store/apps/details?id=jp.or.nhk.news" target="_blank" rel="noopener noreferrer">Android</a></li>
+</ul>]]></content><author><name>Frog</name></author><category term="スマホ" /><category term="スマホ" /><category term="アプリ" /><category term="ニュース" /><summary type="html"><![CDATA[先日スマホを買い換えてアプリを入れ直していた際に、今まで使っていたニュースアプリを変えようと思い数種類試してみました。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/12/11/news-app.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/12/11/news-app.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">予告と近況報告とアレの宣伝</title><link href="https://blog.frogapp.net/2022-12/plan" rel="alternate" type="text/html" title="予告と近況報告とアレの宣伝" /><published>2022-12-05T00:00:00+09:00</published><updated>2022-12-05T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/plan</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/plan"><![CDATA[<p>今後このブログで書くこと・書きたいことです。すでに頭の中ではいくつかネタが思い浮かんでいるのですが、どこかに書き残しておかないと忘れそうなのでここに書いておきます。ついでに近況報告も兼ねています。</p>
+
+<h2 id="12月の予告">12月の予告</h2>
+
+<p>早いものでもう12月。先日「チコちゃんに叱られる」というテレビ番組でやっていたのですが、体感の時間が現実の時間よりも短く感じるのは19歳頃からだそうです。さて、自分は……</p>
+
+<p>ということはおいておき、今月執筆する予定の記事の紹介です。よほどのことがない限り下記のとおりになると思います。</p>
+
+<h3 id="1210-or-11使っているニュースアプリについて">12/10 or 11　使っているニュースアプリについて</h3>
+
+<p><a href="/2022-11/diary">一言日記</a>でも少し触れたのですが、最近スマホを買い替えました。</p>
+
+<p>前のスマホで使っていたアプリを入れ直しているときに、ふと今まで使っていたニュースアプリが肌に合わないなと感じたんですよね。</p>
+
+<p>そこで主要なニュースアプリを色々使ってみて出た結論を書く予定です。</p>
+
+<h3 id="1217-or-18改めて-chromebook-を使ってみて">12/17 or 18　改めて Chromebook を使ってみて</h3>
+
+<p>こちらも<a href="/2022-11/diary">一言日記</a>で少し触れたのですが、最近メイン PC のベゼルが外れて使えなくなり、修理に出すという事態が発生しました。</p>
+
+<p>壊れた PC は学校に持ち込んで授業でも使っていたので、急遽先生にお願いして代替機をお借りしました。そこで貸し出されたのが Chromebook。</p>
+
+<p>いわゆる教育用のやつでスペックも大して良くないしデザインもかなりゴツいのですが、数週間使っていて「こいつもこいつでアリかもしれない」と思い始めたのでそれについて書きます。</p>
+
+<p>ちなみに PC は修理に出してそろそろ2週間が経ちますが、未だに帰ってきません。というか修理費の見積もりメールすら来ません。（迷惑メールフォルダ等くまなく探したが見つからず）</p>
+
+<p>来週いっぱい様子を見て、それでも音沙汰なしのようなら一度連絡を入れてみようと思っています。</p>
+
+<h3 id="1224基本情報の勉強法">12/24　基本情報の勉強法</h3>
+
+<p>こちらも一言ｎ……ですが、先月「基本情報技術者試験」を受け合格したので、僕が基本情報に向けて行った勉強法を書く予定です。</p>
+
+<p>※基本情報技術者試験…「IT エンジニアの登竜門」とも言われる国家試験。</p>
+
+<p>来年度からの新制度にも触れないといけないと思うので、相当な文量になる予感がしています。</p>
+
+<p>あと、この記事は久しぶりに Qiita に投稿してみようかと思っています。</p>
+
+<h3 id="12312022年の総括">12/31　2022年の総括</h3>
+
+<p>2022年の最終日。今年1年を振り返る記事を書きます。</p>
+
+<h2 id="今後書きたい記事">今後書きたい記事</h2>
+
+<p>以下のテーマはあくまでも「機会があったら書いてみたいなー」程度のものなので、実際に記事になるかは未確定です。</p>
+
+<ul>
+  <li>クロスブラウザなパスワードマネージャーを探した話</li>
+  <li>新スマホのレビュー</li>
+  <li>SIM PIN の話</li>
+  <li>外付けストレージに ChromeOS Flex をインストールする方法</li>
+  <li>ブログは何のため？</li>
+  <li>今後のスマホ廉価販売の個人的予想</li>
+  <li>おすすめのプログラミング勉強法</li>
+</ul>
+
+<p>以上、「今後このブログで書くこと・書きたいこと」兼「近況報告」兼「一言日記の宣伝」でした。ここまで読んでいただきありがとうございました。</p>]]></content><author><name>Frog</name></author><category term="雑記" /><category term="お知らせ" /><category term="予告" /><summary type="html"><![CDATA[今後このブログで書くこと・書きたいことです。すでに頭の中ではいくつかネタが思い浮かんでいるのですが、どこかに書き残しておかないと忘れそうなのでここに書いておきます。ついでに近況報告も兼ねています。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/12/04/plan.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/12/04/plan.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">一言日記(2022年12月)</title><link href="https://blog.frogapp.net/2022-12/diary" rel="alternate" type="text/html" title="一言日記(2022年12月)" /><published>2022-12-04T00:00:00+09:00</published><updated>2022-12-04T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/diary</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/diary"><![CDATA[<p>早いものでこの企画も6か月目、2022年も12か月目です。コロナ禍になってから時の流れが速くなった気がするのは自分だけでしょうか。</p>
+
+<p><br /></p>
+
+<p><strong>12月1日(木)　笑い泣き</strong></p>
+
+<p>ついに12月。残り少ない2022年を大切に過ごさなければ！</p>
+
+<p><br /></p>
+
+<p><strong>12月2日(金)　ステレオスピーカー</strong></p>
+
+<p>スマホが新しくなってスピーカーもステレオになったのだが、音の立体感が全然違う。</p>
+
+<p><br /></p>
+
+<p><strong>12月3日(土)　眠気回避術</strong></p>
+
+<p>どうやら自分は上を向いていると眠くなるらしい。普通に考えれば、下を向いている方が眠くなると思うが…</p>
+
+<p><br /></p>
+
+<p><strong>12月4日(日)　Spotify</strong></p>
+
+<p>今日 Spotify を開いたら「2022年まとめ」というものが来ていた。今年自分がよく聞いた曲をセレクトしたプレイリストらしい。最近は専らそのプレイリストを聞いている。</p>
+
+<p><br /></p>
+
+<p><strong>12月5日(月)　目覚まし</strong></p>
+
+<p>目覚ましの音に慣れすぎて、最近目覚ましが鳴っても目覚めなくなった。しかも寝ながら自分でアラームを切ってしまうから、スヌーズ機能も働かない。これは危険。</p>
+
+<p><br /></p>
+
+<p><strong>12月6日(火)　PC 帰還</strong></p>
+
+<p>修理に出していた PC が帰ってきた。しかし、タッチパッドが全く反応しなくなった。(修理前は1日に1回反応しなくなるかならないか程度)これは再修理？</p>
+
+<p><br /></p>
+
+<p><strong>12月7日(水)　会議</strong></p>
+
+<p>1時間会議をした結果、「明日夜 Meet で話し合おう」という結論が出た。</p>
+
+<p><br /></p>
+
+<p><strong>12月8日(木)　会議2</strong></p>
+
+<p>1時間半会議をした結果、「再来週話し合おう」という結論が出た。</p>
+
+<p><br /></p>
+
+<p><strong>12月9日(金)　翻訳</strong></p>
+
+<p>英語の教材を友人と2人で手分けして翻訳しているが、これ結構勉強になっていいね。時間はかかるけど。</p>
+
+<p><br /></p>
+
+<p><strong>12月10日(土)　アドベントカレンダー</strong></p>
+
+<p>Qiita のとあるアドベントカレンダーに参加しているのだが、みんな面白い記事書くなぁ。最近の毎日の楽しみになっている。</p>
+
+<p><br /></p>
+
+<p><strong>12月11日(日)　ブログ</strong></p>
+
+<p>今週は忙しいしブログ記事も1分程度で読めるものでいいかなーと思って書いてみたらそれなりの量になってしまった。</p>
+
+<p><br /></p>
+
+<p><strong>12月12日(月)　数学</strong></p>
+
+<p>数学のとある単元を理解するのに3時間かかった。</p>
+
+<p><br /></p>
+
+<p><strong>12月13日(火)　無駄</strong></p>
+
+<p>今日は時間を無駄にしまくった。後悔しかない。</p>
+
+<p><br /></p>
+
+<p><strong>12月14日(水)　情報共有サイト</strong></p>
+
+<p>もともとは仲間内で英語の教材の和訳を共有するために作ったサイト、メンバーにリポジトリの編集権限を付与したら今は各々が得意な教科の解説記事を投稿し合うようになり結構いい感じになっている。</p>
+
+<p><br /></p>
+
+<p><strong>12月15日(木)　老化</strong></p>
+
+<p>小さい頃はクリスマスのような行事を心待ちにしていたけれど、今となっては「あ、もうクリスマス？ふーん」という感じ。</p>
+
+<p><br /></p>
+
+<p><strong>12月16日(金)　ルール</strong></p>
+
+<p>最近、スマホの設定に「ルール」という機能を見つけた。周りの条件に合わせてマナーモードの切り替えができるらしい。早速、「家の Wi-Fi に繋いでいるときはマナーモードオフ、それ以外ではマナーモードオン」と設定した。</p>
+
+<p><br /></p>
+
+<p><strong>12月17日(土)　どっちが先か</strong></p>
+
+<p>PC が再修理から帰ってくるのが先か、年が明けるのが先か。冬休みにガッツリ開発したいからそれまでには帰ってきてほしい。</p>
+
+<p><br /></p>
+
+<p><strong>12月18日(日)　溜め込み癖</strong></p>
+
+<p>課題を1日でやろうとして地獄を見た。</p>
+
+<p><br /></p>
+
+<p><strong>12月19日(月)　スーパー</strong></p>
+
+<p>たまに行くスーパー、美味しいものとまずいものの差が大きいので目利きが必要。</p>
+
+<p><br /></p>
+
+<p><strong>12月20日(火)　曜日感覚</strong></p>
+
+<p>え？まだ火曜日？</p>
+
+<p><br /></p>
+
+<p><strong>12月21日(水)　緊急通報</strong></p>
+
+<p>スマホの電源を切る画面で、「緊急通報」がやたら目立っているので間違えて押しそうになる。</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[早いものでこの企画も6か月目、2022年も12か月目です。コロナ禍になってから時の流れが速くなった気がするのは自分だけでしょうか。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/12/04/diary-202212.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/12/04/diary-202212.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Colaboratory を楽しくする設定</title><link href="https://blog.frogapp.net/2022-11/colab" rel="alternate" type="text/html" title="Colaboratory を楽しくする設定" /><published>2022-11-26T00:00:00+09:00</published><updated>2022-11-26T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-11/colab</id><content type="html" xml:base="https://blog.frogapp.net/2022-11/colab"><![CDATA[<p>Colaboratory を使っていたら面白そうな設定を見つけたので紹介します。最近は学校で Colaboratory を使うこともあるようですが、この設定を有効にすれば授業を200%楽しめるかもしれません。（先生に怒られても責任は負いませんが）</p>
+
+<h2 id="設定すると">設定すると…？</h2>
+
+<p>画面の上の方をコーギーや猫、カニが歩いたり</p>
+
+<p><img src="/assets/images/2022/11/26/result-1.webp" alt="画面上部をコーギー、猫、カニが歩いている様子" /></p>
+
+<p>タイプするたびに派手な演出が出たりします。</p>
+
+<p><img src="/assets/images/2022/11/26/result-2.webp" alt="タイプするたびに現れる派手な演出" /></p>
+
+<h2 id="設定方法">設定方法</h2>
+
+<p>では設定していきます。</p>
+
+<ol>
+  <li>上部ツールバーから [ツール] → [設定] をクリック<br />
+<img src="/assets/images/2022/11/26/open-settings.webp" alt="上部ツールバーから [ツール] → [設定] をクリック" /></li>
+  <li>[その他] をクリック</li>
+  <li>パワーレベルを「Many power (use with caution)」にし、「コーギーモード」、「猫モード」、「カニモード」にチェックを入れる<br />
+<img src="/assets/images/2022/11/26/enable-settings.webp" alt="パワーレベルを「Many power (use with caution)」にし、「コーギーモード」、「猫モード」、「カニモード」にチェックを入れる" /></li>
+  <li>[保存] をクリックして設定を終了する</li>
+</ol>
+
+<p>なお、一つのプロジェクトでこの設定を行えば、他のプロジェクトでもこの設定が有効になります。</p>
+
+<p>画面が華やかになって面白いので、是非試してみてください。</p>]]></content><author><name>Frog</name></author><category term="プログラミング" /><category term="Colaboratory" /><category term="プログラミング" /><category term="Python" /><summary type="html"><![CDATA[Colaboratory を使っていたら面白そうな設定を見つけたので紹介します。最近は学校で Colaboratory を使うこともあるようですが、この設定を有効にすれば授業を200%楽しめるかもしれません。（先生に怒られても責任は負いませんが）]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/26/colab.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/26/colab.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">プレゼンで気をつけていること (自己流)</title><link href="https://blog.frogapp.net/2022-11/presentation" rel="alternate" type="text/html" title="プレゼンで気をつけていること (自己流)" /><published>2022-11-13T00:00:00+09:00</published><updated>2022-11-13T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-11/presentation</id><content type="html" xml:base="https://blog.frogapp.net/2022-11/presentation"><![CDATA[<p>今回は僕がプレゼンをするときに気をつけていることを紹介します。と言っても僕はそこまでプレゼンが上手いわけではないのですが、少しでも参考になれば幸いです。</p>
+
+<p>早速ですが、僕がいつも心がけているのは以下の7点です。</p>
+
+<ol>
+  <li>見通しを持たせる</li>
+  <li>結論→理由→結論の順で</li>
+  <li>スライド間に繋がりを持たせる</li>
+  <li>用語解説をまとめて書かない</li>
+  <li>「時間がないので読んでおいてください」は厳禁</li>
+  <li>大事なことは何度でも</li>
+  <li>資料作成は遅くとも1週間前には終える</li>
+</ol>
+
+<p>一つずつ見ていきます。</p>
+
+<h2 id="見通しを持たせる">見通しを持たせる</h2>
+
+<p><img src="/assets/images/2022/11/13/flow.webp" alt="発表の流れを見せる" /></p>
+
+<p>「いつ終わるかわからないようなプレゼン」よりも、「終わりが見えるプレゼン」のほうが聞き手は聞きやすいです。</p>
+
+<p>最初にプレゼンの流れを見せるのはもちろん、それぞれの項目に入る前にも「その項目では何を説明するのか」を簡単に伝えます。</p>
+
+<p>換言すれば、「その説明を聞いて何がわかるようになるか」を予め言っておきます。</p>
+
+<p>実はこれは歴史の先生から学んだ術です。その先生は話の流れが変わるたびにその後何を説明するかを端的に教えて下さいます。</p>
+
+<p>「ではここからは第2次世界大戦後に日本の状況について説明します。」という具合です。</p>
+
+<p>この術を使えば聞き手にプレゼンの終わりを見せられるのはもちろん、その後の説明に興味を持ってもらえるという効果も期待でき一石二鳥です。</p>
+
+<h2 id="結論理由結論の順で">結論→理由→結論の順で</h2>
+
+<p><img src="/assets/images/2022/11/13/r-r.webp" alt="結論→理由→結論" /></p>
+
+<p>先程のポイントとも似ているのですが、最初に結論を見せ、聞き手に自分が話そうとしていることを提示します。</p>
+
+<p>ただし、最初に見せる結論は必ずしもわかりやすいものである必要はありません。抽象的で少し疑問が残るほうがその後の理由の説明に集中してもらえます。</p>
+
+<p>最初の結論で「なんとなく分かるけど、これはどういうことなんだろう」と思わせて聞き手を引き付け、理由で納得してもらったあと、最後にもう一度結論を念押しする、という流れです。</p>
+
+<p>これの分かりやすい例が「チコちゃんに叱られる」という番組です。この番組も最初に抽象的な結論を出して視聴者を引き付けたあと、専門家による解説で視聴者を納得させ、最後にもう一度結論を提示するという流れになっています。</p>
+
+<p>ただし、このパターンが何度も続くと聞き手は飽きてしまいます。時にはあえて最初は結論を見せずに、具体例をいくつか挙げて聞き手に結論を想像してもらう手法を入れると刺激的なプレゼンになります。</p>
+
+<h2 id="スライド間に繋がりを持たせる">スライド間に繋がりを持たせる</h2>
+
+<p>スライドが変わるとまるで話題が180度変わったかのように振る舞う人がいますが、そのような態度は聞き手を混乱させてしまいます。</p>
+
+<p>「ここまでは〇〇について話しましたが、じゃあ□□はどうなのか気になりますよね。ということで□□に関する説明に移ります。」と一言入れると聞き手が迷子になるのを防ぐことができます。</p>
+
+<p>先程の歴史の先生の例を出せば、「以上ここまでがヒトラーの政策についてでした。では、ここからはその時の日本やイタリアがどうだったかについて説明します。」というような感じです。</p>
+
+<p>こじつけのように繋げてもいいし、話題が完全に変わる事を言っても構いません。</p>
+
+<p>スライド1枚1枚の「点」の情報を、線で繋ぐなり点どうしの間に境界線を引くなりしてほしいということです。</p>
+
+<p>とは言え、スライドが変わるたびに毎回言うのはさすがにくどいので、「あ、ここちょっと話変わるかな」というところだけで OK です。</p>
+
+<h2 id="用語解説をまとめて書かない">用語解説をまとめて書かない</h2>
+
+<p>専門的な内容をプレゼンする時、専門用語をいちいち説明するのが面倒で最初に専門用語をまとめて解説し、聞き手がそれらの意味を全て理解した前提で話を進める人がいますが、聞き手はそんな短時間で専門用語を覚えられません。</p>
+
+<p>途中で専門用語がわからず置いてきぼりにされてしまいます。</p>
+
+<p>そのためにも、専門用語は一言でもいいので出てくるたびに説明を加えることが重要です。</p>
+
+<p>例えば「りんご」という言葉が超専門用語だった場合、最初に「りんごはバラ科の果物」と言うだけでなく、その後「りんご」という言葉が出るたびに「りんご (バラ科の果物)」というように一言説明を加えると聞き手も理解しやすいです。</p>
+
+<h2 id="時間がないので読んでおいてくださいは厳禁">「時間がないので読んでおいてください」は厳禁</h2>
+
+<p>僕が一番嫌いなパターンです。</p>
+
+<p>「このスライドですが、長すぎて話していると時間が足りないので各自読んで下さい。」というもの。</p>
+
+<p>スライドが表示されているたった数秒間で聞き手がスライドを読解できるとは思えません。</p>
+
+<p>(スライドを聞き手に配布しているなら許容できますが。)</p>
+
+<p>発表者の自己満足でしかありません。</p>
+
+<p>時間が足りないことがわかっているならそのスライドを要約して時間内に収まるようにしたり、他のスライドの無駄な部分を省いて説明の時間を作ったりするべきです。</p>
+
+<h2 id="大事なことは何度でも">大事なことは何度でも</h2>
+
+<p>人はすぐに忘れる生き物です。</p>
+
+<p>プレゼンで主張したいことは、二度とは言わず隙あるごとに繰り返し言うと聞き手の印象に残ります。</p>
+
+<p>ちょっと鬱陶しいくらいが丁度いいです。</p>
+
+<h2 id="資料作成は遅くとも1週間前には終える">資料作成は遅くとも1週間前には終える</h2>
+
+<p>100点満点のものでなくてもいいので、プレゼンで使う資料は遅くとも発表の1週間前には一通り作り終えておきます。(発表日まで1週間以上あることが前提)</p>
+
+<p>なぜこうするかというと、完璧でなくとも一通り資料を作り終えておけば精神的余裕が生まれ、アイディアが浮かびやすくなるからです。</p>
+
+<p>「資料のあそこの部分をこうしたらもっと良くなるのではないか」「この情報を入れるのを忘れていた」というようなことが日常生活の中でふと思い浮かんできます。</p>
+
+<p>その都度資料を修正すれば、発表までには完璧な資料ができていることでしょう。</p>
+
+<p>前日に慌てて資料を作ると、混沌とした内容になったり情報のヌケモレが多く発生したりする場合があります。</p>
+
+<p>普段は締め切り間近にならないとやる気がでないような僕でも、プレゼン資料だけは余裕を持って作っています。</p>
+
+<p>以上、僕がプレゼンの際に気をつけていることでした。必ずしもこの記事のやり方が正解とは限りませんが、プレゼンのやり方で困っている方の一助になれば幸いです。</p>]]></content><author><name>Frog</name></author><category term="雑記" /><category term="プレゼン" /><summary type="html"><![CDATA[今回は僕がプレゼンをするときに気をつけていることを紹介します。と言っても僕はそこまでプレゼンが上手いわけではないのですが、少しでも参考になれば幸いです。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/13/presentation.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/13/presentation.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Google スライドで使える最強日本語フォント</title><link href="https://blog.frogapp.net/2022-11/zen-kaku-gothic" rel="alternate" type="text/html" title="Google スライドで使える最強日本語フォント" /><published>2022-11-07T00:00:00+09:00</published><updated>2022-11-07T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-11/zen-kaku-gothic</id><content type="html" xml:base="https://blog.frogapp.net/2022-11/zen-kaku-gothic"><![CDATA[<p>「Google スライドって便利なんだけど日本語フォントが微妙… Noto Sans JP 早く使えるようにしてくれ！」と思ってフォント一覧を見ていたらよさげな日本語フォントを見つけたのでその紹介です。</p>
+
+<h2 id="zen-kaku-gothic-new">Zen Kaku Gothic New</h2>
+
+<p>その名も「Zen Kaku Gothic New」です。</p>
+
+<p>游ゴシックに近い見た目で、全体的に癖が少なく場面を選ばずに使える印象です。</p>
+
+<p><img src="/assets/images/2022/11/07/zen-vs-yu.webp" alt="Zen Kaku Gothic New と游ゴシックの比較画像" /></p>
+
+<p>同じシリーズのフォントの中に「Zen Kaku Gothic Antique」もあります。</p>
+
+<p>「Antique」とあるように、こちらのフォントは若干古典的な印象を受けます。小説なんかに合いそうです。</p>
+
+<p><img src="/assets/images/2022/11/07/new-vs-antique.webp" alt="Zen Kaku Gothic New と Zen Kaku Gothic Antique の比較画像" /></p>
+
+<p>比較してみると、「Zen Kaku Gothic Antique」はかな文字が大きめになっているほか、ひらがなが手書きに近い形状になっています。</p>
+
+<p>基本的には「Zen Kaku Gothic New」でいいと思いますが、場面によっては「Zen Kaku Gothic Antique」のほうが合うかもしれません。</p>
+
+<h2 id="フォントの適用方法">フォントの適用方法</h2>
+
+<ol>
+  <li>
+    <p>フォント選択画面から「その他のフォント」をクリック</p>
+
+    <p><img src="/assets/images/2022/11/07/other_fonts.webp" alt="「その他のフォント」をクリック" /></p>
+  </li>
+  <li>
+    <p>「zen kaku gothic」で検索し、出てきた2つのフォントにチェックを入れる→「OK」をクリック</p>
+
+    <p><img src="/assets/images/2022/11/07/font-list.webp" alt="Zen Kaku Gothic の2種類のフォントにチェックを入れる" /></p>
+  </li>
+  <li>
+    <p>フォント一覧に「Zen Kaku Gothic New」と「Zen Kaku Gothic Antique」が出てきて使えるように</p>
+
+    <p><img src="/assets/images/2022/11/07/font-added.webp" alt="Zen Kaku Gothic がフォント一覧に追加される" /></p>
+  </li>
+</ol>
+
+<h2 id="ローカル環境やウェブサイトで使用したい場合">ローカル環境やウェブサイトで使用したい場合</h2>
+
+<p>Google スライドの他のフォントと同様に Zen Kaku Gothic も Google Fonts で公開されているので、ダウンロードしてローカル環境で使用したり自分のサイトに埋め込んだりできます。</p>
+
+<p><a href="https://fonts.google.com/specimen/Zen+Kaku+Gothic+New" target="_blank" rel="noopener noreferrer">Zen Kaku Gothic New</a></p>
+
+<p><a href="https://fonts.google.com/specimen/Zen+Kaku+Gothic+Antique" target="_blank" rel="noopener noreferrer">Zen Kaku Gothic Antique</a></p>
+
+<h2 id="終わりに">終わりに</h2>
+
+<p>今回紹介した2つのフォントはどちらも癖がない美しいフォントなので、ぜひ積極的に使ってみてください！</p>
+
+<p>僕も、「Zen Kaku Gothic New」を使って部活用のプレゼン資料を作成中です。</p>]]></content><author><name>Frog</name></author><category term="PC" /><summary type="html"><![CDATA[「Google スライドって便利なんだけど日本語フォントが微妙… Noto Sans JP 早く使えるようにしてくれ！」と思ってフォント一覧を見ていたらよさげな日本語フォントを見つけたのでその紹介です。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/07/title.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/07/title.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">自分のアプリが作られた背景を語る</title><link href="https://blog.frogapp.net/2022-11/background" rel="alternate" type="text/html" title="自分のアプリが作られた背景を語る" /><published>2022-11-06T00:00:00+09:00</published><updated>2022-11-06T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-11/background</id><content type="html" xml:base="https://blog.frogapp.net/2022-11/background"><![CDATA[<p>そういえば、自分が運営しているウェブアプリが作られた背景の話をしたことがなかった気がするので今日はその話をします。</p>
+
+<p>以下のアプリの制作背景を今回は紹介します。</p>
+
+<ul>
+  <li>やまだのタイマー</li>
+  <li>やまだBINGO</li>
+  <li>ストップウォッチ</li>
+  <li>文字起こしツール</li>
+  <li>簡易テキスト読み上げくん</li>
+  <li>Snapdrop JP</li>
+</ul>
+
+<h2 id="やまだのタイマー">やまだのタイマー</h2>
+
+<p><img src="/assets/images/2022/11/06/timer.webp" alt="やまだのタイマー" /></p>
+
+<p><a href="https://timer.frogapp.net">やまだのタイマー</a></p>
+
+<p>一昨年、「1人1枚ずつ学年末までのカウントダウンカレンダーを作ろう」という恒例企画が開かれたのですが、どうせやるならリアルタイムなカウントダウンも欲しいと思いこのアプリを作りました。</p>
+
+<p>その時、残り時間の形式を〇日〇時間〇分〇秒とするのもいいですが、あえて〇時間〇分〇秒という形式にしました。</p>
+
+<p>「残り4日」と言われるのと「残り96時間」と言われるのでは印象がかなり違うように、あえて「日」の単位をなくすことで新たな気付きを得てほしいという思いです。</p>
+
+<p>ただ、この仕様に関してはたびたび指摘を受けます。「なぜ残り日数が表示されないんだ、不便だ！」というものです。しかし、前述したようにここだけは絶対に譲れないポイントなのであえてそのままにしています。</p>
+
+<p>(手抜きしていることの言い訳に聞こえるかもしれませんが、残り日数を表示させること自体は簡単なのでやろうと思えばすぐにできます。「こだわり」を譲れないという話です。)</p>
+
+<h2 id="やまだbingo">やまだBINGO</h2>
+
+<p><img src="/assets/images/2022/11/06/bingo.webp" alt="やまだBINGO" /></p>
+
+<p><a href="https://bingo.frogapp.net">やまだBINGO</a></p>
+
+<p>数学の先生が指名するときにフリーソフトのビンゴマシーンを使っていました。</p>
+
+<p>ビンゴマシーンなら一度当たった人は他の人が全員当たるまでは当たらないので公平性の観点からすごくいい案だと思ったのですが、そのアプリにはアプリを一度終了すると全履歴が消えてしまうという欠点がありました。さらに、出る数字にある程度の規則性があるという欠点もありました。</p>
+
+<p>これでは毎回同じ人が指されてしまいます。(実際、毎回決まった人が指されていました。)</p>
+
+<p>しかしある日。その先生が「こういうアプリ作りたかったら作っていいよ」と仰いました。</p>
+
+<p>その後主に部活の時間に制作をし、1週間ほどでできたのがこのアプリです。</p>
+
+<p>当時使っていたビンゴアプリの欠点を解消するべく、</p>
+
+<ul>
+  <li>出た数字を自動的に保存し、ブラウザを閉じても続きから再開できるようにする</li>
+  <li>数字がなるべく均等に出るようにする</li>
+</ul>
+
+<p>ことに気を付けました。</p>
+
+<p>さらに、公平性を確認できるようソースコードは GitHub にてだれでも見ることができる状態にしたのですが、そもそも Web 系のプログラミングがわかる人がほとんどいなかったので公開する意味があったのかは不明です。</p>
+
+<p>ちなみに初期のやまだ BINGO は Bootstrap で作っていましたが、その後 Next.js + Chakra UI に書き換えました。</p>
+
+<h2 id="ストップウォッチ">ストップウォッチ</h2>
+
+<p><img src="/assets/images/2022/11/06/stopwatch.webp" alt="" /></p>
+
+<p><a href="https://stopwatch.frogapp.net">ストップウォッチ</a></p>
+
+<p>誰かに「今度プレゼンがあるのでそこで使えるストップウォッチを作ってほしい」という要望を受けて土日の2日間で作った気がします。</p>
+
+<p>その後別の人から「ほかのサイトを開いていても経過時間がわかるようにしてほしい」という要望を受け、タブに現在の経過時間をリアルタイムで表示するようにしました。</p>
+
+<h2 id="文字起こしツール">文字起こしツール</h2>
+
+<p><img src="/assets/images/2022/11/06/speech.webp" alt="文字起こしツール" /></p>
+
+<p><a href="https://speech.frogapp.net">文字起こしツール</a></p>
+
+<p>React のチュートリアルで三目並べを作った後に最初に React で作ったアプリです。</p>
+
+<p>「音声認識」って謎のロマンがあるのでやってみたくなって作りました。</p>
+
+<h2 id="簡易テキスト読み上げくん">簡易テキスト読み上げくん</h2>
+
+<p><img src="/assets/images/2022/11/06/read.webp" alt="簡易テキスト読み上げくん" /></p>
+
+<p><a href="https://read.frogapp.net">簡易テキスト読み上げくん</a></p>
+
+<p>Discord のボイスチャットで声が出せない、かつ音声読み上げ Bot がダウンしているという際に使えるように作ったアプリです。</p>
+
+<p>とにかく「手軽さ」を意識し、サイトを開いて文字を入れ、Enter キーを押下するだけで喋るようにしました。</p>
+
+<p>UI が検索エンジンに似ているため間違えられそうですが…</p>
+
+<h2 id="snapdrop-jp">Snapdrop JP</h2>
+
+<p><img src="/assets/images/2022/11/06/snapdrop-jp.webp" alt="Snapdrop JP" /></p>
+
+<p><a href="https://share.frogapp.net">Snapdrop JP</a></p>
+
+<p>従来から <a href="https://snapdrop.net/" target="_blank" rel="noopener noreferrer">Snapdrop</a> という、ブラウザだけで簡単にデータ転送ができるアプリを使っていたのですが、最近 Snapdrop のサーバーダウンが目立ってきたので自分でインスタンスを立てることにしました。</p>
+
+<p>ただクローンしてサーバーに上げるだけではつまらないので、このアプリの素晴らしさを日本のユーザーにも感じてもらいたいという思いから日本語化をすることにしました。</p>
+
+<p>よくある機械翻訳ではなく、日本語ネイティブである自分が自然な日本語になることを第一に和訳して作ったアプリです。</p>
+
+<p>最初はソフトウェアの日本語化なんて簡単だとなめていましたが、日本語と英語は文法やテンションの高さが全く違うのでけっこう大変でした。</p>
+
+<p>今はわりかし自然な日本語になっていますが、初期リリースの頃は不自然な日本語があちらこちらにありました。</p>
+
+<h2 id="あとがきユーザーの声か制作者のこだわりか">あとがき：ユーザーの声か制作者のこだわりか</h2>
+
+<p>やまだのタイマーでも少し触れましたが、制作者のこだわりであえて普通とは違う仕様にしているところがユーザーから批判されることが多々あります。</p>
+
+<p>ユーザーの声を取り入れることでより多くの人にとって使いやすいアプリにできますが、ユーザーの声ばかり取り入れていると普遍的な何の個性もないアプリになってしまいます。</p>
+
+<p>個人的にはユーザーの声 : 制作者のこだわりを 6:4 くらいにするのがちょうどいいと感じています。</p>
+
+<p>(プロジェクトの目的や方針によってこの割合は変わります。例えば受注開発であれば発注者の意思を最大限尊重すべきです。)</p>
+
+<p>とは言え、意見をもらえることは非常にためになるので、何かあったらぜひ Issue に書き込むなり、僕に直接連絡するなりしてくれるとありがたいです。</p>]]></content><author><name>Frog</name></author><category term="プログラミング" /><category term="アプリ開発" /><category term="雑記" /><summary type="html"><![CDATA[そういえば、自分が運営しているウェブアプリが作られた背景の話をしたことがなかった気がするので今日はその話をします。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/06/background.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/06/background.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">一言日記(2022年11月)</title><link href="https://blog.frogapp.net/2022-11/diary" rel="alternate" type="text/html" title="一言日記(2022年11月)" /><published>2022-11-01T00:00:00+09:00</published><updated>2022-11-01T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-11/diary</id><content type="html" xml:base="https://blog.frogapp.net/2022-11/diary"><![CDATA[<p>2022年があと2ヶ月で終わることが信じられない。未だに今の年を「2021年」と書きかけることがあるのだが。</p>
+
+<p><br /></p>
+
+<p><strong>11月1日(火)　笑い泣き</strong></p>
+
+<p>今日、あまりにも笑いすぎて泣いた。</p>
+
+<p><br /></p>
+
+<p><strong>11月2日(水)　曜日感覚</strong></p>
+
+<p>最近、休日という休日がないので曜日感覚が狂ってきている。</p>
+
+<p><br /></p>
+
+<p><strong>11月3日(木)　文化の日？</strong></p>
+
+<p>今日は文化の日で休日だったらしい、と校門を出たあとに気づいた。</p>
+
+<p><br /></p>
+
+<p><strong>11月4日(金)　4連休</strong></p>
+
+<p>今日学校を休んで4連休にしている人がちらほらいる。</p>
+
+<p><br /></p>
+
+<p><strong>11月5日(土)　まだ土曜日</strong></p>
+
+<p>完全に日曜の気分だったが、まだ土曜だった。</p>
+
+<p><br /></p>
+
+<p><strong>11月6日(日)　久しぶりの遅起き</strong></p>
+
+<p>何週間かぶりの完全に自由な休日。9時過ぎまで寝てた。</p>
+
+<p><br /></p>
+
+<p><strong>11月7日(月)　日曜日？</strong></p>
+
+<p>今日も日曜日だと思っていた。あいにく寝坊するところだった。</p>
+
+<p><br /></p>
+
+<p><strong>11月8日(火)　月食</strong></p>
+
+<p>月食をこんなにも真剣に見たのは生まれて初めて。</p>
+
+<p><br /></p>
+
+<p><strong>11月9日(水)　インフルワクチン</strong></p>
+
+<p>インフルの予防接種を打つと例年は1週間ほど腕がひどく腫れ上がるのだが、今年は1日で腫れがほぼ収まった。</p>
+
+<p><br /></p>
+
+<p><strong>11月10日(木)　提出なし？</strong></p>
+
+<p>とある提出物に関する情報が、学年で自分のクラスにだけ伝えられていない。これは出さなくてもいいということだな？</p>
+
+<p><br /></p>
+
+<p><strong>11月11日(金)　トントン拍子</strong></p>
+
+<p>なんか話が想像以上に早く進んで…とある会の運営に回ることになった。</p>
+
+<p><br /></p>
+
+<p><strong>11月12日(土)　価値観</strong></p>
+
+<p>カナダの高校生と話したが、日本とカナダでは常識が大きく異なるんだな。具体的なことは内容的にここには書けないが。</p>
+
+<p><br /></p>
+
+<p><strong>11月13日(日)　良心的</strong></p>
+
+<p>今日行ったスマホショップの店員さん、「今のデータ使用量なら回線は格安から乗り換えないほうがお得ですよ！」ってはっきり言ってくれるなど、かなり良心的な方だった。</p>
+
+<p><br /></p>
+
+<p><strong>11月14日(月)　ChromeOS Flex</strong></p>
+
+<p>昔から使っているデスクトップ PC、Windows が重くなってきたので ChromeOS Flex でも起動できるようにした。</p>
+
+<p><br /></p>
+
+<p><strong>11月15日(火)　プレゼン</strong></p>
+
+<p>部活でプレゼンを行った。うまく伝わったなら良いが…</p>
+
+<p><br /></p>
+
+<p><strong>11月16日(水)　声量</strong></p>
+
+<p>小声で話したつもりでも遠くの人に聞こえていたという現象が度々発生している。相手の耳が良いのか、それとも自分の声が思った以上にデカいのか。</p>
+
+<p><br /></p>
+
+<p><strong>11月17日(木)　バキバキバキ</strong></p>
+
+<p>帰宅して PC を使おうとしたら「バキバキバキ」という音がしてベゼルが取れた。電源は入るので外部ディスプレイに繋げば使えるが、早く修理に出さねば。</p>
+
+<p><br /></p>
+
+<p><strong>11月18日(金)　あっという間</strong></p>
+
+<p>先週はとにかく長かったが、今週はあっという間だった。しかも今週の土日は久しぶりに両日とも休みなのでゆっくりできる。</p>
+
+<p><br /></p>
+
+<p><strong>11月19日(土)　引きこもり</strong></p>
+
+<p>久しぶりに家に引きこもった休日だった。</p>
+
+<p><br /></p>
+
+<p><strong>11月20日(日)　1年ぶり</strong></p>
+
+<p>父方の親戚と1年ぶりの再開。色々話して楽しかった。</p>
+
+<p><br /></p>
+
+<p><strong>11月21日(月)　さよなら</strong></p>
+
+<p>メイン PC が壊れたので修理に出すことに。しばらくはメイン PC なしの生活。開発も満足にできない…</p>
+
+<p><br /></p>
+
+<p><strong>11月22日(火)　タッチパネル</strong></p>
+
+<p>メイン PC が壊れたので代替機として Chromebook のタブレット PC を借りているのだが、やっぱりタッチディスプレイあると便利。操作が楽。</p>
+
+<p><br /></p>
+
+<p><strong>11月23日(水)　基本情報合格！</strong></p>
+
+<p>今日、基本情報技術者試験の午後試験を受けてきた。なんとか7割取れればいいかなと思っていたらまさかの9割近い得点を取れた。先月受けた午前試験も8割ほどだったので、これで基本情報に合格したことになる。（合格点は両者ともに6割）<br />やっと肩の荷が下りた気分。今週は楽しみなことがまだ2つも待っているから思いっきり楽しむぞ。</p>
+
+<p><br /></p>
+
+<p><strong>11月24日(木)　コンタクト</strong></p>
+
+<p>コンタクト、半年前に作ったもののつけ外しが面倒なのと度が微妙にあっていない（初めてのコンタクトなので度を弱めにしてくれた）ために全然つけていない。</p>
+
+<p><br /></p>
+
+<p><strong>11月25日(金)　乗り間違え</strong></p>
+
+<p>乗る電車を間違えて、危うく帰れなくなるところだった。聞いたことのない駅名が流れてきたときにはゾッとした。</p>
+
+<p><br /></p>
+
+<p><strong>11月26日(土)　無感覚接種</strong></p>
+
+<p>コロナワクチンを打ってきたのだが、看護師さんの腕が良くて注射されている感覚がまったくなかった。「なかなか注射されないなー」と思っていたら「これで注射は終わりです」と言われて驚いた。</p>
+
+<p><br /></p>
+
+<p><strong>11月27日(日)　6s からの脱却</strong></p>
+
+<p>ついに iPhone 6s から脱却！”7” になった。</p>
+
+<p><br /></p>
+
+<p><strong>11月28日(月)　夜景</strong></p>
+
+<p>普段写真なんてほぼ撮らないのに、今日は帰り道で風景写真を撮ってみた。あたりはすっかり暗くなっていたが、すごく明るく撮れて一人で感動していた。</p>
+
+<p><br /></p>
+
+<p><strong>11月29日(火)　歴史</strong></p>
+
+<p>最近歴史の先生のテンションがおかしい。今日はピンク・レディーの UFO を歌って踊り始めたり、突然飛び跳ねたり、ヤギの絵を描いて「メェ〜！」と叫んだりといろいろあった。（やるべき内容はきちんとやっているので全く問題ない）</p>
+
+<p><br /></p>
+
+<p><strong>11月30日(水)　さむらい</strong></p>
+
+<p>11月は小の月だから今日で終わり。あと1ヶ月で新年とは考えられない…</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[2022年があと2ヶ月で終わることが信じられない。未だに今の年を「2021年」と書きかけることがあるのだが。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/01/diary-202211.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/01/diary-202211.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Cloudflare Pages で WWW あり・なしを正規化する</title><link href="https://blog.frogapp.net/2022-10/canonicalize" rel="alternate" type="text/html" title="Cloudflare Pages で WWW あり・なしを正規化する" /><published>2022-10-23T00:00:00+09:00</published><updated>2022-10-23T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-10/canonicalize</id><content type="html" xml:base="https://blog.frogapp.net/2022-10/canonicalize"><![CDATA[<p>先日、Cloudflare Pages で運営しているサイトで www あり・なしの正規化を行ったのですが、一筋縄ではいかなかったのでその解説を行います。</p>
+
+<h2 id="やりたいこと">やりたいこと</h2>
+
+<ul>
+  <li>www.frogapp.net にアクセスがあったら frogapp.net に301リダイレクトをする</li>
+  <li>サブパスは保持する (www.frogapp.net/hoge にアクセスされたら frogapp.net/hoge に飛ばす)</li>
+</ul>
+
+<h2 id="下準備">下準備</h2>
+
+<p>まずは、Cloudflare Pages にある正規化したいサイトのカスタムドメインの設定を開きます。</p>
+
+<p>ここで、www 付きのドメインと www なしのドメインを両方登録します。</p>
+
+<p><img src="/assets/images/2022/10/23/domain-setting.webp" alt="カスタムドメインの設定で www 付きのドメインと www なしのドメインを両方登録する" /></p>
+
+<p>この時、ネームサーバーを Cloudflare に移行していない場合は移行を勧められると思います。</p>
+
+<p>Cloudflare はどこかのお名前と違って管理画面の動作が軽く、使いやすいので特段の事情がない限りはここで移行しておくことをおすすめします。</p>
+
+<p>なお、ネームサーバーを Cloudflare に移行してもドメイン自体を移管したわけではないので、ドメイン更新は元のレジストリ (お名前.com 等) で行います。また、ネームサーバーの移行は無料です。</p>
+
+<p>移行は画面の指示に従って行えば簡単にできます。ドメイン周りの知識が皆無だった頃の自分でも簡単にできました。</p>
+
+<p>加えて、<strong>リダイレクト元のドメイン (ここでは www.frogapp.net) は DNS の設定でオレンジの雲、すなわち「プロキシ済み」にしておく必要があります。</strong></p>
+
+<p>これは後述する「ページルール」を使用する上で必要です。</p>
+
+<p>リダイレクト先のドメインは灰色の雲でも問題ありません。</p>
+
+<p>なお、DNS の設定は Cloudflare の管理画面トップ→該当ドメインをクリック→左サイドバーより「DNS」をクリックで開けます。</p>
+
+<p><img src="/assets/images/2022/10/23/dns-setting.webp" alt="リダイレクト元のドメインはオレンジの雲にする" /></p>
+
+<h2 id="ページルールでリダイレクト">ページルールでリダイレクト</h2>
+
+<p>勘が良い方は「最近リリースされた一括リダイレクト機能があるじゃん」と思われるかもしれませんが、Cloudflare Pages で一括リダイレクト機能を使うと、正しく設定しているにも関わらずサブパスが保持されないという問題があります。</p>
+
+<p>例えば www.frogapp.net/hoge にアクセスした場合 frogapp.net/hoge にリダイレクトされるのが望ましいですが、なぜか frogapp.net/ に飛ばされてしまいます。</p>
+
+<p>これは Cloudflare 側のバグなのでしばらくしたら修正されるかもしれませんが、当分は旧来からあるページルールで代用する必要があります。</p>
+
+<p>では本題に移ります。</p>
+
+<p>まず Cloudflare の管理画面のトップに移動し、該当ドメインを選択します。</p>
+
+<p><img src="/assets/images/2022/10/23/cloudflare.webp" alt="トップ画面で該当ドメインを選択する" /></p>
+
+<p>その後、画面左側のサイドバーから「ルール」をクリックします。</p>
+
+<p><img src="/assets/images/2022/10/23/sidebar.webp" alt="サイドバーから「ルール」をクリックする" /></p>
+
+<p>「ページルールを作成」をクリックします。</p>
+
+<p>なお、無料プランではページルールを3つまでしか作成できないので注意が必要です。</p>
+
+<p><img src="/assets/images/2022/10/23/rule.webp" alt="ページルールを作成" /></p>
+
+<p>編集画面になったら、以下のように設定します。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">項目</th>
+      <th style="text-align: left">説明</th>
+      <th style="text-align: left">設定値</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">URL</td>
+      <td style="text-align: left">リダイレクト元の URL。アスタリスクを使用可能。</td>
+      <td style="text-align: left">(例) www.frogapp.net/*</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">設定を選択する</td>
+      <td style="text-align: left">条件に適合する URL にアクセスがあった場合の処理。</td>
+      <td style="text-align: left">URL の転送</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ステータスコード</td>
+      <td style="text-align: left">リダイレクトする際の HTTP ステータスコード。</td>
+      <td style="text-align: left">301 - 永久リダイレクト</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">転送先 URL</td>
+      <td style="text-align: left">リダイレクト先の URL。<br />$1 でアスタリスク内の文字列を参照可能。/$1 を入れることで、サブパスを保持したままリダイレクトできる。<br />https:// や http:// から始めないとエラーになるので注意。</td>
+      <td style="text-align: left">(例) https://frogapp.net/$1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/assets/images/2022/10/23/rule-edit.webp" alt="ページルールの編集" /></p>
+
+<p>最後に「ページルールを保存」を押下して完了です。</p>
+
+<p>なお、<strong>反映には数十分～数時間かかることがある</strong>ので、気長にお待ち下さい。</p>
+
+<p>1日経っても設定が反映されない場合は、設定が間違っていないか再度確認してみてください。それでも解決しない場合は、コメント欄にて教えていただければ可能な限り対応します。</p>]]></content><author><name>Frog</name></author><category term="プログラミング" /><category term="Cloudflare" /><category term="ドメイン" /><summary type="html"><![CDATA[先日、Cloudflare Pages で運営しているサイトで www あり・なしの正規化を行ったのですが、一筋縄ではいかなかったのでその解説を行います。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/10/23/canonicalize.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/10/23/canonicalize.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">
+  <meta property="twitter:title" content="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">
+  <title>Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜 | カエル文書箱</title>
+  
+  <meta property="og:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-02-html.jpg">
+  <meta property="twitter:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-02-html.jpg">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.1">
+<meta property="og:title" content="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">
+<meta name="author" content="Frog">
+<meta property="og:locale" content="ja">
+<meta name="description" content="拡張機能を作るシリーズ第2弾！今回は拡張機能のポップアップを作成していきます！">
+<meta property="og:description" content="拡張機能を作るシリーズ第2弾！今回は拡張機能のポップアップを作成していきます！">
+<link rel="canonical" href="https://blog.frogapp.net/2021-08/chrome-extension-2">
+<meta property="og:url" content="https://blog.frogapp.net/2021-08/chrome-extension-2">
+<meta property="og:site_name" content="カエル文書箱">
+<meta property="og:image" content="https://blog.frogapp.net/assets/images/banners/2021-08-02-html.jpg">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-08-02T00:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="https://blog.frogapp.net/assets/images/banners/2021-08-02-html.jpg">
+<meta property="twitter:title" content="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Frog"},"dateModified":"2021-08-02T00:00:00+09:00","datePublished":"2021-08-02T00:00:00+09:00","description":"拡張機能を作るシリーズ第2弾！今回は拡張機能のポップアップを作成していきます！","headline":"Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜","image":"https://blog.frogapp.net/assets/images/banners/2021-08-02-html.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.frogapp.net/2021-08/chrome-extension-2"},"url":"https://blog.frogapp.net/2021-08/chrome-extension-2"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- OGP -->
+  <meta property="og:title" content="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">
+  <meta property="twitter:title" content="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta property="og:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-02-html.jpg">
+  <meta property="twitter:image" content="https://blog.frogapp.net///assets/images/banners/2021-08-02-html.jpg">
+   
+    <meta property="og:type" content="article">
+  <link rel="shortcut icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=">
+<link type="application/atom+xml" rel="alternate" href="https://blog.frogapp.net/feed.xml" title="カエル文書箱">
+<!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+  <img class="site-favicon" title="カエル文書箱" src="/assets/images/logo.png" onerror="this.style.display='none'">
+  カエル文書箱
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/archives.html">ARCHIVES</a><a class="page-link" href="/categories.html">CATEGORIES</a><a class="page-link" href="/tags.html">TAGS</a>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+      <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script data-cfasync="false">
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2021-08-02T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2021/08/02
+    </time>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  8 分</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/tags.html#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a><a class="post-tag" href="/tags.html#Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD">#Chrome拡張機能</a><a class="post-tag" href="/tags.html#HTML">#HTML</a><a class="post-tag" href="/tags.html#JavaScript">#JavaScript</a><a class="post-tag" href="/tags.html#CSS">#CSS</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+      
+      
+      
+      <!--画像-->
+        <figure>
+          <img src="/assets/images/banners/2021-08-02-html.jpg" width="100%" loading="eager" alt="ヘッダー画像">
+          
+            <figcaption>Photo by <a href="https://unsplash.com/@jacksonsophat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Jackson So</a> on <a href="https://unsplash.com/s/photos/html%2Fcss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
+          
+        </figure>
+      
+
+      <p>拡張機能を作るシリーズ第2弾！今回は拡張機能のポップアップを作成していきます！</p>
+
+<p>これでかなり拡張機能っぽくなります。</p>
+
+<h2 id="ポップアップとは">ポップアップとは</h2>
+<p>拡張機能のアイコンをクリックした時に出てくるもののことです。ここから拡張機能の設定や操作を行うことができます。拡張機能を使ったことがあれば、一度は目にしたことがあるでしょう。</p>
+
+<p>実は、このポップアップは、<strong>HTMLとCSSでできています</strong>！</p>
+
+<p>ということで、サクッと作っちゃいましょう！</p>
+
+<h2 id="今回作っていくもの">今回作っていくもの</h2>
+<p>前回、「作るものはお楽しみ」と言っておきましたが、今回作っていく拡張機能が、ついに決まりました。</p>
+
+<p>それは、「開いているページのタイトルとURLをコピーする拡張機能」です。</p>
+
+<p>イメージはこんな感じです↓</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/132938279-2307d4da-f781-4d5c-b5e9-2f355cf59ff1.png" alt="拡張機能のイメージ"></p>
+
+<p>では、早速作っていきましょう！</p>
+
+<h2 id="設定ファイルを作る">設定ファイルを作る</h2>
+<p>ブラウザに、「これはこのような拡張機能ですよ」と教えてあげるための、設定ファイルを作っていきます。</p>
+
+<p>拡張機能開発用のフォルダを作って、<code class="language-plaintext highlighter-rouge">manifest.json</code> を作成してください。その後、下のコードを記述してください。</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"タイトルとURLをコピー"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subheading"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ページのタイトルとURLを簡単にコピーできます。"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"manifest_version"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"icons"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"16"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icon_16x16.png"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"48"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icon_48x48.png"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"128"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icon_128x128.png"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"default_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"タイトルとURLをコピー"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"default_icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icon_48x48.png"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"default_popup"</span><span class="p">:</span><span class="w"> </span><span class="s2">"popup.html"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>では、この<code class="language-plaintext highlighter-rouge">manifest.json</code>について解説していきます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">名称</th>
+      <th style="text-align: left">説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">name</code></td>
+      <td style="text-align: left">拡張機能の名称</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">subheading</code></td>
+      <td style="text-align: left">拡張機能の説明。ブラウザの「拡張機能の管理」ページなどに表示される。</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">version</code></td>
+      <td style="text-align: left">拡張機能のバージョン。　1.0→1.0.1→1.0.2→…→1.1→…→2.0 のように新しくなっていく。アップデートのたびにバージョン番号を新しくしていく。</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">manifest_version</code></td>
+      <td style="text-align: left">この設定ファイル(<code class="language-plaintext highlighter-rouge">manifest.json</code>)の仕様のバージョン。ここでは最新の <code class="language-plaintext highlighter-rouge">3</code> を指定。</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">icons</code></td>
+      <td style="text-align: left">拡張機能のアイコン。<code class="language-plaintext highlighter-rouge">16x16</code>、<code class="language-plaintext highlighter-rouge">48x48</code>、<code class="language-plaintext highlighter-rouge">128x128</code>の3種類の大きさを用意しなくてはならない。アイコンの画像は後ほど配布します。</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">action</code></td>
+      <td style="text-align: left">ポップアップに関する設定。<br><br><code class="language-plaintext highlighter-rouge">default_title</code>で、拡張機能のアイコンにカーソルをホバーした時に表示されるテキストを指定。<br><br><code class="language-plaintext highlighter-rouge">default_icon</code>で、ブラウザのURLバーの右側に表示される、拡張機能のアイコンを指定。ここでは、先程の<code class="language-plaintext highlighter-rouge">icons</code>で指定した<code class="language-plaintext highlighter-rouge">48x48</code>の画像を流用。<br><br><code class="language-plaintext highlighter-rouge">default_popup</code>で、ポップアップとして表示させるHTMLファイルを指定。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="アイコン">アイコン</h2>
+<p>アイコンは下のリンクからダウンロードできます。</p>
+
+<p><code class="language-plaintext highlighter-rouge">.zip</code>形式ですので、解凍して拡張機能の開発用フォルダの一番上の階層に、3つの画像を配置してください。</p>
+
+<p><a href="https://github.com/r-40021/raw/main/assets/2021-08-02-icon.zip">ダウンロード</a></p>
+
+<p>今回は、「ICOOON MONO」様からお借りしました。この場をお借りして御礼申し上げます。</p>
+
+<p><a href="https://icooon-mono.com/15757/" target="_blank" rel="noopener noreferrer">本家様</a></p>
+
+<p>なお、現在のフォルダの中身はこのようになっています。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/127797042-5be976a0-d12a-4653-a309-3afe987167fb.png" alt="フォルダ"></p>
+
+<h2 id="html-ファイルの作成">HTML ファイルの作成</h2>
+<p>それでは、HTML ファイルを記述してポップアップを作っていきます。</p>
+
+<p>開発用フォルダの一番上の階層に、<code class="language-plaintext highlighter-rouge">popup.html</code> を作成し、以下のコードを記述してください。</p>
+
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;link rel="stylesheet" type="text/css" href="popup.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class="hello"&gt;Hello, world&lt;/p&gt;
+    &lt;script src="popup.js" defer&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>同様に、<code class="language-plaintext highlighter-rouge">popup.css</code>も作成し、以下のコードを記述してください。</p>
+
+<pre><code class="language-CSS">body{
+    width: 400px;
+}
+.hello{
+    color: #333;
+    font-size: 30px;
+}
+</code></pre>
+
+<p>最後に、<code class="language-plaintext highlighter-rouge">popup.js</code>を作成し、以下のコードを記述してください。</p>
+
+<pre><code class="language-JavaScript">setTimeout(() =&gt; {
+    alert("Hello, world! (from js)");
+}, 700);
+</code></pre>
+
+<p>現時点でのフォルダの中身はこのようになっています。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/127799634-641102be-ddef-43c8-9b93-80e54d0c24a7.png" alt="ファルダの中身"></p>
+
+<h2 id="テストする">テストする</h2>
+<p>ここまで、</p>
+<ul>
+  <li>設定ファイル(<code class="language-plaintext highlighter-rouge">manifest.json</code>)</li>
+  <li>HTMLファイル(<code class="language-plaintext highlighter-rouge">popup.html</code>)</li>
+  <li>CSSファイル(<code class="language-plaintext highlighter-rouge">popup.css</code>)</li>
+  <li>JavaScriptファイル(<code class="language-plaintext highlighter-rouge">popup.js</code>)</li>
+</ul>
+
+<p>を作成してきました。</p>
+
+<p>それでは、ちゃんと動作するかテストしてみましょう。</p>
+
+<p>テストの手順は以下のとおりです。</p>
+
+<ol>
+  <li>Chrome で <code class="language-plaintext highlighter-rouge">chrome://extensions</code> を開く</li>
+  <li>画面右上の「デベロッパーモード」をオン</li>
+  <li>「パッケージ化されていない拡張機能を読み込む」</li>
+  <li>拡張機能の開発用フォルダを「開く」</li>
+</ol>
+
+<p>このように、拡張機能がリストに追加されていれば成功です。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/127798492-4675f125-a582-471d-bef1-b5ac7d2e1051.png" alt="拡張機能のリスト"></p>
+
+<p>リストに追加されていることを確認できたら、URLバーの右側にある「パズルのピースのマーク」をクリックすると表示される拡張機能の一覧に、「タイトルとURLをコピー」という拡張機能が追加されているはずなので、クリックして開いてみてください。</p>
+
+<p>このようなものが表示された後、「Hello, world! (from js)」というアラートが表示されたら完璧です！</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/127800066-956b1e03-1684-4c93-8aa3-8360e03fd955.png" alt="ポップアップ"></p>
+
+<p>なお、拡張機能の一覧のピンのマークをクリックすると、URLバーの右側に固定されるので、今後テストをする際に便利です。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/127799053-701f68c1-05f0-4ebf-86d6-2a9f8843346d.png" alt="拡張機能をピン留め"></p>
+
+<h2 id="まとめ">まとめ</h2>
+<ul>
+  <li>ポップアップ付き拡張機能の作成には、<code class="language-plaintext highlighter-rouge">manifest.json</code>、HTMLファイル、JavaScript ファイル、CSS ファイルが必要である。</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">manifest.json</code>は拡張機能の情報を、ブラウザに伝えるためのファイルである。</li>
+  <li>HTML、CSS、JavaScript でポップアップを作成する。ここは、普通のWebアプリと変わらない。</li>
+  <li>Chromeの「デベロッパーモード」を使えば、拡張機能を簡単にテストできる。</li>
+</ul>
+
+<p>いかがでしたか？</p>
+
+<p>次回は、このポップアップを更に充実させていきます！お楽しみに！</p>
+
+
+    </div>
+
+</article>
+
+      <br><br><br>
+      <p>【「Chrome 拡張機能を作ろう」の記事一覧】</p>
+      <ol>
+      
+        
+      
+      
+        
+        <li><a href="/2021-07/chrome-extension-1">環境構築</a></li>
+        
+      
+      
+        
+        <li>
+<a href="/2021-08/chrome-extension-2">ポップアップ作成</a> (←今ココ)</li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-3">仕様に沿って開発</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-4">コピー機能実装</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-5">権限を減らす</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a></li>
+        
+      
+      
+        
+        <li><a href="/2021-08/chrome-extension-7">Webストアに公開</a></li>
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+      </ol>
+       <div class="post-nav">
+<a class="previous" href="/2021-07/chrome-extension-1" title="Chrome 拡張機能を作って公開しよう①　〜環境構築〜">Chrome 拡張機能を作って公開しよう①　〜環境構築〜</a><a class="next" href="/2021-08/chrome-extension-3" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">Chrome 拡張機能を作って公開しよう③　〜形にする〜</a>
+</div>
+<div class="post-related">
+      <div>関連記事</div>
+      <ul>
+        <li><a class="post-link" href="/2022-05/noto" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">汚いフォントに別れを告げられる拡張機能を作った</a></li>
+<li><a class="post-link" href="/2022-01/snow" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">雪</a></li>
+<li><a class="post-link" href="/2022-10/diary" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">一言日記(2022年10月)</a></li>
+<li><a class="post-link" href="/2022-01/change-icon" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">アイコンを変えました</a></li>
+</ul>
+    </div>
+<!-- begin wwww.htmlcommentbox.com -->
+<div id="HCB_comment_box">
+<a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
+<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+
+
+<!-- customize labels of htmlcommentbox.com -->
+<script>
+  /* This code goes ABOVE the main HTML Comment Box code!
+   replace the text in the single quotes below to customize labels.*/
+  hcb_user = {
+      /* L10N */
+      comments_header : 'コメント',
+      name_label : 'お名前',
+      content_label: 'コメントを入力',
+      submit : 'コメントする',
+      no_comments_msg: 'この記事にはまだコメントがついていません。最初のコメントをしましょう！',
+      add:'コメントを追加',
+      again: 'さらにコメントする',
+      said:'さん',
+      showing:'表示中',
+      to:'返信先: ',
+      website_label:'ウェブサイト(任意)',
+      email_label:'(任意・公開されます)メールアドレス',
+      anonymous:'名無し',
+      mod_label:'(管理人)',
+      subscribe:'返信がついたらメールで通知する',
+      add_image:'画像を追加',
+      are_you_sure:'不適切なコメントとして報告してよろしいですか？',
+      reply:'返信',
+      flag:'報告',
+      like:'いいね',
+      /* dates */
+      days_ago:'日前',
+      hours_ago:'時間前',
+      minutes_ago:'分前',
+      within_the_last_minute:'数秒前',
+      msg_thankyou:'コメントありがとうございます！',
+      msg_approval:'このコメントは許可次第反映されます。',
+      msg_approval_required:'コメントありがとうございます！このコメントは管理人が許可次第反映されます。',
+      err_bad_html:'コメントに不正な HTML タグが含まれています。',
+      err_bad_email:'有効なメールアドレスを入力してください。',
+      err_too_frequent:'コメントを連続投稿するには数秒待つ必要があります。',
+      err_comment_empty:'コメントが空欄のため、投稿されませんでした。',
+      err_denied:'このコメントは却下されました。',
+      err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
+      err_spam:'スパムと認定されたためこのコメントは削除されました。',
+      err_blocked:'サイトポリシーによりこのコメントは削除されました。',
+  
+      /* SETTINGS */
+      MAX_CHARS: 256,
+      PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+      ON_COMMENT: function(){}, /* Function to call after commenting. */
+      RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
+  };
+  </script>
+  <!-- done customizing labels of htmlcommentbox.com -->
+
+  <style>
+    #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+      transition: opacity .3s;
+    }
+    #HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
+      opacity: .7;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .btn,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn {
+      background:none; /* Clear twitter bootstrap style. */
+      border: 0;
+      background-color: #fff;
+      color: #0e0e0e;
+      transition: opacity 0.2s;
+    }
+    html[data-theme="dark"] #HCB_comment_box blockquote {
+      color:#bbb;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .hcb-door-in {
+      filter: invert(100%);
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form_content,html[data-theme="dark"] #HCB_comment_box #hcb_form_email,html[data-theme="dark"] #HCB_comment_box #hcb_form_name,html[data-theme="dark"] #HCB_comment_box #hcb_form_website {
+      background-color:#555;
+      border: solid 1px #777;
+      color: #ddd;
+    }
+  </style>
+</section>
+</div>
+   
+
+  </section>
+
+
+  
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">目次</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>© 2022 Frog</div>
+       <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat" target="_blank" rel="noopener noreferrer">Yat Theme</a>.</div>
+       <div class="footer-col rss-subscribe">
+<a href="/feed.xml">RSS 購読</a> ・ <a href="https://frogapp.net/privacy">プライバシーポリシー</a>
+</div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</body>
+</html>

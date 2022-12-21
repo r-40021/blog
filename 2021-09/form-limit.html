@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="10分で定員付きの Google フォームを作ろう＜コピペ可＞">
+  <meta property="twitter:title" content="10分で定員付きの Google フォームを作ろう＜コピペ可＞">
+  <title>10分で定員付きの Google フォームを作ろう＜コピペ可＞ | カエル文書箱</title>
+  
+  <meta property="og:image" content="https://blog.frogapp.net//assets/images/banners/ogp.jpg">
+  <meta property="twitter:image" content="https://blog.frogapp.net//assets/images/banners/ogp.jpg">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.1">
+<meta property="og:title" content="10分で定員付きの Google フォームを作ろう＜コピペ可＞">
+<meta name="author" content="Frog">
+<meta property="og:locale" content="ja">
+<meta name="description" content="今回やったこと Google フォームで、「先着何人」というフォームを作りたい場面で使えるプログラムを作りました。">
+<meta property="og:description" content="今回やったこと Google フォームで、「先着何人」というフォームを作りたい場面で使えるプログラムを作りました。">
+<link rel="canonical" href="https://blog.frogapp.net/2021-09/form-limit">
+<meta property="og:url" content="https://blog.frogapp.net/2021-09/form-limit">
+<meta property="og:site_name" content="カエル文書箱">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-09-16T00:00:00+09:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="10分で定員付きの Google フォームを作ろう＜コピペ可＞">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Frog"},"dateModified":"2021-09-16T00:00:00+09:00","datePublished":"2021-09-16T00:00:00+09:00","description":"今回やったこと Google フォームで、「先着何人」というフォームを作りたい場面で使えるプログラムを作りました。","headline":"10分で定員付きの Google フォームを作ろう＜コピペ可＞","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.frogapp.net/2021-09/form-limit"},"url":"https://blog.frogapp.net/2021-09/form-limit"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- OGP -->
+  <meta property="og:title" content="10分で定員付きの Google フォームを作ろう＜コピペ可＞">
+  <meta property="twitter:title" content="10分で定員付きの Google フォームを作ろう＜コピペ可＞">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta property="og:image" content="https://blog.frogapp.net//assets/images/banners/ogp.jpg">
+  <meta property="twitter:image" content="https://blog.frogapp.net//assets/images/banners/ogp.jpg">
+   
+    <meta property="og:type" content="article">
+  <link rel="shortcut icon" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=">
+<link type="application/atom+xml" rel="alternate" href="https://blog.frogapp.net/feed.xml" title="カエル文書箱">
+<!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+  <img class="site-favicon" title="カエル文書箱" src="/assets/images/logo.png" onerror="this.style.display='none'">
+  カエル文書箱
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/archives.html">ARCHIVES</a><a class="page-link" href="/categories.html">CATEGORIES</a><a class="page-link" href="/tags.html">TAGS</a>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+      <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script data-cfasync="false">
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">10分で定員付きの Google フォームを作ろう＜コピペ可＞</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2021-09-16T00:00:00+09:00" itemprop="datePublished"><svg class="ico-svg" aria-label="公開日" title="公開日"><use xlink:href="/assets/symbol-defs.svg#event"></use></svg> 2021/09/16
+    </time>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><svg class="ico-svg" aria-label="読了時間の目安" title="読了時間の目安"><use xlink:href="/assets/symbol-defs.svg#schedule"></use></svg>  27 分</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/tags.html#Google">#Google</a><a class="post-tag" href="/tags.html#GAS">#GAS</a><a class="post-tag" href="/tags.html#JavaScript">#JavaScript</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+      
+      
+      
+
+      <h2 id="今回やったこと">今回やったこと</h2>
+<p>Google フォームで、「先着何人」というフォームを作りたい場面で使えるプログラムを作りました。</p>
+
+<p>定員付きのフォームの作り方は他のサイトでも紹介されていますが、私が作ったものは、</p>
+
+<ul>
+  <li>フォームの説明欄に残り人数を表示できる</li>
+  <li>枠が残り少なくなったときにだけ、フォームの説明欄に残り人数を表示するようにできる</li>
+  <li>ITに詳しくない人でも保守・管理が簡単→共同編集に便利</li>
+</ul>
+
+<p>といった特徴があり、非常に便利なものになっています。</p>
+
+<p>では、早速作っていきましょう！</p>
+
+<h2 id="必要なもの">必要なもの</h2>
+
+<ul>
+  <li>Google アカウント</li>
+  <li>Google フォームに関するスキル(フォームを作って、結果の集計ができる程度)</li>
+  <li>パソコン(一度作ってしまえば、保守管理はスマホからも行えます)</li>
+</ul>
+
+<h2 id="フォームを作る">フォームを作る</h2>
+
+<p>まずは、<a href="https://docs.google.com/forms/" target="_blank" rel="noopener noreferrer">Google フォーム</a> を開いてください。</p>
+
+<p>フォームは、既存のものでも、新規のものでも構いません。</p>
+
+<p>この記事では、適当に作ったこのフォームを使って説明していきます。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133555756-5d5ef45d-c902-44dd-95f9-6d41bd9d4eca.png" alt="適当に作ったフォーム"></p>
+
+<p>ただし、いくつか設定して欲しい箇所があります。</p>
+
+<ol>
+  <li>フォーム終了後のメッセージ</li>
+  <li>「別の回答を送信するためのリンクを表示」をオフ、もしくは「回答を1回に制限する」をオン</li>
+</ol>
+
+<p>まず、上のバーより「回答」をクリックしてください。</p>
+
+<p>次に、「回答を受付中」の右のスイッチをクリックし、「回答を受け付けていません」の状態にしてください。</p>
+
+<p>そして、「回答者へのメッセージ」と書いてある下のテキストボックスに、任意のメッセージを入力してください。これは、定員に達してフォームの受付が終了した際に、ユーザーに表示されるものです(下の画像を参照)。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133564206-c1d2463c-fe93-45bc-a171-dff451c3d63f.png" alt="終了メッセージ"></p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133564390-07ce9e94-2e6e-43a7-bf1e-ea2747231d67.png" alt="設定手順"></p>
+
+<p>回答者へのメッセージを入力し終えたら、必要に応じて「回答を受け付けていません」の右のスイッチをクリックして「回答を受付中」に戻してください。</p>
+
+<p>それでは、2番の設定を始めます。</p>
+
+<p>上のバーから「設定」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133563672-d2a23fa2-f46b-4186-bfda-e675b5045245.png" alt="フォームの設定画面"></p>
+
+<p>その後、「別の回答を送信するためのリンクを表示」をオフ、もしくは「回答を1回に制限する」をオンにします。</p>
+
+<p>後者はGoogleアカウントを使用して回答を1回に制限するため、回答者が Google アカウントを所持している必要があります。そのため、学校や会社などで Google Workspaces を利用している場合などに最適です。</p>
+
+<p>一方、前者は厳格に回答を1回に制限することはできないものの、Google アカウントへのログインが必要ありません。</p>
+
+<p>以下の手順に従って、どちらか一方、もしくは両方の設定を行ってください。</p>
+
+<h3 id="別の回答を送信するためのリンクを表示をオフにする場合">「別の回答を送信するためのリンクを表示」をオフにする場合</h3>
+
+<p>設定画面を開いたら、プレゼンテーション＞「別の回答を送信するためのリンクを表示」の右側のスイッチをオフ のように操作してください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133565390-3b450917-4bb9-4590-aa69-062352c0b992.png" alt="設定手順"></p>
+
+<h3 id="回答を1回に制限するをオンにする場合">「回答を1回に制限する」をオンにする場合</h3>
+
+<p>設定画面を開いたら、回答＞「回答を 1 回に制限する」の右側のスイッチをオフ のように操作してください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133565700-586a6655-8833-49a3-81b7-724a68fc0e44.png" alt="設定手順"></p>
+
+<p>これら以外の設定は、ご自由にどうぞ。</p>
+
+<h2 id="プログラムを記述する">プログラムを記述する</h2>
+
+<p>まず、右上の縦に3つ並んでいるドットをクリックし、「スクリプトエディタ」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133567550-01708788-5490-40fe-89fa-fbbbfdabe98c.png" alt="スクリプトエディタを開く"></p>
+
+<p>※「現在、ファイルを開くことができません。」と表示された場合は、一旦ログインしているすべての Google アカウントからログアウトし、その後フォームを作成した Google アカウントだけログインし直してみてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133556475-e76ba572-a838-44ea-b5c1-30855b1d94d6.png" alt="スクリプト編集画面"></p>
+
+<p>このような画面が表示されたら、すでに記述されているもの(<code class="language-plaintext highlighter-rouge">function myFunction() { ~</code> の部分)をすべて消してください。</p>
+
+<p>その後、以下のコードをすべてコピペしてください。</p>
+
+<pre><code class="language-JavaScript">`use strict`
+
+const propaty_display_limit = PropertiesService.getScriptProperties().getProperty("DISPLAY_LIMIT");
+const propaty_max = Math.floor(PropertiesService.getScriptProperties().getProperty("MAX"));
+const propaty_old = PropertiesService.getScriptProperties().getProperty("old");
+let LIMIT_COUNT = propaty_max || propaty_max === 0 ? propaty_max : 5;//定員
+let old_dis = propaty_old ? propaty_old : "";//古い定員の残り人数通知
+let display_limit = Math.floor(propaty_display_limit || propaty_display_limit === 0 ? formatLimit(propaty_display_limit) : -1);//残りの枠を表示するしきい値
+const kaigyo = "\n\n---------------------------------\n\n";//残り枠数のあとに追加される文字列
+
+
+function endFormCheck(changed) {
+  const form = FormApp.getActiveForm();//アクティブなフォーム
+  const remaining = LIMIT_COUNT - form.getResponses().length;//残り人数
+  const displayRemaining = remaining &lt; 0 ? 0 : remaining;//残り人数が負の場合は0にする
+  if ((display_limit === -1 || remaining &lt;= display_limit) &amp;&amp; Number(display_limit !== 0)) {
+    const description = `定員${LIMIT_COUNT}名のところ、これまでに${form.getResponses().length}名が申し込みました。\n残りは${displayRemaining}枠です。` + (remaining &lt; 0 ? `(超過${form.getResponses().length - LIMIT_COUNT})` : "");//定員があと何人か
+    if (old_dis &amp;&amp; form.getDescription().indexOf(old_dis) !== -1) {
+      form.setDescription(form.getDescription().replace(old_dis, description));//概要文を書き換え
+    } else {
+      form.setDescription(description + kaigyo + form.getDescription());//新規
+    }
+    PropertiesService.getScriptProperties().setProperty("old", description);
+  } else if (old_dis &amp;&amp; form.getDescription().indexOf(old_dis) !== -1) {
+    form.setDescription(form.getDescription().replace(old_dis + kaigyo, ""));//概要文を書き換え
+  }
+  if (form.getResponses().length &gt;= LIMIT_COUNT) {
+    if (changed === "changed" &amp;&amp; form.isAcceptingResponses()) {
+      FormApp.getUi().alert(`回答を締め切りました。\n現在の定員は${LIMIT_COUNT}名です`);//定員の変更によってフォームが閉鎖された場合に、ポップアップで通知
+    }
+    form.setAcceptingResponses(false);
+  } else if (changed === "changed") {
+    if (!form.isAcceptingResponses()) {
+      /* 定員に余裕がある場合には、回答の収集を再開することを提案 */
+      const ui = FormApp.getUi();
+      const alert = ui.alert("回答の収集を再開", `回答の収集を再開しますか？\n現在の定員は${LIMIT_COUNT}人、残りは${remaining}枠です。`, ui.ButtonSet.YES_NO);
+      if (alert === ui.Button.YES) {
+        form.setAcceptingResponses(true);
+      }
+    } else if ((display_limit !== -1 &amp;&amp; remaining &gt; display_limit) || display_limit === 0) {
+    /*フォームの説明欄に残りの人数が記述されない場合は、ポップアップでお知らせ*/
+      FormApp.getUi().alert(`定員${LIMIT_COUNT}名\n残り${LIMIT_COUNT - form.getResponses().length}枠`);
+    }
+
+  }
+}
+
+function onOpen() {
+  const ui = FormApp.getUi(); // Uiクラスを取得する
+  const menu = ui.createMenu('定員制御');  // Uiクラスからメニューを作成する
+  menu.addItem('定員を変更', 'setMax');   // メニューにアイテムを追加する
+  menu.addItem('残りの枠数を表示するしきい値を変更', 'setDisplayLimit');
+  menu.addItem('最新の状態に更新', 'refresh');   // メニューにアイテムを追加する
+  menu.addToUi();// メニューをUiクラスに追加する
+}
+
+function refresh() {
+  endFormCheck("changed");//更新用
+}
+
+function setMax() {
+  /* 定員を変更 */
+  const form = FormApp.getActiveForm();//アクティブなフォーム
+  const ui = FormApp.getUi();
+  const title = '定員の設定';
+  const body = `半角数字で定員を入力してください。\n現在の定員は${LIMIT_COUNT}人で、残りは${LIMIT_COUNT - form.getResponses().length}枠です。`
+  const prompt = ui.prompt(title, body, ui.ButtonSet.OK_CANCEL);//プロンプトを表示
+  const text = prompt.getResponseText();
+  if (prompt.getSelectedButton() === ui.Button.OK) {
+    if (!isNaN(text) &amp;&amp; Number(text) &gt;= 0) {
+    /*数字であることが確認された場合の処理*/
+      if (!text) return;//空欄だった場合
+      LIMIT_COUNT = Math.floor(Number(text));
+      PropertiesService.getScriptProperties().setProperty("MAX", Math.floor(Number(text)));
+      display_limit = Math.floor(propaty_display_limit || propaty_display_limit === 0 ? formatLimit(propaty_display_limit) : 0);
+      refresh();
+      return;
+    } else {
+      /* 数字じゃなかったら */
+      const ui2 = FormApp.getUi();
+      const title2 = 'むむ？';
+      const body2 = Number(text) &lt; 0 ? '0以上の数を半角で入力してください。' : '半角数字で入力してください。'
+      const alert2 = ui2.alert(title2, body2, ui2.ButtonSet.OK);
+      if (alert2 === ui2.Button.OK) setMax();
+    }
+  }
+}
+
+function setDisplayLimit() {
+  /* しきい値を変更 */
+  const form = FormApp.getActiveForm();//アクティブなフォーム
+  const ui = FormApp.getUi();
+  const title = '残りの枠数を表示するしきい値を設定';
+  const body = `残りの枠数がいくつ以下になったら、回答者数・残りの枠数をフォームの概要文に表示するかを半角数字で入力してください。\n例）定員が100人で、残り5枠以下になったら残りの枠数をフォームの概要文に表示したい場合→「5」と入力する\n\nまた、残りの枠数が定員の○%以下になったら、というように設定することもできます。\n例）残りの枠数が定員の20%以下になったら残りの枠数をフォームの概要文に表示したい場合→「20%」と入力する\n\n概要文に常に残りの枠数を表示したい場合は、「-1」と入力してください。\n概要文に残りの枠数を表示させない場合は、「0」と入力してください。\n\n現在の設定は「${/%/.test(propaty_display_limit) ? propaty_display_limit : Math.floor(Number(propaty_display_limit))}」です。\n現在の定員は${LIMIT_COUNT}人、残りは${LIMIT_COUNT - form.getResponses().length}枠です。\n\n`;
+  const prompt = ui.prompt(title, body, ui.ButtonSet.OK_CANCEL);//プロンプトを表示
+  const text = prompt.getResponseText();
+  if (prompt.getSelectedButton() === ui.Button.OK) {
+    if (/%/.test(text)) {
+      const onlyNum = text.replace("%", "");
+      if (!isNaN(onlyNum) &amp;&amp; Number(onlyNum) &gt;= 0 &amp;&amp; Number(onlyNum &lt;= 100)) {
+      /*パーセントで入力された場合*/
+        if (!onlyNum) return;
+        display_limit = formatLimit(text);//しきい値を変更
+        PropertiesService.getScriptProperties().setProperty("DISPLAY_LIMIT", text);//しきい値を保存
+        refresh();
+        return
+      }
+    } else if (!isNaN(text) &amp;&amp; Number(text) &gt;= -1) {
+      if (!text) return;//空欄だった場合
+      display_limit = formatLimit(Number(text));
+      PropertiesService.getScriptProperties().setProperty("DISPLAY_LIMIT", Math.floor(Number(text)));
+      endFormCheck();
+      return;
+    } else {
+      /* 数字じゃなかったら */
+      const ui2 = FormApp.getUi();
+      const title2 = 'むむ？';
+      const body2 = "数字または割合(%)を半角で正確に入力してください。"
+      const alert2 = ui2.alert(title2, body2, ui2.ButtonSet.OK);
+      if (alert2 === ui2.Button.OK) setDisplayLimit();
+    }
+  }
+}
+
+function formatLimit(int) {
+  if (/%/.test(int)) {
+  /*％を実数に*/
+    return Math.floor(LIMIT_COUNT * (Number(int.replace("%", "")) / 100));
+  } else {
+  /*%でなければ、小数点以下を切り捨てて戻す*/
+    return Math.floor(int);
+  }
+}
+
+</code></pre>
+
+<p>ついでにプロジェクトの名前も変えておきましょう。</p>
+
+<p>左上の「無題のプロジェクト」と書いてある部分をクリックすると表示されるポップアップに、好きな名前を入力してください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133560684-52644e39-e471-429c-b987-b44db83a056c.png" alt="image"></p>
+
+<p>ここまで書いたら、保存してください。</p>
+
+<p>「実行」や「デバッグ」などが並んでいる列のフロッピーディスクのアイコンが保存ボタンです。</p>
+
+<p>キーボードの Ctrl+S でも保存できます。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133557894-f7e775f9-6eb4-43fc-b11e-262403203766.png" alt="保存"></p>
+
+<p>プログラミングを勉強されている方のために、少し解説します。(とりあえずものが作れればいいという方は読み飛ばしてもらって結構です)</p>
+
+<p>これは、Google Apps Scriptというものです。</p>
+
+<p>JavaScript がベースになっており、Google の色々なサービスを(ときには外部サービスとも)連携させることができます。</p>
+
+<p>このコードでは、フォームの回答数によって、残りの枠数を表示させたり、回答の収集を停止したりしています。</p>
+
+<p>どのコードがどのような動作をしているかはコメントに書いておいたので、是非参考にしてみてください。</p>
+
+<h2 id="トリガーをセットする">トリガーをセットする</h2>
+<p>トリガーは、「動作を予約する」時に使う機能です。</p>
+
+<p>上記のコードでは、フォームに新たな回答が来ても何も処理が行われないので、フォームに回答が届いたら、定員に達していないかの確認処理・概要文の更新処理を行うようにします。</p>
+
+<p>左側のメニューから、「トリガー」をクリックしてください。</p>
+
+<p>(カーソルを乗せるとメニューが広がります。)</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133558176-81758725-2bc8-43d5-b929-6a80a7583c0d.png" alt="メニューからトリガーを選ぶ"></p>
+
+<p>画面が変わったら、右下の「トリガーを追加」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133559955-1375b59b-4493-401d-a31e-55a543933f64.png" alt="トリガーを追加"></p>
+
+<p>このとき、画面左下にこのようなポップアップが表示されたら、先程書いたプログラムが保存されていないということなので、青字の「保存」をクリックしてプログラムを保存してください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133559822-d1afeb26-bcb8-4d4a-80a5-28f80cb3090f.png" alt="プログラム未保存の状態"></p>
+
+<p>実行する関数→ 「endFormCheck」</p>
+
+<p>実行するデプロイ→「Head」</p>
+
+<p>イベントのソース→「フォームから」</p>
+
+<p>イベントの種類→「フォーム送信時」</p>
+
+<p>を選んで、右下の「保存」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133558445-c4b72802-7221-4a08-a947-855bb9f42800.png" alt="トリガーをセット"></p>
+
+<p>少し待つと Google アカウントのログイン画面が表示されます。</p>
+
+<p>自分のアカウントをクリックしてください。</p>
+
+<p>この画面が表示されたら、「許可」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133560019-785a56b7-2b79-4119-a670-533c783d2d27.png" alt="権限を許可"></p>
+
+<p>「このアプリは確認されていません」との警告が出る場合がありますが、これは普通のことです。</p>
+
+<p>私の環境では再現できなかったのですが(Google に開発者登録をしているからかも)、もしそのような警告が出た場合は、下のサイトの手順通りに対処してください。</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://auto-worker.com/?p=609#toc_id_2" target="_blank" rel="noopener noreferrer">Google Apps Script(GAS)入門 初回コード実行時の承認・許可方法を解説【図説】</a></td>
+      <td>AutoWorker〜Google Apps Script(GAS)とSikuliで始める業務改善入門&lt;/a&gt;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>※私のコードが信用できないという方は、「安全なページに戻る」をクリックしても構いません。</p>
+
+<h2 id="使ってみる">使ってみる</h2>
+<p>ここまで終えたら、フォームの編集画面を再読込してください。</p>
+
+<p>すると、右上にパズルのピースのアイコンが表示されたと思います。</p>
+
+<p>「定員付きフォーム」に関する設定は、パズルのアイコン＞「定員制御」からすべて行えます。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133560462-1312cfa9-80fb-49ee-b0d1-5604f4abad0b.png" alt="定員制御"></p>
+
+<p>設定画面はこんな感じです。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133561915-b753151b-1f04-47eb-ad84-2416abd80b04.png" alt="設定画面"></p>
+
+<h3 id="最初にやること">最初にやること</h3>
+<p>まず最初に、「定員を変更」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133561983-ad986396-9041-4c62-9b4e-bf769a8dac0f.png" alt="設定画面から定員を変更を選択"></p>
+
+<p>表示されたポップアップに、設定したい定員を半角数字で入力し、「OK」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133561523-ec4f49ab-4002-4e78-bb49-c37aa81e57d3.png" alt="定員設定"></p>
+
+<p>次に、概要文に残りの枠数を表示させるかどうかの設定をします。</p>
+
+<p>先程の設定画面から、「残りの枠数を表示するしきい値を変更」をクリックしてください。</p>
+
+<p><img src="https://user-images.githubusercontent.com/75155258/133562142-df80837b-d1f6-4c9d-9a93-0b20985c88ea.png" alt="しきい値を設定"></p>
+
+<p>このプログラムでは、フォームの概要文に「あと何枠です」というように表示させることができます。</p>
+
+<p>しかし、あまり枠が埋まっていないことが分かると、申し込む気がなくなってしまう人もいます。(特に日本人はその傾向が強いと言われています。)</p>
+
+<p>そこで、枠が残り少なくなったら、「あと何枠です」という表示を開始するように設定できます。</p>
+
+<p>ここでは、「数」か「割合」で設定できます。</p>
+
+<p>まずは、数の場合。これは単純で、「空きが何枠以下になったら、概要文への表示を開始する」ということです。</p>
+
+<p>例えば、空きが10枠以下になったら概要文に「残り○枠です」と表示させたい場合は、ポップアップに「10」と入力してください。</p>
+
+<p>次に、割合の場合。「空き枠が定員の何％以下になったら、概要分への表示を開始する」ということです。</p>
+
+<p>例えば、定員が50人のフォームで、空きが定員の10%の5人以下になった場合に「残り○枠です」と概要文に表示させたい場合は、ポップアップに「10%」と入力してください。</p>
+
+<p>最後に、特殊な場合です。</p>
+
+<p>常に残りの枠数を表示させたい場合は「-1」を、申込数に問わず残りの枠数を表示させたくない場合は「0」を入力してください。</p>
+
+<p>入力し終えたら、「OK」をクリックしてください。もし、「むむ？」という警告が表示された場合は、その数字またはパーセンテージが有効ではないため、「半角で」入力し直してください。</p>
+
+<h3 id="設定を変更する">設定を変更する</h3>
+<p>一度設定した内容を変更したい場合も、上記と同じ手順で行えます。</p>
+
+<h2 id="まとめ">まとめ</h2>
+<p>いかがでしたか？</p>
+
+<p>久しぶりのGASだったので、色々調べながらの開発でしたが、楽しかったです。</p>
+
+<p>ぜひ、本日紹介したプログラムを使ってみてください！</p>
+
+<p>報告不要・クレジット表記不要・商用利用可　です。</p>
+
+<p>なお、ここで紹介したコードは<a href="https://github.com/r-40021/form_limit" target="_blank" rel="noopener noreferrer">GitHub</a>で公開しています。</p>
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/2021-09/aviutl-deview" title="Aviutl の勉強をはじめました">Aviutl の勉強をはじめました</a><a class="next" href="/2021-09/github-education" title="学生は無料で GitHub Pro が使える？特典や申請方法などを解説！">学生は無料で GitHub Pro が使える？特典や申請方法などを解説！</a>
+</div>
+<div class="post-related">
+      <div>関連記事</div>
+      <ul>
+        <li><a class="post-link" href="/2022-01/change-icon" title="学生は無料で GitHub Pro が使える？特典や申請方法などを解説！">アイコンを変えました</a></li>
+<li><a class="post-link" href="/2021-08/chrome-extension-2" title="学生は無料で GitHub Pro が使える？特典や申請方法などを解説！">Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜</a></li>
+<li><a class="post-link" href="/2022-10/canonicalize" title="学生は無料で GitHub Pro が使える？特典や申請方法などを解説！">Cloudflare Pages で WWW あり・なしを正規化する</a></li>
+<li><a class="post-link" href="/2022-01/windows11-context" title="学生は無料で GitHub Pro が使える？特典や申請方法などを解説！">【ソフト不要】Windows 11 のコンテキストメニューを従来の見た目に戻す</a></li>
+</ul>
+    </div>
+<!-- begin wwww.htmlcommentbox.com -->
+<div id="HCB_comment_box">
+<a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0">
+<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%244K.wn4jYQIUngXrPjMlfG0"+"&opts=17182&num=10&ts=1664079968239");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+
+
+<!-- customize labels of htmlcommentbox.com -->
+<script>
+  /* This code goes ABOVE the main HTML Comment Box code!
+   replace the text in the single quotes below to customize labels.*/
+  hcb_user = {
+      /* L10N */
+      comments_header : 'コメント',
+      name_label : 'お名前',
+      content_label: 'コメントを入力',
+      submit : 'コメントする',
+      no_comments_msg: 'この記事にはまだコメントがついていません。最初のコメントをしましょう！',
+      add:'コメントを追加',
+      again: 'さらにコメントする',
+      said:'さん',
+      showing:'表示中',
+      to:'返信先: ',
+      website_label:'ウェブサイト(任意)',
+      email_label:'(任意・公開されます)メールアドレス',
+      anonymous:'名無し',
+      mod_label:'(管理人)',
+      subscribe:'返信がついたらメールで通知する',
+      add_image:'画像を追加',
+      are_you_sure:'不適切なコメントとして報告してよろしいですか？',
+      reply:'返信',
+      flag:'報告',
+      like:'いいね',
+      /* dates */
+      days_ago:'日前',
+      hours_ago:'時間前',
+      minutes_ago:'分前',
+      within_the_last_minute:'数秒前',
+      msg_thankyou:'コメントありがとうございます！',
+      msg_approval:'このコメントは許可次第反映されます。',
+      msg_approval_required:'コメントありがとうございます！このコメントは管理人が許可次第反映されます。',
+      err_bad_html:'コメントに不正な HTML タグが含まれています。',
+      err_bad_email:'有効なメールアドレスを入力してください。',
+      err_too_frequent:'コメントを連続投稿するには数秒待つ必要があります。',
+      err_comment_empty:'コメントが空欄のため、投稿されませんでした。',
+      err_denied:'このコメントは却下されました。',
+      err_unknown:'原因不明エラーが発生したため、コメントが投稿されませんでした。管理人にこの問題を報告してください。',
+      err_spam:'スパムと認定されたためこのコメントは削除されました。',
+      err_blocked:'サイトポリシーによりこのコメントは削除されました。',
+  
+      /* SETTINGS */
+      MAX_CHARS: 256,
+      PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+      ON_COMMENT: function(){}, /* Function to call after commenting. */
+      RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
+  };
+  </script>
+  <!-- done customizing labels of htmlcommentbox.com -->
+
+  <style>
+    #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+      transition: opacity .3s;
+    }
+    #HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
+      opacity: .7;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .btn,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn {
+      background:none; /* Clear twitter bootstrap style. */
+      border: 0;
+      background-color: #fff;
+      color: #0e0e0e;
+      transition: opacity 0.2s;
+    }
+    html[data-theme="dark"] #HCB_comment_box blockquote {
+      color:#bbb;
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form .hcb-door-in {
+      filter: invert(100%);
+    }
+    html[data-theme="dark"] #HCB_comment_box #hcb_form_content,html[data-theme="dark"] #HCB_comment_box #hcb_form_email,html[data-theme="dark"] #HCB_comment_box #hcb_form_name,html[data-theme="dark"] #HCB_comment_box #hcb_form_website {
+      background-color:#555;
+      border: solid 1px #777;
+      color: #ddd;
+    }
+  </style>
+</section>
+</div>
+   
+
+  </section>
+
+
+  
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">目次</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>© 2022 Frog</div>
+       <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat" target="_blank" rel="noopener noreferrer">Yat Theme</a>.</div>
+       <div class="footer-col rss-subscribe">
+<a href="/feed.xml">RSS 購読</a> ・ <a href="https://frogapp.net/privacy">プライバシーポリシー</a>
+</div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</body>
+</html>
