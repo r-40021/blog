@@ -17,7 +17,7 @@ jobs:
           bundler-cache: true # Runs 'bundle install' and caches installed gems automatically
 
       - name: Build with Jekyll
-        run: JEKYLL_ENV=production bundle exec jekyll build
+        run: JEKYLL_ENV=production bundle exec jekyll build && cp _headers _site/_headers
 
       - name: Deploy to a branch
         uses: peaceiris/actions-gh-pages@v3
