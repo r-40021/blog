@@ -130,7 +130,6 @@ paginate: 30
 # timezone
 timezone: Asia/Tokyo
 
-
 # Build settings
 # highlighter: none
 markdown: kramdown
