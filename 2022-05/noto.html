@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -239,141 +237,82 @@
           <img src="/assets/images/2022/05/21/promo.jpg" width="100%" loading="eager" alt="フォントを置き換えて見やすく">
            <figcaption></figcaption>
        </figure>
-     <p>ブラウジングをしていると、文字がギザギザのページに遭遇することはありませんか？そんな悩みを解決する拡張機能を開発したので、今回はそのご紹介です。
-</p>
+     <p>ブラウジングをしていると、文字がギザギザのページに遭遇することはありませんか？そんな悩みを解決する拡張機能を開発したので、今回はそのご紹介です。</p>
 <div class="info-card">
 この記事の対象は Windows ユーザーです。
 Mac / Linux ユーザーにはほとんど関係ない内容です。
 </div>
 <h2 id="どんな拡張機能か">どんな拡張機能か</h2>
-<p>前述の通り、<strong>Web サイトの汚い文字を綺麗にする</strong>拡張機能です。
-</p>
-<p>インストールはこちらから
-</p>
-<p>Chrome→ <a href="https://chrome.google.com/webstore/detail/oecglhldbofcklanmhckefiflhfhabdd" target="_blank" rel="noopener noreferrer">https://chrome.google.com/webstore/detail/oecglhldbofcklanmhckefiflhfhabdd</a>
-</p>
-<p>Firefox→ <a href="https://addons.mozilla.org/ja/firefox/addon/replace-with-noto/" target="_blank" rel="noopener noreferrer">https://addons.mozilla.org/ja/firefox/addon/replace-with-noto/</a>
-</p>
-<p>ソースコード→ <a href="https://github.com/r-40021/replace-font" target="_blank" rel="noopener noreferrer">https://github.com/r-40021/replace-font</a>
-</p>
-<p>インストールするだけで使えます。
-</p>
+<p>前述の通り、<strong>Web サイトの汚い文字を綺麗にする</strong>拡張機能です。</p>
+<p>インストールはこちらから</p>
+<p>Chrome→ <a href="https://chrome.google.com/webstore/detail/oecglhldbofcklanmhckefiflhfhabdd" target="_blank" rel="noopener noreferrer">https://chrome.google.com/webstore/detail/oecglhldbofcklanmhckefiflhfhabdd</a></p>
+<p>Firefox→ <a href="https://addons.mozilla.org/ja/firefox/addon/replace-with-noto/" target="_blank" rel="noopener noreferrer">https://addons.mozilla.org/ja/firefox/addon/replace-with-noto/</a></p>
+<p>ソースコード→ <a href="https://github.com/r-40021/replace-font" target="_blank" rel="noopener noreferrer">https://github.com/r-40021/replace-font</a></p>
+<p>インストールするだけで使えます。</p>
 <h2 id="拡張機能がしていること">拡張機能がしていること</h2>
-<p>そもそも、なぜ一部の Web サイトの文字はギザギザしているのでしょうか？
-</p>
-<p>多くは、フォントとして MS ゴシック を使用しているためです。
-</p>
-<p>この MS ゴシック、実は30年前に作られた古いフォントです。
-</p>
-<p>低解像度のディスプレイでも読みやすいようにと開発されたフォントで、現在の高解像度のディスプレイとの相性が悪いのです。
-</p>
-<p>「じゃあ、なぜ未だに MS ゴシックを採用しているサイトが有るのか」と思うかもしれません。
-</p>
-<p>理由は色々ありますが、
-</p>
+<p>そもそも、なぜ一部の Web サイトの文字はギザギザしているのでしょうか？</p>
+<p>多くは、フォントとして MS ゴシック を使用しているためです。</p>
+<p>この MS ゴシック、実は30年前に作られた古いフォントです。</p>
+<p>低解像度のディスプレイでも読みやすいようにと開発されたフォントで、現在の高解像度のディスプレイとの相性が悪いのです。</p>
+<p>「じゃあ、なぜ未だに MS ゴシックを採用しているサイトが有るのか」と思うかもしれません。</p>
+<p>理由は色々ありますが、</p>
 <ul>
- <li>過去の慣習が残っている
- </li>
-<li>更新がしばらく止まっている
-</li>
+ <li>過去の慣習が残っている</li>
+ <li>更新がしばらく止まっている</li>
 </ul>
-<p>等があると思います。
-</p>
-<p>また、Windows に未だに MS ゴシックが搭載されているのは互換性維持のためです。
-</p>
-<p>そこで、この拡張機能はこの MS ゴシック を、読みやすくてきれいな <strong>Noto Sans</strong> に置き換える働きをします。
-</p>
+<p>等があると思います。</p>
+<p>また、Windows に未だに MS ゴシックが搭載されているのは互換性維持のためです。</p>
+<p>そこで、この拡張機能はこの MS ゴシック を、読みやすくてきれいな <strong>Noto Sans</strong> に置き換える働きをします。</p>
 <h2 id="対象は-ms-ゴシックだけでなく">対象は MS ゴシックだけでなく…</h2>
-<p>当初は MS ゴシックのみを置き換える拡張機能の予定でしたが、翌々考えてみれば他にも読みづらいフォントは色々あります。
-</p>
-<p>例えば、
-</p>
+<p>当初は MS ゴシックのみを置き換える拡張機能の予定でしたが、翌々考えてみれば他にも読みづらいフォントは色々あります。</p>
+<p>例えば、</p>
 <ul>
- <li>游ゴシック
- </li>
-<li>メイリオ
-</li>
+ <li>游ゴシック</li>
+ <li>メイリオ</li>
 </ul>
-<p>等です。
-</p>
-<p>メイリオについては意外に思うかもしれませんが、ディスプレイによってはかすれることがある少し厄介なフォントです。(MS ゴシックに比べれば1億倍マシですが)
-</p>
-<p><del>あと、THE・Windows のフォントって感じが好みではない。</del>
-</p>
-<p>これらのフォントも、ちゃんと Noto Sans に置き換えます。
-</p>
+<p>等です。</p>
+<p>メイリオについては意外に思うかもしれませんが、ディスプレイによってはかすれることがある少し厄介なフォントです。(MS ゴシックに比べれば1億倍マシですが)</p>
+<p><del>あと、THE・Windows のフォントって感じが好みではない。</del></p>
+<p>これらのフォントも、ちゃんと Noto Sans に置き換えます。</p>
 <h2 id="開発に当たっての苦悩">開発に当たっての苦悩</h2>
-<p>Noto Sans は綺麗で素晴らしいフォントなのですが、容量が大きいという欠点があります。
-</p>
-<p>そこで、サブセット化を行いました。
-</p>
-<p>サブセット化とは、フォントの中から必要な字のみを抽出することです。
-</p>
-<p>これにより、大幅にフォントファイルのサイズを削減することができました。
-</p>
-<p>また、フォントファイルの形式には、圧縮効率が高い WOFF を使用しました。
-</p>
-<p>サブセット化及び WOFF への変換に使用したソフトウェアは以下のとおりです。
-</p>
+<p>Noto Sans は綺麗で素晴らしいフォントなのですが、容量が大きいという欠点があります。</p>
+<p>そこで、サブセット化を行いました。</p>
+<p>サブセット化とは、フォントの中から必要な字のみを抽出することです。</p>
+<p>これにより、大幅にフォントファイルのサイズを削減することができました。</p>
+<p>また、フォントファイルの形式には、圧縮効率が高い WOFF を使用しました。</p>
+<p>サブセット化及び WOFF への変換に使用したソフトウェアは以下のとおりです。</p>
 <ul>
- <li>
-<a href="https://opentype.jp/subsetfontmk.htm" target="_blank" rel="noopener noreferrer">サブセットフォントメーカー</a>
- </li>
-<li>
-<a href="https://opentype.jp/woffconv.htm" target="_blank" rel="noopener noreferrer">WOFFコンバータ</a>
-</li>
+ <li><a href="https://opentype.jp/subsetfontmk.htm" target="_blank" rel="noopener noreferrer">サブセットフォントメーカー</a></li>
+ <li><a href="https://opentype.jp/woffconv.htm" target="_blank" rel="noopener noreferrer">WOFFコンバータ</a></li>
 </ul>
-<p>サブセット化で収録文字数を減らせばフォントファイルのサイズも小さくなりますが、収録文字数が少なすぎると一部の文字が Noto Sans に置換されないという事態が発生します。
-</p>
-<p>そこのバランスが難しかったです。
-</p>
-<p>最終的に収録した文字の一覧はこちらの記事にまとめてあるのでご覧ください。
-</p>
+<p>サブセット化で収録文字数を減らせばフォントファイルのサイズも小さくなりますが、収録文字数が少なすぎると一部の文字が Noto Sans に置換されないという事態が発生します。</p>
+<p>そこのバランスが難しかったです。</p>
+<p>最終的に収録した文字の一覧はこちらの記事にまとめてあるのでご覧ください。</p>
 <ul>
- <li>
-<a href="https://blog.frogapp.net/2022-05/subset">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a>
-</li>
+ <li><a href="https://blog.frogapp.net/2022-05/subset">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a></li>
 </ul>
-<p>さらに、フォントファイルを先読みしておくことで、フォント読み込みにおけるちらつきを軽減しました。
-</p>
+<p>さらに、フォントファイルを先読みしておくことで、フォント読み込みにおけるちらつきを軽減しました。</p>
 <h2 id="評判">評判</h2>
-<p>Chrome ウェブストアで高評価を頂いたほか、その他の利用者の方々からも多数の喜びの声を頂いています。
-</p>
-<p>この場をお借りして御礼申し上げます。
-</p>
-<p><img src="/assets/images/2022/05/21/review.jpg" alt="Chromeウェブストアでのレビュー「フォントきれいになった。神！！！」">
-</p>
+<p>Chrome ウェブストアで高評価を頂いたほか、その他の利用者の方々からも多数の喜びの声を頂いています。</p>
+<p>この場をお借りして御礼申し上げます。</p>
+<p><img src="/assets/images/2022/05/21/review.jpg" alt="Chromeウェブストアでのレビュー「フォントきれいになった。神！！！」"></p>
 <h2 id="より多くのサイトの文字を見やすくする">より多くのサイトの文字を見やすくする</h2>
-<p>この拡張機能で一部の Web サイトのフォントは綺麗になりますが、フォントを特に指定していないサイトではこの拡張機能は効力を発揮しません。
-</p>
-<p>これらのサイトも美しい Noto Sans で見たいという方は、ブラウザの設定から変更できますのでぜひやってみてください。
-</p>
-<p><del>この記事では具体的な設定方法は割愛します。</del>
-</p>
-<p><del>(そのうち記事書くかも)</del>
-</p>
-<p>(2022/5/30 追記)
-</p>
-<p>記事書きました。
-</p>
-<p><a href="https://blog.frogapp.net/2022-05/font">Chrome のフォントを美しい Noto Sans にする方法</a>
-</p>
-<p>設定自体はそこまで難しくはないです。
-</p>
+<p>この拡張機能で一部の Web サイトのフォントは綺麗になりますが、フォントを特に指定していないサイトではこの拡張機能は効力を発揮しません。</p>
+<p>これらのサイトも美しい Noto Sans で見たいという方は、ブラウザの設定から変更できますのでぜひやってみてください。</p>
+<p><del>この記事では具体的な設定方法は割愛します。</del></p>
+<p><del>(そのうち記事書くかも)</del></p>
+<p>(2022/5/30 追記)</p>
+<p>記事書きました。</p>
+<p><a href="https://blog.frogapp.net/2022-05/font">Chrome のフォントを美しい Noto Sans にする方法</a></p>
+<p>設定自体はそこまで難しくはないです。</p>
 <h2 id="最後に">最後に</h2>
-<p>この拡張機能は自分の中でも出来にかなり自信があります。
-</p>
-<p>もちろん自分も愛用しています。
-</p>
-<p>「この拡張機能良いな」と思ったら、ぜひ使ってみてください！
-</p>
-<p>Chrome→ <a href="https://chrome.google.com/webstore/detail/oecglhldbofcklanmhckefiflhfhabdd" target="_blank" rel="noopener noreferrer">https://chrome.google.com/webstore/detail/oecglhldbofcklanmhckefiflhfhabdd</a>
-</p>
-<p>Firefox→ <a href="https://addons.mozilla.org/ja/firefox/addon/replace-with-noto/" target="_blank" rel="noopener noreferrer">https://addons.mozilla.org/ja/firefox/addon/replace-with-noto/</a>
-</p>
-<p>ソースコード→ <a href="https://github.com/r-40021/replace-font" target="_blank" rel="noopener noreferrer">https://github.com/r-40021/replace-font</a>
-   </p>
-</div>
+<p>この拡張機能は自分の中でも出来にかなり自信があります。</p>
+<p>もちろん自分も愛用しています。</p>
+<p>「この拡張機能良いな」と思ったら、ぜひ使ってみてください！</p>
+<p>Chrome→ <a href="https://chrome.google.com/webstore/detail/oecglhldbofcklanmhckefiflhfhabdd" target="_blank" rel="noopener noreferrer">https://chrome.google.com/webstore/detail/oecglhldbofcklanmhckefiflhfhabdd</a></p>
+<p>Firefox→ <a href="https://addons.mozilla.org/ja/firefox/addon/replace-with-noto/" target="_blank" rel="noopener noreferrer">https://addons.mozilla.org/ja/firefox/addon/replace-with-noto/</a></p>
+<p>ソースコード→ <a href="https://github.com/r-40021/replace-font" target="_blank" rel="noopener noreferrer">https://github.com/r-40021/replace-font</a></p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2022-05/insider" title="Windows Insider で 0xc8000402 エラーになりビルドをインストール出来ない場合の対処法(結構簡単)">Windows Insider で 0xc8000402 エラーになりビルドをインストール出来ない場合の対処法(結構簡単)</a><a class="next" href="/2022-05/subset" title="フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a>
@@ -381,10 +320,10 @@ Mac / Linux ユーザーにはほとんど関係ない内容です。
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-10/diary" title="フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】">一言日記(2022年10月)</a></li>
-<li><a class="post-link" href="/2022-09/l10n" title="フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】">ローカリゼーションの難しさ</a></li>
-<li><a class="post-link" href="/2021-09/discord-kocho" title="フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】">【完全無料・24時間稼働】Discord の bot を作った話</a></li>
-<li><a class="post-link" href="/2021-10/conditional-operator" title="フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】">三項演算子が便利すぎて感動した</a></li>
+       <li><a class="post-link" href="/2022-05/noto" title="フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】">汚いフォントに別れを告げられる拡張機能を作った</a></li>
+<li><a class="post-link" href="/2021-10/pixel6" title="フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】">Pixel 6 のレビューはしないけどレビューもどきはしてみた</a></li>
+<li><a class="post-link" href="/2022-06/manjaro" title="フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】">Windows ユーザーが Manjaro に乗り換えて感じたメリット・デメリット</a></li>
+<li><a class="post-link" href="/2021-12/answer" title="フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】">間違い探しの解答</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -496,7 +435,7 @@ Mac / Linux ユーザーにはほとんど関係ない内容です。
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -659,6 +598,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

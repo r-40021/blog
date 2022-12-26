@@ -126,11 +126,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -235,70 +233,46 @@
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
    <div class="post-content e-content" itemprop="articleBody">
-     <p>こんにちは！今回は、<strong>1円もかけずに</strong> Discord の bot を作ったのでその話をしていこうと思います。
-</p>
+     <p>こんにちは！今回は、<strong>1円もかけずに</strong> Discord の bot を作ったのでその話をしていこうと思います。</p>
 <div class="alert-card">
 <div>
-<p>以下の記事で、「GASを使ってGlitchのサーバーがスリープ状態に入らないようにする」方法が紹介されていますが、今後禁止される可能性があるとのことです。
-</p>
-<p>ちょっとしたDiscordのbotを作る程度であれば問題ないと思われますが、Glitchに過度な負担をかけないように十分注意してください。
-</p>
-<p><a href="https://blog.glitch.com/post/ping-services" target="_blank" rel="noopener noreferrer">Ping Services on Glitch — Glitch Blog</a>
-</p>
+<p>以下の記事で、「GASを使ってGlitchのサーバーがスリープ状態に入らないようにする」方法が紹介されていますが、今後禁止される可能性があるとのことです。</p>
+<p>ちょっとしたDiscordのbotを作る程度であれば問題ないと思われますが、Glitchに過度な負担をかけないように十分注意してください。</p>
+<p><a href="https://blog.glitch.com/post/ping-services" target="_blank" rel="noopener noreferrer">Ping Services on Glitch — Glitch Blog</a></p>
 </div>
 </div>
 <h2 id="作ったもの">作ったもの</h2>
-<p>「校長先生風の bot」を作りました。
-</p>
-<p>サーバーがにぎやかになっていい感じです。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/132112814-bbe4b7ab-eaea-4732-b9ed-66f0148ea31c.png" alt="動いている様子">
-</p>
+<p>「校長先生風の bot」を作りました。</p>
+<p>サーバーがにぎやかになっていい感じです。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/132112814-bbe4b7ab-eaea-4732-b9ed-66f0148ea31c.png" alt="動いている様子"></p>
 <h3 id="説明書">説明書</h3>
-<p>この bot を導入してみたい方は、下のリンクから見られる説明書に導入方法が載っているので、参考にしてください。
-</p>
-<p><a href="https://gist.github.com/r-40021/b53cfa3c53f93b805cc53ea7b0eb0fe3" target="_blank" rel="noopener noreferrer">取扱説明書</a>
-</p>
+<p>この bot を導入してみたい方は、下のリンクから見られる説明書に導入方法が載っているので、参考にしてください。</p>
+<p><a href="https://gist.github.com/r-40021/b53cfa3c53f93b805cc53ea7b0eb0fe3" target="_blank" rel="noopener noreferrer">取扱説明書</a></p>
 <h2 id="作り方">作り方</h2>
-<p>どのようにして作ったのか、説明します。
-</p>
+<p>どのようにして作ったのか、説明します。</p>
 <h3 id="使ったサービス">使ったサービス</h3>
-<p>すべて無料のものです。
-</p>
+<p>すべて無料のものです。</p>
 <ul>
- <li>Glitch (Node.js で色々動かせるサービス)
- </li>
-<li>Google Apps Script (Glitch サーバーのスリープ防止)
-</li>
+ <li>Glitch (Node.js で色々動かせるサービス)</li>
+ <li>Google Apps Script (Glitch サーバーのスリープ防止)</li>
 </ul>
 <h3 id="参考にしたサイト">参考にしたサイト</h3>
-<p><a href="https://note.com/exteoi/n/nf1c37cb26c41" target="_blank" rel="noopener noreferrer">誰でも作れる！Discord Bot（基礎編）｜EOi｜note</a>
-</p>
-<p>とてもわかりやすかったです。<code class="language-plaintext highlighter-rouge">npm</code> などのパッケージ管理ツールを使ったことがあり、JavaScript がある程度できる人であれば簡単に作れると思います。
-</p>
+<p><a href="https://note.com/exteoi/n/nf1c37cb26c41" target="_blank" rel="noopener noreferrer">誰でも作れる！Discord Bot（基礎編）｜EOi｜note</a></p>
+<p>とてもわかりやすかったです。<code class="language-plaintext highlighter-rouge">npm</code> などのパッケージ管理ツールを使ったことがあり、JavaScript がある程度できる人であれば簡単に作れると思います。</p>
 <h4 id="注意点">注意点</h4>
-<p>とても分かりやすいサイトなのですが、情報が1年前のものなので今とは違う点がいくつかあります。
-</p>
+<p>とても分かりやすいサイトなのですが、情報が1年前のものなので今とは違う点がいくつかあります。</p>
 <h5 id="new-projectからglitch-hello-nodeを選ぶ">「New Project」から「glitch-hello-node」を選ぶ</h5>
-<p>上記の note には「hello-express」を選択するように書いてありますが、現時点でそのような項目はないので、代わりに「glitch-hello-node」を選択してください。
-</p>
-<p>そして、プログラムの編集画面に遷移したら、<code class="language-plaintext highlighter-rouge">package.json</code> と <code class="language-plaintext highlighter-rouge">server.js</code> 以外は削除してください。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/132113095-b19a91d9-5963-4a24-bb63-3d71ffeedfc7.png" alt="必要ないファイルやフォルダを削除する">
-</p>
-<p>その後の手順は変わりません。
-</p>
+<p>上記の note には「hello-express」を選択するように書いてありますが、現時点でそのような項目はないので、代わりに「glitch-hello-node」を選択してください。</p>
+<p>そして、プログラムの編集画面に遷移したら、<code class="language-plaintext highlighter-rouge">package.json</code> と <code class="language-plaintext highlighter-rouge">server.js</code> 以外は削除してください。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/132113095-b19a91d9-5963-4a24-bb63-3d71ffeedfc7.png" alt="必要ないファイルやフォルダを削除する"></p>
+<p>その後の手順は変わりません。</p>
 <h5 id="glitch-でプロジェクトを非公開にするには有料プランに加入する必要がある">Glitch でプロジェクトを非公開にするには有料プランに加入する必要がある</h5>
-<p>とはいえ、Discordの token をきちんと環境変数に入れておけば特に問題ないと思います。
-</p>
-<p>機密情報はコードに書かないで、確実に環境変数に入れるようにしてください。
-</p>
+<p>とはいえ、Discordの token をきちんと環境変数に入れておけば特に問題ないと思います。</p>
+<p>機密情報はコードに書かないで、確実に環境変数に入れるようにしてください。</p>
 <h2 id="まとめ">まとめ</h2>
-<p>いかがでしたか？
-</p>
-<p>このように、簡単かつ無料で Discord の bot を作成できるので、ぜひ試してみてください！
-   </p>
-</div>
+<p>いかがでしたか？</p>
+<p>このように、簡単かつ無料で Discord の bot を作成できるので、ぜひ試してみてください！</p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2021-08/twitter-delete" title="Twitter のアカウントを復活！残るデータ・消えるデータ">Twitter のアカウントを復活！残るデータ・消えるデータ</a><a class="next" href="/2021-09/drive-preview" title="Google ドライブの動画が再生できないときの対処法">Google ドライブの動画が再生できないときの対処法</a>
@@ -306,10 +280,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2021-10/autumn" title="Google ドライブの動画が再生できないときの対処法">秋</a></li>
-<li><a class="post-link" href="/2022-09/l10n" title="Google ドライブの動画が再生できないときの対処法">ローカリゼーションの難しさ</a></li>
-<li><a class="post-link" href="/2022-09/bot-2" title="Google ドライブの動画が再生できないときの対処法">5人で使っていたbotが学年の半数の人に使われるようになった話(後編)</a></li>
-<li><a class="post-link" href="/2022-09/comment" title="Google ドライブの動画が再生できないときの対処法">コメント欄の試験運用を開始します</a></li>
+       <li><a class="post-link" href="/2022-11/background" title="Google ドライブの動画が再生できないときの対処法">自分のアプリが作られた背景を語る</a></li>
+<li><a class="post-link" href="/2021-10/autumn" title="Google ドライブの動画が再生できないときの対処法">秋</a></li>
+<li><a class="post-link" href="/2021-11/protect-chrome" title="Google ドライブの動画が再生できないときの対処法">プライバシーの宝庫、Chrome を守る〜晒し防止篇〜</a></li>
+<li><a class="post-link" href="/2022-06/iphone6s" title="Google ドライブの動画が再生できないときの対処法">iPhone 6s はまだ使えるのか？(2022年版)</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -421,7 +395,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -584,6 +558,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

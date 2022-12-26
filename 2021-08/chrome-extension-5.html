@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -240,8 +238,7 @@
            <figcaption>Photo by <a href="https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Sigmund</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
        </figure>
      <h2 id="お詫びと訂正">お詫びと訂正</h2>
-<p><a href="https://blog.frogapp.net/2021-08/chrome-extension-4">本連載第4回 「コピー機能の実装」</a>のコードの一部に誤りがありました。お詫びして訂正いたします。
-</p>
+<p><a href="https://blog.frogapp.net/2021-08/chrome-extension-4">本連載第4回 「コピー機能の実装」</a>のコードの一部に誤りがありました。お詫びして訂正いたします。</p>
 <pre><code class="language-JavaScript">document.getElementById("LINE").addEventListener("click", ()=&gt;{
     windowOpen("https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(tabTitle));
 }, false);
@@ -251,42 +248,26 @@
 }, false);
 </code></pre>
 <h2 id="権限を少なくする">権限を少なくする</h2>
-<p>では、本題に入ります。
-</p>
-<p>前回まで書いてきたコードですが、まだ課題があります。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/127963556-97d4558d-cb67-40f7-8ac4-cf119b9a35bc.png" alt="権限多すぎ">
-</p>
-<p>これは、Chrome の拡張機能の管理画面のスクリーンショットです。権限が、「閲覧履歴の読み取り」と、この拡張機能の機能に対して過大であることがわかります。
-</p>
-<p>今回は、これを修正します。
-</p>
+<p>では、本題に入ります。</p>
+<p>前回まで書いてきたコードですが、まだ課題があります。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/127963556-97d4558d-cb67-40f7-8ac4-cf119b9a35bc.png" alt="権限多すぎ"></p>
+<p>これは、Chrome の拡張機能の管理画面のスクリーンショットです。権限が、「閲覧履歴の読み取り」と、この拡張機能の機能に対して過大であることがわかります。</p>
+<p>今回は、これを修正します。</p>
 <pre><code class="language-JSON">"permissions": ["activeTab"],
 </code></pre>
-<p><code class="language-plaintext highlighter-rouge">chrome://extensions</code> を開き、更新ボタンを押します。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/128589985-e072d29d-d87e-4f11-afa6-9d66016b6c7f.png" alt="更新ボタン">
-</p>
-<p>「詳細」ボタンをクリックして、「権限」欄を見てください。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/128590010-5027b476-f5c0-4f95-b410-529b31257a3c.png" alt="権限">
-</p>
-<p>「この拡張機能に特別な権限は必要ありません」と表示されていれば OK です。
-</p>
+<p><code class="language-plaintext highlighter-rouge">chrome://extensions</code> を開き、更新ボタンを押します。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/128589985-e072d29d-d87e-4f11-afa6-9d66016b6c7f.png" alt="更新ボタン"></p>
+<p>「詳細」ボタンをクリックして、「権限」欄を見てください。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/128590010-5027b476-f5c0-4f95-b410-529b31257a3c.png" alt="権限"></p>
+<p>「この拡張機能に特別な権限は必要ありません」と表示されていれば OK です。</p>
 <h2 id="不具合を修正する">不具合を修正する</h2>
-<p>しかし、これだけで今日の記事が終わってしまってはあっけないので、もう一つやります。
-</p>
-<p><code class="language-plaintext highlighter-rouge">chrome://extension</code> 画面で拡張機能を開き、Facebook でシェアしてみてください。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/128590126-b4a4a56f-6064-4450-ad2a-e6aef655e92c.png" alt="エラー">
-</p>
-<p>エラーになります。どうやら、URL に <code class="language-plaintext highlighter-rouge">http://</code> か <code class="language-plaintext highlighter-rouge">https://</code> が含まれていないとリクエストを拒否する仕様になっているようです。
-</p>
-<p>そこで、URL にこれらが存在するか調べる機能を実装していきます。
-</p>
+<p>しかし、これだけで今日の記事が終わってしまってはあっけないので、もう一つやります。</p>
+<p><code class="language-plaintext highlighter-rouge">chrome://extension</code> 画面で拡張機能を開き、Facebook でシェアしてみてください。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/128590126-b4a4a56f-6064-4450-ad2a-e6aef655e92c.png" alt="エラー"></p>
+<p>エラーになります。どうやら、URL に <code class="language-plaintext highlighter-rouge">http://</code> か <code class="language-plaintext highlighter-rouge">https://</code> が含まれていないとリクエストを拒否する仕様になっているようです。</p>
+<p>そこで、URL にこれらが存在するか調べる機能を実装していきます。</p>
 <h3 id="html-の修正">HTML の修正</h3>
-<p>「Facebook のシェアボタン」〜「LINE で送るボタン」までを、<code class="language-plaintext highlighter-rouge">&lt;div id="sns"&gt;</code>で囲んでください。
-</p>
+<p>「Facebook のシェアボタン」〜「LINE で送るボタン」までを、<code class="language-plaintext highlighter-rouge">&lt;div id="sns"&gt;</code>で囲んでください。</p>
 <h3 id="javascript-の修正">JavaScript の修正</h3>
 <pre><code class="language-JavaScript">if(!/http\:\/\/|https\:\/\//.test(tabUrl)) {
     const element = document.getElementById("sns");
@@ -294,80 +275,52 @@
     element.textContent = "このページでは SNS を用いたシェア機能をご利用になれません。ご了承ください。";
 }
 </code></pre>
-<p>このコードに登場する <code class="language-plaintext highlighter-rouge">test</code> は、とある文字列の中に指定した文字列が含まれているかを、<code class="language-plaintext highlighter-rouge">true</code> または <code class="language-plaintext highlighter-rouge">false</code> で返すものです。
-</p>
-<p><code class="language-plaintext highlighter-rouge">test</code> の前に検索したい文字列を正規表現で指定します。正規表現について、詳しくは説明しませんが、このコードに関わっているルールを説明します。
-</p>
+<p>このコードに登場する <code class="language-plaintext highlighter-rouge">test</code> は、とある文字列の中に指定した文字列が含まれているかを、<code class="language-plaintext highlighter-rouge">true</code> または <code class="language-plaintext highlighter-rouge">false</code> で返すものです。</p>
+<p><code class="language-plaintext highlighter-rouge">test</code> の前に検索したい文字列を正規表現で指定します。正規表現について、詳しくは説明しませんが、このコードに関わっているルールを説明します。</p>
 <ol>
- <li>正規表現は2つの <code class="language-plaintext highlighter-rouge">/</code> (スラッシュ)の間に書く
- </li>
-<li>
-<code class="language-plaintext highlighter-rouge">|</code> は「または」という意味。<code class="language-plaintext highlighter-rouge">/りんご|みかん/</code> と書いた場合、「りんご」または「みかん」が含まれているか、という意味となる
- </li>
-<li>正規表現の中に登場する <code class="language-plaintext highlighter-rouge">/</code>(スラッシュ)や<code class="language-plaintext highlighter-rouge">:</code>(コロン)、<code class="language-plaintext highlighter-rouge">;</code>(セミコロン)が含まれている場合、これらの文字がプログラムのコマンドと誤認識されないよう、直前に <code class="language-plaintext highlighter-rouge">\</code>(バッククオート)を入れる。
-</li>
+ <li>正規表現は2つの <code class="language-plaintext highlighter-rouge">/</code> (スラッシュ)の間に書く</li>
+ <li>
+<code class="language-plaintext highlighter-rouge">|</code> は「または」という意味。<code class="language-plaintext highlighter-rouge">/りんご|みかん/</code> と書いた場合、「りんご」または「みかん」が含まれているか、という意味となる</li>
+ <li>正規表現の中に登場する <code class="language-plaintext highlighter-rouge">/</code>(スラッシュ)や<code class="language-plaintext highlighter-rouge">:</code>(コロン)、<code class="language-plaintext highlighter-rouge">;</code>(セミコロン)が含まれている場合、これらの文字がプログラムのコマンドと誤認識されないよう、直前に <code class="language-plaintext highlighter-rouge">\</code>(バッククオート)を入れる。</li>
 </ol>
-<p>上記のコードの場合、「<code class="language-plaintext highlighter-rouge">http://</code> か <code class="language-plaintext highlighter-rouge">https://</code> が含まれているか」という意味になる。
-</p>
-<p>もし、<code class="language-plaintext highlighter-rouge">http://</code> も <code class="language-plaintext highlighter-rouge">https://</code> も含まれていない場合、先程 <code class="language-plaintext highlighter-rouge">popup.html</code> に追加した<code class="language-plaintext highlighter-rouge">&lt;div id="sns"&gt;</code> の上に余白を追加し、中のテキストを変更するようになっています。
-</p>
-<p>これで、SNS でシェアした際にエラーになるのを防ぐことができます。
-</p>
-<p>今日は以上です！
-</p>
+<p>上記のコードの場合、「<code class="language-plaintext highlighter-rouge">http://</code> か <code class="language-plaintext highlighter-rouge">https://</code> が含まれているか」という意味になる。</p>
+<p>もし、<code class="language-plaintext highlighter-rouge">http://</code> も <code class="language-plaintext highlighter-rouge">https://</code> も含まれていない場合、先程 <code class="language-plaintext highlighter-rouge">popup.html</code> に追加した<code class="language-plaintext highlighter-rouge">&lt;div id="sns"&gt;</code> の上に余白を追加し、中のテキストを変更するようになっています。</p>
+<p>これで、SNS でシェアした際にエラーになるのを防ぐことができます。</p>
+<p>今日は以上です！</p>
 <h2 id="まとめ">まとめ</h2>
 <ul>
  <li>
-<code class="language-plaintext highlighter-rouge">tabs</code> の代わりに <code class="language-plaintext highlighter-rouge">activeTab</code> を指定することで、権限が無駄に多くなることが防げる。
- </li>
-<li>
-<code class="language-plaintext highlighter-rouge">test</code> を用いると、文字列を検索することができる。
-</li>
+<code class="language-plaintext highlighter-rouge">tabs</code> の代わりに <code class="language-plaintext highlighter-rouge">activeTab</code> を指定することで、権限が無駄に多くなることが防げる。</li>
+ <li>
+<code class="language-plaintext highlighter-rouge">test</code> を用いると、文字列を検索することができる。</li>
 </ul>
-<p>本日もお疲れさまでした！
-</p>
-<p>次回は Web ストアに出品する予定でしたが、予定を変更してもう一つ機能を実装していきます。
-</p>
-<p>また、今回扱ったコードは、<a href="https://github.com/r-40021/copy_title-URL/tree/lesson_5">こちら</a>から見られます。
-   </p>
-</div>
+<p>本日もお疲れさまでした！</p>
+<p>次回は Web ストアに出品する予定でしたが、予定を変更してもう一つ機能を実装していきます。</p>
+<p>また、今回扱ったコードは、<a href="https://github.com/r-40021/copy_title-URL/tree/lesson_5">こちら</a>から見られます。</p>
+   </div>
 </article>
       <br><br><br>
-     <p>【「Chrome 拡張機能を作ろう」の記事一覧】
-     </p>
-<ol>
+     <p>【「Chrome 拡張機能を作ろう」の記事一覧】</p>
+     <ol>
+       <li><a href="/2021-07/chrome-extension-1">環境構築</a></li>
+       <li><a href="/2021-08/chrome-extension-2">ポップアップ作成</a></li>
+       <li><a href="/2021-08/chrome-extension-3">仕様に沿って開発</a></li>
+       <li><a href="/2021-08/chrome-extension-4">コピー機能実装</a></li>
        <li>
-<a href="/2021-07/chrome-extension-1">環境構築</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-2">ポップアップ作成</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-3">仕様に沿って開発</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-4">コピー機能実装</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-5">権限を減らす</a> (←今ココ)
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-7">Webストアに公開</a>
-     </li>
-</ol>
+<a href="/2021-08/chrome-extension-5">権限を減らす</a> (←今ココ)</li>
+       <li><a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a></li>
+       <li><a href="/2021-08/chrome-extension-7">Webストアに公開</a></li>
+     </ol>
       <div class="post-nav">
 <a class="previous" href="/2021-08/chrome-extension-4" title="Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜">Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜</a><a class="next" href="/2021-08/chrome-extension-6" title="Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜">Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜</a>
 </div>
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-05/subset" title="Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a></li>
-<li><a class="post-link" href="/2021-12/countdown" title="Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜">年末年始の楽しい時間までカウントダウン！</a></li>
-<li><a class="post-link" href="/2022-07/diary" title="Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜">一言日記(2022年7月)</a></li>
-<li><a class="post-link" href="/2022-09/bot-1" title="Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜">5人で使っていたbotが学年の半数の人に使われるようになった話(前編)</a></li>
+       <li><a class="post-link" href="/2021-11/no-msgothic" title="Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜">ＭＳ ゴシックを使わないで(切実)</a></li>
+<li><a class="post-link" href="/2021-12/answer" title="Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜">間違い探しの解答</a></li>
+<li><a class="post-link" href="/2022-11/colab" title="Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜">Colaboratory を楽しくする設定</a></li>
+<li><a class="post-link" href="/2022-07/1st-anniversary" title="Chrome 拡張機能を作って公開しよう⑥　〜コンテキストメニューを作る〜">【1周年記念】ブログを書くのは非効率だが、いいこともある＆今後について</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -479,7 +432,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -642,6 +595,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

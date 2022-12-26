@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -239,13 +237,10 @@
           <img src="/assets/images/2022/09/25/comment.webp" width="100%" loading="eager" alt="コメント欄試験運用開始">
            <figcaption></figcaption>
        </figure>
-     <p>読者間での交流の場を設けたいと思い、この度コメント欄の試験運用を開始しました。
-</p>
-<p>とりあえず数カ月間試してみて、コメント欄を継続するか決定します。
-</p>
-<p>なお、スパムが湧いたり誹謗中傷や反社会的な書き込みが見られた場合には即刻コメント欄を廃止しますのでご了承ください。
-   </p>
-</div>
+     <p>読者間での交流の場を設けたいと思い、この度コメント欄の試験運用を開始しました。</p>
+<p>とりあえず数カ月間試してみて、コメント欄を継続するか決定します。</p>
+<p>なお、スパムが湧いたり誹謗中傷や反社会的な書き込みが見られた場合には即刻コメント欄を廃止しますのでご了承ください。</p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2022-09/bot-2" title="5人で使っていたbotが学年の半数の人に使われるようになった話(後編)">5人で使っていたbotが学年の半数の人に使われるようになった話(後編)</a><a class="next" href="/2022-09/l10n" title="ローカリゼーションの難しさ">ローカリゼーションの難しさ</a>
@@ -253,10 +248,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-05/font" title="ローカリゼーションの難しさ">Chrome のフォントを美しい Noto Sans にする方法</a></li>
-<li><a class="post-link" href="/2022-06/ios16" title="ローカリゼーションの難しさ">iPhone 6s 、iOS 16 非対応へ。今後どうする？</a></li>
-<li><a class="post-link" href="/2021-10/pixel6" title="ローカリゼーションの難しさ">Pixel 6 のレビューはしないけどレビューもどきはしてみた</a></li>
-<li><a class="post-link" href="/2022-11/presentation" title="ローカリゼーションの難しさ">プレゼンで気をつけていること (自己流)</a></li>
+       <li><a class="post-link" href="/2022-06/linux-at-school" title="ローカリゼーションの難しさ">学校でLinuxを使う上で困ったこと</a></li>
+<li><a class="post-link" href="/2021-09/discord-kocho" title="ローカリゼーションの難しさ">【完全無料・24時間稼働】Discord の bot を作った話</a></li>
+<li><a class="post-link" href="/2022-05/insider" title="ローカリゼーションの難しさ">Windows Insider で 0xc8000402 エラーになりビルドをインストール出来ない場合の対処法(結構簡単)</a></li>
+<li><a class="post-link" href="/2021-12/winter" title="ローカリゼーションの難しさ">冬</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -368,7 +363,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -531,6 +526,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

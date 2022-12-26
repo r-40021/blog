@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -242,19 +240,15 @@
            <figcaption> Photo by <a href="https://unsplash.com/@anagani_saikiran?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Sai Kiran Anagani</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
        </figure>
      <h2 id="現象">現象</h2>
-<p>yayでGriveを再インストールしようとしたら「patch: コマンドが見つかりません」というエラーが出てインストールできなくなりました。
-</p>
+<p>yayでGriveを再インストールしようとしたら「patch: コマンドが見つかりません」というエラーが出てインストールできなくなりました。</p>
 <h2 id="解決策">解決策</h2>
-<p>以下のコマンドを実行してパッケージをビルドするために必要なツール群をインストールします。
-</p>
-<p>そして、インストールしたいパッケージを再度インストールします。
-</p>
+<p>以下のコマンドを実行してパッケージをビルドするために必要なツール群をインストールします。</p>
+<p>そして、インストールしたいパッケージを再度インストールします。</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    pacman <span class="nt">-S</span> base-devel
 </code></pre></div></div>
 <h2 id="参考サイト">参考サイト</h2>
-<p><a href="https://bbs.archlinux.org/viewtopic.php?id=45933" target="_blank" rel="noopener noreferrer">patch: command not found / Creating &amp; Modifying Packages / Arch Linux Forums</a>
-   </p>
-</div>
+<p><a href="https://bbs.archlinux.org/viewtopic.php?id=45933" target="_blank" rel="noopener noreferrer">patch: command not found / Creating &amp; Modifying Packages / Arch Linux Forums</a></p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2022-07/manjaro-karnel" title="ManjaroとXubuntuをデュアルブートしたらKarnel Panicになった！！！">ManjaroとXubuntuをデュアルブートしたらKarnel Panicになった！！！</a><a class="next" href="/2022-07/windows" title="Windowsを入れたらまずすること(定番6つ＋自己流3つ)">Windowsを入れたらまずすること(定番6つ＋自己流3つ)</a>
@@ -262,10 +256,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2021-11/protect-chrome" title="Windowsを入れたらまずすること(定番6つ＋自己流3つ)">プライバシーの宝庫、Chrome を守る〜晒し防止篇〜</a></li>
-<li><a class="post-link" href="/2022-12/chromebook" title="Windowsを入れたらまずすること(定番6つ＋自己流3つ)">改めて感じた Chromebook の良さ〜心配がいらない PC〜</a></li>
-<li><a class="post-link" href="/2022-09/domain-sale" title="Windowsを入れたらまずすること(定番6つ＋自己流3つ)">.com .netドメインが1年間0円で使える！</a></li>
-<li><a class="post-link" href="/2021-09/form-limit" title="Windowsを入れたらまずすること(定番6つ＋自己流3つ)">10分で定員付きの Google フォームを作ろう＜コピペ可＞</a></li>
+       <li><a class="post-link" href="/2021-08/chrome-extension-3" title="Windowsを入れたらまずすること(定番6つ＋自己流3つ)">Chrome 拡張機能を作って公開しよう③　〜形にする〜</a></li>
+<li><a class="post-link" href="/2022-08/kde-screenshot" title="Windowsを入れたらまずすること(定番6つ＋自己流3つ)">KDE Plasmaでスクリーンショットが昔の画面になってしまう時の対処法</a></li>
+<li><a class="post-link" href="/2022-08/fxstudent" title="Windowsを入れたらまずすること(定番6つ＋自己流3つ)">Firefox学生マーケティングチームに参加しました</a></li>
+<li><a class="post-link" href="/2022-05/subset" title="Windowsを入れたらまずすること(定番6つ＋自己流3つ)">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -377,7 +371,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -540,6 +534,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

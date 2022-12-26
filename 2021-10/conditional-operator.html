@@ -126,11 +126,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -233,16 +231,13 @@
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
    <div class="post-content e-content" itemprop="articleBody">
-     <p>数ヶ月前、三項演算子に出会って感動したので、まだこの感動を味わっていない方向けに記事を書きました。
-</p>
+     <p>数ヶ月前、三項演算子に出会って感動したので、まだこの感動を味わっていない方向けに記事を書きました。</p>
 <h2 id="三項演算子の便利さ">三項演算子の便利さ</h2>
-<p>このような処理をしようとしているとします。
-</p>
+<p>このような処理をしようとしているとします。</p>
 <blockquote>
  <p>変数 <code class="language-plaintext highlighter-rouge">age</code> には数値（年齢）が入る<br>
 <code class="language-plaintext highlighter-rouge">age</code> が18以上なら、変数 <code class="language-plaintext highlighter-rouge">message</code> に「あなたは成人です」を代入する<br>
-その他の場合は、変数 <code class="language-plaintext highlighter-rouge">message</code> に「あなたは成人ではありません」を代入する<br>
-</p>
+その他の場合は、変数 <code class="language-plaintext highlighter-rouge">message</code> に「あなたは成人ではありません」を代入する<br></p>
 </blockquote>
 <pre><code class="language-JavaScript">let message;
 if (age &gt;= 18) {
@@ -253,38 +248,23 @@ if (age &gt;= 18) {
 </code></pre>
 <pre><code class="language-JavaScript">const message = age &gt;= 18 ? "あなたは成人です" : "あなたは成人ではありません";
 </code></pre>
-<p>なんと美しいコード…
-</p>
-<p>では、三項演算子について解説していきます。
-</p>
+<p>なんと美しいコード…</p>
+<p>では、三項演算子について解説していきます。</p>
 <h2 id="三項演算子の使い方">三項演算子の使い方</h2>
-<p>三項演算子は「if-else」文をまとめたものですが、三項演算子には、三項演算子自身が条件判定で得られたデータに「化ける」という性質があります。これは if 文にはない性質です。
-</p>
-<p>このことにより、三項演算子を変数に代入することができます。
-</p>
-<p>次に、使い方についです。
-</p>
-<p>三項演算子は長いですが、3つの部分に分かれます。
-</p>
-<p>① 条件式
-</p>
-<p>② ①が true と判定されたときの処理
-</p>
-<p>③ ②が false と判定されたときの処理
-</p>
+<p>三項演算子は「if-else」文をまとめたものですが、三項演算子には、三項演算子自身が条件判定で得られたデータに「化ける」という性質があります。これは if 文にはない性質です。</p>
+<p>このことにより、三項演算子を変数に代入することができます。</p>
+<p>次に、使い方についです。</p>
+<p>三項演算子は長いですが、3つの部分に分かれます。</p>
+<p>① 条件式</p>
+<p>② ①が true と判定されたときの処理</p>
+<p>③ ②が false と判定されたときの処理</p>
 <p>① の書き方は if 文の条件式と同じなので、覚えやすいです。<code class="language-plaintext highlighter-rouge">&amp;&amp;</code> や <code class="language-plaintext highlighter-rouge">||</code> を使い、条件式を複数連結させられます。 ①の後には “?” が必要です
-。
-</p>
-<p>② ①の条件式が <code class="language-plaintext highlighter-rouge">true</code> のときに、三項演算子が何に化けるかを指定します。文字列でも数値でも数式でも、何でもOKです。
-</p>
-<p>③ ①の条件式が <code class="language-plaintext highlighter-rouge">false</code> のときに、三項演算子が何に化けるかを指定します。文字列でも数値でも数式でも、何でもOKです。
-</p>
-<p>なお、②と③の間には “:” が付きます。
-</p>
-<p>ここまで読んだ上で先ほどのサンプルコートを見てみると、初見のときとは違ったものが感じられます…
-</p>
-<p>ぜひ、今回ご紹介した「三項演算子」を使ってみてください！！
-</p>
+。</p>
+<p>② ①の条件式が <code class="language-plaintext highlighter-rouge">true</code> のときに、三項演算子が何に化けるかを指定します。文字列でも数値でも数式でも、何でもOKです。</p>
+<p>③ ①の条件式が <code class="language-plaintext highlighter-rouge">false</code> のときに、三項演算子が何に化けるかを指定します。文字列でも数値でも数式でも、何でもOKです。</p>
+<p>なお、②と③の間には “:” が付きます。</p>
+<p>ここまで読んだ上で先ほどのサンプルコートを見てみると、初見のときとは違ったものが感じられます…</p>
+<p>ぜひ、今回ご紹介した「三項演算子」を使ってみてください！！</p>
 <h2 id="参考">参考</h2>
 <ul>
  <li>
@@ -292,11 +272,11 @@ if (age &gt;= 18) {
      <tbody>
        <tr>
          <td><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank" rel="noopener noreferrer">条件 (三項) 演算子 - JavaScript</a></td>
-<td>MDN&lt;/a&gt;</td>
-</tr>
-</tbody>
-</table>
-</li>
+         <td>MDN&lt;/a&gt;</td>
+       </tr>
+     </tbody>
+   </table>
+ </li>
 </ul>
    </div>
 </article>
@@ -306,10 +286,10 @@ if (age &gt;= 18) {
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2021-12/countdown" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">年末年始の楽しい時間までカウントダウン！</a></li>
-<li><a class="post-link" href="/2021-10/autumn" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">秋</a></li>
-<li><a class="post-link" href="/2022-11/zen-kaku-gothic" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">Google スライドで使える最強日本語フォント</a></li>
-<li><a class="post-link" href="/2022-08/diary" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">一言日記(2022年8月)</a></li>
+       <li><a class="post-link" href="/2021-11/no-msgothic" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">ＭＳ ゴシックを使わないで(切実)</a></li>
+<li><a class="post-link" href="/2022-06/ie" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">IE サポート終了によせて</a></li>
+<li><a class="post-link" href="/2022-06/ios16" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">iPhone 6s 、iOS 16 非対応へ。今後どうする？</a></li>
+<li><a class="post-link" href="/2022-07/yay-patch" title="Pixel 6 のレビューはしないけどレビューもどきはしてみた">yayで「patch: コマンドが見つかりません」エラーが出たときの対処法</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -421,7 +401,7 @@ if (age &gt;= 18) {
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -584,6 +564,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -239,127 +237,76 @@
           <img src="/assets/images/2022/06/23/manjaro-gnome.jpg" width="100%" loading="eager" alt="Manjaro のデスクトップ">
            <figcaption></figcaption>
        </figure>
-     <p>先日、メインPCのOSをWindowsからManjaroに変えました。2週間ほど使ってみて感じたメリットとデメリットを紹介します。
-</p>
+     <p>先日、メインPCのOSをWindowsからManjaroに変えました。2週間ほど使ってみて感じたメリットとデメリットを紹介します。</p>
 <h2 id="manjaroとは">Manjaroとは？</h2>
-<p>詳しい説明は割愛しますが、今人気のLinuxディストリビューションです。
-</p>
-<p>導入のハードルが富士山よりも高い(個人の感想です)Arch Linuxを簡単に扱えるようにしたのが特徴です。
-</p>
+<p>詳しい説明は割愛しますが、今人気のLinuxディストリビューションです。</p>
+<p>導入のハードルが富士山よりも高い(個人の感想です)Arch Linuxを簡単に扱えるようにしたのが特徴です。</p>
 <h2 id="pcスペック">PCスペック</h2>
-<p>Core i5 1135G7
-</p>
-<p>8GB RAM
-</p>
-<p>256GB PCIe SSD
-</p>
-<p>良くも悪くもない、普通のスペックです。
-</p>
-<p>Windows 11も余裕で動くのですが、開発でDockerを使うとメモリが枯渇する問題があったため、「じゃあメモリを食わないLinuxに移行しよう！」となりました。
-</p>
+<p>Core i5 1135G7</p>
+<p>8GB RAM</p>
+<p>256GB PCIe SSD</p>
+<p>良くも悪くもない、普通のスペックです。</p>
+<p>Windows 11も余裕で動くのですが、開発でDockerを使うとメモリが枯渇する問題があったため、「じゃあメモリを食わないLinuxに移行しよう！」となりました。</p>
 <h2 id="メリット5つ">メリット5つ</h2>
 <h3 id="メモリ使用量が少ない">メモリ使用量が少ない</h3>
-<p>「重い」と言われるGNOMEを使用していますが、Firefoxでこのブログ原稿を書いている最中でもメモリは2.5GBしか消費していません。
-</p>
-<p>起動直後では1GBほどになることもあります。
-</p>
-<p>Windowsはメモリに余裕がある場合には予め多めにメモリを確保しておく性質があるため、単純な比較はできませんが、同じような状況だとWindows 11では5GBは消費します。
-</p>
-<p>また、開発で仮想環境を立ち上げても、Windowsの場合はWSLを経由する必要があるのであっという間にスワップしますが、ManjaroではホストOS自体がLinuxであるため、全体でも5GBほどしか消費しません。
-</p>
+<p>「重い」と言われるGNOMEを使用していますが、Firefoxでこのブログ原稿を書いている最中でもメモリは2.5GBしか消費していません。</p>
+<p>起動直後では1GBほどになることもあります。</p>
+<p>Windowsはメモリに余裕がある場合には予め多めにメモリを確保しておく性質があるため、単純な比較はできませんが、同じような状況だとWindows 11では5GBは消費します。</p>
+<p>また、開発で仮想環境を立ち上げても、Windowsの場合はWSLを経由する必要があるのであっという間にスワップしますが、ManjaroではホストOS自体がLinuxであるため、全体でも5GBほどしか消費しません。</p>
 <h3 id="軽い">軽い</h3>
-<p>そもそもPCのスペックがそれなりにあるのでWindowsとの差はあまり感じませんが、確かに動作のカクつきがほとんどないように感じます。
-</p>
-<p>Windowsではスタートメニューを開く際に若干カクつくことがありました。(特に起動直後)
-</p>
-<p>それがManjaroではほとんどありません。
-</p>
-<p>また、ブラウザの性能を測れる<a href="https://browserbench.org/Speedometer2.0/" target="_blank" rel="noopener noreferrer">Speedometer 2.0</a>を実行したところ、あのFirefoxで90というスコアが出ました。
-</p>
-<p>(昔は140くらいいっていたような…？)
-</p>
-<p><img src="/assets/images/2022/06/23/speedometer.jpg" alt="Speedometerのスコア">
-</p>
-<p>ちなみにWindows版のFirefoxでは60くらいです。
-</p>
-<p>OSを変えただけで1.5倍になるとはすごいですよね。
-</p>
+<p>そもそもPCのスペックがそれなりにあるのでWindowsとの差はあまり感じませんが、確かに動作のカクつきがほとんどないように感じます。</p>
+<p>Windowsではスタートメニューを開く際に若干カクつくことがありました。(特に起動直後)</p>
+<p>それがManjaroではほとんどありません。</p>
+<p>また、ブラウザの性能を測れる<a href="https://browserbench.org/Speedometer2.0/" target="_blank" rel="noopener noreferrer">Speedometer 2.0</a>を実行したところ、あのFirefoxで90というスコアが出ました。</p>
+<p>(昔は140くらいいっていたような…？)</p>
+<p><img src="/assets/images/2022/06/23/speedometer.jpg" alt="Speedometerのスコア"></p>
+<p>ちなみにWindows版のFirefoxでは60くらいです。</p>
+<p>OSを変えただけで1.5倍になるとはすごいですよね。</p>
 <h3 id="カスタマイズ度が高い">カスタマイズ度が高い</h3>
-<p>Linux全般に言えることですが、とにかく自由にカスタマイズできます。
-</p>
-<p>何なら、ファイルをネットから落としてきて指定されたフォルダに配置すれば、UIをWindows風やMac風に簡単に変えられます。
-</p>
-<p>起動画面を変えることだってできます。
-</p>
-<p>Windowsでもフリーソフトを使えばある程度のカスタマイズは可能ですが、どうしても「無理やり感」が出てしまいます。
-</p>
-<p>これがLinuxなら設定ファイルをちょちょいと書き換えるだけです。
-</p>
-<p>(「それがムズいんだよ」という声が聞こえてきそうですが)
-</p>
-<p>ただ、カスタマイズしやすい分、触れてはいけない部分を触ってしまうとすぐに起動不可になるという側面もあります。
-</p>
+<p>Linux全般に言えることですが、とにかく自由にカスタマイズできます。</p>
+<p>何なら、ファイルをネットから落としてきて指定されたフォルダに配置すれば、UIをWindows風やMac風に簡単に変えられます。</p>
+<p>起動画面を変えることだってできます。</p>
+<p>Windowsでもフリーソフトを使えばある程度のカスタマイズは可能ですが、どうしても「無理やり感」が出てしまいます。</p>
+<p>これがLinuxなら設定ファイルをちょちょいと書き換えるだけです。</p>
+<p>(「それがムズいんだよ」という声が聞こえてきそうですが)</p>
+<p>ただ、カスタマイズしやすい分、触れてはいけない部分を触ってしまうとすぐに起動不可になるという側面もあります。</p>
 <h3 id="wslを使わなくていい">WSLを使わなくていい</h3>
-<p>Windowsで開発をしていたときにはWSLを使っていました。
-</p>
-<p>これはこれで非常に便利で、革新的なものだと思うのですが、WSLの起動には時間がかかりますし、メモリも食います。
-</p>
-<p>これがLinuxなら、そもそも仮想環境自体が不要です。
-</p>
-<p>非常に快適に開発をすることが出来るようになりました。
-</p>
+<p>Windowsで開発をしていたときにはWSLを使っていました。</p>
+<p>これはこれで非常に便利で、革新的なものだと思うのですが、WSLの起動には時間がかかりますし、メモリも食います。</p>
+<p>これがLinuxなら、そもそも仮想環境自体が不要です。</p>
+<p>非常に快適に開発をすることが出来るようになりました。</p>
 <h3 id="トラックパッドでの操作が快適">トラックパッドでの操作が快適</h3>
-<p>Manjaroは、初期の状態でトラックパッドのジェスチャーと慣性スクロールをサポートしています。
-</p>
-<p>Linuxディストリビューションはトラックパッドへの対応がいまいちなことが多いですが、Manjaroは最初から完璧に対応してくれているのでありがたいです。
-</p>
-<p>トラックパッドのジェスチャーは、まるでMacかのようにヌルヌル動いてくれます。
-</p>
+<p>Manjaroは、初期の状態でトラックパッドのジェスチャーと慣性スクロールをサポートしています。</p>
+<p>Linuxディストリビューションはトラックパッドへの対応がいまいちなことが多いですが、Manjaroは最初から完璧に対応してくれているのでありがたいです。</p>
+<p>トラックパッドのジェスチャーは、まるでMacかのようにヌルヌル動いてくれます。</p>
 <h2 id="デメリット4つ">デメリット4つ</h2>
 <h3 id="日本語環境の準備が面倒">日本語環境の準備が面倒</h3>
-<p>Ubuntuなど簡単に日本語環境が整うディストリビューションがある一方、Manjaroの場合は自分で日本語環境を用意する必要があります。
-</p>
-<p>一応、Manjaroにも言語を選ぶだけで自動でその言語に必要な環境を整えてくれる機能が搭載されていますが、僕の場合はそれがうまく動かず、結局自分でやらなければなりませんでした。
-</p>
-<p>また、システムフォントも初期設定では中華臭くなっているので、自分で変える必要があります。
-</p>
+<p>Ubuntuなど簡単に日本語環境が整うディストリビューションがある一方、Manjaroの場合は自分で日本語環境を用意する必要があります。</p>
+<p>一応、Manjaroにも言語を選ぶだけで自動でその言語に必要な環境を整えてくれる機能が搭載されていますが、僕の場合はそれがうまく動かず、結局自分でやらなければなりませんでした。</p>
+<p>また、システムフォントも初期設定では中華臭くなっているので、自分で変える必要があります。</p>
 <h3 id="プリインストールアプリが多い">プリインストールアプリが多い</h3>
-<p>完全版のManjaroはとにかくプリインストールアプリが多いです。
-</p>
-<p>まずはこのアプリたちを削除する必要があります。
-</p>
-<p>とはいえ、某OSと違って、「アップデートをしたら消したアプリが復活した」なんてことはないのでご安心ください。
-</p>
+<p>完全版のManjaroはとにかくプリインストールアプリが多いです。</p>
+<p>まずはこのアプリたちを削除する必要があります。</p>
+<p>とはいえ、某OSと違って、「アップデートをしたら消したアプリが復活した」なんてことはないのでご安心ください。</p>
 <h3 id="バッテリーが持たないこともある">バッテリーが持たない(こともある)</h3>
-<p>Linuxは初期状態ではバッテリーが持ちません。
-</p>
-<p>しかし、PowertopとTLPを使用することでバッテリー駆動時間を伸ばすことができます。
-</p>
-<p>僕はこの方法を実践した結果、逆にWindowsよりもバッテリーが持つようになった気がします。
-</p>
-<p>PowertopとTLPは以下のコマンドで導入することができます。
-</p>
+<p>Linuxは初期状態ではバッテリーが持ちません。</p>
+<p>しかし、PowertopとTLPを使用することでバッテリー駆動時間を伸ばすことができます。</p>
+<p>僕はこの方法を実践した結果、逆にWindowsよりもバッテリーが持つようになった気がします。</p>
+<p>PowertopとTLPは以下のコマンドで導入することができます。</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S powertop tlp
 systemctl enable tlp.service
 sudo tlp start
 </code></pre></div></div>
 <h3 id="使うのがむずい">使うのがむずい</h3>
-<p>いくらArch Linuxを簡単に使えるようにしたManjaroであっても、Linuxであることには変わりありません。
-</p>
-<p>トラブルも多く、そのたびに自分で解決しなければなりません。
-</p>
-<p>情報は基本英語で、解決に何日もかかることがあります。
-</p>
-<p>Linuxは素晴らしいOSですが、一方で難しいOSでもあります。
-</p>
-<p>実機にWindowsを消してLinuxを入れるのもいいですが、まずは仮想環境から始めて徐々にステップアップしていくのがおすすめです。
-</p>
+<p>いくらArch Linuxを簡単に使えるようにしたManjaroであっても、Linuxであることには変わりありません。</p>
+<p>トラブルも多く、そのたびに自分で解決しなければなりません。</p>
+<p>情報は基本英語で、解決に何日もかかることがあります。</p>
+<p>Linuxは素晴らしいOSですが、一方で難しいOSでもあります。</p>
+<p>実機にWindowsを消してLinuxを入れるのもいいですが、まずは仮想環境から始めて徐々にステップアップしていくのがおすすめです。</p>
 <h2 id="まとめ">まとめ</h2>
-<p>今回はWindowsからManjaroに乗り換えて感じたメリットとデメリットを紹介しました。
-</p>
-<p>Manjaroは素晴らしいOSなので、Linuxに興味があるという方はぜひ一度触ってみてください！
-   </p>
-</div>
+<p>今回はWindowsからManjaroに乗り換えて感じたメリットとデメリットを紹介しました。</p>
+<p>Manjaroは素晴らしいOSなので、Linuxに興味があるという方はぜひ一度触ってみてください！</p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2022-06/ie" title="IE サポート終了によせて">IE サポート終了によせて</a><a class="next" href="/2022-06/linux-at-school" title="学校でLinuxを使う上で困ったこと">学校でLinuxを使う上で困ったこと</a>
@@ -367,10 +314,10 @@ sudo tlp start
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-04/spring" title="学校でLinuxを使う上で困ったこと">春</a></li>
-<li><a class="post-link" href="/2021-08/github-webeditor" title="学校でLinuxを使う上で困ったこと">GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー</a></li>
-<li><a class="post-link" href="/2022-09/bot-1" title="学校でLinuxを使う上で困ったこと">5人で使っていたbotが学年の半数の人に使われるようになった話(前編)</a></li>
-<li><a class="post-link" href="/2022-06/ios16" title="学校でLinuxを使う上で困ったこと">iPhone 6s 、iOS 16 非対応へ。今後どうする？</a></li>
+       <li><a class="post-link" href="/2022-07/diary" title="学校でLinuxを使う上で困ったこと">一言日記(2022年7月)</a></li>
+<li><a class="post-link" href="/2022-05/font" title="学校でLinuxを使う上で困ったこと">Chrome のフォントを美しい Noto Sans にする方法</a></li>
+<li><a class="post-link" href="/2022-11/presentation" title="学校でLinuxを使う上で困ったこと">プレゼンで気をつけていること (自己流)</a></li>
+<li><a class="post-link" href="/2022-12/fe" title="学校でLinuxを使う上で困ったこと">Qiita に投稿しました【基本情報に向けて行った勉強法や当日の注意点など】</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -482,7 +429,7 @@ sudo tlp start
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -645,6 +592,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

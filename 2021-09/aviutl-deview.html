@@ -126,11 +126,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -233,16 +231,11 @@
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
    <div class="post-content e-content" itemprop="articleBody">
-     <p>この度、Aviutl の勉強をはじめました。
-</p>
-<p>そしてその第１作目を YouTube に公開しました。
-</p>
-<p>YouTube チャンネルの使い道がやっとできた…
-</p>
-<p>まだまだ学習し始めたばかりなのでクオリティは底辺中の底辺ですが、温かい目で見守っていただけると幸いです。
-</p>
-<p>記念すべき第1作目は、「Discord アカウントの作成手順」です。OBS の練習も兼ねています。
-</p>
+     <p>この度、Aviutl の勉強をはじめました。</p>
+<p>そしてその第１作目を YouTube に公開しました。</p>
+<p>YouTube チャンネルの使い道がやっとできた…</p>
+<p>まだまだ学習し始めたばかりなのでクオリティは底辺中の底辺ですが、温かい目で見守っていただけると幸いです。</p>
+<p>記念すべき第1作目は、「Discord アカウントの作成手順」です。OBS の練習も兼ねています。</p>
 <div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/QzKQBk09cOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
    </div>
 </article>
@@ -252,10 +245,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2021-08/chrome-extension-3" title="10分で定員付きの Google フォームを作ろう＜コピペ可＞">Chrome 拡張機能を作って公開しよう③　〜形にする〜</a></li>
-<li><a class="post-link" href="/2022-02/chromebook-start-like-windows" title="10分で定員付きの Google フォームを作ろう＜コピペ可＞">Chromebook のランチャーを Windows のスタートメニューっぽくする</a></li>
-<li><a class="post-link" href="/2021-09/form-limit" title="10分で定員付きの Google フォームを作ろう＜コピペ可＞">10分で定員付きの Google フォームを作ろう＜コピペ可＞</a></li>
-<li><a class="post-link" href="/2022-09/bot-1" title="10分で定員付きの Google フォームを作ろう＜コピペ可＞">5人で使っていたbotが学年の半数の人に使われるようになった話(前編)</a></li>
+       <li><a class="post-link" href="/2022-09/domain-sale" title="10分で定員付きの Google フォームを作ろう＜コピペ可＞">.com .netドメインが1年間0円で使える！</a></li>
+<li><a class="post-link" href="/2022-06/linux-at-school" title="10分で定員付きの Google フォームを作ろう＜コピペ可＞">学校でLinuxを使う上で困ったこと</a></li>
+<li><a class="post-link" href="/2021-09/github-education" title="10分で定員付きの Google フォームを作ろう＜コピペ可＞">学生は無料で GitHub Pro が使える？特典や申請方法などを解説！</a></li>
+<li><a class="post-link" href="/2021-08/chrome-extension-7" title="10分で定員付きの Google フォームを作ろう＜コピペ可＞">Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -367,7 +360,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -530,6 +523,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

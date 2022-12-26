@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -239,26 +237,17 @@
           <img src="/assets/images/2022/06/23/manjaro-gnome.jpg" width="100%" loading="eager" alt="Manjaroのデスクトップ画面">
            <figcaption></figcaption>
        </figure>
-     <p>Xubuntuは起動するのにManjaroくんが起動しない…
-</p>
+     <p>Xubuntuは起動するのにManjaroくんが起動しない…</p>
 <h2 id="現象">現象</h2>
-<p>実は最近、ManjaroでWi-Fiにうまく接続できない状態になっていまして、問題の切り分けの一環としてXubuntuをデュアルブートしました。
-</p>
-<p>その結果、Xubuntuは起動するもののManjaroがKarnel Panicとなって起動しなくなりました。
-</p>
+<p>実は最近、ManjaroでWi-Fiにうまく接続できない状態になっていまして、問題の切り分けの一環としてXubuntuをデュアルブートしました。</p>
+<p>その結果、Xubuntuは起動するもののManjaroがKarnel Panicとなって起動しなくなりました。</p>
 <h2 id="解決法">解決法</h2>
-<p>まず、GRUBメニューで「Advanced options for Manjaro」を選択します。
-</p>
-<p>(スクショなくてすみません)
-</p>
-<p>その後、”fallback”という文字が含まれるカーネルを選択し、Enterキーで起動します。
-</p>
-<p>これで起動したら、ログインしてターミナルを開きます。
-</p>
-<p>(これで起動できなかった場合、もしくはGRUBメニューが現れなかった場合は、この記事の最後の「”fallback”のカーネルで起動しない場合」をお読みください。)
-</p>
-<p>まず、<code class="language-plaintext highlighter-rouge">lsblk -l</code>コマンドを実行してディスクの状況を調べます。
-</p>
+<p>まず、GRUBメニューで「Advanced options for Manjaro」を選択します。</p>
+<p>(スクショなくてすみません)</p>
+<p>その後、”fallback”という文字が含まれるカーネルを選択し、Enterキーで起動します。</p>
+<p>これで起動したら、ログインしてターミナルを開きます。</p>
+<p>(これで起動できなかった場合、もしくはGRUBメニューが現れなかった場合は、この記事の最後の「”fallback”のカーネルで起動しない場合」をお読みください。)</p>
+<p>まず、<code class="language-plaintext highlighter-rouge">lsblk -l</code>コマンドを実行してディスクの状況を調べます。</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">[</span>user@mainpc ~]<span class="nv">$ </span>lsblk <span class="nt">-l</span>
     NAME      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
     nvme0n1   259:0    0 238.5G  0 disk 
@@ -266,35 +255,25 @@
     nvme0n1p2 259:2    0 192.5G  0 part /
     nvme0n1p3 259:3    0  45.6G  0 part
 </code></pre></div></div>
-<p>容量を頼りに、Manjaroがインストールされているパーティションを探し、その列の「NAME」を確認します。
-</p>
-<p>(ここでは、”nvme0n1p2”にManjaroがインストールされています。)
-</p>
-<p>その後、以下のコマンドを実行します。
-</p>
-<p><code class="language-plaintext highlighter-rouge">${disk}</code> となっている箇所には、先程調べたパーティションの”NAME”(例：nvme0n1p2)を入れてください。
-</p>
+<p>容量を頼りに、Manjaroがインストールされているパーティションを探し、その列の「NAME」を確認します。</p>
+<p>(ここでは、”nvme0n1p2”にManjaroがインストールされています。)</p>
+<p>その後、以下のコマンドを実行します。</p>
+<p><code class="language-plaintext highlighter-rouge">${disk}</code> となっている箇所には、先程調べたパーティションの”NAME”(例：nvme0n1p2)を入れてください。</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nb">sudo </span>grub-install /dev/<span class="k">${</span><span class="nv">disk</span><span class="k">}</span>
 </code></pre></div></div>
-<p>出力は以下のようになります(一例です)。
-</p>
+<p>出力は以下のようになります(一例です)。</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">[</span>user@mainpc ~]<span class="nv">$ </span><span class="nb">sudo </span>grub-install /dev/nvme0n1p2
     Installing <span class="k">for </span>x86_64-efi platform.
     Installation finished. No error reported.
 </code></pre></div></div>
-<p>最後に、以下のコマンドを実行すれば完了です。
-</p>
+<p>最後に、以下のコマンドを実行すれば完了です。</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nb">sudo </span>update-grub
 </code></pre></div></div>
-<p>再起動して、Manjaroが起動するか確かめてみてください！
-</p>
+<p>再起動して、Manjaroが起動するか確かめてみてください！</p>
 <h3 id="fallbackのカーネルで起動しない場合">“fallback”のカーネルで起動しない場合</h3>
-<p>インストール時に使用したLive USBを使用します。
-</p>
-<p>まずはLive USBから起動し、ターミナルを開いてください。
-</p>
-<p>上記で説明したように、<code class="language-plaintext highlighter-rouge">fdisk -l</code> コマンドを実行してディスクの状況を調べます。
-</p>
+<p>インストール時に使用したLive USBを使用します。</p>
+<p>まずはLive USBから起動し、ターミナルを開いてください。</p>
+<p>上記で説明したように、<code class="language-plaintext highlighter-rouge">fdisk -l</code> コマンドを実行してディスクの状況を調べます。</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">[</span>manjaro@mainpc ~]<span class="nv">$ </span>lsblk <span class="nt">-l</span>
     NAME      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
     nvme0n1   259:0    0 238.5G  0 disk 
@@ -302,42 +281,29 @@
     nvme0n1p2 259:2    0 192.5G  0 part /
     nvme0n1p3 259:3    0  45.6G  0 part
 </code></pre></div></div>
-<p>容量を頼りに、Manjaroがインストールされているパーティションを探し、その列の「NAME」を確認します。
-</p>
-<p>(ここでは、”nvme0n1p2”にManjaroがインストールされています。)
-</p>
-<p>このあと、HDDやSSDをマウントするため、マウント先となるディレクトリを作成します。
-</p>
-<p>(Live環境のため、実際にはディレクトリはどこにも作成されません。)
-</p>
+<p>容量を頼りに、Manjaroがインストールされているパーティションを探し、その列の「NAME」を確認します。</p>
+<p>(ここでは、”nvme0n1p2”にManjaroがインストールされています。)</p>
+<p>このあと、HDDやSSDをマウントするため、マウント先となるディレクトリを作成します。</p>
+<p>(Live環境のため、実際にはディレクトリはどこにも作成されません。)</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nb">sudo mkdir</span> /manjaro-mount
 </code></pre></div></div>
-<p>そして、マウントします。
-</p>
-<p><code class="language-plaintext highlighter-rouge">${disk}</code> となっている箇所には、先程調べたパーティションの”NAME”(例：nvme0n1p2)を入れてください。
-</p>
+<p>そして、マウントします。</p>
+<p><code class="language-plaintext highlighter-rouge">${disk}</code> となっている箇所には、先程調べたパーティションの”NAME”(例：nvme0n1p2)を入れてください。</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nb">sudo </span>mount /dev/<span class="k">${</span><span class="nv">disk</span><span class="k">}</span> /manjaro-mount
 </code></pre></div></div>
-<p>さあ、魔法の時間です。
-</p>
-<p>今から実行するコマンドで、PCにインストールされているManjaroのルート権限を手に入れることができます。(なんとも恐ろしい…)
-</p>
+<p>さあ、魔法の時間です。</p>
+<p>今から実行するコマンドで、PCにインストールされているManjaroのルート権限を手に入れることができます。(なんとも恐ろしい…)</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nb">sudo chroot</span> /manjaro-mount
 </code></pre></div></div>
-<p>これで、あなたはPCにインストールされているManjaroの管理者です！
-</p>
-<p>ここからは、起動できなくなったManjaroに入り込んだのと同様にコマンドを実行できます。
-</p>
-<p>上記の「解決法」を参考に、
-</p>
+<p>これで、あなたはPCにインストールされているManjaroの管理者です！</p>
+<p>ここからは、起動できなくなったManjaroに入り込んだのと同様にコマンドを実行できます。</p>
+<p>上記の「解決法」を参考に、</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nb">sudo </span>grub-install /dev/<span class="k">${</span><span class="nv">disk</span><span class="k">}</span>
     <span class="nb">sudo </span>update-grub
 </code></pre></div></div>
-<p>を実行すれば完了です。
-</p>
-<p>(<code class="language-plaintext highlighter-rouge">${disk}</code> となっている箇所には、先程調べたパーティションの”NAME”を入れてください。)
-   </p>
-</div>
+<p>を実行すれば完了です。</p>
+<p>(<code class="language-plaintext highlighter-rouge">${disk}</code> となっている箇所には、先程調べたパーティションの”NAME”を入れてください。)</p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2022-07/diary" title="一言日記(2022年7月)">一言日記(2022年7月)</a><a class="next" href="/2022-07/yay-patch" title="yayで「patch: コマンドが見つかりません」エラーが出たときの対処法">yayで「patch: コマンドが見つかりません」エラーが出たときの対処法</a>
@@ -345,10 +311,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-01/windows11-context" title="yayで「patch: コマンドが見つかりません」エラーが出たときの対処法">【ソフト不要】Windows 11 のコンテキストメニューを従来の見た目に戻す</a></li>
+       <li><a class="post-link" href="/2021-09/github-education" title="yayで「patch: コマンドが見つかりません」エラーが出たときの対処法">学生は無料で GitHub Pro が使える？特典や申請方法などを解説！</a></li>
 <li><a class="post-link" href="/2022-08/diary" title="yayで「patch: コマンドが見つかりません」エラーが出たときの対処法">一言日記(2022年8月)</a></li>
-<li><a class="post-link" href="/2021-09/aviutl-deview" title="yayで「patch: コマンドが見つかりません」エラーが出たときの対処法">Aviutl の勉強をはじめました</a></li>
-<li><a class="post-link" href="/2022-10/thinkbook" title="yayで「patch: コマンドが見つかりません」エラーが出たときの対処法">メインPC (ThinkBook 13s Gen2)を1年弱使ってみて</a></li>
+<li><a class="post-link" href="/2022-05/noto" title="yayで「patch: コマンドが見つかりません」エラーが出たときの対処法">汚いフォントに別れを告げられる拡張機能を作った</a></li>
+<li><a class="post-link" href="/2022-01/windows11-review" title="yayで「patch: コマンドが見つかりません」エラーが出たときの対処法">Windows 11 に関する誤解を暴く</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -460,7 +426,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -623,6 +589,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

@@ -126,11 +126,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -233,53 +231,32 @@
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
    <div class="post-content e-content" itemprop="articleBody">
-     <p>node.js をブラウザ上で使える <a href="https://glitch.com/" target="_blank" rel="noopener noreferrer">Glitch</a> を使っていて、プロジェクトの削除方法が気になったので調べてみました。
-</p>
+     <p>node.js をブラウザ上で使える <a href="https://glitch.com/" target="_blank" rel="noopener noreferrer">Glitch</a> を使っていて、プロジェクトの削除方法が気になったので調べてみました。</p>
 <h2 id="結論">結論</h2>
-<p>結論から言うと、現時点では Glitch でプロジェクトを削除する方法は <strong>ありません</strong>。
-</p>
-<p>どうやら2018年の時点では削除機能があったようですが、2021年現在では削除されています。
-</p>
-<p>（「削除機能が削除された」とはややこしい…）
-</p>
-<p>しかしご安心ください。代替策があります。
-</p>
+<p>結論から言うと、現時点では Glitch でプロジェクトを削除する方法は <strong>ありません</strong>。</p>
+<p>どうやら2018年の時点では削除機能があったようですが、2021年現在では削除されています。</p>
+<p>（「削除機能が削除された」とはややこしい…）</p>
+<p>しかしご安心ください。代替策があります。</p>
 <h2 id="代替策">代替策</h2>
-<p>Glitch でプロジェクトを削除することはできませんが、プロジェクトを「アーカイブ」することなら可能です。
-</p>
-<p>サーバーにデータは残りますが、閲覧や編集は不可能になり、プロジェクトは非公開になります。
-</p>
+<p>Glitch でプロジェクトを削除することはできませんが、プロジェクトを「アーカイブ」することなら可能です。</p>
+<p>サーバーにデータは残りますが、閲覧や編集は不可能になり、プロジェクトは非公開になります。</p>
 <h3 id="アーカイブする方法">アーカイブする方法</h3>
-<p>画面左上の自分のプロジェクト名をクリックし、出てきたメニューを下にスクロールします。
-</p>
-<p>そして、一番下の「Archive This Project」をクリックしてください。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/136206952-55697d22-6ab5-4d7a-8f3f-07f547c53780.png" alt="プロジェクトのアーカイブ">
-</p>
-<p>その後、確認メッセージが表示されるので「OK」をクリックしてください。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/136206961-99685280-d66c-4ac6-a1e6-943d3b5531ab.png" alt="確認ダイアログ">
-</p>
-<p>編集画面右上に「Archived ＜プロジェクト名＞」というメッセージが表示されていれば完了です。
-</p>
+<p>画面左上の自分のプロジェクト名をクリックし、出てきたメニューを下にスクロールします。</p>
+<p>そして、一番下の「Archive This Project」をクリックしてください。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/136206952-55697d22-6ab5-4d7a-8f3f-07f547c53780.png" alt="プロジェクトのアーカイブ"></p>
+<p>その後、確認メッセージが表示されるので「OK」をクリックしてください。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/136206961-99685280-d66c-4ac6-a1e6-943d3b5531ab.png" alt="確認ダイアログ"></p>
+<p>編集画面右上に「Archived ＜プロジェクト名＞」というメッセージが表示されていれば完了です。</p>
 <h3 id="アーカイブしたプロジェクトは何処へ行くのか">アーカイブしたプロジェクトは何処へ行くのか</h3>
-<p>アーカイブしたプロジェクトは、ダッシュボードの「Archived」に振り分けられます。
-</p>
-<p><a href="https://glitch.com/dashboard" target="_blank" rel="noopener noreferrer">ダッシュボード</a>にアクセスし、「Projects」の右側から「Archived」を選んでください。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/136206964-2bcf5a3d-63c6-434f-9629-32bd038dac76.png" alt="ダッシュボード">
-</p>
-<p>すると、アーカイブしたプロジェクトの一覧を見ることができます。
-</p>
-<p>アーカイブしたプロジェクトは閲覧・編集が不可能なため、これらの操作をする場合には先ほどのダッシュボードにて、プロジェクト一覧の上にカーソルを乗せると現れる「Reactivate」をクリックし、アーカイブを解除する必要があります。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/136207557-7bdb8833-1596-4266-8665-1917700ac4b7.png" alt="アーカイブ解除">
-</p>
+<p>アーカイブしたプロジェクトは、ダッシュボードの「Archived」に振り分けられます。</p>
+<p><a href="https://glitch.com/dashboard" target="_blank" rel="noopener noreferrer">ダッシュボード</a>にアクセスし、「Projects」の右側から「Archived」を選んでください。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/136206964-2bcf5a3d-63c6-434f-9629-32bd038dac76.png" alt="ダッシュボード"></p>
+<p>すると、アーカイブしたプロジェクトの一覧を見ることができます。</p>
+<p>アーカイブしたプロジェクトは閲覧・編集が不可能なため、これらの操作をする場合には先ほどのダッシュボードにて、プロジェクト一覧の上にカーソルを乗せると現れる「Reactivate」をクリックし、アーカイブを解除する必要があります。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/136207557-7bdb8833-1596-4266-8665-1917700ac4b7.png" alt="アーカイブ解除"></p>
 <h2 id="参考">参考</h2>
 <ul>
- <li>
-<a href="https://support.glitch.com/t/how-to-delete-a-project/31576" target="_blank" rel="noopener noreferrer">How to delete a project? - Glitch Help - Glitch Support</a>
-</li>
+ <li><a href="https://support.glitch.com/t/how-to-delete-a-project/31576" target="_blank" rel="noopener noreferrer">How to delete a project? - Glitch Help - Glitch Support</a></li>
 </ul>
    </div>
 </article>
@@ -289,10 +266,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2021-09/drive-preview" title="三項演算子が便利すぎて感動した">Google ドライブの動画が再生できないときの対処法</a></li>
-<li><a class="post-link" href="/2022-09/bot-2" title="三項演算子が便利すぎて感動した">5人で使っていたbotが学年の半数の人に使われるようになった話(後編)</a></li>
-<li><a class="post-link" href="/2022-01/browser" title="三項演算子が便利すぎて感動した">1年間いろんなブラウザを試した結果、結局Chromeに戻った話</a></li>
-<li><a class="post-link" href="/2022-11/presentation" title="三項演算子が便利すぎて感動した">プレゼンで気をつけていること (自己流)</a></li>
+       <li><a class="post-link" href="/2022-06/study-abroad" title="三項演算子が便利すぎて感動した">留学体験記を聞いて</a></li>
+<li><a class="post-link" href="/2022-08/domain" title="三項演算子が便利すぎて感動した">ドメインが変わりました</a></li>
+<li><a class="post-link" href="/2021-09/form-limit" title="三項演算子が便利すぎて感動した">10分で定員付きの Google フォームを作ろう＜コピペ可＞</a></li>
+<li><a class="post-link" href="/2021-09/github-kusa" title="三項演算子が便利すぎて感動した">GitHub の草、17週連続フルコンボ達成！</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -404,7 +381,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -567,6 +544,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

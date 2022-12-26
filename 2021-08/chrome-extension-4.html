@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -239,14 +237,10 @@
           <img src="/assets/images/banners/2021-08-04-twitter.jpg" width="100%" loading="eager" alt="ヘッダー画像">
            <figcaption>Photo by <a href="https://unsplash.com/@alexbemore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Alexander Shatov</a> on <a href="https://unsplash.com/s/photos/twitter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
        </figure>
-     <p>こんにちは！1回30分で拡張機能を作るシリーズ、第4弾です。今回は、この拡張機能の要、「コピー機能」を実装していきます。
-</p>
-<p>「あれ？15分じゃなかったのかよ！」と気づかれた方、そうです。1回分のボリュームが15分に収まりきらないということで、誠に勝手ながら30分に延長させていただきました。
-</p>
-<p>「15分しか時間がない」という方、ご安心ください。最後にも触れますが、明日・明後日の連載はお休みします。ということで、ゆとりを持って取り組んでみてください。
-</p>
-<p>では、本題に入っていきましょう。(切り替えが早い)
-</p>
+     <p>こんにちは！1回30分で拡張機能を作るシリーズ、第4弾です。今回は、この拡張機能の要、「コピー機能」を実装していきます。</p>
+<p>「あれ？15分じゃなかったのかよ！」と気づかれた方、そうです。1回分のボリュームが15分に収まりきらないということで、誠に勝手ながら30分に延長させていただきました。</p>
+<p>「15分しか時間がない」という方、ご安心ください。最後にも触れますが、明日・明後日の連載はお休みします。ということで、ゆとりを持って取り組んでみてください。</p>
+<p>では、本題に入っていきましょう。(切り替えが早い)</p>
 <h2 id="コピーボタンの配置">コピーボタンの配置</h2>
 <p><code class="language-plaintext highlighter-rouge">popup.html</code> を次のように書き換えてください。
 </p>
@@ -296,8 +290,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
 </code></pre>
-<p>このままではボタンがむき出しになっていてかっこ悪いので、<code class="language-plaintext highlighter-rouge">popup.css</code> に以下の内容を追記してください。
-</p>
+<p>このままではボタンがむき出しになっていてかっこ悪いので、<code class="language-plaintext highlighter-rouge">popup.css</code> に以下の内容を追記してください。</p>
 <pre><code class="language-CSS">/*ボタンに適用するCSS*/
 button {
   appearance: none; /*デフォルトの見た目を無効に*/
@@ -330,25 +323,17 @@ svg.withText{
     margin-right: .7em; /*右側に余白をあける*/
 }
 </code></pre>
-<p>ここまでやると、以下の画像のようになります。ボタンにスタイルが適用されていて、いい感じですね！
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/128103219-9d6ebeaa-f9c2-42da-83da-5e7b2d233983.png" alt="CSS適用後">
-</p>
+<p>ここまでやると、以下の画像のようになります。ボタンにスタイルが適用されていて、いい感じですね！</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/128103219-9d6ebeaa-f9c2-42da-83da-5e7b2d233983.png" alt="CSS適用後"></p>
 <h2 id="コピー機能の実装">コピー機能の実装</h2>
-<p>それでは、本題の「コピー機能の実装」に移ります。
-</p>
-<p>流れとしては、
-</p>
+<p>それでは、本題の「コピー機能の実装」に移ります。</p>
+<p>流れとしては、</p>
 <ol>
- <li>コピーボタンをクリックする
- </li>
-<li>クリップボードに URL またはタイトルがコピーされる
-</li>
+ <li>コピーボタンをクリックする</li>
+ <li>クリップボードに URL またはタイトルがコピーされる</li>
 </ol>
-<p>「コピーボタンをクリックしたとき」は、<code class="language-plaintext highlighter-rouge">addEventListener</code> を使えばいけそうです。
-</p>
-<p>また、クリップボードにコピーするという動作は、<code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText(コピーしたい文字列)</code> でできます。
-</p>
+<p>「コピーボタンをクリックしたとき」は、<code class="language-plaintext highlighter-rouge">addEventListener</code> を使えばいけそうです。</p>
+<p>また、クリップボードにコピーするという動作は、<code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText(コピーしたい文字列)</code> でできます。</p>
 <pre><code class="language-JavaScript">chrome.tabs.query({ 'active': true, 'lastFocusedWindow': true }, tabs =&gt; {
     title.value = tabs[0].title;
     url.value = tabs[0].url;
@@ -369,35 +354,24 @@ svg.withText{
     
 });
 </code></pre>
-<p>それでは、「コピー」ボタンを押して、動作を確認してみてください！
-</p>
-<p>ちなみに、「タイトルとURLを両方コピー」した場合は、タイトルとURLの間に改行が入ります。これが、上記のコードの <code class="language-plaintext highlighter-rouge">\n</code> に当たる部分です。JavaScriptでは、<code class="language-plaintext highlighter-rouge">\n</code> を使うと文字列を改行させることができます。
-</p>
+<p>それでは、「コピー」ボタンを押して、動作を確認してみてください！</p>
+<p>ちなみに、「タイトルとURLを両方コピー」した場合は、タイトルとURLの間に改行が入ります。これが、上記のコードの <code class="language-plaintext highlighter-rouge">\n</code> に当たる部分です。JavaScriptでは、<code class="language-plaintext highlighter-rouge">\n</code> を使うと文字列を改行させることができます。</p>
 <h2 id="コピーしたことを伝える">コピーしたことを伝える</h2>
-<p>しかし、これではボタンを押しても何も起こらないので、本当にコピーされたのか疑問に思いますよね。
-</p>
-<p>そこで、コピーボタンを押したら、クリップボードのアイコンが「チェックアイコン」に変わるようにしましょう。
-</p>
-<p>仕組みはこうです。
-</p>
+<p>しかし、これではボタンを押しても何も起こらないので、本当にコピーされたのか疑問に思いますよね。</p>
+<p>そこで、コピーボタンを押したら、クリップボードのアイコンが「チェックアイコン」に変わるようにしましょう。</p>
+<p>仕組みはこうです。</p>
 <ol>
- <li>コピーボタンが押されたら、クリップボードのアイコンを非表示にし、チェックアイコンを表示する
- </li>
-<li>5秒後にもとに戻す
- </li>
-<li>ボタンがクリックされたとき、他のボタンがチェックアイコンだったらもとに戻す
-</li>
+ <li>コピーボタンが押されたら、クリップボードのアイコンを非表示にし、チェックアイコンを表示する</li>
+ <li>5秒後にもとに戻す</li>
+ <li>ボタンがクリックされたとき、他のボタンがチェックアイコンだったらもとに戻す</li>
 </ol>
 <pre><code class="language-HTML">&lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 checkIcon" viewBox="0 0 16 16" style="display: none;"&gt;
     &lt;path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/&gt;
 &lt;/svg&gt;
 </code></pre>
-<p>ただ、この時点でポップアップを開いてもなんの変化もありません。先程追加したチェックアイコンには、<code class="language-plaintext highlighter-rouge">style="display: none;"</code> とあります。これにより、非表示になっているからです。
-</p>
-<p>では、<code class="language-plaintext highlighter-rouge">popup.js</code> に、ボタンを押したときにチェックアイコンを表示させるようにプログラムします。
-</p>
-<p>「クリップボードアイコンをチェックアイコンに入れ替える」という処理は何度か使いそうなので、関数にまとめます。
-</p>
+<p>ただ、この時点でポップアップを開いてもなんの変化もありません。先程追加したチェックアイコンには、<code class="language-plaintext highlighter-rouge">style="display: none;"</code> とあります。これにより、非表示になっているからです。</p>
+<p>では、<code class="language-plaintext highlighter-rouge">popup.js</code> に、ボタンを押したときにチェックアイコンを表示させるようにプログラムします。</p>
+<p>「クリップボードアイコンをチェックアイコンに入れ替える」という処理は何度か使いそうなので、関数にまとめます。</p>
 <pre><code class="language-JavaScript">let timeout;
 function showCheck(parentId) {
     clearTimeout(timeout); //5秒後に予定されている処理をキャンセル
@@ -420,8 +394,7 @@ function showCheck(parentId) {
     }, 5000);
 }
 </code></pre>
-<p>そして、ボタンがクリックされた際にこの関数を呼び出すようにします。引数 <code class="language-plaintext highlighter-rouge">parentId</code> には、ボタンのIDを代入します。
-</p>
+<p>そして、ボタンがクリックされた際にこの関数を呼び出すようにします。引数 <code class="language-plaintext highlighter-rouge">parentId</code> には、ボタンのIDを代入します。</p>
 <pre><code class="language-JavaScript">/*候補１*/
 showCheck("copyTitle");
 
@@ -431,17 +404,12 @@ showCheck("copyURL");
 /*候補3*/
 showCheck("copyBoth");
 </code></pre>
-<p>これで、コピーボタンをクリックするとチェックアイコンに切り替わるはずです。
-</p>
-<p>もし、クリックしたのと違うボタンのアイコンが変化している場合は、上記のコードを追加する場所を間違えています。
-</p>
+<p>これで、コピーボタンをクリックするとチェックアイコンに切り替わるはずです。</p>
+<p>もし、クリックしたのと違うボタンのアイコンが変化している場合は、上記のコードを追加する場所を間違えています。</p>
 <h2 id="sns-へのシェアボタンを追加する">SNS へのシェアボタンを追加する</h2>
-<p>SNS で直接投稿・送信ができるボタンを設置します。
-</p>
-<p>このようなボタンについては、公式が「このURLにアクセスすればシェアできるよ」と公開してくれているので、それに則って作成していきます。
-</p>
-<p>まずは <code class="language-plaintext highlighter-rouge">popup.html</code> から行きましょう。
-</p>
+<p>SNS で直接投稿・送信ができるボタンを設置します。</p>
+<p>このようなボタンについては、公式が「このURLにアクセスすればシェアできるよ」と公開してくれているので、それに則って作成していきます。</p>
+<p>まずは <code class="language-plaintext highlighter-rouge">popup.html</code> から行きましょう。</p>
 <pre><code class="language-HTML">&lt;div class="both"&gt;
   &lt;button title="タイトルとURLをコピー" id="copyBoth" class="shareSNS copyBoth"&gt;
     &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard withText" viewBox="0 0 16 16" aria-label="タイトルとURLをコピー"&gt;
@@ -540,19 +508,14 @@ showCheck("copyBoth");
     fill: #fff;
 }
 </code></pre>
-<p>下の画像のようになっていればOKです。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/128118980-3cdc3850-cf07-4da1-99b3-0f130a1f68e6.png" alt="SNS シェア">
-</p>
-<p>では、<code class="language-plaintext highlighter-rouge">popup.js</code> で動きを付け加えていきます。
-</p>
-<p>これと同時に、<code class="language-plaintext highlighter-rouge">tabs[0].title</code> と <code class="language-plaintext highlighter-rouge">tabs[0].url</code> を定数に格納します。後で参照しやすくするためです。
-</p>
+<p>下の画像のようになっていればOKです。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/128118980-3cdc3850-cf07-4da1-99b3-0f130a1f68e6.png" alt="SNS シェア"></p>
+<p>では、<code class="language-plaintext highlighter-rouge">popup.js</code> で動きを付け加えていきます。</p>
+<p>これと同時に、<code class="language-plaintext highlighter-rouge">tabs[0].title</code> と <code class="language-plaintext highlighter-rouge">tabs[0].url</code> を定数に格納します。後で参照しやすくするためです。</p>
 <pre><code class="language-JavaScript">const tabTitle = tabs[0].title;
 const tabUrl = tabs[0].url;
 </code></pre>
-<p>そして、コードの中の <code class="language-plaintext highlighter-rouge">tabs[0].title</code> と <code class="language-plaintext highlighter-rouge">tabs[0].url</code> をそれぞれ、<code class="language-plaintext highlighter-rouge">tabTitle</code> と <code class="language-plaintext highlighter-rouge">tabUrl</code> に書き換えてください。
-</p>
+<p>そして、コードの中の <code class="language-plaintext highlighter-rouge">tabs[0].title</code> と <code class="language-plaintext highlighter-rouge">tabs[0].url</code> をそれぞれ、<code class="language-plaintext highlighter-rouge">tabTitle</code> と <code class="language-plaintext highlighter-rouge">tabUrl</code> に書き換えてください。</p>
 <pre><code class="language-JavaScript">/*Facebook*/
 document.getElementById("shareToFB").addEventListener("click", () =&gt; {
     windowOpen("https://www.facebook.com/share.php?u=" + encodeURIComponent(tabUrl));
@@ -574,41 +537,35 @@ document.getElementById("LINE").addEventListener("click", ()=&gt;{
     return false;
 }
 </code></pre>
-<p>では、SNS シェア部分のコードの解説をします。
-</p>
-<p>主要SNS では、指定された URL にアクセスすることで、シェアができるようになっています。SNS サービス毎の URL は以下のとおりです。
-</p>
+<p>では、SNS シェア部分のコードの解説をします。</p>
+<p>主要SNS では、指定された URL にアクセスすることで、シェアができるようになっています。SNS サービス毎の URL は以下のとおりです。</p>
 <table>
 <thead>
    <tr>
      <th style="text-align: center">サービス名</th>
-<th style="text-align: left">URL</th>
-</tr>
-</thead>
-<tbody>
+     <th style="text-align: left">URL</th>
+   </tr>
+ </thead>
+ <tbody>
    <tr>
      <td style="text-align: center">Facebook</td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://www.facebook.com/share.php?u={{ URL }}</code></td>
-</tr>
-<tr>
+     <td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://www.facebook.com/share.php?u={{ URL }}</code></td>
+   </tr>
+   <tr>
      <td style="text-align: center">Twitter</td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://twitter.com/share?text={{ ツイート文 }}&amp;url={{ URL }}&amp;hashtags={{ ハッシュタグ (カンマ区切りで複数指定可能) }}</code></td>
-</tr>
-<tr>
+     <td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://twitter.com/share?text={{ ツイート文 }}&amp;url={{ URL }}&amp;hashtags={{ ハッシュタグ (カンマ区切りで複数指定可能) }}</code></td>
+   </tr>
+   <tr>
      <td style="text-align: center">LINE</td>
-<td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://social-plugins.line.me/lineit/share?url={{ URL }}</code></td>
-</tr>
-</tbody>
+     <td style="text-align: left"><code class="language-plaintext highlighter-rouge">https://social-plugins.line.me/lineit/share?url={{ URL }}</code></td>
+   </tr>
+ </tbody>
 </table>
-<p><code class="language-plaintext highlighter-rouge">{{ URL }}</code>の部分に共有したい URL を入れると、上記のような SNS でシェアすることができます。
-</p>
-<p>また、Twitter の場合は、ツイート文やハッシュタグも指定できます。要領は URL と同じで、指定された部分に文字を入れるだけです。
-</p>
-<p>上記のコードの中に、<code class="language-plaintext highlighter-rouge">encodeURIComponent()</code> というものが頻繁に使われていますが、これは日本語や記号などを、コンピューターが扱いやすいように変換するためのものです。URL の中に日本語などが紛れていると、予期せぬトラブルの原因になります。そこで、この処理が必要になるわけです。
-</p>
+<p><code class="language-plaintext highlighter-rouge">{{ URL }}</code>の部分に共有したい URL を入れると、上記のような SNS でシェアすることができます。</p>
+<p>また、Twitter の場合は、ツイート文やハッシュタグも指定できます。要領は URL と同じで、指定された部分に文字を入れるだけです。</p>
+<p>上記のコードの中に、<code class="language-plaintext highlighter-rouge">encodeURIComponent()</code> というものが頻繁に使われていますが、これは日本語や記号などを、コンピューターが扱いやすいように変換するためのものです。URL の中に日本語などが紛れていると、予期せぬトラブルの原因になります。そこで、この処理が必要になるわけです。</p>
 <h2 id="コード全体">コード全体</h2>
-<p>最後に、コードの全体を提示します。「うまく動かない」等の場合は参考にしてみてください。
-</p>
+<p>最後に、コードの全体を提示します。「うまく動かない」等の場合は参考にしてみてください。</p>
 <pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
 &lt;html lang="ja"&gt;
 
@@ -929,72 +886,48 @@ function windowOpen(url) {
     return false;
 }
 </code></pre>
-<p>さて、今日はここまでです。お疲れさまでした！
-</p>
+<p>さて、今日はここまでです。お疲れさまでした！</p>
 <h2 id="todo">TODO</h2>
 <ul>
- <li>前回予告した、「権限を少なくする作業」(次回)
- </li>
-<li>Chrome Web ストアで公開(次々回)
-</li>
+ <li>前回予告した、「権限を少なくする作業」(次回)</li>
+ <li>Chrome Web ストアで公開(次々回)</li>
 </ul>
-<p>※今後の予定は変更になる可能性があります
-</p>
+<p>※今後の予定は変更になる可能性があります</p>
 <h2 id="まとめ">まとめ</h2>
 <ul>
  <li>
-<code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText(コピーしたい文字列)</code> で文字列をクリップボードにコピーできる。
- </li>
-<li>指定のURLにアクセスすれば、各種SNSでシェアすることができる。
-</li>
+<code class="language-plaintext highlighter-rouge">navigator.clipboard.writeText(コピーしたい文字列)</code> で文字列をクリップボードにコピーできる。</li>
+ <li>指定のURLにアクセスすれば、各種SNSでシェアすることができる。</li>
 </ul>
-<p>今回は前回以上にボリューミーでしたが、ここまで読んでいただきありがとうございました。
-</p>
-<p>さて、ここまで駆け足でやってきてしまったので、明日、明後日、の連載はお休みします。今までの復習を行ったり、少し息抜きしたりしてください。
-</p>
-<p>それでは、次回(8/7)をお楽しみに！
-</p>
+<p>今回は前回以上にボリューミーでしたが、ここまで読んでいただきありがとうございました。</p>
+<p>さて、ここまで駆け足でやってきてしまったので、明日、明後日、の連載はお休みします。今までの復習を行ったり、少し息抜きしたりしてください。</p>
+<p>それでは、次回(8/7)をお楽しみに！</p>
 <h2 id="202187-追記">2021/8/7 追記</h2>
-<p>「LINE で送る」ボタンに関するコードに誤りがあったため訂正しました。
-   </p>
-</div>
+<p>「LINE で送る」ボタンに関するコードに誤りがあったため訂正しました。</p>
+   </div>
 </article>
       <br><br><br>
-     <p>【「Chrome 拡張機能を作ろう」の記事一覧】
-     </p>
-<ol>
+     <p>【「Chrome 拡張機能を作ろう」の記事一覧】</p>
+     <ol>
+       <li><a href="/2021-07/chrome-extension-1">環境構築</a></li>
+       <li><a href="/2021-08/chrome-extension-2">ポップアップ作成</a></li>
+       <li><a href="/2021-08/chrome-extension-3">仕様に沿って開発</a></li>
        <li>
-<a href="/2021-07/chrome-extension-1">環境構築</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-2">ポップアップ作成</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-3">仕様に沿って開発</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-4">コピー機能実装</a> (←今ココ)
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-5">権限を減らす</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-7">Webストアに公開</a>
-     </li>
-</ol>
+<a href="/2021-08/chrome-extension-4">コピー機能実装</a> (←今ココ)</li>
+       <li><a href="/2021-08/chrome-extension-5">権限を減らす</a></li>
+       <li><a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a></li>
+       <li><a href="/2021-08/chrome-extension-7">Webストアに公開</a></li>
+     </ol>
       <div class="post-nav">
 <a class="previous" href="/2021-08/chrome-extension-3" title="Chrome 拡張機能を作って公開しよう③　〜形にする〜">Chrome 拡張機能を作って公開しよう③　〜形にする〜</a><a class="next" href="/2021-08/chrome-extension-5" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜</a>
 </div>
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-09/windows-key" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法</a></li>
-<li><a class="post-link" href="/2022-12/chromebook" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">改めて感じた Chromebook の良さ〜心配がいらない PC〜</a></li>
-<li><a class="post-link" href="/2022-05/subset" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a></li>
-<li><a class="post-link" href="/2022-01/snow" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">雪</a></li>
+       <li><a class="post-link" href="/2022-11/background" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">自分のアプリが作られた背景を語る</a></li>
+<li><a class="post-link" href="/2022-10/next-partner" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">iPhone 6s の次の相棒を探す</a></li>
+<li><a class="post-link" href="/2022-12/news" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">自分に合ったニュースアプリを探し求めて</a></li>
+<li><a class="post-link" href="/2021-08/chrome-extension-5" title="Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜">Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -1106,7 +1039,7 @@ function windowOpen(url) {
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -1269,6 +1202,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

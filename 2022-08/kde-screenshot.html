@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -241,28 +239,18 @@
           <img src="/assets/images/2022/08/11/screen.jpg" width="100%" loading="eager" alt="スクリーン">
            <figcaption>Photo by <a href="https://unsplash.com/@quaritsch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Quaritsch Photography</a> on <a href="https://unsplash.com/s/photos/screen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>  </figcaption>
        </figure>
-     <p>KDE Plasma でスクリーンショットを撮ろうとしたところ、現在の画面ではなく随分昔の画面が撮影されてしまう不具合に遭遇しました。
-</p>
+     <p>KDE Plasma でスクリーンショットを撮ろうとしたところ、現在の画面ではなく随分昔の画面が撮影されてしまう不具合に遭遇しました。</p>
 <h2 id="現象">現象</h2>
-<p>Arch Linux(KDE Plasma 5)で、Spectacleを用いてスクリーンショットを短形領域で撮影しようとしたところ、現在の画面ではなく数十分前の画面が撮影されてしまいます。
-</p>
-<p>なお、使用しているPCにグラボは搭載されておらず、インテルの内蔵GPUを使用しています。
-</p>
+<p>Arch Linux(KDE Plasma 5)で、Spectacleを用いてスクリーンショットを短形領域で撮影しようとしたところ、現在の画面ではなく数十分前の画面が撮影されてしまいます。</p>
+<p>なお、使用しているPCにグラボは搭載されておらず、インテルの内蔵GPUを使用しています。</p>
 <h2 id="解決法">解決法</h2>
-<p>xf86-video-intelパッケージを削除します。
-</p>
-<p>Arch系の場合は、<code class="language-plaintext highlighter-rouge">pacman -R xf86-video-intel</code>で削除できます。
-</p>
-<p>KDEやDebian、Ubuntu、Fedoraからも、インテル第4世代以降のGPUを搭載している場合にはxf86-video-intelのインストールは非推奨とされています。
-</p>
+<p>xf86-video-intelパッケージを削除します。</p>
+<p>Arch系の場合は、<code class="language-plaintext highlighter-rouge">pacman -R xf86-video-intel</code>で削除できます。</p>
+<p>KDEやDebian、Ubuntu、Fedoraからも、インテル第4世代以降のGPUを搭載している場合にはxf86-video-intelのインストールは非推奨とされています。</p>
 <h2 id="参考サイト">参考サイト</h2>
 <ul>
- <li>
-<a href="https://bbs.archlinux.org/viewtopic.php?id=263247" target="_blank" rel="noopener noreferrer">[SOLVED] KDE Plasma 5 / Spectacle Screenshot uses old screen state / Applications Desktop Environments / Arch Linux Forums</a>
- </li>
-<li>
-<a href="https://wiki.archlinux.jp/index.php/Intel_Graphics#.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB" target="_blank" rel="noopener noreferrer">Intel Graphics - ArchWiki</a>
-</li>
+ <li><a href="https://bbs.archlinux.org/viewtopic.php?id=263247" target="_blank" rel="noopener noreferrer">[SOLVED] KDE Plasma 5 / Spectacle Screenshot uses old screen state / Applications Desktop Environments / Arch Linux Forums</a></li>
+ <li><a href="https://wiki.archlinux.jp/index.php/Intel_Graphics#.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB" target="_blank" rel="noopener noreferrer">Intel Graphics - ArchWiki</a></li>
 </ul>
    </div>
 </article>
@@ -272,10 +260,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-07/diary" title="左Enterキーのすゝめ(Linux、Windows対応)">一言日記(2022年7月)</a></li>
-<li><a class="post-link" href="/2022-06/study-abroad" title="左Enterキーのすゝめ(Linux、Windows対応)">留学体験記を聞いて</a></li>
-<li><a class="post-link" href="/2022-09/bot-1" title="左Enterキーのすゝめ(Linux、Windows対応)">5人で使っていたbotが学年の半数の人に使われるようになった話(前編)</a></li>
-<li><a class="post-link" href="/2021-12/winter" title="左Enterキーのすゝめ(Linux、Windows対応)">冬</a></li>
+       <li><a class="post-link" href="/2022-05/subset" title="左Enterキーのすゝめ(Linux、Windows対応)">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a></li>
+<li><a class="post-link" href="/2022-12/fe" title="左Enterキーのすゝめ(Linux、Windows対応)">Qiita に投稿しました【基本情報に向けて行った勉強法や当日の注意点など】</a></li>
+<li><a class="post-link" href="/2022-10/canonicalize" title="左Enterキーのすゝめ(Linux、Windows対応)">Cloudflare Pages で WWW あり・なしを正規化する</a></li>
+<li><a class="post-link" href="/2022-06/ie" title="左Enterキーのすゝめ(Linux、Windows対応)">IE サポート終了によせて</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -387,7 +375,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -550,6 +538,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

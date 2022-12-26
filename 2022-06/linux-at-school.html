@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -239,62 +237,40 @@
           <img src="/assets/images/2022/06/26/hallway.jpg" width="100%" loading="eager" alt="廊下">
            <figcaption>Photo by <a href="https://unsplash.com/@nkly1004?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Nguyen Khanh Ly</a> on <a href="https://unsplash.com/s/photos/school?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>  </figcaption>
        </figure>
-     <p>私が通っている学校はBYOD制で、自由にデバイスを持ち込めるのですが、Linux(Manjaro)を実際に学校で使用してみて困ったことをまとめてみます。
-</p>
+     <p>私が通っている学校はBYOD制で、自由にデバイスを持ち込めるのですが、Linux(Manjaro)を実際に学校で使用してみて困ったことをまとめてみます。</p>
 <div class="warning-card">
 学校からOSについて指定がある場合には、そちらに従うようにしてください。
 </div>
 <h2 id="基本的に問題なし">基本的に問題なし</h2>
-<p>学校にもよると思いますが、ほとんどのことはなんの問題もなく普通に行えます。
-</p>
-<p>私が学校で端末を使うのは以下のような場面です。
-</p>
+<p>学校にもよると思いますが、ほとんどのことはなんの問題もなく普通に行えます。</p>
+<p>私が学校で端末を使うのは以下のような場面です。</p>
 <ul>
- <li>Google Workspaceでの共同作業
- </li>
-<li>その他Webツールの使用
-</li>
+ <li>Google Workspaceでの共同作業</li>
+ <li>その他Webツールの使用</li>
 </ul>
-<p>ブラウザさえあれば出来ることばかりです。
-</p>
-<p>ただし、ブラウザはFirefoxがデフォルトになっているディストリビューションが多いと思いますが、たまにFirefoxでは動かないサイトもあるのでChromium系のブラウザも入れておいたほうが安心です。
-</p>
+<p>ブラウザさえあれば出来ることばかりです。</p>
+<p>ただし、ブラウザはFirefoxがデフォルトになっているディストリビューションが多いと思いますが、たまにFirefoxでは動かないサイトもあるのでChromium系のブラウザも入れておいたほうが安心です。</p>
 <h2 id="困ったこと">困ったこと</h2>
 <h3 id="インストール直後は大変">インストール直後は大変</h3>
-<p>ディストリビューションにもよりますが、私が使っているManjaroは日本語入力が初期状態ではできません。
-</p>
-<p>日本語環境の構築が間に合わなかったため、インストール翌日は日本語入力が使えず大変な思いをしました。
-</p>
-<p>たまたま知っていた<a href="https://www.inputking.com/japanese/" target="_blank" rel="noopener noreferrer">InputKing</a>というオンライン入力ツールを使うことでなんとか対処できましたが、このツールを知らなければ大変なことになっていたと思います。
-</p>
-<p>その他にも、WiFiの設定をし直すなど、やらなければならない作業が多かったです。
-</p>
+<p>ディストリビューションにもよりますが、私が使っているManjaroは日本語入力が初期状態ではできません。</p>
+<p>日本語環境の構築が間に合わなかったため、インストール翌日は日本語入力が使えず大変な思いをしました。</p>
+<p>たまたま知っていた<a href="https://www.inputking.com/japanese/" target="_blank" rel="noopener noreferrer">InputKing</a>というオンライン入力ツールを使うことでなんとか対処できましたが、このツールを知らなければ大変なことになっていたと思います。</p>
+<p>その他にも、WiFiの設定をし直すなど、やらなければならない作業が多かったです。</p>
 <h3 id="唐突に壊れる">唐突に壊れる</h3>
-<p>Linuxあるあるで、家で色々いじくり回していたら突然起動しなくなることがあります。
-</p>
-<p>突然起動しなくなったと言っても、翌日には学校で使う予定があり今日中に復旧させなければなりません。この場合には夜遅くまでパソコンに向かわなければならないことがあります。
-</p>
-<p>しかし、こんな時に役立つのがLive USBです。
-</p>
-<p>Live USBからSSDにインストールされているLinuxを操作して、問題となっているパッケージを削除する等の処理を行います。
-</p>
-<p>そのため、インストールに使用したLive USBは必ず残しておいたほうがいいです。
-</p>
+<p>Linuxあるあるで、家で色々いじくり回していたら突然起動しなくなることがあります。</p>
+<p>突然起動しなくなったと言っても、翌日には学校で使う予定があり今日中に復旧させなければなりません。この場合には夜遅くまでパソコンに向かわなければならないことがあります。</p>
+<p>しかし、こんな時に役立つのがLive USBです。</p>
+<p>Live USBからSSDにインストールされているLinuxを操作して、問題となっているパッケージを削除する等の処理を行います。</p>
+<p>そのため、インストールに使用したLive USBは必ず残しておいたほうがいいです。</p>
 <h3 id="一部ソフトが非対応">一部ソフトが非対応</h3>
-<p>学校で使う一部のソフトがLinuxに対応していないことがあります。
-</p>
-<p>私の場合は、ミラーリングソフトがこれにあたりました。
-</p>
-<p>とはいえ、私のPCはHDMI端子がついているのでミラーリングソフトがなくても有線で繋げば問題ないのですが、映像端子がないPCの場合は注意が必要です。
-</p>
+<p>学校で使う一部のソフトがLinuxに対応していないことがあります。</p>
+<p>私の場合は、ミラーリングソフトがこれにあたりました。</p>
+<p>とはいえ、私のPCはHDMI端子がついているのでミラーリングソフトがなくても有線で繋げば問題ないのですが、映像端子がないPCの場合は注意が必要です。</p>
 <h2 id="それでもメリットのほうが大きい">それでもメリットのほうが大きい</h2>
-<p>ここまでLinuxを学校で使用して遭遇したトラブルについて書いてきましたが、Linuxを使うデメリットよりもメリットのほうが上回ると思います。
-</p>
-<p>高速で安定、セキュリティが高いLinuxを僕は今後も使い続ける予定です。
-</p>
-<p>※ちなみにこの記事もLinuxで書いています。
-   </p>
-</div>
+<p>ここまでLinuxを学校で使用して遭遇したトラブルについて書いてきましたが、Linuxを使うデメリットよりもメリットのほうが上回ると思います。</p>
+<p>高速で安定、セキュリティが高いLinuxを僕は今後も使い続ける予定です。</p>
+<p>※ちなみにこの記事もLinuxで書いています。</p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2022-06/manjaro" title="Windows ユーザーが Manjaro に乗り換えて感じたメリット・デメリット">Windows ユーザーが Manjaro に乗り換えて感じたメリット・デメリット</a><a class="next" href="/2022-07/diary" title="一言日記(2022年7月)">一言日記(2022年7月)</a>
@@ -302,10 +278,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-08/diary" title="一言日記(2022年7月)">一言日記(2022年8月)</a></li>
-<li><a class="post-link" href="/2022-01/snow" title="一言日記(2022年7月)">雪</a></li>
-<li><a class="post-link" href="/2021-12/winter" title="一言日記(2022年7月)">冬</a></li>
-<li><a class="post-link" href="/2021-12/answer" title="一言日記(2022年7月)">間違い探しの解答</a></li>
+       <li><a class="post-link" href="/2022-06/manjaro" title="一言日記(2022年7月)">Windows ユーザーが Manjaro に乗り換えて感じたメリット・デメリット</a></li>
+<li><a class="post-link" href="/2022-06/linux-at-school" title="一言日記(2022年7月)">学校でLinuxを使う上で困ったこと</a></li>
+<li><a class="post-link" href="/2022-10/pixel7" title="一言日記(2022年7月)">Pixel 7の発表会を見た感想＆今買うならどのスマホか</a></li>
+<li><a class="post-link" href="/2021-08/chrome-extension-3" title="一言日記(2022年7月)">Chrome 拡張機能を作って公開しよう③　〜形にする〜</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -417,7 +393,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -580,6 +556,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

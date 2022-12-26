@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -239,111 +237,71 @@
           <img src="/assets/images/banners/2021-07-30-develop.jpg" width="100%" loading="eager" alt="ヘッダー画像">
            <figcaption>Photo by <a href="https://unsplash.com/@pankajpatel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Pankaj Patel</a> on <a href="https://unsplash.com/s/photos/javascript?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
        </figure>
-     <p>今回からは、連載企画ということで Chrome の拡張機能を開発していきます。何回分に渡るかはわかりませんが、1回分のボリュームを抑えていくので、物足りなさを感じてしまう方もいらっしゃるかもしれませんが、お付き合いよろしくお願いします。
-</p>
-<p>さて、今回は連載第1回目、ということで環境構築を行っていきます。といっても、普段からプログラミングをされている方は、やることがほぼないです！プログラミングをされていない方も、難易度はそこまで高くありませんので、身構えずに取り組んでみてください。
-</p>
+     <p>今回からは、連載企画ということで Chrome の拡張機能を開発していきます。何回分に渡るかはわかりませんが、1回分のボリュームを抑えていくので、物足りなさを感じてしまう方もいらっしゃるかもしれませんが、お付き合いよろしくお願いします。</p>
+<p>さて、今回は連載第1回目、ということで環境構築を行っていきます。といっても、普段からプログラミングをされている方は、やることがほぼないです！プログラミングをされていない方も、難易度はそこまで高くありませんので、身構えずに取り組んでみてください。</p>
 <h2 id="対象">対象</h2>
 <ul>
- <li>HTML、JavaScript、CSS の基礎が分かる方 (DOM操作とか…)
-</li>
+ <li>HTML、JavaScript、CSS の基礎が分かる方 (DOM操作とか…)</li>
 </ul>
-<p>これらがわからないという方は、まずは Webアプリを作るところから始めてみましょう！
-</p>
-<p>Chrome 拡張機能開発ではこれら３つの言語が必須になります。
-</p>
-<p>※HTML、CSS はものによっては使わないかも
-</p>
+<p>これらがわからないという方は、まずは Webアプリを作るところから始めてみましょう！</p>
+<p>Chrome 拡張機能開発ではこれら３つの言語が必須になります。</p>
+<p>※HTML、CSS はものによっては使わないかも</p>
 <h2 id="必要なもののインストール">必要なもののインストール</h2>
 <h3 id="google-chrome">Google Chrome</h3>
-<p>当たり前ですが、Google Chrome が必要です。開発した拡張機能をテストするのに用います。
-</p>
-<p>普段から Google Chrome を使われている方は、再度インストールする必要はありません。そのままで OK です。
-</p>
+<p>当たり前ですが、Google Chrome が必要です。開発した拡張機能をテストするのに用います。</p>
+<p>普段から Google Chrome を使われている方は、再度インストールする必要はありません。そのままで OK です。</p>
 <h3 id="エディタ">エディタ</h3>
-<p>プログラムを書いていくために必要なエディタをインストールします。これも、普段使われているもので結構です。
-</p>
-<p>ただし、WIndows 標準の「メモ帳」を使われている方は、特にこだわりがないのであれば、今は無料で高機能なものがたくさんあるのでこれを機に是非インストールしましょう。
-</p>
-<p>おすすめは「Visual Studio Code」です。
-</p>
-<p><a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/" target="_blank" rel="noopener noreferrer">ダウンロードページ</a>
-</p>
-<p>インストールしたら、デフォルトでは画面が英語なので日本語化します。以下のサイトを参考にすればすぐにできます。
-</p>
+<p>プログラムを書いていくために必要なエディタをインストールします。これも、普段使われているもので結構です。</p>
+<p>ただし、WIndows 標準の「メモ帳」を使われている方は、特にこだわりがないのであれば、今は無料で高機能なものがたくさんあるのでこれを機に是非インストールしましょう。</p>
+<p>おすすめは「Visual Studio Code」です。</p>
+<p><a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/" target="_blank" rel="noopener noreferrer">ダウンロードページ</a></p>
+<p>インストールしたら、デフォルトでは画面が英語なので日本語化します。以下のサイトを参考にすればすぐにできます。</p>
 <p><a href="https://www.fenet.jp/dotnet/column/environment/5400/" target="_blank" rel="noopener noreferrer">Visual Studio Codeを日本語表示にする手順！変更方法も解説
- (.NET Column)</a>
-</p>
+ (.NET Column)</a></p>
 <p>これで環境構築は終了です！あっという間でしたね！
-誰でも気軽に開発を始められるところが、Chrome 拡張機能開発の良い点の一つだと思います。
-</p>
+誰でも気軽に開発を始められるところが、Chrome 拡張機能開発の良い点の一つだと思います。</p>
 <h2 id="公開するなら">公開するなら…</h2>
-<p>開発したChrome 拡張機能をウェブストアで公開するには、上のものに加えて以下のものが必要になります。
-</p>
+<p>開発したChrome 拡張機能をウェブストアで公開するには、上のものに加えて以下のものが必要になります。</p>
 <ul>
- <li>Google アカウント (できれば開発用のものを作ったほうが良い)
- </li>
-<li>5ドル (ウェブストアにアカウントを登録する際に、<strong>１度だけ</strong>登録料を支払う必要がある)
- </li>
-<li>クレジットカード or デビットカード (どうしても用意できない場合は、本人確認を済ませたLINEプリペイドカードでも可)
-</li>
+ <li>Google アカウント (できれば開発用のものを作ったほうが良い)</li>
+ <li>5ドル (ウェブストアにアカウントを登録する際に、<strong>１度だけ</strong>登録料を支払う必要がある)</li>
+ <li>クレジットカード or デビットカード (どうしても用意できない場合は、本人確認を済ませたLINEプリペイドカードでも可)</li>
 </ul>
 <h2 id="開発の流れ">開発の流れ</h2>
 <ol>
- <li>必要なファイルを用意する
- </li>
-<li>コードを書く
- </li>
-<li>テストする
- </li>
-<li>2.3.を繰り返し、バグをなくしていく
- </li>
-<li>公開！ (これは任意)
-</li>
+ <li>必要なファイルを用意する</li>
+ <li>コードを書く</li>
+ <li>テストする</li>
+ <li>2.3.を繰り返し、バグをなくしていく</li>
+ <li>公開！ (これは任意)</li>
 </ol>
-<p>金曜日で疲れているので、今回はこれくらいにします。次回からいよいよ本格的に開発を行っていきます！
-</p>
+<p>金曜日で疲れているので、今回はこれくらいにします。次回からいよいよ本格的に開発を行っていきます！</p>
 <p>実は…何を作っていくかは、<strong>未定</strong>です！
-次回をお楽しみに。
-   </p>
-</div>
+次回をお楽しみに。</p>
+   </div>
 </article>
       <br><br><br>
-     <p>【「Chrome 拡張機能を作ろう」の記事一覧】
-     </p>
-<ol>
+     <p>【「Chrome 拡張機能を作ろう」の記事一覧】</p>
+     <ol>
        <li>
-<a href="/2021-07/chrome-extension-1">環境構築</a> (←今ココ)
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-2">ポップアップ作成</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-3">仕様に沿って開発</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-4">コピー機能実装</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-5">権限を減らす</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a>
-       </li>
-<li>
-<a href="/2021-08/chrome-extension-7">Webストアに公開</a>
-     </li>
-</ol>
+<a href="/2021-07/chrome-extension-1">環境構築</a> (←今ココ)</li>
+       <li><a href="/2021-08/chrome-extension-2">ポップアップ作成</a></li>
+       <li><a href="/2021-08/chrome-extension-3">仕様に沿って開発</a></li>
+       <li><a href="/2021-08/chrome-extension-4">コピー機能実装</a></li>
+       <li><a href="/2021-08/chrome-extension-5">権限を減らす</a></li>
+       <li><a href="/2021-08/chrome-extension-6">コンテキストメニューの作成</a></li>
+       <li><a href="/2021-08/chrome-extension-7">Webストアに公開</a></li>
+     </ol>
       <div class="post-nav">
 <a class="previous" href="/2021-07/jekyll" title="Jekyll について">Jekyll について</a><a class="next" href="/2021-08/chrome-extension-2" title="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜</a>
 </div>
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2021-08/chrome-extension-4" title="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜</a></li>
-<li><a class="post-link" href="/2022-08/ads" title="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">僕が広告を一切入れていない理由(本音)</a></li>
-<li><a class="post-link" href="/2021-10/autumn" title="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">秋</a></li>
-<li><a class="post-link" href="/2021-08/chrome-extension-5" title="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜</a></li>
+       <li><a class="post-link" href="/2022-07/diary" title="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">一言日記(2022年7月)</a></li>
+<li><a class="post-link" href="/2022-08/diary" title="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">一言日記(2022年8月)</a></li>
+<li><a class="post-link" href="/2022-08/left-enter" title="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">左Enterキーのすゝめ(Linux、Windows対応)</a></li>
+<li><a class="post-link" href="/2021-09/github-kusa" title="Chrome 拡張機能を作って公開しよう②　〜ポップアップの作成〜">GitHub の草、17週連続フルコンボ達成！</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -455,7 +413,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -618,6 +576,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -238,70 +236,42 @@
        <figure>
           <img src="/assets/images/banners/2022-02-18-chromebook-start-like-windows.jpg" width="100%" loading="eager" alt="WindowsのスタートメニューっぽいChromebookのランチャー">
        </figure>
-     <p>お久しぶりです。最近、Chromebook の人気が出てきていますね。僕も学校で使っていますが、結構気に入っています。コスパ最高ですし、 Windows のように複雑な設定がないので使いやすいです。しかし、一つ気になる点を挙げるとすれば、
-</p>
-<p><strong>「「全画面のランチャーが使いづらい」」</strong>
-</p>
-<p>点です。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/154628667-f43003c2-c220-41bf-8b8b-cbfa6f20c627.jpg" alt="普通のChromebookのランチャーのスクリーンショット">
-</p>
-<p>僕のような Windows を使ってきた人には、どうしても使いづらいです。
-</p>
-<p>全画面のランチャーなんて、まるであの黒歴史 (Windows 8) みたい。
-</p>
-<p>そこで、今回は Chromebook の全画面で使いづらいランチャーを、このように左下に出てくるようにしていきます。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/154628702-65cb88b6-a1f2-49f5-9cab-ba1c27c1772a.jpg" alt="ChromebookのWndowsっぽいランチャーのスクリーンショット">
-</p>
+     <p>お久しぶりです。最近、Chromebook の人気が出てきていますね。僕も学校で使っていますが、結構気に入っています。コスパ最高ですし、 Windows のように複雑な設定がないので使いやすいです。しかし、一つ気になる点を挙げるとすれば、</p>
+<p><strong>「「全画面のランチャーが使いづらい」」</strong></p>
+<p>点です。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/154628667-f43003c2-c220-41bf-8b8b-cbfa6f20c627.jpg" alt="普通のChromebookのランチャーのスクリーンショット"></p>
+<p>僕のような Windows を使ってきた人には、どうしても使いづらいです。</p>
+<p>全画面のランチャーなんて、まるであの黒歴史 (Windows 8) みたい。</p>
+<p>そこで、今回は Chromebook の全画面で使いづらいランチャーを、このように左下に出てくるようにしていきます。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/154628702-65cb88b6-a1f2-49f5-9cab-ba1c27c1772a.jpg" alt="ChromebookのWndowsっぽいランチャーのスクリーンショット"></p>
 <h2 id="設定方法">設定方法</h2>
-<p>設定は非常に簡単で、人によっては1分もかからずに終わると思います。
-</p>
+<p>設定は非常に簡単で、人によっては1分もかからずに終わると思います。</p>
 <div class="alert-card">
   Chrome OS のバージョンによってはこの方法が使えない場合があります。
 </div>
-<p>まずは、 Chrome のアドレスバーに <code class="language-plaintext highlighter-rouge">chrome://flags</code> と入力し、Enter キーを押してください。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/154647883-5cd0e3df-3f18-46e2-8ee6-5bed33f64a2f.jpg" alt="chrome://flags のスクリーンショット">
-</p>
-<p>このような画面が現れれば OK です。
-</p>
-<p>※私の場合はすでにいろいろといじっているので多少画面が異なる場合がありますが、特に問題はありません。
-</p>
-<p>ちなみに、この <code class="language-plaintext highlighter-rouge">chrome://flags</code> は試験段階の機能を有効にしたり、逆に無効にしたりできるページです。
-</p>
-<p>そのため、このページにある機能は正式実装されてしばらくすると削除されます。また、正式実装が見送られた場合にも削除されます。
-</p>
-<p>つまり、将来的に Chromebook のランチャーが左下になる可能性があるということです。
-</p>
-<p>そうしたら、上の検索ボックスに「app launcher」と検索して、以下の3つの項目を「Enabled」にしてください。
-</p>
+<p>まずは、 Chrome のアドレスバーに <code class="language-plaintext highlighter-rouge">chrome://flags</code> と入力し、Enter キーを押してください。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/154647883-5cd0e3df-3f18-46e2-8ee6-5bed33f64a2f.jpg" alt="chrome://flags のスクリーンショット"></p>
+<p>このような画面が現れれば OK です。</p>
+<p>※私の場合はすでにいろいろといじっているので多少画面が異なる場合がありますが、特に問題はありません。</p>
+<p>ちなみに、この <code class="language-plaintext highlighter-rouge">chrome://flags</code> は試験段階の機能を有効にしたり、逆に無効にしたりできるページです。</p>
+<p>そのため、このページにある機能は正式実装されてしばらくすると削除されます。また、正式実装が見送られた場合にも削除されます。</p>
+<p>つまり、将来的に Chromebook のランチャーが左下になる可能性があるということです。</p>
+<p>そうしたら、上の検索ボックスに「app launcher」と検索して、以下の3つの項目を「Enabled」にしてください。</p>
 <ul>
- <li>Productivity experiment: App Launcher
- </li>
-<li>App Launcher: Animation
- </li>
-<li>App Launcher: Force Continue Section Suggestions
-</li>
+ <li>Productivity experiment: App Launcher</li>
+ <li>App Launcher: Animation</li>
+ <li>App Launcher: Force Continue Section Suggestions</li>
 </ul>
-<p><img src="https://user-images.githubusercontent.com/75155258/154650285-4cd0f325-4a33-4977-895f-0bd4e8e2e7a2.jpg" alt="enabled に変更するスクリーンショット">
-</p>
-<p>変更し終えたら、右下の「Restart」ボタンを押してください。
-</p>
-<p>再起動後、ランチャーが Windows 風になっているはずです。
-</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/154650285-4cd0f325-4a33-4977-895f-0bd4e8e2e7a2.jpg" alt="enabled に変更するスクリーンショット"></p>
+<p>変更し終えたら、右下の「Restart」ボタンを押してください。</p>
+<p>再起動後、ランチャーが Windows 風になっているはずです。</p>
 <h2 id="ちなみに">ちなみに…</h2>
-<p>シェルフを右や左に置いている場合は、ランチャーもシェルフに合わせて移動します。
-</p>
-<p>シェルフ縦置き族の皆様も安心して全画面ランチャーに別れを告げることができます。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/154661686-88d1069d-fe98-49e2-b05f-65234a5b1ee4.jpg" alt="シェルフを右置きにした場合のスクリーンショット">
-</p>
-<p>新鮮な Chromebook をぜひ楽しんでみてください！
-</p>
-<p>ここまで読んでいただきありがとうございました。
-   </p>
-</div>
+<p>シェルフを右や左に置いている場合は、ランチャーもシェルフに合わせて移動します。</p>
+<p>シェルフ縦置き族の皆様も安心して全画面ランチャーに別れを告げることができます。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/154661686-88d1069d-fe98-49e2-b05f-65234a5b1ee4.jpg" alt="シェルフを右置きにした場合のスクリーンショット"></p>
+<p>新鮮な Chromebook をぜひ楽しんでみてください！</p>
+<p>ここまで読んでいただきありがとうございました。</p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2022-01/windows11-context" title="【ソフト不要】Windows 11 のコンテキストメニューを従来の見た目に戻す">【ソフト不要】Windows 11 のコンテキストメニューを従来の見た目に戻す</a><a class="next" href="/2022-04/spring" title="春">春</a>
@@ -309,9 +279,9 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-07/windows" title="春">Windowsを入れたらまずすること(定番6つ＋自己流3つ)</a></li>
-<li><a class="post-link" href="/2022-05/font" title="春">Chrome のフォントを美しい Noto Sans にする方法</a></li>
-<li><a class="post-link" href="/2022-09/bot-1" title="春">5人で使っていたbotが学年の半数の人に使われるようになった話(前編)</a></li>
+       <li><a class="post-link" href="/2022-02/chromebook-start-like-windows" title="春">Chromebook のランチャーを Windows のスタートメニューっぽくする</a></li>
+<li><a class="post-link" href="/2022-06/study-abroad" title="春">留学体験記を聞いて</a></li>
+<li><a class="post-link" href="/2022-07/1st-anniversary" title="春">【1周年記念】ブログを書くのは非効率だが、いいこともある＆今後について</a></li>
 <li><a class="post-link" href="/2022-07/manjaro-karnel" title="春">ManjaroとXubuntuをデュアルブートしたらKarnel Panicになった！！！</a></li>
 </ul>
    </div>
@@ -424,7 +394,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -587,6 +557,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

@@ -129,11 +129,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -242,105 +240,74 @@
           <img src="/assets/images/2022/10/23/canonicalize.webp" width="100%" loading="eager" alt="Cloudflare Pages で WWW あり・なしを正規化">
            <figcaption></figcaption>
        </figure>
-     <p>先日、Cloudflare Pages で運営しているサイトで www あり・なしの正規化を行ったのですが、一筋縄ではいかなかったのでその解説を行います。
-</p>
+     <p>先日、Cloudflare Pages で運営しているサイトで www あり・なしの正規化を行ったのですが、一筋縄ではいかなかったのでその解説を行います。</p>
 <h2 id="やりたいこと">やりたいこと</h2>
 <ul>
- <li>www.frogapp.net にアクセスがあったら frogapp.net に301リダイレクトをする
- </li>
-<li>サブパスは保持する (www.frogapp.net/hoge にアクセスされたら frogapp.net/hoge に飛ばす)
-</li>
+ <li>www.frogapp.net にアクセスがあったら frogapp.net に301リダイレクトをする</li>
+ <li>サブパスは保持する (www.frogapp.net/hoge にアクセスされたら frogapp.net/hoge に飛ばす)</li>
 </ul>
 <h2 id="下準備">下準備</h2>
-<p>まずは、Cloudflare Pages にある正規化したいサイトのカスタムドメインの設定を開きます。
-</p>
-<p>ここで、www 付きのドメインと www なしのドメインを両方登録します。
-</p>
-<p><img src="/assets/images/2022/10/23/domain-setting.webp" alt="カスタムドメインの設定で www 付きのドメインと www なしのドメインを両方登録する">
-</p>
-<p>この時、ネームサーバーを Cloudflare に移行していない場合は移行を勧められると思います。
-</p>
-<p>Cloudflare はどこかのお名前と違って管理画面の動作が軽く、使いやすいので特段の事情がない限りはここで移行しておくことをおすすめします。
-</p>
-<p>なお、ネームサーバーを Cloudflare に移行してもドメイン自体を移管したわけではないので、ドメイン更新は元のレジストリ (お名前.com 等) で行います。また、ネームサーバーの移行は無料です。
-</p>
-<p>移行は画面の指示に従って行えば簡単にできます。ドメイン周りの知識が皆無だった頃の自分でも簡単にできました。
-</p>
-<p>加えて、<strong>リダイレクト元のドメイン (ここでは www.frogapp.net) は DNS の設定でオレンジの雲、すなわち「プロキシ済み」にしておく必要があります。</strong>
-</p>
-<p>これは後述する「ページルール」を使用する上で必要です。
-</p>
-<p>リダイレクト先のドメインは灰色の雲でも問題ありません。
-</p>
-<p>なお、DNS の設定は Cloudflare の管理画面トップ→該当ドメインをクリック→左サイドバーより「DNS」をクリックで開けます。
-</p>
-<p><img src="/assets/images/2022/10/23/dns-setting.webp" alt="リダイレクト元のドメインはオレンジの雲にする">
-</p>
+<p>まずは、Cloudflare Pages にある正規化したいサイトのカスタムドメインの設定を開きます。</p>
+<p>ここで、www 付きのドメインと www なしのドメインを両方登録します。</p>
+<p><img src="/assets/images/2022/10/23/domain-setting.webp" alt="カスタムドメインの設定で www 付きのドメインと www なしのドメインを両方登録する"></p>
+<p>この時、ネームサーバーを Cloudflare に移行していない場合は移行を勧められると思います。</p>
+<p>Cloudflare はどこかのお名前と違って管理画面の動作が軽く、使いやすいので特段の事情がない限りはここで移行しておくことをおすすめします。</p>
+<p>なお、ネームサーバーを Cloudflare に移行してもドメイン自体を移管したわけではないので、ドメイン更新は元のレジストリ (お名前.com 等) で行います。また、ネームサーバーの移行は無料です。</p>
+<p>移行は画面の指示に従って行えば簡単にできます。ドメイン周りの知識が皆無だった頃の自分でも簡単にできました。</p>
+<p>加えて、<strong>リダイレクト元のドメイン (ここでは www.frogapp.net) は DNS の設定でオレンジの雲、すなわち「プロキシ済み」にしておく必要があります。</strong></p>
+<p>これは後述する「ページルール」を使用する上で必要です。</p>
+<p>リダイレクト先のドメインは灰色の雲でも問題ありません。</p>
+<p>なお、DNS の設定は Cloudflare の管理画面トップ→該当ドメインをクリック→左サイドバーより「DNS」をクリックで開けます。</p>
+<p><img src="/assets/images/2022/10/23/dns-setting.webp" alt="リダイレクト元のドメインはオレンジの雲にする"></p>
 <h2 id="ページルールでリダイレクト">ページルールでリダイレクト</h2>
-<p>勘が良い方は「最近リリースされた一括リダイレクト機能があるじゃん」と思われるかもしれませんが、Cloudflare Pages で一括リダイレクト機能を使うと、正しく設定しているにも関わらずサブパスが保持されないという問題があります。
-</p>
-<p>例えば www.frogapp.net/hoge にアクセスした場合 frogapp.net/hoge にリダイレクトされるのが望ましいですが、なぜか frogapp.net/ に飛ばされてしまいます。
-</p>
-<p>これは Cloudflare 側のバグなのでしばらくしたら修正されるかもしれませんが、当分は旧来からあるページルールで代用する必要があります。
-</p>
-<p>では本題に移ります。
-</p>
-<p>まず Cloudflare の管理画面のトップに移動し、該当ドメインを選択します。
-</p>
-<p><img src="/assets/images/2022/10/23/cloudflare.webp" alt="トップ画面で該当ドメインを選択する">
-</p>
-<p>その後、画面左側のサイドバーから「ルール」をクリックします。
-</p>
-<p><img src="/assets/images/2022/10/23/sidebar.webp" alt="サイドバーから「ルール」をクリックする">
-</p>
-<p>「ページルールを作成」をクリックします。
-</p>
-<p>なお、無料プランではページルールを3つまでしか作成できないので注意が必要です。
-</p>
-<p><img src="/assets/images/2022/10/23/rule.webp" alt="ページルールを作成">
-</p>
-<p>編集画面になったら、以下のように設定します。
-</p>
+<p>勘が良い方は「最近リリースされた一括リダイレクト機能があるじゃん」と思われるかもしれませんが、Cloudflare Pages で一括リダイレクト機能を使うと、正しく設定しているにも関わらずサブパスが保持されないという問題があります。</p>
+<p>例えば www.frogapp.net/hoge にアクセスした場合 frogapp.net/hoge にリダイレクトされるのが望ましいですが、なぜか frogapp.net/ に飛ばされてしまいます。</p>
+<p>これは Cloudflare 側のバグなのでしばらくしたら修正されるかもしれませんが、当分は旧来からあるページルールで代用する必要があります。</p>
+<p>では本題に移ります。</p>
+<p>まず Cloudflare の管理画面のトップに移動し、該当ドメインを選択します。</p>
+<p><img src="/assets/images/2022/10/23/cloudflare.webp" alt="トップ画面で該当ドメインを選択する"></p>
+<p>その後、画面左側のサイドバーから「ルール」をクリックします。</p>
+<p><img src="/assets/images/2022/10/23/sidebar.webp" alt="サイドバーから「ルール」をクリックする"></p>
+<p>「ページルールを作成」をクリックします。</p>
+<p>なお、無料プランではページルールを3つまでしか作成できないので注意が必要です。</p>
+<p><img src="/assets/images/2022/10/23/rule.webp" alt="ページルールを作成"></p>
+<p>編集画面になったら、以下のように設定します。</p>
 <table>
 <thead>
    <tr>
      <th style="text-align: center">項目</th>
-<th style="text-align: left">説明</th>
-<th style="text-align: left">設定値</th>
-</tr>
-</thead>
-<tbody>
+     <th style="text-align: left">説明</th>
+     <th style="text-align: left">設定値</th>
+   </tr>
+ </thead>
+ <tbody>
    <tr>
      <td style="text-align: center">URL</td>
-<td style="text-align: left">リダイレクト元の URL。アスタリスクを使用可能。</td>
-<td style="text-align: left">(例) www.frogapp.net/*</td>
-</tr>
-<tr>
+     <td style="text-align: left">リダイレクト元の URL。アスタリスクを使用可能。</td>
+     <td style="text-align: left">(例) www.frogapp.net/*</td>
+   </tr>
+   <tr>
      <td style="text-align: center">設定を選択する</td>
-<td style="text-align: left">条件に適合する URL にアクセスがあった場合の処理。</td>
-<td style="text-align: left">URL の転送</td>
-</tr>
-<tr>
+     <td style="text-align: left">条件に適合する URL にアクセスがあった場合の処理。</td>
+     <td style="text-align: left">URL の転送</td>
+   </tr>
+   <tr>
      <td style="text-align: center">ステータスコード</td>
-<td style="text-align: left">リダイレクトする際の HTTP ステータスコード。</td>
-<td style="text-align: left">301 - 永久リダイレクト</td>
-</tr>
-<tr>
+     <td style="text-align: left">リダイレクトする際の HTTP ステータスコード。</td>
+     <td style="text-align: left">301 - 永久リダイレクト</td>
+   </tr>
+   <tr>
      <td style="text-align: center">転送先 URL</td>
-<td style="text-align: left">リダイレクト先の URL。<br>$1 でアスタリスク内の文字列を参照可能。/$1 を入れることで、サブパスを保持したままリダイレクトできる。<br>https:// や http:// から始めないとエラーになるので注意。</td>
-<td style="text-align: left">(例) https://frogapp.net/$1</td>
-</tr>
-</tbody>
+     <td style="text-align: left">リダイレクト先の URL。<br>$1 でアスタリスク内の文字列を参照可能。/$1 を入れることで、サブパスを保持したままリダイレクトできる。<br>https:// や http:// から始めないとエラーになるので注意。</td>
+     <td style="text-align: left">(例) https://frogapp.net/$1</td>
+   </tr>
+ </tbody>
 </table>
-<p><img src="/assets/images/2022/10/23/rule-edit.webp" alt="ページルールの編集">
-</p>
-<p>最後に「ページルールを保存」を押下して完了です。
-</p>
-<p>なお、<strong>反映には数十分～数時間かかることがある</strong>ので、気長にお待ち下さい。
-</p>
-<p>1日経っても設定が反映されない場合は、設定が間違っていないか再度確認してみてください。それでも解決しない場合は、コメント欄にて教えていただければ可能な限り対応します。
-   </p>
-</div>
+<p><img src="/assets/images/2022/10/23/rule-edit.webp" alt="ページルールの編集"></p>
+<p>最後に「ページルールを保存」を押下して完了です。</p>
+<p>なお、<strong>反映には数十分～数時間かかることがある</strong>ので、気長にお待ち下さい。</p>
+<p>1日経っても設定が反映されない場合は、設定が間違っていないか再度確認してみてください。それでも解決しない場合は、コメント欄にて教えていただければ可能な限り対応します。</p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2022-10/next-partner" title="iPhone 6s の次の相棒を探す">iPhone 6s の次の相棒を探す</a><a class="next" href="/2022-11/diary" title="一言日記(2022年11月)">一言日記(2022年11月)</a>
@@ -348,10 +315,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2021-10/autumn" title="一言日記(2022年11月)">秋</a></li>
-<li><a class="post-link" href="/2022-07/diary" title="一言日記(2022年11月)">一言日記(2022年7月)</a></li>
-<li><a class="post-link" href="/2022-09/diary" title="一言日記(2022年11月)">一言日記(2022年9月)</a></li>
-<li><a class="post-link" href="/2021-07/jekyll" title="一言日記(2022年11月)">Jekyll について</a></li>
+       <li><a class="post-link" href="/2022-06/manjaro" title="一言日記(2022年11月)">Windows ユーザーが Manjaro に乗り換えて感じたメリット・デメリット</a></li>
+<li><a class="post-link" href="/2022-01/snow" title="一言日記(2022年11月)">雪</a></li>
+<li><a class="post-link" href="/2022-07/windows" title="一言日記(2022年11月)">Windowsを入れたらまずすること(定番6つ＋自己流3つ)</a></li>
+<li><a class="post-link" href="/2022-05/subset" title="一言日記(2022年11月)">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -463,7 +430,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -626,6 +593,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

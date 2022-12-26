@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -238,51 +236,33 @@
        <figure>
           <img src="/assets/images/banners/2022-01-29-win11-context.jpg" width="100%" loading="eager" alt="Windows 11 のコンテキストメニューを戻す">
        </figure>
-     <p>こんにちは。今回は Windows 11 のコンテキストメニュー（右クリックしたときに出てくるメニュー）を従来の見た目に戻す方法を解説します。
-</p>
-<p>Windows 11 になって、コンテキストメニューがシンプルな見た目に変更されました。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/151647824-51d87563-dfbf-437f-b524-af6643908fb7.jpg" alt="新しくなったコンテキストメニュー">
-</p>
-<p>これはこれで綺麗なのですが、サードパーティ製アプリ(7-zip とか) を使うには「その他のオプションを表示」をいちいちクリックするか、Shift + F10 を押下しなければならないので面倒です。
-</p>
-<p>そこでネットで調べていたところ、追加のソフトウェアなしでコンテキストメニューを従来の見た目に戻す方法を見つけたのでご紹介します。
-</p>
+     <p>こんにちは。今回は Windows 11 のコンテキストメニュー（右クリックしたときに出てくるメニュー）を従来の見た目に戻す方法を解説します。</p>
+<p>Windows 11 になって、コンテキストメニューがシンプルな見た目に変更されました。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/151647824-51d87563-dfbf-437f-b524-af6643908fb7.jpg" alt="新しくなったコンテキストメニュー"></p>
+<p>これはこれで綺麗なのですが、サードパーティ製アプリ(7-zip とか) を使うには「その他のオプションを表示」をいちいちクリックするか、Shift + F10 を押下しなければならないので面倒です。</p>
+<p>そこでネットで調べていたところ、追加のソフトウェアなしでコンテキストメニューを従来の見た目に戻す方法を見つけたのでご紹介します。</p>
 <h2 id="従来の見た目に戻す">従来の見た目に戻す</h2>
-<p>まずは、ターミナルを起動します。
-</p>
-<p>スタートボタンを右クリック→ Windows ターミナル をクリックしてください。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/151647820-db7dcce9-2cba-4992-8553-89aa02f0b36d.jpg" alt="ターミナルの開き方">
-</p>
-<p>黒い画面が現れたら、以下のコマンドをコピー＆ペーストして、Enter キーを押してください。
-</p>
+<p>まずは、ターミナルを起動します。</p>
+<p>スタートボタンを右クリック→ Windows ターミナル をクリックしてください。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/151647820-db7dcce9-2cba-4992-8553-89aa02f0b36d.jpg" alt="ターミナルの開き方"></p>
+<p>黒い画面が現れたら、以下のコマンドをコピー＆ペーストして、Enter キーを押してください。</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">reg.exe</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="s2">"HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32"</span><span class="w"> </span><span class="nx">/f</span><span class="w"> </span><span class="nx">/ve</span><span class="w">
 </span></code></pre></div></div>
-<p>「The operation completed successfully.」と表示されたら成功です。
-</p>
-<p><strong>パソコンの再起動後</strong>、コンテキストメニューが従来の見た目に戻ります。
-</p>
+<p>「The operation completed successfully.」と表示されたら成功です。</p>
+<p><strong>パソコンの再起動後</strong>、コンテキストメニューが従来の見た目に戻ります。</p>
 <h2 id="従来の見た目に戻したのを戻す">従来の見た目に戻したのを戻す</h2>
-<p>「間違えて従来の見た目に戻してしまった」、「従来の見た目に戻したけど、新しいコンテキストメニューも使ってみたくなった」という場合の方法です。
-</p>
-<p>まずは、先ほどと同様に スタートボタンを右クリック→ Windows ターミナル をクリックしてください。
-</p>
-<p>黒い画面が現れたら、以下のコマンドをコピー＆ペーストして、Enter キーを押してください。
-</p>
+<p>「間違えて従来の見た目に戻してしまった」、「従来の見た目に戻したけど、新しいコンテキストメニューも使ってみたくなった」という場合の方法です。</p>
+<p>まずは、先ほどと同様に スタートボタンを右クリック→ Windows ターミナル をクリックしてください。</p>
+<p>黒い画面が現れたら、以下のコマンドをコピー＆ペーストして、Enter キーを押してください。</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">reg.exe</span><span class="w"> </span><span class="nx">delete</span><span class="w"> </span><span class="s2">"HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}"</span><span class="w"> </span><span class="nx">/f</span><span class="w">
 </span></code></pre></div></div>
-<p>「The operation completed successfully.」と表示されたら成功です。
-</p>
-<p><strong>パソコンの再起動後</strong>、コンテキストメニューが新しい見た目になります。
-</p>
+<p>「The operation completed successfully.」と表示されたら成功です。</p>
+<p><strong>パソコンの再起動後</strong>、コンテキストメニューが新しい見た目になります。</p>
 <h2 id="参考サイト">参考サイト</h2>
 <p>Windows 11の右クリックメニューを以前のバージョンに戻す方法【コンテキストメニュー】 <br>
-<a href="https://smartasw.com/archives/13479" target="_blank" rel="noopener noreferrer">https://smartasw.com/archives/13479</a>
-</p>
-<p>最後まで読んでいただきありがとうございました！
-   </p>
-</div>
+<a href="https://smartasw.com/archives/13479" target="_blank" rel="noopener noreferrer">https://smartasw.com/archives/13479</a></p>
+<p>最後まで読んでいただきありがとうございました！</p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2022-01/windows11-review" title="Windows 11 に関する誤解を暴く">Windows 11 に関する誤解を暴く</a><a class="next" href="/2022-02/chromebook-start-like-windows" title="Chromebook のランチャーを Windows のスタートメニューっぽくする">Chromebook のランチャーを Windows のスタートメニューっぽくする</a>
@@ -290,10 +270,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-06/ios16" title="Chromebook のランチャーを Windows のスタートメニューっぽくする">iPhone 6s 、iOS 16 非対応へ。今後どうする？</a></li>
-<li><a class="post-link" href="/2022-11/diary" title="Chromebook のランチャーを Windows のスタートメニューっぽくする">一言日記(2022年11月)</a></li>
-<li><a class="post-link" href="/2022-12/chromebook" title="Chromebook のランチャーを Windows のスタートメニューっぽくする">改めて感じた Chromebook の良さ〜心配がいらない PC〜</a></li>
-<li><a class="post-link" href="/2022-05/insider" title="Chromebook のランチャーを Windows のスタートメニューっぽくする">Windows Insider で 0xc8000402 エラーになりビルドをインストール出来ない場合の対処法(結構簡単)</a></li>
+       <li><a class="post-link" href="/2022-01/browser" title="Chromebook のランチャーを Windows のスタートメニューっぽくする">1年間いろんなブラウザを試した結果、結局Chromeに戻った話</a></li>
+<li><a class="post-link" href="/2022-08/ads" title="Chromebook のランチャーを Windows のスタートメニューっぽくする">僕が広告を一切入れていない理由(本音)</a></li>
+<li><a class="post-link" href="/2022-08/left-enter" title="Chromebook のランチャーを Windows のスタートメニューっぽくする">左Enterキーのすゝめ(Linux、Windows対応)</a></li>
+<li><a class="post-link" href="/2022-07/manjaro-karnel" title="Chromebook のランチャーを Windows のスタートメニューっぽくする">ManjaroとXubuntuをデュアルブートしたらKarnel Panicになった！！！</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -405,7 +385,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -568,6 +548,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

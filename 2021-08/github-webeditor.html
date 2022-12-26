@@ -126,11 +126,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -233,105 +231,68 @@
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
    <div class="post-content e-content" itemprop="articleBody">
-     <p>先日、GitHub がブラウザ上で VS Code を使える新機能を発表しました。
-</p>
-<p>以前から予告されている Codespaces とは異なり、すべてのユーザーが無料で使用できます。
-</p>
-<p>ということで、私も使ってみました。
-</p>
-<p>ちなみに、この記事も Web Editor を使って書いています。
-</p>
+     <p>先日、GitHub がブラウザ上で VS Code を使える新機能を発表しました。</p>
+<p>以前から予告されている Codespaces とは異なり、すべてのユーザーが無料で使用できます。</p>
+<p>ということで、私も使ってみました。</p>
+<p>ちなみに、この記事も Web Editor を使って書いています。</p>
 <h2 id="使い方">使い方</h2>
-<p>使い方はとても簡単。
-</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🤫 New shortcut: Press . on any GitHub repo. <a href="https://t.co/AHTSDot4qc">pic.twitter.com/AHTSDot4qc</a>— GitHub (@github) <a href="https://twitter.com/github/status/1425505817827151872?ref_src=twsrc%5Etfw">August 11, 2021</a></p></blockquote>
+<p>使い方はとても簡単。</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">🤫 New shortcut: Press . on any GitHub repo. <a href="https://t.co/AHTSDot4qc">pic.twitter.com/AHTSDot4qc</a></p>— GitHub (@github) <a href="https://twitter.com/github/status/1425505817827151872?ref_src=twsrc%5Etfw">August 11, 2021</a>
+</blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>このツイートの動画のように、GitHub のリポジトリ画面で、キーボードの「.」(ピリオド)キーを押すだけ！
-</p>
+<p>このツイートの動画のように、GitHub のリポジトリ画面で、キーボードの「.」(ピリオド)キーを押すだけ！</p>
 <h2 id="どんなものか">どんなものか</h2>
-<p>簡単に行ってしまえば、「VS Code がブラウザ上でも動く」サービスです。
-</p>
-<p>GitHub が来月から提供を開始する類似のサービスとして、Codespaces がありますが、これは法人向けで、料金も発生します。その分機能が多いです。
-</p>
-<p>一方、こちらの Web  Editor は誰でも無料で使えるサービスですが、機能は限られています。
-</p>
+<p>簡単に行ってしまえば、「VS Code がブラウザ上でも動く」サービスです。</p>
+<p>GitHub が来月から提供を開始する類似のサービスとして、Codespaces がありますが、これは法人向けで、料金も発生します。その分機能が多いです。</p>
+<p>一方、こちらの Web  Editor は誰でも無料で使えるサービスですが、機能は限られています。</p>
 <h2 id="使用感">使用感</h2>
-<p>使ってみましたが、とてもサクサク動きます。使っているのは、Celeron CPU の低スペノートPCなのですが、もっさりすることもなく、快適に使えます。
-</p>
-<p>気になった点として、画面右下に「Layout: us」と表示されており、JIS配列では使えないのかと思っていましたが、問題なく使えました。記号の入力も含めてバッチリです。
-</p>
-<p><img src="https://user-images.githubusercontent.com/75155258/129321958-cced00cc-e868-48f3-9dd5-b496114f544b.png" alt="レイアウトがUSになっている">
-</p>
-<p>では、この Web Editor のメリット・デメリットをご紹介します。
-</p>
+<p>使ってみましたが、とてもサクサク動きます。使っているのは、Celeron CPU の低スペノートPCなのですが、もっさりすることもなく、快適に使えます。</p>
+<p>気になった点として、画面右下に「Layout: us」と表示されており、JIS配列では使えないのかと思っていましたが、問題なく使えました。記号の入力も含めてバッチリです。</p>
+<p><img src="https://user-images.githubusercontent.com/75155258/129321958-cced00cc-e868-48f3-9dd5-b496114f544b.png" alt="レイアウトがUSになっている"></p>
+<p>では、この Web Editor のメリット・デメリットをご紹介します。</p>
 <h2 id="メリット">メリット</h2>
 <h3 id="ローカルの-vs-code-の環境が同期される">ローカルの VS Code の環境が同期される</h3>
-<p>ローカルの VS Code で GitHub アカウントでの同期を有効にしている場合は、Web Editor にも反映されます。
-</p>
-<p>ただ、拡張機能と一部の設定は同期されませんでした…
-</p>
+<p>ローカルの VS Code で GitHub アカウントでの同期を有効にしている場合は、Web Editor にも反映されます。</p>
+<p>ただ、拡張機能と一部の設定は同期されませんでした…</p>
 <h3 id="動作が軽い">動作が軽い</h3>
-<p>低スペックのパソコンでも、快適に動作します。
-</p>
+<p>低スペックのパソコンでも、快適に動作します。</p>
 <h3 id="github-との相性が抜群">GitHub との相性が抜群</h3>
-<p>当たり前ですが、GitHub との相性は抜群です！
-</p>
-<p>Commit はもちろん、Issue や Pull Request だってできます。
-</p>
-<p>ちなみに、Web Editor でコミットをすると、GitHub の方にも反映されます。<code class="language-plaintext highlighter-rouge">git push</code> の工程がないので、はじめは戸惑うかもしれませんが、すぐに慣れます。
-</p>
+<p>当たり前ですが、GitHub との相性は抜群です！</p>
+<p>Commit はもちろん、Issue や Pull Request だってできます。</p>
+<p>ちなみに、Web Editor でコミットをすると、GitHub の方にも反映されます。<code class="language-plaintext highlighter-rouge">git push</code> の工程がないので、はじめは戸惑うかもしれませんが、すぐに慣れます。</p>
 <h3 id="拡張機能が使える">拡張機能が使える</h3>
-<p>拡張機能もインストールできます。スニペット等もそのまま使えるので、安心です。
-</p>
+<p>拡張機能もインストールできます。スニペット等もそのまま使えるので、安心です。</p>
 <h3 id="os-を問わない">OS を問わない</h3>
-<p>PC のみならず、タブレットでも開発ができます。スマホだと画面が小さすぎて無理がありますが。
-</p>
+<p>PC のみならず、タブレットでも開発ができます。スマホだと画面が小さすぎて無理がありますが。</p>
 <h2 id="デメリット">デメリット</h2>
 <h3 id="ターミナルが使えない">ターミナルが使えない</h3>
-<p>ターミナルは残念ながら使えません。Codespaces だと使えるようですが…
-</p>
-<p>拡張機能でカバーできる部分もあるかもしれませんが、あまりハードな開発はできません。
-</p>
+<p>ターミナルは残念ながら使えません。Codespaces だと使えるようですが…</p>
+<p>拡張機能でカバーできる部分もあるかもしれませんが、あまりハードな開発はできません。</p>
 <h3 id="使えない拡張機能が多い">使えない拡張機能が多い</h3>
-<p>ローカルでは使えても、Web Editor では使えない拡張機能が結構多いです。
-</p>
-<p>個人的には、
-</p>
+<p>ローカルでは使えても、Web Editor では使えない拡張機能が結構多いです。</p>
+<p>個人的には、</p>
 <ul>
- <li>Live Server
- </li>
-<li>テキスト校正くん
-</li>
+ <li>Live Server</li>
+ <li>テキスト校正くん</li>
 </ul>
-<p>が使えないのが痛いですね…
-</p>
-<p>フォーマッターも使えません。逆に、スニペット系はサポートされているものが多いです。
-</p>
-<p>Live Server に関しては、類似サービスの <a href="https://www.gitpod.io/" target="_blank" rel="noopener noreferrer">Gitpod</a> では使えるので、 Gitpod に比べるとやや劣った印象を受けます。
-</p>
-<p>ただ、Gitpod は無料プランだと時間制限があるので、結局はローカル環境での開発が一番快適でしょう。
-</p>
-<p>法人の場合は Codespaces が良いと思います。実際に GitHub 社のエンジニアの方々が使いながら改善されているので、「かゆいところに手が届く」仕様になっていると思います。Codespaces ならターミナルも使えますし。
-</p>
+<p>が使えないのが痛いですね…</p>
+<p>フォーマッターも使えません。逆に、スニペット系はサポートされているものが多いです。</p>
+<p>Live Server に関しては、類似サービスの <a href="https://www.gitpod.io/" target="_blank" rel="noopener noreferrer">Gitpod</a> では使えるので、 Gitpod に比べるとやや劣った印象を受けます。</p>
+<p>ただ、Gitpod は無料プランだと時間制限があるので、結局はローカル環境での開発が一番快適でしょう。</p>
+<p>法人の場合は Codespaces が良いと思います。実際に GitHub 社のエンジニアの方々が使いながら改善されているので、「かゆいところに手が届く」仕様になっていると思います。Codespaces ならターミナルも使えますし。</p>
 <h3 id="markdown-を扱っている時画像を挿入できない">Markdown を扱っている時、画像を挿入できない</h3>
-<p>昔からある GitHub のブラウザ上の編集画面では、画像をドラッグ&amp;ドロップすれば Markdown で書いているものに画像を挿入できたのですが、Web Editor ではできません。
-</p>
-<p>これが地味に面倒。いちいち Issue かなんかの編集画面に画像をアップロードして、URL を Web Editor にコピペしないといけない。
-</p>
-<p>ただ、昔ながらのブラウザ上の編集画面とは違って、リアルタイムで作業が保存される(コミットはされない)点は便利です。
-</p>
+<p>昔からある GitHub のブラウザ上の編集画面では、画像をドラッグ&amp;ドロップすれば Markdown で書いているものに画像を挿入できたのですが、Web Editor ではできません。</p>
+<p>これが地味に面倒。いちいち Issue かなんかの編集画面に画像をアップロードして、URL を Web Editor にコピペしないといけない。</p>
+<p>ただ、昔ながらのブラウザ上の編集画面とは違って、リアルタイムで作業が保存される(コミットはされない)点は便利です。</p>
 <h2 id="どのような用途に向いているか">どのような用途に向いているか</h2>
 <ul>
- <li>コンパイルがいらない言語(JavaScript、Python など)での軽いプログラミング
- </li>
-<li>ブログの執筆
- </li>
-<li>コードの閲覧
-</li>
+ <li>コンパイルがいらない言語(JavaScript、Python など)での軽いプログラミング</li>
+ <li>ブログの執筆</li>
+ <li>コードの閲覧</li>
 </ul>
-<p>Web Editor の用途はかなり限られてしまいますが、手軽な開発環境としてはかなり優秀ではないのでしょうか。
-   </p>
-</div>
+<p>Web Editor の用途はかなり限られてしまいますが、手軽な開発環境としてはかなり優秀ではないのでしょうか。</p>
+   </div>
 </article>
 <div class="post-nav">
 <a class="previous" href="/2021-08/chrome-extension-7" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜</a><a class="next" href="/2021-08/twitter-delete" title="Twitter のアカウントを復活！残るデータ・消えるデータ">Twitter のアカウントを復活！残るデータ・消えるデータ</a>
@@ -339,10 +300,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-01/windows11-review" title="Twitter のアカウントを復活！残るデータ・消えるデータ">Windows 11 に関する誤解を暴く</a></li>
-<li><a class="post-link" href="/2022-08/left-enter" title="Twitter のアカウントを復活！残るデータ・消えるデータ">左Enterキーのすゝめ(Linux、Windows対応)</a></li>
-<li><a class="post-link" href="/2022-08/kde-screenshot" title="Twitter のアカウントを復活！残るデータ・消えるデータ">KDE Plasmaでスクリーンショットが昔の画面になってしまう時の対処法</a></li>
-<li><a class="post-link" href="/2022-09/domain-sale" title="Twitter のアカウントを復活！残るデータ・消えるデータ">.com .netドメインが1年間0円で使える！</a></li>
+       <li><a class="post-link" href="/2021-07/chrome-extension-1" title="Twitter のアカウントを復活！残るデータ・消えるデータ">Chrome 拡張機能を作って公開しよう①　〜環境構築〜</a></li>
+<li><a class="post-link" href="/2022-05/subset" title="Twitter のアカウントを復活！残るデータ・消えるデータ">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a></li>
+<li><a class="post-link" href="/2022-07/diary" title="Twitter のアカウントを復活！残るデータ・消えるデータ">一言日記(2022年7月)</a></li>
+<li><a class="post-link" href="/2021-10/conditional-operator" title="Twitter のアカウントを復活！残るデータ・消えるデータ">三項演算子が便利すぎて感動した</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -454,7 +415,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -617,6 +578,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>

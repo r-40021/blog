@@ -128,11 +128,9 @@
   <label for="theme-switch">
    <div class="toggle"></div>
    <div class="names">
-     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg>
-     </p>
-<p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg>
-   </p>
-</div>
+     <p class="light"><svg class="ico-svg" aria-label="ライトモード"><use xlink:href="/assets/symbol-defs.svg#light_mode"></use></svg></p>
+     <p class="dark"><svg class="ico-svg" aria-label="ダークモード"><use xlink:href="/assets/symbol-defs.svg#dark_mode"></use></svg></p>
+   </div>
   </label>
 </div>
 <script data-cfasync="false">
@@ -241,41 +239,29 @@
           <img src="/assets/images/2022/09/10/win10.webp" width="100%" loading="eager" alt="Windows 10 のロック画面">
            <figcaption>Photo by <a href="https://unsplash.com/@meymigrou?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Panos Sakalakis</a> on <a href="https://unsplash.com/photos/Ik0wTGgZYYM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a>  </figcaption>
        </figure>
-     <p>Linux上でWindowsの仮想環境を建てる際にはWindowsのプロダクトキーが必要になりますが、最近のWindowsがプリインストールされたPCの場合、プロダクトキーが付属していない場合がほとんどです。そこで、今回はOEM版(プリインストール版)Windowsのプロダクトキーを確認する方法をご紹介します。Linux、Windowsのどちらからでも使えます。
-</p>
+     <p>Linux上でWindowsの仮想環境を建てる際にはWindowsのプロダクトキーが必要になりますが、最近のWindowsがプリインストールされたPCの場合、プロダクトキーが付属していない場合がほとんどです。そこで、今回はOEM版(プリインストール版)Windowsのプロダクトキーを確認する方法をご紹介します。Linux、Windowsのどちらからでも使えます。</p>
 <div class="warning-card">
 以下の方法はOEM版(プリインストール版)Windowsの場合にのみ使えます。その他のWindowsの場合にはプロダクトキーが付属しているかと思いますのでそちらをご参照ください。
 </div>
 <h2 id="確認方法">確認方法</h2>
 <h3 id="linux編">Linux編</h3>
-<p>OEM版Windowsのライセンス情報はマザーボードに保存されています。以下のコマンドを実行すればそのライセンス情報を読み出すことができます。
-</p>
-<p>結構簡単です。
-</p>
-<p>出力されるログのうち、XXXXX-XXXXX-XXXXX-XXXXX-XXXXX の形式のものがWindowsのプロダクトキーです。
-</p>
+<p>OEM版Windowsのライセンス情報はマザーボードに保存されています。以下のコマンドを実行すればそのライセンス情報を読み出すことができます。</p>
+<p>結構簡単です。</p>
+<p>出力されるログのうち、XXXXX-XXXXX-XXXXX-XXXXX-XXXXX の形式のものがWindowsのプロダクトキーです。</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>strings /sys/firmware/acpi/tables/MSDM
 </code></pre></div></div>
 <h3 id="windows編">Windows編</h3>
 <pre><code class="language-CMD">wmic path softwarelicensingservice get OA3xOriginalProductKey
 </code></pre>
 <h2 id="これってライセンス的にどうなの">これってライセンス的にどうなの？</h2>
-<p>OEM版Windowsのプロダクトキーを仮想環境で使用することはライセンス的に問題がないのか気になる方も多いと思います。
-</p>
-<p>結論としては、問題ありません。
-</p>
-<p>OEM版ライセンスが適用されているPC上であれば、仮想環境上であっても構わないというのがMicrosoftの見解だそうです。
-</p>
-<p>一方、別のデバイスでプロダクトキーを使うのはアウトとなります。
-</p>
+<p>OEM版Windowsのプロダクトキーを仮想環境で使用することはライセンス的に問題がないのか気になる方も多いと思います。</p>
+<p>結論としては、問題ありません。</p>
+<p>OEM版ライセンスが適用されているPC上であれば、仮想環境上であっても構わないというのがMicrosoftの見解だそうです。</p>
+<p>一方、別のデバイスでプロダクトキーを使うのはアウトとなります。</p>
 <h2 id="参考サイト">参考サイト</h2>
 <ul>
- <li>
-<a href="https://www.cyberciti.biz/faq/linux-find-windows-10-oem-product-key-command/" target="_blank" rel="noopener noreferrer">Linux find Windows 10/11 OEM product key command - nixCraft</a>
- </li>
-<li>
-<a href="http://blog.yottun8.com/archives/794" target="_blank" rel="noopener noreferrer">OEM 版 Windows 10 の仮想化に必要なライセンス - Yottun8</a>
-</li>
+ <li><a href="https://www.cyberciti.biz/faq/linux-find-windows-10-oem-product-key-command/" target="_blank" rel="noopener noreferrer">Linux find Windows 10/11 OEM product key command - nixCraft</a></li>
+ <li><a href="http://blog.yottun8.com/archives/794" target="_blank" rel="noopener noreferrer">OEM 版 Windows 10 の仮想化に必要なライセンス - Yottun8</a></li>
 </ul>
    </div>
 </article>
@@ -285,10 +271,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2021-12/winter" title="5人で使っていたbotが学年の半数の人に使われるようになった話(後編)">冬</a></li>
-<li><a class="post-link" href="/2022-07/yay-patch" title="5人で使っていたbotが学年の半数の人に使われるようになった話(後編)">yayで「patch: コマンドが見つかりません」エラーが出たときの対処法</a></li>
-<li><a class="post-link" href="/2022-01/windows11-context" title="5人で使っていたbotが学年の半数の人に使われるようになった話(後編)">【ソフト不要】Windows 11 のコンテキストメニューを従来の見た目に戻す</a></li>
-<li><a class="post-link" href="/2021-08/chrome-extension-5" title="5人で使っていたbotが学年の半数の人に使われるようになった話(後編)">Chrome 拡張機能を作って公開しよう⑤　〜権限多すぎ問題を解決〜</a></li>
+       <li><a class="post-link" href="/2021-10/windows11" title="5人で使っていたbotが学年の半数の人に使われるようになった話(後編)">Windows 11 まもなく正式リリース！新機能やアップグレード方法を解説</a></li>
+<li><a class="post-link" href="/2022-07/manjaro-karnel" title="5人で使っていたbotが学年の半数の人に使われるようになった話(後編)">ManjaroとXubuntuをデュアルブートしたらKarnel Panicになった！！！</a></li>
+<li><a class="post-link" href="/2022-09/bot-2" title="5人で使っていたbotが学年の半数の人に使われるようになった話(後編)">5人で使っていたbotが学年の半数の人に使われるようになった話(後編)</a></li>
+<li><a class="post-link" href="/2022-08/kde-screenshot" title="5人で使っていたbotが学年の半数の人に使われるようになった話(後編)">KDE Plasmaでスクリーンショットが昔の画面になってしまう時の対処法</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -400,7 +386,7 @@
       var h = headings[i];
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
     }
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
     // The header element
@@ -563,6 +549,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   /* fix wrong badge display for firefox browser */
   code > table pre::before {
     display: none;
-  }</style>
+  }
+</style>
 </body>
 </html>
