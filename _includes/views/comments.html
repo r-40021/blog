@@ -22,7 +22,7 @@
       showing:'表示中',
       to:'返信先: ',
       website_label:'ウェブサイト(任意)',
-      email_label:'(任意・公開されます)メールアドレス',
+      email_label:'(任意・公開されます) メールアドレス',
       anonymous:'名無し',
       mod_label:'(管理人)',
       subscribe:'返信がついたらメールで通知する',
@@ -63,6 +63,15 @@
     }
     #HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
       opacity: .7;
+    }
+    #hcb_form_email {
+      width: 20rem;
+    }
+    #HCB_comment_form_box a {
+      color: #389092;
+    }
+    html[data-theme="dark"] #HCB_comment_form_box a {
+      color: #6ac4c6;
     }
     html[data-theme="dark"] #HCB_comment_box #hcb_form .btn,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn {
       background:none; /* Clear twitter bootstrap style. */
