@@ -528,9 +528,9 @@ function LINE() {
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2022-06/ios16" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">iPhone 6s 、iOS 16 非対応へ。今後どうする？</a></li>
-<li><a class="post-link" href="/2021-12/winter" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">冬</a></li>
-<li><a class="post-link" href="/2022-08/fxstudent" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">Firefox学生マーケティングチームに参加しました</a></li>
+       <li><a class="post-link" href="/2022-12/news" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">自分に合ったニュースアプリを探し求めて</a></li>
+<li><a class="post-link" href="/2022-07/windows" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">Windowsを入れたらまずすること(定番6つ＋自己流3つ)</a></li>
+<li><a class="post-link" href="/2021-08/chrome-extension-4" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">Chrome 拡張機能を作って公開しよう④　〜コピー機能の実装〜</a></li>
 <li><a class="post-link" href="/2021-08/github-webeditor" title="Chrome 拡張機能を作って公開しよう 最終回　〜Web ストアに公開〜">GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー</a></li>
 </ul>
    </div>
@@ -554,7 +554,7 @@ function LINE() {
       showing:'表示中',
       to:'返信先: ',
       website_label:'ウェブサイト(任意)',
-      email_label:'(任意・公開されます)メールアドレス',
+      email_label:'(任意・公開されます) メールアドレス',
       anonymous:'名無し',
       mod_label:'(管理人)',
       subscribe:'返信がついたらメールで通知する',
@@ -592,6 +592,15 @@ function LINE() {
     }
     #HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
       opacity: .7;
+    }
+    #hcb_form_email {
+      width: 20rem;
+    }
+    #HCB_comment_form_box a {
+      color: #389092;
+    }
+    html[data-theme="dark"] #HCB_comment_form_box a {
+      color: #6ac4c6;
     }
     html[data-theme="dark"] #HCB_comment_box #hcb_form .btn,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn {
       background:none; /* Clear twitter bootstrap style. */

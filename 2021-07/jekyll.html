@@ -280,10 +280,10 @@ GitHub Pages ではプラグインが使えない。</li>
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2021-08/github-webeditor" title="Chrome 拡張機能を作って公開しよう①　〜環境構築〜">GitHub 公式がブラウザ上で VS Code を使える機能を実装したので、レビュー</a></li>
-<li><a class="post-link" href="/2022-06/linux-at-school" title="Chrome 拡張機能を作って公開しよう①　〜環境構築〜">学校でLinuxを使う上で困ったこと</a></li>
-<li><a class="post-link" href="/2021-10/pixel6" title="Chrome 拡張機能を作って公開しよう①　〜環境構築〜">Pixel 6 のレビューはしないけどレビューもどきはしてみた</a></li>
-<li><a class="post-link" href="/2022-08/fxstudent" title="Chrome 拡張機能を作って公開しよう①　〜環境構築〜">Firefox学生マーケティングチームに参加しました</a></li>
+       <li><a class="post-link" href="/2022-05/subset" title="Chrome 拡張機能を作って公開しよう①　〜環境構築〜">フォントのサブセット化で入れておきたい文字【常用漢字・JIS第1水準だけじゃダメ】</a></li>
+<li><a class="post-link" href="/2021-09/drive-preview" title="Chrome 拡張機能を作って公開しよう①　〜環境構築〜">Google ドライブの動画が再生できないときの対処法</a></li>
+<li><a class="post-link" href="/2021-08/chrome-extension-3" title="Chrome 拡張機能を作って公開しよう①　〜環境構築〜">Chrome 拡張機能を作って公開しよう③　〜形にする〜</a></li>
+<li><a class="post-link" href="/2022-06/manjaro" title="Chrome 拡張機能を作って公開しよう①　〜環境構築〜">Windows ユーザーが Manjaro に乗り換えて感じたメリット・デメリット</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -306,7 +306,7 @@ GitHub Pages ではプラグインが使えない。</li>
       showing:'表示中',
       to:'返信先: ',
       website_label:'ウェブサイト(任意)',
-      email_label:'(任意・公開されます)メールアドレス',
+      email_label:'(任意・公開されます) メールアドレス',
       anonymous:'名無し',
       mod_label:'(管理人)',
       subscribe:'返信がついたらメールで通知する',
@@ -344,6 +344,15 @@ GitHub Pages ではプラグインが使えない。</li>
     }
     #HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
       opacity: .7;
+    }
+    #hcb_form_email {
+      width: 20rem;
+    }
+    #HCB_comment_form_box a {
+      color: #389092;
+    }
+    html[data-theme="dark"] #HCB_comment_form_box a {
+      color: #6ac4c6;
     }
     html[data-theme="dark"] #HCB_comment_box #hcb_form .btn,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn {
       background:none; /* Clear twitter bootstrap style. */

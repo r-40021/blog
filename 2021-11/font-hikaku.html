@@ -285,10 +285,10 @@
 <div class="post-related">
      <div>関連記事</div>
      <ul>
-       <li><a class="post-link" href="/2021-07/jekyll" title="プライバシーの宝庫、Chrome を守る〜晒し防止篇〜">Jekyll について</a></li>
-<li><a class="post-link" href="/2021-10/autumn" title="プライバシーの宝庫、Chrome を守る〜晒し防止篇〜">秋</a></li>
-<li><a class="post-link" href="/2022-07/windows" title="プライバシーの宝庫、Chrome を守る〜晒し防止篇〜">Windowsを入れたらまずすること(定番6つ＋自己流3つ)</a></li>
-<li><a class="post-link" href="/2021-09/form-limit" title="プライバシーの宝庫、Chrome を守る〜晒し防止篇〜">10分で定員付きの Google フォームを作ろう＜コピペ可＞</a></li>
+       <li><a class="post-link" href="/2021-07/chrome-extension-1" title="プライバシーの宝庫、Chrome を守る〜晒し防止篇〜">Chrome 拡張機能を作って公開しよう①　〜環境構築〜</a></li>
+<li><a class="post-link" href="/2021-09/drive-preview" title="プライバシーの宝庫、Chrome を守る〜晒し防止篇〜">Google ドライブの動画が再生できないときの対処法</a></li>
+<li><a class="post-link" href="/2022-12/chromebook" title="プライバシーの宝庫、Chrome を守る〜晒し防止篇〜">改めて感じた Chromebook の良さ〜心配がいらない PC〜</a></li>
+<li><a class="post-link" href="/2021-09/github-kusa" title="プライバシーの宝庫、Chrome を守る〜晒し防止篇〜">GitHub の草、17週連続フルコンボ達成！</a></li>
 </ul>
    </div>
 <div id="HCB_comment_box">
@@ -311,7 +311,7 @@
       showing:'表示中',
       to:'返信先: ',
       website_label:'ウェブサイト(任意)',
-      email_label:'(任意・公開されます)メールアドレス',
+      email_label:'(任意・公開されます) メールアドレス',
       anonymous:'名無し',
       mod_label:'(管理人)',
       subscribe:'返信がついたらメールで通知する',
@@ -349,6 +349,15 @@
     }
     #HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
       opacity: .7;
+    }
+    #hcb_form_email {
+      width: 20rem;
+    }
+    #HCB_comment_form_box a {
+      color: #389092;
+    }
+    html[data-theme="dark"] #HCB_comment_form_box a {
+      color: #6ac4c6;
     }
     html[data-theme="dark"] #HCB_comment_box #hcb_form .btn,html[data-theme="dark"] #HCB_comment_box #HCB_comment_form_box .btn {
       background:none; /* Clear twitter bootstrap style. */
