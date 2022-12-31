@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2022-12-31T19:24:07+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">Qiita に投稿しました【基本情報に向けて行った勉強法や当日の注意点など】</title><link href="https://blog.frogapp.net/2022-12/fe" rel="alternate" type="text/html" title="Qiita に投稿しました【基本情報に向けて行った勉強法や当日の注意点など】" /><published>2022-12-24T00:00:00+09:00</published><updated>2022-12-24T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/fe</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/fe"><![CDATA[<p>今週分の記事は久しぶりに Qiita に投稿しました。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2022-12-31T19:24:25+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
+
+<h2 id="2022年は変化の1年">2022年は「変化」の1年</h2>
+
+<p>振り返ってみると、2022年は「変化」の1年だったのかなと思います。</p>
+
+<p>独自ドメインを取ってみたり、ブログの週一更新を始めたり、一言日記をつけるようになったり、翻訳プロジェクトに参加するようになったり、Firefox 学生マーケティングチームに参加したり…</p>
+
+<p>身近なところでは、コンタクトを (たまにですが) つけるようになったり、3年間一緒にいたスマホを買い替えたり、Linux のディストリビューションをいくつも試したり、基本情報取ったり、去年までの自分が絶対やらないような係をやるようになったり…</p>
+
+<p>もともと自分は「変化」を求め続けている人ではあるのですが、今年は今まで以上に変化が大きかったように感じます。</p>
+
+<h2 id="2022年の活動">2022年の活動</h2>
+
+<p>今年1年間どのような活動を行ったのか、ここで総括してみようと思います。</p>
+
+<h3 id="今年リリースしたアプリ">今年リリースしたアプリ</h3>
+
+<ul>
+  <li><a href="https://read.frogapp.net/" target="_blank" rel="noopener noreferrer">簡易テキスト読み上げくん</a></li>
+  <li><a href="https://share.frogapp.net" target="_blank" rel="noopener noreferrer">Snapdrop JP</a></li>
+  <li>文字数カウント <a href="https://chrome.google.com/webstore/detail/bhfihcmmnnagikobmgakbjliddjmfgmd" target="_blank" rel="noopener noreferrer">Chrome</a><a href="https://addons.mozilla.org/ja/firefox/addon/count-character/" target="_blank" rel="noopener noreferrer">Firefox</a></li>
+  <li>やっぱり Noto Sans <a href="https://chrome.google.com/webstore/detail/oecglhldbofcklanmhckefiflhfhabdd" target="_blank" rel="noopener noreferrer">Chrome</a><a href="https://addons.mozilla.org/ja/firefox/addon/replace-with-noto/" target="_blank" rel="noopener noreferrer">Firefox</a></li>
+</ul>
+
+<p>今年は4つのアプリ (内2つはブラウザ拡張機能) をリリースしました。</p>
+
+<p>アプリリリースの裏話については以前投稿しましたのでぜひご覧ください。</p>
+
+<p><a href="https://blog.frogapp.net/2022-11/background">自分のアプリが作られた背景を語る</a></p>
+
+<p>バンバンアプリを出しまくっていた2021年よりは少ないと思われるかも知れませんが、実は今年は非公開のアプリ (学校用など) の開発が多かったです。</p>
+
+<p>また、リリースしたアプリの数は少ないですがヒット作も出ました。</p>
+
+<p>「Snapdrop JP」と「やっぱり Noto Sans」です。</p>
+
+<p>Snapdrop JP は月間約1,500回アクセスされ、やっぱり Noto Sans のユーザー数は約270人となっています。(2022/12/31現在)</p>
+
+<p>みるみるうちにユーザー数が増えていくのを見て、モチベーションになっていました。</p>
+
+<h3 id="ブログ">ブログ</h3>
+
+<p><strong>2022年の執筆記事数：51本</strong></p>
+
+<p>今年は1年間で51本の記事を公開しました。</p>
+
+<p>数カ月間更新が止まった時期もありましたが、年間で平均すると大体週1本のペースになりました。</p>
+
+<p>今年公開した記事のうち、アクセスが多かった上位3本の記事は以下のとおりです。</p>
+
+<ul>
+  <li><a href="https://blog.frogapp.net/2022-05/font">Chrome のフォントを美しい Noto Sans にする方法</a></li>
+  <li><a href="https://blog.frogapp.net/2022-02/chromebook-start-like-windows">Chromebook のランチャーを Windows のスタートメニューっぽくする</a></li>
+  <li><a href="https://blog.frogapp.net/2022-09/windows-key">LinuxやWindowsからOEM版Windowsのプロダクトキーを確認する方法</a></li>
+</ul>
+
+<p>アクセス数を伸ばすために記事を書いているわけではありませんが、やはり IT 系の記事が伸びやすい印象です。</p>
+
+<p>来年も<strong>週1本</strong>を目指して更新を続けます。</p>
+
+<h2 id="終わりに">終わりに</h2>
+
+<p>2022年は「あっという間だった」と思う一方で、「色々なことに挑戦できた」とも思う1年でした。</p>
+
+<p>2023年は今年以上に良い1年にしたいです。</p>
+
+<p>それでは、良いお年をお迎えください。</p>]]></content><author><name>Frog</name></author><category term="雑記" /><category term="振り返り" /><category term="年末" /><summary type="html"><![CDATA[今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/12/31/2022.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/12/31/2022.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Qiita に投稿しました【基本情報に向けて行った勉強法や当日の注意点など】</title><link href="https://blog.frogapp.net/2022-12/fe" rel="alternate" type="text/html" title="Qiita に投稿しました【基本情報に向けて行った勉強法や当日の注意点など】" /><published>2022-12-24T00:00:00+09:00</published><updated>2022-12-24T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/fe</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/fe"><![CDATA[<p>今週分の記事は久しぶりに Qiita に投稿しました。</p>
 
 <p>ぜひご覧ください。</p>
 
@@ -712,184 +779,4 @@
 
 <p>(プロジェクトの目的や方針によってこの割合は変わります。例えば受注開発であれば発注者の意思を最大限尊重すべきです。)</p>
 
-<p>とは言え、意見をもらえることは非常にためになるので、何かあったらぜひ Issue に書き込むなり、僕に直接連絡するなりしてくれるとありがたいです。</p>]]></content><author><name>Frog</name></author><category term="プログラミング" /><category term="アプリ開発" /><category term="雑記" /><summary type="html"><![CDATA[そういえば、自分が運営しているウェブアプリが作られた背景の話をしたことがなかった気がするので今日はその話をします。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/06/background.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/06/background.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">一言日記(2022年11月)</title><link href="https://blog.frogapp.net/2022-11/diary" rel="alternate" type="text/html" title="一言日記(2022年11月)" /><published>2022-11-01T00:00:00+09:00</published><updated>2022-11-01T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-11/diary</id><content type="html" xml:base="https://blog.frogapp.net/2022-11/diary"><![CDATA[<p>2022年があと2ヶ月で終わることが信じられない。未だに今の年を「2021年」と書きかけることがあるのだが。</p>
-
-<p><br /></p>
-
-<p><strong>11月1日(火)　笑い泣き</strong></p>
-
-<p>今日、あまりにも笑いすぎて泣いた。</p>
-
-<p><br /></p>
-
-<p><strong>11月2日(水)　曜日感覚</strong></p>
-
-<p>最近、休日という休日がないので曜日感覚が狂ってきている。</p>
-
-<p><br /></p>
-
-<p><strong>11月3日(木)　文化の日？</strong></p>
-
-<p>今日は文化の日で休日だったらしい、と校門を出たあとに気づいた。</p>
-
-<p><br /></p>
-
-<p><strong>11月4日(金)　4連休</strong></p>
-
-<p>今日学校を休んで4連休にしている人がちらほらいる。</p>
-
-<p><br /></p>
-
-<p><strong>11月5日(土)　まだ土曜日</strong></p>
-
-<p>完全に日曜の気分だったが、まだ土曜だった。</p>
-
-<p><br /></p>
-
-<p><strong>11月6日(日)　久しぶりの遅起き</strong></p>
-
-<p>何週間かぶりの完全に自由な休日。9時過ぎまで寝てた。</p>
-
-<p><br /></p>
-
-<p><strong>11月7日(月)　日曜日？</strong></p>
-
-<p>今日も日曜日だと思っていた。あいにく寝坊するところだった。</p>
-
-<p><br /></p>
-
-<p><strong>11月8日(火)　月食</strong></p>
-
-<p>月食をこんなにも真剣に見たのは生まれて初めて。</p>
-
-<p><br /></p>
-
-<p><strong>11月9日(水)　インフルワクチン</strong></p>
-
-<p>インフルの予防接種を打つと例年は1週間ほど腕がひどく腫れ上がるのだが、今年は1日で腫れがほぼ収まった。</p>
-
-<p><br /></p>
-
-<p><strong>11月10日(木)　提出なし？</strong></p>
-
-<p>とある提出物に関する情報が、学年で自分のクラスにだけ伝えられていない。これは出さなくてもいいということだな？</p>
-
-<p><br /></p>
-
-<p><strong>11月11日(金)　トントン拍子</strong></p>
-
-<p>なんか話が想像以上に早く進んで…とある会の運営に回ることになった。</p>
-
-<p><br /></p>
-
-<p><strong>11月12日(土)　価値観</strong></p>
-
-<p>カナダの高校生と話したが、日本とカナダでは常識が大きく異なるんだな。具体的なことは内容的にここには書けないが。</p>
-
-<p><br /></p>
-
-<p><strong>11月13日(日)　良心的</strong></p>
-
-<p>今日行ったスマホショップの店員さん、「今のデータ使用量なら回線は格安から乗り換えないほうがお得ですよ！」ってはっきり言ってくれるなど、かなり良心的な方だった。</p>
-
-<p><br /></p>
-
-<p><strong>11月14日(月)　ChromeOS Flex</strong></p>
-
-<p>昔から使っているデスクトップ PC、Windows が重くなってきたので ChromeOS Flex でも起動できるようにした。</p>
-
-<p><br /></p>
-
-<p><strong>11月15日(火)　プレゼン</strong></p>
-
-<p>部活でプレゼンを行った。うまく伝わったなら良いが…</p>
-
-<p><br /></p>
-
-<p><strong>11月16日(水)　声量</strong></p>
-
-<p>小声で話したつもりでも遠くの人に聞こえていたという現象が度々発生している。相手の耳が良いのか、それとも自分の声が思った以上にデカいのか。</p>
-
-<p><br /></p>
-
-<p><strong>11月17日(木)　バキバキバキ</strong></p>
-
-<p>帰宅して PC を使おうとしたら「バキバキバキ」という音がしてベゼルが取れた。電源は入るので外部ディスプレイに繋げば使えるが、早く修理に出さねば。</p>
-
-<p><br /></p>
-
-<p><strong>11月18日(金)　あっという間</strong></p>
-
-<p>先週はとにかく長かったが、今週はあっという間だった。しかも今週の土日は久しぶりに両日とも休みなのでゆっくりできる。</p>
-
-<p><br /></p>
-
-<p><strong>11月19日(土)　引きこもり</strong></p>
-
-<p>久しぶりに家に引きこもった休日だった。</p>
-
-<p><br /></p>
-
-<p><strong>11月20日(日)　1年ぶり</strong></p>
-
-<p>父方の親戚と1年ぶりの再開。色々話して楽しかった。</p>
-
-<p><br /></p>
-
-<p><strong>11月21日(月)　さよなら</strong></p>
-
-<p>メイン PC が壊れたので修理に出すことに。しばらくはメイン PC なしの生活。開発も満足にできない…</p>
-
-<p><br /></p>
-
-<p><strong>11月22日(火)　タッチパネル</strong></p>
-
-<p>メイン PC が壊れたので代替機として Chromebook のタブレット PC を借りているのだが、やっぱりタッチディスプレイあると便利。操作が楽。</p>
-
-<p><br /></p>
-
-<p><strong>11月23日(水)　基本情報合格！</strong></p>
-
-<p>今日、基本情報技術者試験の午後試験を受けてきた。なんとか7割取れればいいかなと思っていたらまさかの9割近い得点を取れた。先月受けた午前試験も8割ほどだったので、これで基本情報に合格したことになる。（合格点は両者ともに6割）<br />やっと肩の荷が下りた気分。今週は楽しみなことがまだ2つも待っているから思いっきり楽しむぞ。</p>
-
-<p><br /></p>
-
-<p><strong>11月24日(木)　コンタクト</strong></p>
-
-<p>コンタクト、半年前に作ったもののつけ外しが面倒なのと度が微妙にあっていない（初めてのコンタクトなので度を弱めにしてくれた）ために全然つけていない。</p>
-
-<p><br /></p>
-
-<p><strong>11月25日(金)　乗り間違え</strong></p>
-
-<p>乗る電車を間違えて、危うく帰れなくなるところだった。聞いたことのない駅名が流れてきたときにはゾッとした。</p>
-
-<p><br /></p>
-
-<p><strong>11月26日(土)　無感覚接種</strong></p>
-
-<p>コロナワクチンを打ってきたのだが、看護師さんの腕が良くて注射されている感覚がまったくなかった。「なかなか注射されないなー」と思っていたら「これで注射は終わりです」と言われて驚いた。</p>
-
-<p><br /></p>
-
-<p><strong>11月27日(日)　6s からの脱却</strong></p>
-
-<p>ついに iPhone 6s から脱却！”7” になった。</p>
-
-<p><br /></p>
-
-<p><strong>11月28日(月)　夜景</strong></p>
-
-<p>普段写真なんてほぼ撮らないのに、今日は帰り道で風景写真を撮ってみた。あたりはすっかり暗くなっていたが、すごく明るく撮れて一人で感動していた。</p>
-
-<p><br /></p>
-
-<p><strong>11月29日(火)　歴史</strong></p>
-
-<p>最近歴史の先生のテンションがおかしい。今日はピンク・レディーの UFO を歌って踊り始めたり、突然飛び跳ねたり、ヤギの絵を描いて「メェ〜！」と叫んだりといろいろあった。（やるべき内容はきちんとやっているので全く問題ない）</p>
-
-<p><br /></p>
-
-<p><strong>11月30日(水)　さむらい</strong></p>
-
-<p>11月は小の月だから今日で終わり。あと1ヶ月で新年とは考えられない…</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[2022年があと2ヶ月で終わることが信じられない。未だに今の年を「2021年」と書きかけることがあるのだが。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/01/diary-202211.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/01/diary-202211.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>とは言え、意見をもらえることは非常にためになるので、何かあったらぜひ Issue に書き込むなり、僕に直接連絡するなりしてくれるとありがたいです。</p>]]></content><author><name>Frog</name></author><category term="プログラミング" /><category term="アプリ開発" /><category term="雑記" /><summary type="html"><![CDATA[そういえば、自分が運営しているウェブアプリが作られた背景の話をしたことがなかった気がするので今日はその話をします。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/06/background.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/06/background.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
