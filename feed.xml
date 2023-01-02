@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2022-12-31T19:24:25+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2023-01-03T00:40:28+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
 
 <h2 id="2022年は変化の1年">2022年は「変化」の1年</h2>
 
@@ -478,7 +478,37 @@
 
 <p><strong>12月26日(月)　軽くなった？</strong></p>
 
-<p>Windows 11 に戻ってから数日。なんか Windows 11 が軽く感じられてきた。僕が慣れただけ？</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[早いものでこの企画も6か月目、2022年も12か月目です。コロナ禍になってから時の流れが速くなった気がするのは自分だけでしょうか。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/12/04/diary-202212.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/12/04/diary-202212.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Colaboratory を楽しくする設定</title><link href="https://blog.frogapp.net/2022-11/colab" rel="alternate" type="text/html" title="Colaboratory を楽しくする設定" /><published>2022-11-26T00:00:00+09:00</published><updated>2022-11-26T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-11/colab</id><content type="html" xml:base="https://blog.frogapp.net/2022-11/colab"><![CDATA[<p>Colaboratory を使っていたら面白そうな設定を見つけたので紹介します。最近は学校で Colaboratory を使うこともあるようですが、この設定を有効にすれば授業を200%楽しめるかもしれません。（先生に怒られても責任は負いませんが）</p>
+<p>Windows 11 に戻ってから数日。なんか Windows 11 が軽く感じられてきた。僕が慣れただけ？</p>
+
+<p><br /></p>
+
+<p><strong>12月27日(火)　開発三昧</strong></p>
+
+<p>拡張機能やブログの不具合を修正した。</p>
+
+<p><br /></p>
+
+<p><strong>12月28日(水)　年末</strong></p>
+
+<p>そろそろ今年も終わっちゃうなーそしたら冬休みも終わりが近いな…</p>
+
+<p><br /></p>
+
+<p><strong>12月29日(木)　コンタクト</strong></p>
+
+<p>ここ数日久しぶりにコンタクトを付けているけど、鼻や耳のあたりに物が無いというのは想像以上に快適。ただし見やすさで言えば眼鏡の方が上。</p>
+
+<p><br /></p>
+
+<p><strong>12月30日(金)　リリース延期</strong></p>
+
+<p>今日デプロイまで行けると思ったが、想定外のトラブルが発生しできず…</p>
+
+<p><br /></p>
+
+<p><strong>12月31日(月)　やっとリリース</strong></p>
+
+<p>とあるサイトをやっとデプロイできた。しかし、デプロイ後も色々調整作業をして、結局1日潰れた。</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[早いものでこの企画も6か月目、2022年も12か月目です。コロナ禍になってから時の流れが速くなった気がするのは自分だけでしょうか。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/12/04/diary-202212.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/12/04/diary-202212.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Colaboratory を楽しくする設定</title><link href="https://blog.frogapp.net/2022-11/colab" rel="alternate" type="text/html" title="Colaboratory を楽しくする設定" /><published>2022-11-26T00:00:00+09:00</published><updated>2022-11-26T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-11/colab</id><content type="html" xml:base="https://blog.frogapp.net/2022-11/colab"><![CDATA[<p>Colaboratory を使っていたら面白そうな設定を見つけたので紹介します。最近は学校で Colaboratory を使うこともあるようですが、この設定を有効にすれば授業を200%楽しめるかもしれません。（先生に怒られても責任は負いませんが）</p>
 
 <h2 id="設定すると">設定すると…？</h2>
 
