@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2023-01-03T00:54:44+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2023-01-03T00:54:55+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">一言日記(2023年1月)</title><link href="https://blog.frogapp.net/2023-01/diary" rel="alternate" type="text/html" title="一言日記(2023年1月)" /><published>2023-01-03T00:00:00+09:00</published><updated>2023-01-03T00:00:00+09:00</updated><id>https://blog.frogapp.net/2023-01/diary</id><content type="html" xml:base="https://blog.frogapp.net/2023-01/diary"><![CDATA[<p>実はかつて「蛙年」というのがありました。その後、とある人が「蛙といえば卵だろ！」と言って数百年前に「卵年」になったのですが、年末年始で忙しさで「卵」の点を抜かして「卯」と書く人が大量発生し、気づいたときには「卯年」になっていたそうです。つまり、「卯年」は元を辿れば「蛙年」なのです。(※諸説あり)</p>
+
+<p><br /></p>
+
+<p><strong>1月1日(日)　帰省</strong></p>
+
+<p>親の実家に帰省。色々話せて楽しかった。</p>
+
+<p><br /></p>
+
+<p><strong>1月2日(月)　田舎あるある</strong></p>
+
+<p>一般道を高速道路並みの速さで走る車がいる。</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[実はかつて「蛙年」というのがありました。その後、とある人が「蛙といえば卵だろ！」と言って数百年前に「卵年」になったのですが、年末年始で忙しさで「卵」の点を抜かして「卯」と書く人が大量発生し、気づいたときには「卯年」になっていたそうです。つまり、「卯年」は元を辿れば「蛙年」なのです。(※諸説あり)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
 
 <h2 id="2022年は変化の1年">2022年は「変化」の1年</h2>
 
@@ -693,120 +705,4 @@
 
 <p>今回紹介した2つのフォントはどちらも癖がない美しいフォントなので、ぜひ積極的に使ってみてください！</p>
 
-<p>僕も、「Zen Kaku Gothic New」を使って部活用のプレゼン資料を作成中です。</p>]]></content><author><name>Frog</name></author><category term="PC" /><summary type="html"><![CDATA[「Google スライドって便利なんだけど日本語フォントが微妙… Noto Sans JP 早く使えるようにしてくれ！」と思ってフォント一覧を見ていたらよさげな日本語フォントを見つけたのでその紹介です。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/07/title.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/07/title.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">自分のアプリが作られた背景を語る</title><link href="https://blog.frogapp.net/2022-11/background" rel="alternate" type="text/html" title="自分のアプリが作られた背景を語る" /><published>2022-11-06T00:00:00+09:00</published><updated>2022-11-06T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-11/background</id><content type="html" xml:base="https://blog.frogapp.net/2022-11/background"><![CDATA[<p>そういえば、自分が運営しているウェブアプリが作られた背景の話をしたことがなかった気がするので今日はその話をします。</p>
-
-<p>以下のアプリの制作背景を今回は紹介します。</p>
-
-<ul>
-  <li>やまだのタイマー</li>
-  <li>やまだBINGO</li>
-  <li>ストップウォッチ</li>
-  <li>文字起こしツール</li>
-  <li>簡易テキスト読み上げくん</li>
-  <li>Snapdrop JP</li>
-</ul>
-
-<h2 id="やまだのタイマー">やまだのタイマー</h2>
-
-<p><img src="/assets/images/2022/11/06/timer.webp" alt="やまだのタイマー" /></p>
-
-<p><a href="https://timer.frogapp.net">やまだのタイマー</a></p>
-
-<p>一昨年、「1人1枚ずつ学年末までのカウントダウンカレンダーを作ろう」という恒例企画が開かれたのですが、どうせやるならリアルタイムなカウントダウンも欲しいと思いこのアプリを作りました。</p>
-
-<p>その時、残り時間の形式を〇日〇時間〇分〇秒とするのもいいですが、あえて〇時間〇分〇秒という形式にしました。</p>
-
-<p>「残り4日」と言われるのと「残り96時間」と言われるのでは印象がかなり違うように、あえて「日」の単位をなくすことで新たな気付きを得てほしいという思いです。</p>
-
-<p>ただ、この仕様に関してはたびたび指摘を受けます。「なぜ残り日数が表示されないんだ、不便だ！」というものです。しかし、前述したようにここだけは絶対に譲れないポイントなのであえてそのままにしています。</p>
-
-<p>(手抜きしていることの言い訳に聞こえるかもしれませんが、残り日数を表示させること自体は簡単なのでやろうと思えばすぐにできます。「こだわり」を譲れないという話です。)</p>
-
-<h2 id="やまだbingo">やまだBINGO</h2>
-
-<p><img src="/assets/images/2022/11/06/bingo.webp" alt="やまだBINGO" /></p>
-
-<p><a href="https://bingo.frogapp.net">やまだBINGO</a></p>
-
-<p>数学の先生が指名するときにフリーソフトのビンゴマシーンを使っていました。</p>
-
-<p>ビンゴマシーンなら一度当たった人は他の人が全員当たるまでは当たらないので公平性の観点からすごくいい案だと思ったのですが、そのアプリにはアプリを一度終了すると全履歴が消えてしまうという欠点がありました。さらに、出る数字にある程度の規則性があるという欠点もありました。</p>
-
-<p>これでは毎回同じ人が指されてしまいます。(実際、毎回決まった人が指されていました。)</p>
-
-<p>しかしある日。その先生が「こういうアプリ作りたかったら作っていいよ」と仰いました。</p>
-
-<p>その後主に部活の時間に制作をし、1週間ほどでできたのがこのアプリです。</p>
-
-<p>当時使っていたビンゴアプリの欠点を解消するべく、</p>
-
-<ul>
-  <li>出た数字を自動的に保存し、ブラウザを閉じても続きから再開できるようにする</li>
-  <li>数字がなるべく均等に出るようにする</li>
-</ul>
-
-<p>ことに気を付けました。</p>
-
-<p>さらに、公平性を確認できるようソースコードは GitHub にてだれでも見ることができる状態にしたのですが、そもそも Web 系のプログラミングがわかる人がほとんどいなかったので公開する意味があったのかは不明です。</p>
-
-<p>ちなみに初期のやまだ BINGO は Bootstrap で作っていましたが、その後 Next.js + Chakra UI に書き換えました。</p>
-
-<h2 id="ストップウォッチ">ストップウォッチ</h2>
-
-<p><img src="/assets/images/2022/11/06/stopwatch.webp" alt="" /></p>
-
-<p><a href="https://stopwatch.frogapp.net">ストップウォッチ</a></p>
-
-<p>誰かに「今度プレゼンがあるのでそこで使えるストップウォッチを作ってほしい」という要望を受けて土日の2日間で作った気がします。</p>
-
-<p>その後別の人から「ほかのサイトを開いていても経過時間がわかるようにしてほしい」という要望を受け、タブに現在の経過時間をリアルタイムで表示するようにしました。</p>
-
-<h2 id="文字起こしツール">文字起こしツール</h2>
-
-<p><img src="/assets/images/2022/11/06/speech.webp" alt="文字起こしツール" /></p>
-
-<p><a href="https://speech.frogapp.net">文字起こしツール</a></p>
-
-<p>React のチュートリアルで三目並べを作った後に最初に React で作ったアプリです。</p>
-
-<p>「音声認識」って謎のロマンがあるのでやってみたくなって作りました。</p>
-
-<h2 id="簡易テキスト読み上げくん">簡易テキスト読み上げくん</h2>
-
-<p><img src="/assets/images/2022/11/06/read.webp" alt="簡易テキスト読み上げくん" /></p>
-
-<p><a href="https://read.frogapp.net">簡易テキスト読み上げくん</a></p>
-
-<p>Discord のボイスチャットで声が出せない、かつ音声読み上げ Bot がダウンしているという際に使えるように作ったアプリです。</p>
-
-<p>とにかく「手軽さ」を意識し、サイトを開いて文字を入れ、Enter キーを押下するだけで喋るようにしました。</p>
-
-<p>UI が検索エンジンに似ているため間違えられそうですが…</p>
-
-<h2 id="snapdrop-jp">Snapdrop JP</h2>
-
-<p><img src="/assets/images/2022/11/06/snapdrop-jp.webp" alt="Snapdrop JP" /></p>
-
-<p><a href="https://share.frogapp.net">Snapdrop JP</a></p>
-
-<p>従来から <a href="https://snapdrop.net/" target="_blank" rel="noopener noreferrer">Snapdrop</a> という、ブラウザだけで簡単にデータ転送ができるアプリを使っていたのですが、最近 Snapdrop のサーバーダウンが目立ってきたので自分でインスタンスを立てることにしました。</p>
-
-<p>ただクローンしてサーバーに上げるだけではつまらないので、このアプリの素晴らしさを日本のユーザーにも感じてもらいたいという思いから日本語化をすることにしました。</p>
-
-<p>よくある機械翻訳ではなく、日本語ネイティブである自分が自然な日本語になることを第一に和訳して作ったアプリです。</p>
-
-<p>最初はソフトウェアの日本語化なんて簡単だとなめていましたが、日本語と英語は文法やテンションの高さが全く違うのでけっこう大変でした。</p>
-
-<p>今はわりかし自然な日本語になっていますが、初期リリースの頃は不自然な日本語があちらこちらにありました。</p>
-
-<h2 id="あとがきユーザーの声か制作者のこだわりか">あとがき：ユーザーの声か制作者のこだわりか</h2>
-
-<p>やまだのタイマーでも少し触れましたが、制作者のこだわりであえて普通とは違う仕様にしているところがユーザーから批判されることが多々あります。</p>
-
-<p>ユーザーの声を取り入れることでより多くの人にとって使いやすいアプリにできますが、ユーザーの声ばかり取り入れていると普遍的な何の個性もないアプリになってしまいます。</p>
-
-<p>個人的にはユーザーの声 : 制作者のこだわりを 6:4 くらいにするのがちょうどいいと感じています。</p>
-
-<p>(プロジェクトの目的や方針によってこの割合は変わります。例えば受注開発であれば発注者の意思を最大限尊重すべきです。)</p>
-
-<p>とは言え、意見をもらえることは非常にためになるので、何かあったらぜひ Issue に書き込むなり、僕に直接連絡するなりしてくれるとありがたいです。</p>]]></content><author><name>Frog</name></author><category term="プログラミング" /><category term="アプリ開発" /><category term="雑記" /><summary type="html"><![CDATA[そういえば、自分が運営しているウェブアプリが作られた背景の話をしたことがなかった気がするので今日はその話をします。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/06/background.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/06/background.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>僕も、「Zen Kaku Gothic New」を使って部活用のプレゼン資料を作成中です。</p>]]></content><author><name>Frog</name></author><category term="PC" /><summary type="html"><![CDATA[「Google スライドって便利なんだけど日本語フォントが微妙… Noto Sans JP 早く使えるようにしてくれ！」と思ってフォント一覧を見ていたらよさげな日本語フォントを見つけたのでその紹介です。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2022/11/07/title.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2022/11/07/title.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
