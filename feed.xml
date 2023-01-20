@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2023-01-13T00:20:04+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">Redis が無限に再接続し続けた原因はたった1文字のタイプミスでした</title><link href="https://blog.frogapp.net/2023-01/redis" rel="alternate" type="text/html" title="Redis が無限に再接続し続けた原因はたった1文字のタイプミスでした" /><published>2023-01-08T00:00:00+09:00</published><updated>2023-01-08T00:00:00+09:00</updated><id>https://blog.frogapp.net/2023-01/redis</id><content type="html" xml:base="https://blog.frogapp.net/2023-01/redis"><![CDATA[<p>現在作っている学校用の Node.js (Express) アプリで <a href="https://upstash.com/" target="_blank" rel="noopener noreferrer">Upstash</a> の Redis を使おうとしたところ、切断→再接続を超高速で無限に繰り返す謎の不具合に悩まされたのですが、結果あっさり解決してしまった話です。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2023-01-20T13:20:19+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">Redis が無限に再接続し続けた原因はたった1文字のタイプミスでした</title><link href="https://blog.frogapp.net/2023-01/redis" rel="alternate" type="text/html" title="Redis が無限に再接続し続けた原因はたった1文字のタイプミスでした" /><published>2023-01-08T00:00:00+09:00</published><updated>2023-01-08T00:00:00+09:00</updated><id>https://blog.frogapp.net/2023-01/redis</id><content type="html" xml:base="https://blog.frogapp.net/2023-01/redis"><![CDATA[<p>現在作っている学校用の Node.js (Express) アプリで <a href="https://upstash.com/" target="_blank" rel="noopener noreferrer">Upstash</a> の Redis を使おうとしたところ、切断→再接続を超高速で無限に繰り返す謎の不具合に悩まされたのですが、結果あっさり解決してしまった話です。</p>
 
 <p>※この記事では本来は「URI」と表記するものであっても、わかりやすさを重視し「URL」に統一して表記しています。予めご了承下さい。</p>
 
@@ -246,7 +246,55 @@ Redis reconnecting
 
 <p><strong>1月12日(木)　mozc-ut</strong></p>
 
-<p>mozc-ut 公開終了の件。誰しも意見を自由に言う権利がある一方で、開発者は開発をいつでも自由に辞める権利があるから、「どっちも悪くない」というのが僕の意見。いずれにせよ、持続可能な OSS を実現するにはどうしたら良いかを真剣に考えなければならない時期が来たと感じる。</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[実はかつて「蛙年」というのがありました。その後、とある人が「蛙といえば卵だろ！」と言って数百年前に「卵年」になったのですが、年末年始で忙しさで「卵」の点を抜かして「卯」と書く人が大量発生し、気づいたときには「卯年」になっていたそうです。つまり、「卯年」は元を辿れば「蛙年」なのです。(※諸説あり)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
+<p>mozc-ut 公開終了の件。誰しも意見を自由に言う権利がある一方で、開発者は開発をいつでも自由に辞める権利があるから、「どっちも悪くない」というのが僕の意見。いずれにせよ、持続可能な OSS を実現するにはどうしたら良いかを真剣に考えなければならない時期が来たと感じる。</p>
+
+<p><br /></p>
+
+<p><strong>1月13日(金)　13日の金曜日</strong></p>
+
+<p>今日は13日の金曜日。特に不吉なことはなかったが。</p>
+
+<p><br /></p>
+
+<p><strong>1月14日(土)　ブログ…</strong></p>
+
+<p>週末なのでブログ記事を書かなければならないのだが、気付いたら1日が終わっていた。</p>
+
+<p><br /></p>
+
+<p><strong>1月15日(日)　課題</strong></p>
+
+<p>課題に追われた1日。結局ブログは書けなかった。</p>
+
+<p><br /></p>
+
+<p><strong>1月16日(月)　日記</strong></p>
+
+<p>実はこれ以外にも個人的にもう1つ日記をつけているのだが、最近はすっかり書いていない。こっちの日記も更新が滞りつつあるが…</p>
+
+<p><br /></p>
+
+<p><strong>1月17日(火)　眠気</strong></p>
+
+<p>最近眠気がひどい。9時頃にはもう眠くなる。</p>
+
+<p><br /></p>
+
+<p><strong>1月18日(水)　夢</strong></p>
+
+<p>夢の中で目覚めるという不思議な体験をした。</p>
+
+<p><br /></p>
+
+<p><strong>1月19日(木)　バッテリー</strong></p>
+
+<p>最近、スマホのバッテリーの減りが速い。0時に充電器から抜いて、7時頃見ると15%ほど減っている。常時表示ディスプレイが原因なのは明らかだが、昔はせいぜい6%くらいしか減らなかったんだよなぁ…</p>
+
+<p><br /></p>
+
+<p><strong>1月20日(金)　単語帳</strong></p>
+
+<p>学校で配布された単語帳を Amazon で調べて、星1レビューのみを見ていたらやる気が失せた。</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[実はかつて「蛙年」というのがありました。その後、とある人が「蛙といえば卵だろ！」と言って数百年前に「卵年」になったのですが、年末年始で忙しさで「卵」の点を抜かして「卯」と書く人が大量発生し、気づいたときには「卯年」になっていたそうです。つまり、「卯年」は元を辿れば「蛙年」なのです。(※諸説あり)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
 
 <h2 id="2022年は変化の1年">2022年は「変化」の1年</h2>
 
