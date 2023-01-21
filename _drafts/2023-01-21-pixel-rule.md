@@ -2,7 +2,7 @@
 layout: post
 categories: スマホ
 seo:
-  date_modified: 2023-01-21 12:58:24 +0900
+  date_modified: 2023-01-21 15:00:00 +0900
 tags:
 - スマホ
 - Google
