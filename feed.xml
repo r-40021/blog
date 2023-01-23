@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2023-01-21T19:42:25+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">【Google Pixel】外出したらマナーモードを自動でオンにする</title><link href="https://blog.frogapp.net/2023-01/pixel-rule" rel="alternate" type="text/html" title="【Google Pixel】外出したらマナーモードを自動でオンにする" /><published>2023-01-21T00:00:00+09:00</published><updated>2023-01-21T00:00:00+09:00</updated><id>https://blog.frogapp.net/2023-01/pixel-rule</id><content type="html" xml:base="https://blog.frogapp.net/2023-01/pixel-rule"><![CDATA[<p>Pixel の設定を眺めていたら、「ルール」という、現在地や接続している Wi-Fi に応じてマナーモードのオン / オフを切り替えられる非常に便利な機能を発見しました。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2023-01-23T22:17:45+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">【Google Pixel】外出したらマナーモードを自動でオンにする</title><link href="https://blog.frogapp.net/2023-01/pixel-rule" rel="alternate" type="text/html" title="【Google Pixel】外出したらマナーモードを自動でオンにする" /><published>2023-01-21T00:00:00+09:00</published><updated>2023-01-21T00:00:00+09:00</updated><id>https://blog.frogapp.net/2023-01/pixel-rule</id><content type="html" xml:base="https://blog.frogapp.net/2023-01/pixel-rule"><![CDATA[<p>Pixel の設定を眺めていたら、「ルール」という、現在地や接続している Wi-Fi に応じてマナーモードのオン / オフを切り替えられる非常に便利な機能を発見しました。</p>
 
 <p>今回は、そんな「ルール」機能の設定方法を解説します。</p>
 
@@ -445,7 +445,25 @@ Redis reconnecting
 
 <p><strong>1月20日(金)　単語帳</strong></p>
 
-<p>学校で配布された単語帳を Amazon で調べて、星1レビューのみを見ていたらやる気が失せた。</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[実はかつて「蛙年」というのがありました。その後、とある人が「蛙といえば卵だろ！」と言って数百年前に「卵年」になったのですが、年末年始で忙しさで「卵」の点を抜かして「卯」と書く人が続出し、気づいたときには「卯年」になっていたそうです。つまり、「卯年」は元を辿れば「蛙年」なのです。(※諸説あり)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
+<p>学校で配布された単語帳を Amazon で調べて、星1レビューのみを見ていたらやる気が失せた。</p>
+
+<p><br /></p>
+
+<p><strong>1月21日(土)　無駄な時間</strong></p>
+
+<p>午前はブログを書いていたが、午後は無駄なことをただひたすらしていた。土曜日って、「明日も休みだしだらけてもいいやー」という気分になるので危険。</p>
+
+<p><br /></p>
+
+<p><strong>1月22日(日)　Ubuntu</strong></p>
+
+<p>外付け HDD に Ubuntu を入れてみたが、HDD だと動作が重い。ChromeOS Flex にするか、それとも軽量ディストリを試すか。</p>
+
+<p><br /></p>
+
+<p><strong>1月23日(月)　修正作業</strong></p>
+
+<p>使っているフレームワークのアップデートの影響で、やまだ BINGO がバグり散らかしていたことが判明。その修正作業を行った。</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[実はかつて「蛙年」というのがありました。その後、とある人が「蛙といえば卵だろ！」と言って数百年前に「卵年」になったのですが、年末年始で忙しさで「卵」の点を抜かして「卯」と書く人が続出し、気づいたときには「卯年」になっていたそうです。つまり、「卯年」は元を辿れば「蛙年」なのです。(※諸説あり)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
 
 <h2 id="2022年は変化の1年">2022年は「変化」の1年</h2>
 
