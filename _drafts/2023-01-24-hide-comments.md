@@ -2,7 +2,7 @@
 layout: post
 categories: 雑記
 seo:
-  date_modified: 2023-01-24 21:00:44 +0900
+  date_modified: 2023-01-24T21:00:44.000+09:00
 tags:
 - お知らせ
 copylight: ''
