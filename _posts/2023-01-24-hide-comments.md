@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: 雑記
+categories: お知らせ
 seo:
   date_modified: 2023-01-24T21:00:44.000+09:00
 tags:
