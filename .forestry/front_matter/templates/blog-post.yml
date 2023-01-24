@@ -22,13 +22,13 @@ fields:
   config:
     required: true
     options:
-    - Google
     - PC
     - SNS
     - プログラミング
     - スマホ
     - 雑記
     - 一言日記
+    - お知らせ
     source:
       type: simple
       section: 
