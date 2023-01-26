@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2023-01-24T21:00:20+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">コメント欄を非表示にします</title><link href="https://blog.frogapp.net/2023-01/hide-comments" rel="alternate" type="text/html" title="コメント欄を非表示にします" /><published>2023-01-24T00:00:00+09:00</published><updated>2023-01-24T00:00:00+09:00</updated><id>https://blog.frogapp.net/2023-01/hide-comments</id><content type="html" xml:base="https://blog.frogapp.net/2023-01/hide-comments"><![CDATA[<p>表題の通り、9月下旬から実証実験を行っていたコメント欄を一旦非表示にします。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://blog.frogapp.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.frogapp.net/" rel="alternate" type="text/html" hreflang="ja" /><updated>2023-01-27T01:32:18+09:00</updated><id>https://blog.frogapp.net/feed.xml</id><title type="html">カエル文書箱</title><subtitle>デジタルから間違い探しまで、種々雑多なブログ</subtitle><author><name>Frog</name></author><entry><title type="html">コメント欄を非表示にします</title><link href="https://blog.frogapp.net/2023-01/hide-comments" rel="alternate" type="text/html" title="コメント欄を非表示にします" /><published>2023-01-24T00:00:00+09:00</published><updated>2023-01-24T00:00:00+09:00</updated><id>https://blog.frogapp.net/2023-01/hide-comments</id><content type="html" xml:base="https://blog.frogapp.net/2023-01/hide-comments"><![CDATA[<p>表題の通り、9月下旬から実証実験を行っていたコメント欄を一旦非表示にします。</p>
 
 <p>理由は単純で、<strong>「このブログにはまだコメント欄は早すぎた」</strong>ためです。</p>
 
@@ -469,7 +469,25 @@ Redis reconnecting
 
 <p><strong>1月23日(月)　修正作業</strong></p>
 
-<p>使っているフレームワークのアップデートの影響で、やまだ BINGO がバグり散らかしていたことが判明。その修正作業を行った。</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[実はかつて「蛙年」というのがありました。その後、とある人が「蛙といえば卵だろ！」と言って数百年前に「卵年」になったのですが、年末年始で忙しさで「卵」の点を抜かして「卯」と書く人が続出し、気づいたときには「卯年」になっていたそうです。つまり、「卯年」は元を辿れば「蛙年」なのです。(※諸説あり)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
+<p>使っているフレームワークのアップデートの影響で、やまだ BINGO がバグり散らかしていたことが判明。その修正作業を行った。</p>
+
+<p><br /></p>
+
+<p><strong>1月24日(火)　寒い</strong></p>
+
+<p>寒い。凍え死にそう。</p>
+
+<p><br /></p>
+
+<p><strong>1月25日(水)　安堵</strong></p>
+
+<p>夏頃から企画していたものがやっと (ほぼ) 完結した。達成感はもちろんあるが、どこか寂しさも感じる。しかし、実は来月にもとあるものを企画しているので、そちらに向けて動き出さねば。</p>
+
+<p><br /></p>
+
+<p><strong>1月26日(木)　サイト</strong></p>
+
+<p>学校向けに作った、時間割や予定表、提出物、授業関連のリンクをまとめて確認できるサイトの認知度をあげようと色々やっている。ログイン処理も裏のデータベース管理も自分でプログラムを書いたのだが、Google サイトの類のものを使って実装していると勘違いされることがあって少し複雑な気持ち。(デザイン面でテンプレを使ったのは事実だが…)</p>]]></content><author><name>Frog</name></author><category term="一言日記" /><category term="一言日記" /><summary type="html"><![CDATA[実はかつて「蛙年」というのがありました。その後、とある人が「蛙といえば卵だろ！」と言って数百年前に「卵年」になったのですが、年末年始で忙しさで「卵」の点を抜かして「卯」と書く人が続出し、気づいたときには「卯年」になっていたそうです。つまり、「卯年」は元を辿れば「蛙年」なのです。(※諸説あり)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" /><media:content medium="image" url="https://blog.frogapp.net/assets/images/2023/01/02/diary-202301.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">2022年を振りカエル</title><link href="https://blog.frogapp.net/2022-12/2022" rel="alternate" type="text/html" title="2022年を振りカエル" /><published>2022-12-31T00:00:00+09:00</published><updated>2022-12-31T00:00:00+09:00</updated><id>https://blog.frogapp.net/2022-12/2022</id><content type="html" xml:base="https://blog.frogapp.net/2022-12/2022"><![CDATA[<p>今年も残すところ5時間を切りました。2022年の最後の最後に、今年1年を振り返ってみます。</p>
 
 <h2 id="2022年は変化の1年">2022年は「変化」の1年</h2>
 
