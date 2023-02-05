@@ -711,18 +711,6 @@ html[data-scroll-status=down] .framework .sidebar {
   margin-bottom: 1em;
   padding: 0.5em 1em;
 }
-.post .post-content .alert-card:before {
-  content: "";
-  margin-top: 7px;
-  margin-inline-end: 0.7em;
-  height: 1em;
-  width: 2.5em;
-  mask: url("/assets/symbol-defs.svg#ico_report");
-  -webkit-mask: url("/assets/symbol-defs.svg#ico_report");
-  mask-size: cover;
-  -webkit-mask-size: cover;
-  background-color: #6e2121;
-}
 .post .post-content .alert-card a {
   color: inherit;
   text-decoration: underline;
@@ -738,18 +726,6 @@ html[data-scroll-status=down] .framework .sidebar {
   margin-bottom: 1em;
   padding: 0.5em 1em;
 }
-.post .post-content .warning-card:before {
-  content: "";
-  margin-top: 7px;
-  margin-inline-end: 0.7em;
-  height: 1em;
-  width: 2.5em;
-  mask: url("/assets/symbol-defs.svg#ico_warning");
-  -webkit-mask: url("/assets/symbol-defs.svg#ico_warning");
-  mask-size: cover;
-  -webkit-mask-size: cover;
-  background-color: #544321;
-}
 .post .post-content .warning-card a {
   color: inherit;
   text-decoration: underline;
@@ -764,18 +740,6 @@ html[data-scroll-status=down] .framework .sidebar {
   display: flex;
   margin-bottom: 1em;
   padding: 0.5em 1em;
-}
-.post .post-content .info-card:before {
-  content: "";
-  margin-top: 7px;
-  margin-inline-end: 0.7em;
-  height: 1em;
-  width: 2.5em;
-  mask: url("/assets/symbol-defs.svg#ico_info");
-  -webkit-mask: url("/assets/symbol-defs.svg#ico_info");
-  mask-size: cover;
-  -webkit-mask-size: cover;
-  background-color: #164d7a;
 }
 .post .post-content .info-card a {
   color: inherit;
