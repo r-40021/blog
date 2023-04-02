@@ -1,3 +1,8 @@
+> **Warning**  
+> This repository is no longer in use.  
+> It has been moved to [r-40021/new-portfolio-and-blog](https://github.com/r-40021/new-portfolio-and-blog).  
+> In addition, the URL has changed from [blog.frogapp.net](https://blog.frogapp.net) to [frogapp.net/blog](https://frogapp.net/blog).
+
 <div align="center">
   <br>
 
